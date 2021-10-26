@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="27fcf61d-f28c-4ec8-add0-0350b20d92ba" >
+		<http:listener-connection host="localhost" port="8081" />
+	</http:listener-config>
+	<http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="593ee50f-98f2-43e1-9470-a720af6f4241" >
+		<http:request-connection host="localhost" port="8081" />
+	</http:request-config>
+	<flow name="jenkins-demoFlow" doc:id="a1b75e9b-9216-47b5-a4f6-4b8a05e861b9" >
+		<http:listener doc:name="Listener" doc:id="79d95667-f89e-49eb-aeeb-39cdbb660039" config-ref="HTTP_Listener_config" path="/test"/>
+		<set-payload value="#['Tested successfully......']" doc:name="Set Payload" doc:id="51004d14-ff1a-4994-b4f5-9da5c1d6bf58" />
+	</flow>
+	<flow name="jenkins-demoFlow1" doc:id="c5be088a-3030-429a-a54b-cf1eaf8f63cf" >
+		<http:listener doc:name="Listener" doc:id="56d27e95-115e-4089-94cb-1f14658999ea" config-ref="HTTP_Listener_config" path="/test1"/>
+		<http:request method="GET" doc:name="Request" doc:id="60abfbbb-d66f-4efe-83a7-aaf313726cb5" config-ref="HTTP_Request_configuration" path="/test"/>
+	</flow>
+</mule>
