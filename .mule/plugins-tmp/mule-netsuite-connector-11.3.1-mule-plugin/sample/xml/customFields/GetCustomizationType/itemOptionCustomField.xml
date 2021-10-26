@@ -1,0 +1,29 @@
+<getCustomizationIdResponse xmlns="urn:messages_2020_2.platform.webservices.netsuite.com">
+    <platformCore:getCustomizationIdResult xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com">
+        <platformCore:status isSuccess="true"/>
+        <platformCore:totalRecords>7</platformCore:totalRecords>
+        <platformCore:customizationRefList>
+            <platformCore:customizationRef scriptId="custcol1" internalId="5" type="itemOptionCustomField">
+                <platformCore:name>Faceplate Colors</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custcol10" internalId="4574" type="itemOptionCustomField">
+                <platformCore:name>TEST ITEM OPTION FIELD</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custcol_helmetsize" internalId="14" type="itemOptionCustomField">
+                <platformCore:name>Size</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custcol_ropetype" internalId="15" type="itemOptionCustomField">
+                <platformCore:name>Rope Type</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custcol_hand" internalId="13" type="itemOptionCustomField">
+                <platformCore:name>Hand</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custcol5" internalId="9" type="itemOptionCustomField">
+                <platformCore:name>Finish</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custcol6" internalId="10" type="itemOptionCustomField">
+                <platformCore:name>Hardware</platformCore:name>
+            </platformCore:customizationRef>
+        </platformCore:customizationRefList>
+    </platformCore:getCustomizationIdResult>
+</getCustomizationIdResponse>

@@ -1,0 +1,126 @@
+{
+  "format": "java",
+  "type": "Array",
+  "annotations": {
+    "classInformation": {
+      "classname": "java.util.Iterator",
+      "hasDefaultConstructor": false,
+      "isInterface": true,
+      "isInstantiable": false,
+      "isAbstract": true,
+      "isFinal": false,
+      "implementedInterfaces": [
+        
+      ],
+      "parent": "",
+      "genericTypes": [
+        
+      ],
+      "isMap": false
+    }
+  },
+  "item": {
+    "format": "xml",
+    "type": "Object",
+    "annotations": {
+      "label": "SALES_ORDER"
+    },
+    "fields": [
+      {
+        "key": {
+          "name": "{urn:core_2020_2.platform.webservices.netsuite.com}record",
+          "annotations": {
+            "label": "Record"
+          },
+          "attributes": [
+            {
+              "key": {
+                "name": "internalId"
+              },
+              "model": {
+                "type": "String"
+              }
+            },
+            {
+              "key": {
+                "name": "externalId"
+              },
+              "model": {
+                "type": "String"
+              }
+            }
+          ],
+          "required": "true"
+        },
+        "model": {
+          "type": "Object",
+          "annotations": {
+            "typeId": "{urn:sales_2020_2.transactions.webservices.netsuite.com}SalesOrder"
+          },
+          "fields": [
+            {
+              "key": {
+                "name": "{urn:sales_2020_2.transactions.webservices.netsuite.com}itemList",
+                "annotations": {
+                  "label": "Item List"
+                }
+              },
+              "model": {
+                "type": "Object",
+                "annotations": {
+                  "typeId": "{urn:sales_2020_2.transactions.webservices.netsuite.com}SalesOrderItemList"
+                },
+                "fields": [
+                  {
+                    "key": {
+                      "name": "{urn:sales_2020_2.transactions.webservices.netsuite.com}item",
+                      "annotations": {
+                        "label": "Item"
+                      },
+                      "repeated": "true"
+                    },
+                    "model": {
+                      "type": "Object",
+                      "annotations": {
+                        "typeId": "{urn:sales_2020_2.transactions.webservices.netsuite.com}SalesOrderItem"
+                      },
+                      "fields": [
+                        {
+                          "key": {
+                            "name": "{urn:sales_2020_2.transactions.webservices.netsuite.com}job",
+                            "annotations": {
+                              "label": "Job"
+                            },
+                            "attributes": [
+                              {
+                                "key": {
+                                  "name": "internalId"
+                                },
+                                "model": {
+                                  "type": "String"
+                                }
+                              }
+                            ]
+                          },
+                          "model": {
+                            "type": "Object",
+                            "annotations": {
+                              "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+                            },
+                            "fields": [
+                              
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="a5b43db6-0849-4432-a7e0-78c7a5a63873" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="applebabyFlow" doc:id="e08703fb-8ce0-499e-a47f-4a5e2bfaf8d4" >
+		<http:listener doc:name="Listener" doc:id="9d2de31e-bc61-4ff3-a2df-daba57afe184" config-ref="HTTP_Listener_config" path="/welcome"/>
+		<set-payload value="Welcome to mule in maven" doc:name="Set Payload" doc:id="840ae1b0-2eff-431e-bea3-e1cc7b2fa15d" />
+	</flow>
+</mule>

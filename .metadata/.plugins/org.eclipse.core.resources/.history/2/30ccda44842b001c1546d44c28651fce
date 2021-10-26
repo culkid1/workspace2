@@ -1,0 +1,7 @@
+package com.mycompany;
+
+import org.mule.runtime.extension.api.values.ValueProvider;
+
+public class ProtocolProvider implements ValueProvider{
+
+}

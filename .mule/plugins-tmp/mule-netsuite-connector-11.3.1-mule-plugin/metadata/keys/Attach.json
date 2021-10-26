@@ -1,0 +1,24 @@
+{
+  "AttachBasicReference": {
+    "displayName": "AttachBasicReference",
+    "childs": {
+      
+    },
+    "partName": "attachRefType",
+    "id": "AttachBasicReference",
+    "properties": [
+      
+    ]
+  },
+  "AttachContactReference": {
+    "displayName": "AttachContactReference",
+    "childs": {
+      
+    },
+    "partName": "attachRefType",
+    "id": "AttachContactReference",
+    "properties": [
+      
+    ]
+  }
+}

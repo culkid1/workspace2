@@ -1,0 +1,15 @@
+{
+  "format": "xml",
+  "type": "Object",
+  "fields": [
+    {
+      "key": {
+        "name": "internalID",
+        "required": "true"
+      },
+      "model": {
+        "type": "String"
+      }
+    }
+  ]
+}

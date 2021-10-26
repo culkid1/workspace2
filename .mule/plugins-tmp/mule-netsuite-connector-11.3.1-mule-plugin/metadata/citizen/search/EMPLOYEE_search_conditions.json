@@ -1,0 +1,1150 @@
+{
+  "format": "xml",
+  "type": "Object",
+  "fields": [
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}address",
+        "annotations": {
+          "label": "Address"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}addressee",
+        "annotations": {
+          "label": "Addressee"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}addressLabel",
+        "annotations": {
+          "label": "Address Label"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}addressPhone",
+        "annotations": {
+          "label": "Address Phone"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}alienNumber",
+        "annotations": {
+          "label": "Alien Number"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}allocation",
+        "annotations": {
+          "label": "Allocation"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}anniversary",
+        "annotations": {
+          "label": "Anniversary"
+        }
+      },
+      "model": {
+        "type": "DateTime",
+        "annotations": {
+          "pattern": "YYYY-MM-DDThh:mm:ss"
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDateField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}approvalLimit",
+        "annotations": {
+          "label": "Approval Limit"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}attention",
+        "annotations": {
+          "label": "Attention"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}authWorkDate",
+        "annotations": {
+          "label": "Auth Work Date"
+        }
+      },
+      "model": {
+        "type": "DateTime",
+        "annotations": {
+          "pattern": "YYYY-MM-DDThh:mm:ss"
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDateField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}baseWage",
+        "annotations": {
+          "label": "Base Wage"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}billAddress",
+        "annotations": {
+          "label": "Bill Address"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}birthDate",
+        "annotations": {
+          "label": "Birth Date"
+        }
+      },
+      "model": {
+        "type": "DateTime",
+        "annotations": {
+          "pattern": "YYYY-MM-DDThh:mm:ss"
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDateField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}birthDay",
+        "annotations": {
+          "label": "Birth Day"
+        }
+      },
+      "model": {
+        "type": "DateTime",
+        "annotations": {
+          "pattern": "YYYY-MM-DDThh:mm:ss"
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDateField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}bonusTarget",
+        "annotations": {
+          "label": "Bonus Target"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}bonusTargetComment",
+        "annotations": {
+          "label": "Bonus Target Comment"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}city",
+        "annotations": {
+          "label": "City"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}comments",
+        "annotations": {
+          "label": "Comments"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}concurrentWebServicesUser",
+        "annotations": {
+          "label": "Concurrent Web Services User"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}county",
+        "annotations": {
+          "label": "County"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}dateCreated",
+        "annotations": {
+          "label": "Date Created"
+        }
+      },
+      "model": {
+        "type": "DateTime",
+        "annotations": {
+          "pattern": "YYYY-MM-DDThh:mm:ss"
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDateField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}defaultTaxRegText",
+        "annotations": {
+          "label": "Default Tax Reg Text"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}eligibleForCommission",
+        "annotations": {
+          "label": "Eligible For Commission"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}email",
+        "annotations": {
+          "label": "Email"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}employeeTypeKpi",
+        "annotations": {
+          "label": "Employee Type Kpi"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}entityId",
+        "annotations": {
+          "label": "Entity Id"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}expenseLimit",
+        "annotations": {
+          "label": "Expense Limit"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}externalIdString",
+        "annotations": {
+          "label": "External Id String"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}fax",
+        "annotations": {
+          "label": "Fax"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}firstName",
+        "annotations": {
+          "label": "First Name"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}giveAccess",
+        "annotations": {
+          "label": "Give Access"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}hireDate",
+        "annotations": {
+          "label": "Hire Date"
+        }
+      },
+      "model": {
+        "type": "DateTime",
+        "annotations": {
+          "pattern": "YYYY-MM-DDThh:mm:ss"
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDateField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}I9Verified",
+        "annotations": {
+          "label": "I 9 Verified"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}image",
+        "annotations": {
+          "label": "Image"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}internalIdNumber",
+        "annotations": {
+          "label": "Internal Id Number"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}isDefaultBilling",
+        "annotations": {
+          "label": "Is Default Billing"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}isDefaultShipping",
+        "annotations": {
+          "label": "Is Default Shipping"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}isInactive",
+        "annotations": {
+          "label": "Is Inactive"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}isJobManager",
+        "annotations": {
+          "label": "Is Job Manager"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}isJobResource",
+        "annotations": {
+          "label": "Is Job Resource"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}isTemplate",
+        "annotations": {
+          "label": "Is Template"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}jobDescription",
+        "annotations": {
+          "label": "Job Description"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}laborCost",
+        "annotations": {
+          "label": "Labor Cost"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}lastModifiedDate",
+        "annotations": {
+          "label": "Last Modified Date"
+        }
+      },
+      "model": {
+        "type": "DateTime",
+        "annotations": {
+          "pattern": "YYYY-MM-DDThh:mm:ss"
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDateField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}lastName",
+        "annotations": {
+          "label": "Last Name"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}lastPaidDate",
+        "annotations": {
+          "label": "Last Paid Date"
+        }
+      },
+      "model": {
+        "type": "DateTime",
+        "annotations": {
+          "pattern": "YYYY-MM-DDThh:mm:ss"
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDateField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}lastReviewDate",
+        "annotations": {
+          "label": "Last Review Date"
+        }
+      },
+      "model": {
+        "type": "DateTime",
+        "annotations": {
+          "pattern": "YYYY-MM-DDThh:mm:ss"
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDateField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}middleName",
+        "annotations": {
+          "label": "Middle Name"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}nextReviewDate",
+        "annotations": {
+          "label": "Next Review Date"
+        }
+      },
+      "model": {
+        "type": "DateTime",
+        "annotations": {
+          "pattern": "YYYY-MM-DDThh:mm:ss"
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDateField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}offlineAccess",
+        "annotations": {
+          "label": "Offline Access"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}permChangeDate",
+        "annotations": {
+          "label": "Perm Change Date"
+        }
+      },
+      "model": {
+        "type": "DateTime",
+        "annotations": {
+          "pattern": "YYYY-MM-DDThh:mm:ss"
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDateField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}phone",
+        "annotations": {
+          "label": "Phone"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}phoneticName",
+        "annotations": {
+          "label": "Phonetic Name"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}primaryEarningAmount",
+        "annotations": {
+          "label": "Primary Earning Amount"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}primaryEarningItem",
+        "annotations": {
+          "label": "Primary Earning Item"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}primaryEarningType",
+        "annotations": {
+          "label": "Primary Earning Type"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}purchaseOrderApprovalLimit",
+        "annotations": {
+          "label": "Purchase Order Approval Limit"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}purchaseOrderLimit",
+        "annotations": {
+          "label": "Purchase Order Limit"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}releaseDate",
+        "annotations": {
+          "label": "Release Date"
+        }
+      },
+      "model": {
+        "type": "DateTime",
+        "annotations": {
+          "pattern": "YYYY-MM-DDThh:mm:ss"
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDateField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}roleChangeDate",
+        "annotations": {
+          "label": "Role Change Date"
+        }
+      },
+      "model": {
+        "type": "DateTime",
+        "annotations": {
+          "pattern": "YYYY-MM-DDThh:mm:ss"
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDateField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}salesRep",
+        "annotations": {
+          "label": "Sales Rep"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}salutation",
+        "annotations": {
+          "label": "Salutation"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}socialSecurityNumber",
+        "annotations": {
+          "label": "Social Security Number"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}startDateTimeOffCalc",
+        "annotations": {
+          "label": "Start Date Time Off Calc"
+        }
+      },
+      "model": {
+        "type": "DateTime",
+        "annotations": {
+          "pattern": "YYYY-MM-DDThh:mm:ss"
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDateField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}state",
+        "annotations": {
+          "label": "State"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}supportRep",
+        "annotations": {
+          "label": "Support Rep"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}targetUtilization",
+        "annotations": {
+          "label": "Target Utilization"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}terminationDetails",
+        "annotations": {
+          "label": "Termination Details"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}title",
+        "annotations": {
+          "label": "Title"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}usePerquest",
+        "annotations": {
+          "label": "Use Perquest"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}useTimeData",
+        "annotations": {
+          "label": "Use Time Data"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}visaExpDate",
+        "annotations": {
+          "label": "Visa Exp Date"
+        }
+      },
+      "model": {
+        "type": "DateTime",
+        "annotations": {
+          "pattern": "YYYY-MM-DDThh:mm:ss"
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDateField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}zipCode",
+        "annotations": {
+          "label": "Zip Code"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanCustomField__custentity_2663_payment_method__3992",
+        "annotations": {
+          "label": "EFT Bill Payment"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDateCustomField__custentity23__4578",
+        "annotations": {
+          "label": "DateField"
+        }
+      },
+      "model": {
+        "type": "DateTime",
+        "annotations": {
+          "pattern": "YYYY-MM-DDThh:mm:ss"
+        }
+      },
+      "annotations": {
+        "pattern": "YYYY-MM-DDThh:mm:ss"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleCustomField__custentity28__4583",
+        "annotations": {
+          "label": "DecimalField"
+        }
+      },
+      "model": {
+        "type": "Number"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongCustomField__custentity25__4580",
+        "annotations": {
+          "label": "IntegerField"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "range": {
+          "from": -9.223372036854776E+18,
+          "to": 9.223372036854776E+18
+        }
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringCustomField__custentitymycustomfielddemo__4571",
+        "annotations": {
+          "label": "My Custom Field Demo"
+        }
+      },
+      "model": {
+        "type": "String"
+      }
+    }
+  ]
+}

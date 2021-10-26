@@ -1,0 +1,2667 @@
+{
+  "format": "xml",
+  "type": "Object",
+  "annotations": {
+    "label": "CUSTOMER_REFUND"
+  },
+  "fields": [
+    {
+      "key": {
+        "name": "{urn:core_2020_2.platform.webservices.netsuite.com}record",
+        "annotations": {
+          "label": "Record"
+        },
+        "required": "true"
+      },
+      "model": {
+        "type": "Object",
+        "annotations": {
+          "typeId": "{urn:customers_2020_2.transactions.webservices.netsuite.com}CustomerRefund"
+        },
+        "ordered": true,
+        "fields": [
+          {
+            "key": {
+              "name": "{urn:core_2020_2.platform.webservices.netsuite.com}nullFieldList",
+              "annotations": {
+                "label": "Null Field List"
+              }
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}NullField"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                    "annotations": {
+                      "label": "Name"
+                    },
+                    "repeated": "true"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}NullField"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}createdDate",
+              "annotations": {
+                "label": "Created Date"
+              }
+            },
+            "model": {
+              "type": "DateTime"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}lastModifiedDate",
+              "annotations": {
+                "label": "Last Modified Date"
+              }
+            },
+            "model": {
+              "type": "DateTime"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}status",
+              "annotations": {
+                "label": "Status"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}transactionNumber",
+              "annotations": {
+                "label": "Transaction Number"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}customer",
+              "annotations": {
+                "label": "Customer"
+              },
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "type"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                    "annotations": {
+                      "label": "Name"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}customForm",
+              "annotations": {
+                "label": "Custom Form"
+              },
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "type"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                    "annotations": {
+                      "label": "Name"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}balance",
+              "annotations": {
+                "label": "Balance"
+              }
+            },
+            "model": {
+              "type": "Number"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}arAcct",
+              "annotations": {
+                "label": "Ar Acct"
+              },
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "type"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                    "annotations": {
+                      "label": "Name"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}currencyName",
+              "annotations": {
+                "label": "Currency Name"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}exchangeRate",
+              "annotations": {
+                "label": "Exchange Rate"
+              }
+            },
+            "model": {
+              "type": "Number"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}total",
+              "annotations": {
+                "label": "Total"
+              }
+            },
+            "model": {
+              "type": "Number"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}currency",
+              "annotations": {
+                "label": "Currency"
+              },
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "type"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                    "annotations": {
+                      "label": "Name"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}tranDate",
+              "annotations": {
+                "label": "Tran Date"
+              }
+            },
+            "model": {
+              "type": "DateTime"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}voidJournal",
+              "annotations": {
+                "label": "Void Journal"
+              },
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "type"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                    "annotations": {
+                      "label": "Name"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}postingPeriod",
+              "annotations": {
+                "label": "Posting Period"
+              },
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "type"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                    "annotations": {
+                      "label": "Name"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}memo",
+              "annotations": {
+                "label": "Memo"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}paymentMethod",
+              "annotations": {
+                "label": "Payment Method"
+              },
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "type"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                    "annotations": {
+                      "label": "Name"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}account",
+              "annotations": {
+                "label": "Account"
+              },
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "type"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                    "annotations": {
+                      "label": "Name"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}toBePrinted",
+              "annotations": {
+                "label": "To Be Printed"
+              }
+            },
+            "model": {
+              "type": "Boolean"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}tranId",
+              "annotations": {
+                "label": "Tran Id"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}debitCardIssueNo",
+              "annotations": {
+                "label": "Debit Card Issue No"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}creditCardProcessor",
+              "annotations": {
+                "label": "Credit Card Processor"
+              },
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "type"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                    "annotations": {
+                      "label": "Name"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}chargeIt",
+              "annotations": {
+                "label": "Charge It"
+              }
+            },
+            "model": {
+              "type": "Boolean"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}pnRefNum",
+              "annotations": {
+                "label": "Pn Ref Num"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}validFrom",
+              "annotations": {
+                "label": "Valid From"
+              }
+            },
+            "model": {
+              "type": "DateTime"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}subsidiary",
+              "annotations": {
+                "label": "Subsidiary"
+              },
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "type"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                    "annotations": {
+                      "label": "Name"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}department",
+              "annotations": {
+                "label": "Department"
+              },
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "type"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                    "annotations": {
+                      "label": "Name"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}class",
+              "annotations": {
+                "label": "Class"
+              },
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "type"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                    "annotations": {
+                      "label": "Name"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}location",
+              "annotations": {
+                "label": "Location"
+              },
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "type"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                    "annotations": {
+                      "label": "Name"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}paymentOption",
+              "annotations": {
+                "label": "Payment Option"
+              },
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "type"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                    "annotations": {
+                      "label": "Name"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}inputAuthCode",
+              "annotations": {
+                "label": "Input Auth Code"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}inputReferenceCode",
+              "annotations": {
+                "label": "Input Reference Code"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}checkNumber",
+              "annotations": {
+                "label": "Check Number"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}paymentCardCsc",
+              "annotations": {
+                "label": "Payment Card Csc"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}paymentProcessingProfile",
+              "annotations": {
+                "label": "Payment Processing Profile"
+              },
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "type"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                    "annotations": {
+                      "label": "Name"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}handlingMode",
+              "annotations": {
+                "label": "Handling Mode"
+              }
+            },
+            "model": {
+              "type": "String",
+              "annotations": {
+                "enum": {
+                  "type": "[Ljava.lang.String;",
+                  "values": [
+                    "_process",
+                    "_recordExternalEvent",
+                    "_saveOnly"
+                  ]
+                }
+              }
+            },
+            "annotations": {
+              "enum": {
+                "type": "[Ljava.lang.String;",
+                "values": [
+                  "_process",
+                  "_recordExternalEvent",
+                  "_saveOnly"
+                ]
+              }
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}outputAuthCode",
+              "annotations": {
+                "label": "Output Auth Code"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}outputReferenceCode",
+              "annotations": {
+                "label": "Output Reference Code"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}paymentOperation",
+              "annotations": {
+                "label": "Payment Operation"
+              }
+            },
+            "model": {
+              "type": "String",
+              "annotations": {
+                "enum": {
+                  "type": "[Ljava.lang.String;",
+                  "values": [
+                    "_authorization",
+                    "_capture",
+                    "_sale",
+                    "_refund",
+                    "_credit",
+                    "_refresh",
+                    "_void"
+                  ]
+                }
+              }
+            },
+            "annotations": {
+              "enum": {
+                "type": "[Ljava.lang.String;",
+                "values": [
+                  "_authorization",
+                  "_capture",
+                  "_sale",
+                  "_refund",
+                  "_credit",
+                  "_refresh",
+                  "_void"
+                ]
+              }
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}dynamicDescriptor",
+              "annotations": {
+                "label": "Dynamic Descriptor"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}creditCard",
+              "annotations": {
+                "label": "Credit Card"
+              },
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "type"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                    "annotations": {
+                      "label": "Name"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}ccIsPurchaseCardBin",
+              "annotations": {
+                "label": "Cc Is Purchase Card Bin"
+              }
+            },
+            "model": {
+              "type": "Boolean"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}ccNumber",
+              "annotations": {
+                "label": "Cc Number"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}ccProcessAsPurchaseCard",
+              "annotations": {
+                "label": "Cc Process As Purchase Card"
+              }
+            },
+            "model": {
+              "type": "Boolean"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}ccExpireDate",
+              "annotations": {
+                "label": "Cc Expire Date"
+              }
+            },
+            "model": {
+              "type": "DateTime"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}ccName",
+              "annotations": {
+                "label": "Cc Name"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}ccStreet",
+              "annotations": {
+                "label": "Cc Street"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}ccZipCode",
+              "annotations": {
+                "label": "Cc Zip Code"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}ccApproved",
+              "annotations": {
+                "label": "Cc Approved"
+              }
+            },
+            "model": {
+              "type": "Boolean"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}applyList",
+              "annotations": {
+                "label": "Apply List"
+              },
+              "attributes": [
+                {
+                  "key": {
+                    "name": "replaceAll"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:customers_2020_2.transactions.webservices.netsuite.com}CustomerRefundApplyList"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}apply",
+                    "annotations": {
+                      "label": "Apply"
+                    },
+                    "repeated": "true"
+                  },
+                  "model": {
+                    "type": "Object",
+                    "annotations": {
+                      "typeId": "{urn:customers_2020_2.transactions.webservices.netsuite.com}CustomerRefundApply"
+                    },
+                    "ordered": true,
+                    "fields": [
+                      {
+                        "key": {
+                          "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}apply",
+                          "annotations": {
+                            "label": "Apply"
+                          }
+                        },
+                        "model": {
+                          "type": "Boolean"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}doc",
+                          "annotations": {
+                            "label": "Doc"
+                          }
+                        },
+                        "model": {
+                          "type": "Number"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}line",
+                          "annotations": {
+                            "label": "Line"
+                          }
+                        },
+                        "model": {
+                          "type": "Number"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}applyDate",
+                          "annotations": {
+                            "label": "Apply Date"
+                          }
+                        },
+                        "model": {
+                          "type": "DateTime"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}type",
+                          "annotations": {
+                            "label": "Type"
+                          }
+                        },
+                        "model": {
+                          "type": "String"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}refNum",
+                          "annotations": {
+                            "label": "Ref Num"
+                          }
+                        },
+                        "model": {
+                          "type": "String"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}total",
+                          "annotations": {
+                            "label": "Total"
+                          }
+                        },
+                        "model": {
+                          "type": "Number"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}due",
+                          "annotations": {
+                            "label": "Due"
+                          }
+                        },
+                        "model": {
+                          "type": "Number"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}currency",
+                          "annotations": {
+                            "label": "Currency"
+                          }
+                        },
+                        "model": {
+                          "type": "String"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}amount",
+                          "annotations": {
+                            "label": "Amount"
+                          }
+                        },
+                        "model": {
+                          "type": "Number"
+                        }
+                      }
+                    ]
+                  },
+                  "annotations": {
+                    "typeId": "{urn:customers_2020_2.transactions.webservices.netsuite.com}CustomerRefundApply"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:customers_2020_2.transactions.webservices.netsuite.com}CustomerRefundApplyList"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}depositList",
+              "annotations": {
+                "label": "Deposit List"
+              },
+              "attributes": [
+                {
+                  "key": {
+                    "name": "replaceAll"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:customers_2020_2.transactions.webservices.netsuite.com}CustomerRefundDepositList"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}customerRefundDeposit",
+                    "annotations": {
+                      "label": "Customer Refund Deposit"
+                    },
+                    "repeated": "true"
+                  },
+                  "model": {
+                    "type": "Object",
+                    "annotations": {
+                      "typeId": "{urn:customers_2020_2.transactions.webservices.netsuite.com}CustomerRefundDeposit"
+                    },
+                    "ordered": true,
+                    "fields": [
+                      {
+                        "key": {
+                          "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}apply",
+                          "annotations": {
+                            "label": "Apply"
+                          }
+                        },
+                        "model": {
+                          "type": "Boolean"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}doc",
+                          "annotations": {
+                            "label": "Doc"
+                          }
+                        },
+                        "model": {
+                          "type": "Number"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}line",
+                          "annotations": {
+                            "label": "Line"
+                          }
+                        },
+                        "model": {
+                          "type": "Number"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}depositDate",
+                          "annotations": {
+                            "label": "Deposit Date"
+                          }
+                        },
+                        "model": {
+                          "type": "DateTime"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}refNum",
+                          "annotations": {
+                            "label": "Ref Num"
+                          }
+                        },
+                        "model": {
+                          "type": "String"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}total",
+                          "annotations": {
+                            "label": "Total"
+                          }
+                        },
+                        "model": {
+                          "type": "Number"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}remaining",
+                          "annotations": {
+                            "label": "Remaining"
+                          }
+                        },
+                        "model": {
+                          "type": "Number"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}currency",
+                          "annotations": {
+                            "label": "Currency"
+                          }
+                        },
+                        "model": {
+                          "type": "String"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}amount",
+                          "annotations": {
+                            "label": "Amount"
+                          }
+                        },
+                        "model": {
+                          "type": "Number"
+                        }
+                      }
+                    ]
+                  },
+                  "annotations": {
+                    "typeId": "{urn:customers_2020_2.transactions.webservices.netsuite.com}CustomerRefundDeposit"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:customers_2020_2.transactions.webservices.netsuite.com}CustomerRefundDepositList"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}accountingBookDetailList",
+              "annotations": {
+                "label": "Accounting Book Detail List"
+              },
+              "attributes": [
+                {
+                  "key": {
+                    "name": "replaceAll"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:common_2020_2.platform.webservices.netsuite.com}AccountingBookDetailList"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:common_2020_2.platform.webservices.netsuite.com}accountingBookDetail",
+                    "annotations": {
+                      "label": "Accounting Book Detail"
+                    },
+                    "repeated": "true"
+                  },
+                  "model": {
+                    "type": "Object",
+                    "annotations": {
+                      "typeId": "{urn:common_2020_2.platform.webservices.netsuite.com}AccountingBookDetail"
+                    },
+                    "ordered": true,
+                    "fields": [
+                      {
+                        "key": {
+                          "name": "{urn:common_2020_2.platform.webservices.netsuite.com}accountingBook",
+                          "annotations": {
+                            "label": "Accounting Book"
+                          },
+                          "attributes": [
+                            {
+                              "key": {
+                                "name": "internalId"
+                              },
+                              "model": {
+                                "type": "String"
+                              }
+                            },
+                            {
+                              "key": {
+                                "name": "externalId"
+                              },
+                              "model": {
+                                "type": "String"
+                              }
+                            },
+                            {
+                              "key": {
+                                "name": "type"
+                              },
+                              "model": {
+                                "type": "String"
+                              }
+                            }
+                          ]
+                        },
+                        "model": {
+                          "type": "Object",
+                          "annotations": {
+                            "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+                          },
+                          "ordered": true,
+                          "fields": [
+                            {
+                              "key": {
+                                "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                                "annotations": {
+                                  "label": "Name"
+                                }
+                              },
+                              "model": {
+                                "type": "String"
+                              }
+                            }
+                          ]
+                        },
+                        "annotations": {
+                          "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "{urn:common_2020_2.platform.webservices.netsuite.com}currency",
+                          "annotations": {
+                            "label": "Currency"
+                          },
+                          "attributes": [
+                            {
+                              "key": {
+                                "name": "internalId"
+                              },
+                              "model": {
+                                "type": "String"
+                              }
+                            },
+                            {
+                              "key": {
+                                "name": "externalId"
+                              },
+                              "model": {
+                                "type": "String"
+                              }
+                            },
+                            {
+                              "key": {
+                                "name": "type"
+                              },
+                              "model": {
+                                "type": "String"
+                              }
+                            }
+                          ]
+                        },
+                        "model": {
+                          "type": "Object",
+                          "annotations": {
+                            "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+                          },
+                          "ordered": true,
+                          "fields": [
+                            {
+                              "key": {
+                                "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                                "annotations": {
+                                  "label": "Name"
+                                }
+                              },
+                              "model": {
+                                "type": "String"
+                              }
+                            }
+                          ]
+                        },
+                        "annotations": {
+                          "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "{urn:common_2020_2.platform.webservices.netsuite.com}exchangeRate",
+                          "annotations": {
+                            "label": "Exchange Rate"
+                          }
+                        },
+                        "model": {
+                          "type": "Number"
+                        }
+                      }
+                    ]
+                  },
+                  "annotations": {
+                    "typeId": "{urn:common_2020_2.platform.webservices.netsuite.com}AccountingBookDetail"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:common_2020_2.platform.webservices.netsuite.com}AccountingBookDetailList"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}payeeAddressList",
+              "annotations": {
+                "label": "Payee Address List"
+              },
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "type"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                    "annotations": {
+                      "label": "Name"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}payeeAddress",
+              "annotations": {
+                "label": "Payee Address"
+              }
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:common_2020_2.platform.webservices.netsuite.com}Address"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}nullFieldList",
+                    "annotations": {
+                      "label": "Null Field List"
+                    }
+                  },
+                  "model": {
+                    "type": "Object",
+                    "annotations": {
+                      "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}NullField"
+                    },
+                    "ordered": true,
+                    "fields": [
+                      {
+                        "key": {
+                          "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                          "annotations": {
+                            "label": "Name"
+                          },
+                          "repeated": "true"
+                        },
+                        "model": {
+                          "type": "String"
+                        }
+                      }
+                    ]
+                  },
+                  "annotations": {
+                    "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}NullField"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "{urn:common_2020_2.platform.webservices.netsuite.com}internalId",
+                    "annotations": {
+                      "label": "Internal Id"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "{urn:common_2020_2.platform.webservices.netsuite.com}country",
+                    "annotations": {
+                      "label": "Country"
+                    }
+                  },
+                  "model": {
+                    "type": "String",
+                    "annotations": {
+                      "enum": {
+                        "type": "[Ljava.lang.String;",
+                        "values": [
+                          "_afghanistan",
+                          "_alandIslands",
+                          "_albania",
+                          "_algeria",
+                          "_americanSamoa",
+                          "_andorra",
+                          "_angola",
+                          "_anguilla",
+                          "_antarctica",
+                          "_antiguaAndBarbuda",
+                          "_argentina",
+                          "_armenia",
+                          "_aruba",
+                          "_australia",
+                          "_austria",
+                          "_azerbaijan",
+                          "_bahamas",
+                          "_bahrain",
+                          "_bangladesh",
+                          "_barbados",
+                          "_belarus",
+                          "_belgium",
+                          "_belize",
+                          "_benin",
+                          "_bermuda",
+                          "_bhutan",
+                          "_bolivia",
+                          "_bonaireSaintEustatiusAndSaba",
+                          "_bosniaAndHerzegovina",
+                          "_botswana",
+                          "_bouvetIsland",
+                          "_brazil",
+                          "_britishIndianOceanTerritory",
+                          "_bruneiDarussalam",
+                          "_bulgaria",
+                          "_burkinaFaso",
+                          "_burundi",
+                          "_cambodia",
+                          "_cameroon",
+                          "_canada",
+                          "_canaryIslands",
+                          "_capeVerde",
+                          "_caymanIslands",
+                          "_centralAfricanRepublic",
+                          "_ceutaAndMelilla",
+                          "_chad",
+                          "_chile",
+                          "_china",
+                          "_christmasIsland",
+                          "_cocosKeelingIslands",
+                          "_colombia",
+                          "_comoros",
+                          "_congoDemocraticPeoplesRepublic",
+                          "_congoRepublicOf",
+                          "_cookIslands",
+                          "_costaRica",
+                          "_coteDIvoire",
+                          "_croatiaHrvatska",
+                          "_cuba",
+                          "_curacao",
+                          "_cyprus",
+                          "_czechRepublic",
+                          "_denmark",
+                          "_djibouti",
+                          "_dominica",
+                          "_dominicanRepublic",
+                          "_eastTimor",
+                          "_ecuador",
+                          "_egypt",
+                          "_elSalvador",
+                          "_equatorialGuinea",
+                          "_eritrea",
+                          "_estonia",
+                          "_ethiopia",
+                          "_falklandIslands",
+                          "_faroeIslands",
+                          "_fiji",
+                          "_finland",
+                          "_france",
+                          "_frenchGuiana",
+                          "_frenchPolynesia",
+                          "_frenchSouthernTerritories",
+                          "_gabon",
+                          "_gambia",
+                          "_georgia",
+                          "_germany",
+                          "_ghana",
+                          "_gibraltar",
+                          "_greece",
+                          "_greenland",
+                          "_grenada",
+                          "_guadeloupe",
+                          "_guam",
+                          "_guatemala",
+                          "_guernsey",
+                          "_guinea",
+                          "_guineaBissau",
+                          "_guyana",
+                          "_haiti",
+                          "_heardAndMcDonaldIslands",
+                          "_holySeeCityVaticanState",
+                          "_honduras",
+                          "_hongKong",
+                          "_hungary",
+                          "_iceland",
+                          "_india",
+                          "_indonesia",
+                          "_iranIslamicRepublicOf",
+                          "_iraq",
+                          "_ireland",
+                          "_isleOfMan",
+                          "_israel",
+                          "_italy",
+                          "_jamaica",
+                          "_japan",
+                          "_jersey",
+                          "_jordan",
+                          "_kazakhstan",
+                          "_kenya",
+                          "_kiribati",
+                          "_koreaDemocraticPeoplesRepublic",
+                          "_koreaRepublicOf",
+                          "_kosovo",
+                          "_kuwait",
+                          "_kyrgyzstan",
+                          "_laoPeoplesDemocraticRepublic",
+                          "_latvia",
+                          "_lebanon",
+                          "_lesotho",
+                          "_liberia",
+                          "_libya",
+                          "_liechtenstein",
+                          "_lithuania",
+                          "_luxembourg",
+                          "_macau",
+                          "_macedonia",
+                          "_madagascar",
+                          "_malawi",
+                          "_malaysia",
+                          "_maldives",
+                          "_mali",
+                          "_malta",
+                          "_marshallIslands",
+                          "_martinique",
+                          "_mauritania",
+                          "_mauritius",
+                          "_mayotte",
+                          "_mexico",
+                          "_micronesiaFederalStateOf",
+                          "_moldovaRepublicOf",
+                          "_monaco",
+                          "_mongolia",
+                          "_montenegro",
+                          "_montserrat",
+                          "_morocco",
+                          "_mozambique",
+                          "_myanmar",
+                          "_namibia",
+                          "_nauru",
+                          "_nepal",
+                          "_netherlands",
+                          "_newCaledonia",
+                          "_newZealand",
+                          "_nicaragua",
+                          "_niger",
+                          "_nigeria",
+                          "_niue",
+                          "_norfolkIsland",
+                          "_northernMarianaIslands",
+                          "_norway",
+                          "_oman",
+                          "_pakistan",
+                          "_palau",
+                          "_panama",
+                          "_papuaNewGuinea",
+                          "_paraguay",
+                          "_peru",
+                          "_philippines",
+                          "_pitcairnIsland",
+                          "_poland",
+                          "_portugal",
+                          "_puertoRico",
+                          "_qatar",
+                          "_reunionIsland",
+                          "_romania",
+                          "_russianFederation",
+                          "_rwanda",
+                          "_saintBarthelemy",
+                          "_saintHelena",
+                          "_saintKittsAndNevis",
+                          "_saintLucia",
+                          "_saintMartin",
+                          "_saintVincentAndTheGrenadines",
+                          "_samoa",
+                          "_sanMarino",
+                          "_saoTomeAndPrincipe",
+                          "_saudiArabia",
+                          "_senegal",
+                          "_serbia",
+                          "_seychelles",
+                          "_sierraLeone",
+                          "_singapore",
+                          "_sintMaarten",
+                          "_slovakRepublic",
+                          "_slovenia",
+                          "_solomonIslands",
+                          "_somalia",
+                          "_southAfrica",
+                          "_southGeorgia",
+                          "_southSudan",
+                          "_spain",
+                          "_sriLanka",
+                          "_stateOfPalestine",
+                          "_stPierreAndMiquelon",
+                          "_sudan",
+                          "_suriname",
+                          "_svalbardAndJanMayenIslands",
+                          "_swaziland",
+                          "_sweden",
+                          "_switzerland",
+                          "_syrianArabRepublic",
+                          "_taiwan",
+                          "_tajikistan",
+                          "_tanzania",
+                          "_thailand",
+                          "_togo",
+                          "_tokelau",
+                          "_tonga",
+                          "_trinidadAndTobago",
+                          "_tunisia",
+                          "_turkey",
+                          "_turkmenistan",
+                          "_turksAndCaicosIslands",
+                          "_tuvalu",
+                          "_uganda",
+                          "_ukraine",
+                          "_unitedArabEmirates",
+                          "_unitedKingdom",
+                          "_unitedStates",
+                          "_uruguay",
+                          "_uSMinorOutlyingIslands",
+                          "_uzbekistan",
+                          "_vanuatu",
+                          "_venezuela",
+                          "_vietnam",
+                          "_virginIslandsBritish",
+                          "_virginIslandsUSA",
+                          "_wallisAndFutunaIslands",
+                          "_westernSahara",
+                          "_yemen",
+                          "_zambia",
+                          "_zimbabwe"
+                        ]
+                      }
+                    }
+                  },
+                  "annotations": {
+                    "enum": {
+                      "type": "[Ljava.lang.String;",
+                      "values": [
+                        "_afghanistan",
+                        "_alandIslands",
+                        "_albania",
+                        "_algeria",
+                        "_americanSamoa",
+                        "_andorra",
+                        "_angola",
+                        "_anguilla",
+                        "_antarctica",
+                        "_antiguaAndBarbuda",
+                        "_argentina",
+                        "_armenia",
+                        "_aruba",
+                        "_australia",
+                        "_austria",
+                        "_azerbaijan",
+                        "_bahamas",
+                        "_bahrain",
+                        "_bangladesh",
+                        "_barbados",
+                        "_belarus",
+                        "_belgium",
+                        "_belize",
+                        "_benin",
+                        "_bermuda",
+                        "_bhutan",
+                        "_bolivia",
+                        "_bonaireSaintEustatiusAndSaba",
+                        "_bosniaAndHerzegovina",
+                        "_botswana",
+                        "_bouvetIsland",
+                        "_brazil",
+                        "_britishIndianOceanTerritory",
+                        "_bruneiDarussalam",
+                        "_bulgaria",
+                        "_burkinaFaso",
+                        "_burundi",
+                        "_cambodia",
+                        "_cameroon",
+                        "_canada",
+                        "_canaryIslands",
+                        "_capeVerde",
+                        "_caymanIslands",
+                        "_centralAfricanRepublic",
+                        "_ceutaAndMelilla",
+                        "_chad",
+                        "_chile",
+                        "_china",
+                        "_christmasIsland",
+                        "_cocosKeelingIslands",
+                        "_colombia",
+                        "_comoros",
+                        "_congoDemocraticPeoplesRepublic",
+                        "_congoRepublicOf",
+                        "_cookIslands",
+                        "_costaRica",
+                        "_coteDIvoire",
+                        "_croatiaHrvatska",
+                        "_cuba",
+                        "_curacao",
+                        "_cyprus",
+                        "_czechRepublic",
+                        "_denmark",
+                        "_djibouti",
+                        "_dominica",
+                        "_dominicanRepublic",
+                        "_eastTimor",
+                        "_ecuador",
+                        "_egypt",
+                        "_elSalvador",
+                        "_equatorialGuinea",
+                        "_eritrea",
+                        "_estonia",
+                        "_ethiopia",
+                        "_falklandIslands",
+                        "_faroeIslands",
+                        "_fiji",
+                        "_finland",
+                        "_france",
+                        "_frenchGuiana",
+                        "_frenchPolynesia",
+                        "_frenchSouthernTerritories",
+                        "_gabon",
+                        "_gambia",
+                        "_georgia",
+                        "_germany",
+                        "_ghana",
+                        "_gibraltar",
+                        "_greece",
+                        "_greenland",
+                        "_grenada",
+                        "_guadeloupe",
+                        "_guam",
+                        "_guatemala",
+                        "_guernsey",
+                        "_guinea",
+                        "_guineaBissau",
+                        "_guyana",
+                        "_haiti",
+                        "_heardAndMcDonaldIslands",
+                        "_holySeeCityVaticanState",
+                        "_honduras",
+                        "_hongKong",
+                        "_hungary",
+                        "_iceland",
+                        "_india",
+                        "_indonesia",
+                        "_iranIslamicRepublicOf",
+                        "_iraq",
+                        "_ireland",
+                        "_isleOfMan",
+                        "_israel",
+                        "_italy",
+                        "_jamaica",
+                        "_japan",
+                        "_jersey",
+                        "_jordan",
+                        "_kazakhstan",
+                        "_kenya",
+                        "_kiribati",
+                        "_koreaDemocraticPeoplesRepublic",
+                        "_koreaRepublicOf",
+                        "_kosovo",
+                        "_kuwait",
+                        "_kyrgyzstan",
+                        "_laoPeoplesDemocraticRepublic",
+                        "_latvia",
+                        "_lebanon",
+                        "_lesotho",
+                        "_liberia",
+                        "_libya",
+                        "_liechtenstein",
+                        "_lithuania",
+                        "_luxembourg",
+                        "_macau",
+                        "_macedonia",
+                        "_madagascar",
+                        "_malawi",
+                        "_malaysia",
+                        "_maldives",
+                        "_mali",
+                        "_malta",
+                        "_marshallIslands",
+                        "_martinique",
+                        "_mauritania",
+                        "_mauritius",
+                        "_mayotte",
+                        "_mexico",
+                        "_micronesiaFederalStateOf",
+                        "_moldovaRepublicOf",
+                        "_monaco",
+                        "_mongolia",
+                        "_montenegro",
+                        "_montserrat",
+                        "_morocco",
+                        "_mozambique",
+                        "_myanmar",
+                        "_namibia",
+                        "_nauru",
+                        "_nepal",
+                        "_netherlands",
+                        "_newCaledonia",
+                        "_newZealand",
+                        "_nicaragua",
+                        "_niger",
+                        "_nigeria",
+                        "_niue",
+                        "_norfolkIsland",
+                        "_northernMarianaIslands",
+                        "_norway",
+                        "_oman",
+                        "_pakistan",
+                        "_palau",
+                        "_panama",
+                        "_papuaNewGuinea",
+                        "_paraguay",
+                        "_peru",
+                        "_philippines",
+                        "_pitcairnIsland",
+                        "_poland",
+                        "_portugal",
+                        "_puertoRico",
+                        "_qatar",
+                        "_reunionIsland",
+                        "_romania",
+                        "_russianFederation",
+                        "_rwanda",
+                        "_saintBarthelemy",
+                        "_saintHelena",
+                        "_saintKittsAndNevis",
+                        "_saintLucia",
+                        "_saintMartin",
+                        "_saintVincentAndTheGrenadines",
+                        "_samoa",
+                        "_sanMarino",
+                        "_saoTomeAndPrincipe",
+                        "_saudiArabia",
+                        "_senegal",
+                        "_serbia",
+                        "_seychelles",
+                        "_sierraLeone",
+                        "_singapore",
+                        "_sintMaarten",
+                        "_slovakRepublic",
+                        "_slovenia",
+                        "_solomonIslands",
+                        "_somalia",
+                        "_southAfrica",
+                        "_southGeorgia",
+                        "_southSudan",
+                        "_spain",
+                        "_sriLanka",
+                        "_stateOfPalestine",
+                        "_stPierreAndMiquelon",
+                        "_sudan",
+                        "_suriname",
+                        "_svalbardAndJanMayenIslands",
+                        "_swaziland",
+                        "_sweden",
+                        "_switzerland",
+                        "_syrianArabRepublic",
+                        "_taiwan",
+                        "_tajikistan",
+                        "_tanzania",
+                        "_thailand",
+                        "_togo",
+                        "_tokelau",
+                        "_tonga",
+                        "_trinidadAndTobago",
+                        "_tunisia",
+                        "_turkey",
+                        "_turkmenistan",
+                        "_turksAndCaicosIslands",
+                        "_tuvalu",
+                        "_uganda",
+                        "_ukraine",
+                        "_unitedArabEmirates",
+                        "_unitedKingdom",
+                        "_unitedStates",
+                        "_uruguay",
+                        "_uSMinorOutlyingIslands",
+                        "_uzbekistan",
+                        "_vanuatu",
+                        "_venezuela",
+                        "_vietnam",
+                        "_virginIslandsBritish",
+                        "_virginIslandsUSA",
+                        "_wallisAndFutunaIslands",
+                        "_westernSahara",
+                        "_yemen",
+                        "_zambia",
+                        "_zimbabwe"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "key": {
+                    "name": "{urn:common_2020_2.platform.webservices.netsuite.com}attention",
+                    "annotations": {
+                      "label": "Attention"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "{urn:common_2020_2.platform.webservices.netsuite.com}addressee",
+                    "annotations": {
+                      "label": "Addressee"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "{urn:common_2020_2.platform.webservices.netsuite.com}addrPhone",
+                    "annotations": {
+                      "label": "Addr Phone"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "{urn:common_2020_2.platform.webservices.netsuite.com}addr1",
+                    "annotations": {
+                      "label": "Addr 1"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "{urn:common_2020_2.platform.webservices.netsuite.com}addr2",
+                    "annotations": {
+                      "label": "Addr 2"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "{urn:common_2020_2.platform.webservices.netsuite.com}addr3",
+                    "annotations": {
+                      "label": "Addr 3"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "{urn:common_2020_2.platform.webservices.netsuite.com}city",
+                    "annotations": {
+                      "label": "City"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "{urn:common_2020_2.platform.webservices.netsuite.com}state",
+                    "annotations": {
+                      "label": "State"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "{urn:common_2020_2.platform.webservices.netsuite.com}zip",
+                    "annotations": {
+                      "label": "Zip"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "{urn:common_2020_2.platform.webservices.netsuite.com}addrText",
+                    "annotations": {
+                      "label": "Addr Text"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "{urn:common_2020_2.platform.webservices.netsuite.com}override",
+                    "annotations": {
+                      "label": "Override"
+                    }
+                  },
+                  "model": {
+                    "type": "Boolean"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "{urn:common_2020_2.platform.webservices.netsuite.com}customFieldList",
+                    "annotations": {
+                      "label": "Custom Field List"
+                    }
+                  },
+                  "model": {
+                    "type": "Object",
+                    "fields": [
+                      
+                    ]
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:common_2020_2.platform.webservices.netsuite.com}Address"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:customers_2020_2.transactions.webservices.netsuite.com}customFieldList",
+              "annotations": {
+                "label": "Custom Field List"
+              }
+            },
+            "model": {
+              "type": "Object",
+              "fields": [
+                
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

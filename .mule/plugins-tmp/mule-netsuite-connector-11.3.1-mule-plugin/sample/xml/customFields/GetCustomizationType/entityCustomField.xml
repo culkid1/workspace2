@@ -1,0 +1,131 @@
+<getCustomizationIdResponse xmlns="urn:messages_2020_2.platform.webservices.netsuite.com">
+    <platformCore:getCustomizationIdResult xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com">
+        <platformCore:status isSuccess="true"/>
+        <platformCore:totalRecords>41</platformCore:totalRecords>
+        <platformCore:customizationRefList>
+            <platformCore:customizationRef scriptId="custentity_wc_picture" internalId="3793" type="entityCustomField">
+                <platformCore:name>WC Picture</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity_wc_related_asset" internalId="3794" type="entityCustomField">
+                <platformCore:name>Related Asset</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity_2663_payment_method" internalId="3992" type="entityCustomField">
+                <platformCore:name>EFT Bill Payment</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity_2663_customer_refund" internalId="3994" type="entityCustomField">
+                <platformCore:name>EFT Customer Refund Payment</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity_2663_direct_debit" internalId="3993" type="entityCustomField">
+                <platformCore:name>Direct Debit</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity9" internalId="34" type="entityCustomField">
+                <platformCore:name>Payment Commitment Date</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity10" internalId="17" type="entityCustomField">
+                <platformCore:name>Payment Commitment Amount</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity11" internalId="18" type="entityCustomField">
+                <platformCore:name>Collection Notes</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity12" internalId="19" type="entityCustomField">
+                <platformCore:name>A/P Contact Person</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity_fmt_customer_credit_on_hold" internalId="201" type="entityCustomField">
+                <platformCore:name>Customer Credit On Hold</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity6" internalId="31" type="entityCustomField">
+                <platformCore:name>Industry Type</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity7" internalId="32" type="entityCustomField">
+                <platformCore:name>Company Size</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity8" internalId="33" type="entityCustomField">
+                <platformCore:name>Annual Revenue</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity19" internalId="25" type="entityCustomField">
+                <platformCore:name>SIC Code</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity20" internalId="27" type="entityCustomField">
+                <platformCore:name>Number of Locations</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity21" internalId="28" type="entityCustomField">
+                <platformCore:name>Product Interest</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity_rvc" internalId="38" type="entityCustomField">
+                <platformCore:name>Remaining Vendor Credit</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity_ppob" internalId="37" type="entityCustomField">
+                <platformCore:name>Payment % of Balance</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity_fmt_cust_credit_on_hold" internalId="183" type="entityCustomField">
+                <platformCore:name>Set Customer Credit on Hold</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity_fmt_cur_sales_order" internalId="184" type="entityCustomField">
+                <platformCore:name>Current Sales Order</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity_vendor_lead_time" internalId="195" type="entityCustomField">
+                <platformCore:name>Vendor Lead Time</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity2" internalId="696" type="entityCustomField">
+                <platformCore:name>Sales Engineer</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity1" internalId="16" type="entityCustomField">
+                <platformCore:name>Advertising Preference</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity_is_manufacturer" internalId="35" type="entityCustomField">
+                <platformCore:name>Is Manufacturer?</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity_wrnty_center_phone" internalId="39" type="entityCustomField">
+                <platformCore:name>Wrnty Center Phone</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity_supervisor" internalId="3744" type="entityCustomField">
+                <platformCore:name>Supervisore</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity18" internalId="24" type="entityCustomField">
+                <platformCore:name>Hot Lead</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity_lead_category" internalId="185" type="entityCustomField">
+                <platformCore:name>Category</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity_wc_dept" internalId="3792" type="entityCustomField">
+                <platformCore:name>Department</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity22" internalId="4005" type="entityCustomField">
+                <platformCore:name>Default Cost Template</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity_cust_priority" internalId="4565" type="entityCustomField">
+                <platformCore:name>Priority</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity13" internalId="20" type="entityCustomField">
+                <platformCore:name>Medium</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity14" internalId="21" type="entityCustomField">
+                <platformCore:name>Keyword Search</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity15" internalId="22" type="entityCustomField">
+                <platformCore:name>Search Engine</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity16" internalId="23" type="entityCustomField">
+                <platformCore:name>Keyword Search2</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity4" internalId="29" type="entityCustomField">
+                <platformCore:name>Shipping Instructions</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity5" internalId="30" type="entityCustomField">
+                <platformCore:name>How did you hear of us?</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity_skills" internalId="693" type="entityCustomField">
+                <platformCore:name>Skills</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity23" internalId="4571" type="entityCustomField">
+                <platformCore:name>TEST ITEM CUSTOM ENTITY FIELD</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentitytestentityfield" internalId="4579" type="entityCustomField">
+                <platformCore:name>TEST ENTITY FIELD</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custentity_iv_bank_address" internalId="4587" type="entityCustomField">
+                <platformCore:name>Bank Address</platformCore:name>
+            </platformCore:customizationRef>
+        </platformCore:customizationRefList>
+    </platformCore:getCustomizationIdResult>
+</getCustomizationIdResponse>

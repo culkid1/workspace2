@@ -1,0 +1,233 @@
+{
+  "CASH_REFUND": {
+    "displayName": "CASH_REFUND",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CASH_REFUND",
+    "properties": [
+      
+    ]
+  },
+  "CASH_SALE": {
+    "displayName": "CASH_SALE",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CASH_SALE",
+    "properties": [
+      
+    ]
+  },
+  "CONTACT": {
+    "displayName": "CONTACT",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CONTACT",
+    "properties": [
+      
+    ]
+  },
+  "CREDIT_MEMO": {
+    "displayName": "CREDIT_MEMO",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CREDIT_MEMO",
+    "properties": [
+      
+    ]
+  },
+  "CUSTOMER": {
+    "displayName": "CUSTOMER",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CUSTOMER",
+    "properties": [
+      
+    ]
+  },
+  "CUSTOMER_DEPOSIT": {
+    "displayName": "CUSTOMER_DEPOSIT",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CUSTOMER_DEPOSIT",
+    "properties": [
+      
+    ]
+  },
+  "CUSTOMER_PAYMENT": {
+    "displayName": "CUSTOMER_PAYMENT",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CUSTOMER_PAYMENT",
+    "properties": [
+      
+    ]
+  },
+  "CUSTOMER_REFUND": {
+    "displayName": "CUSTOMER_REFUND",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CUSTOMER_REFUND",
+    "properties": [
+      
+    ]
+  },
+  "EMPLOYEE": {
+    "displayName": "EMPLOYEE",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "EMPLOYEE",
+    "properties": [
+      
+    ]
+  },
+  "ESTIMATE": {
+    "displayName": "ESTIMATE",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "ESTIMATE",
+    "properties": [
+      
+    ]
+  },
+  "INVENTORY_ITEM": {
+    "displayName": "INVENTORY_ITEM",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "INVENTORY_ITEM",
+    "properties": [
+      
+    ]
+  },
+  "INVOICE": {
+    "displayName": "INVOICE",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "INVOICE",
+    "properties": [
+      
+    ]
+  },
+  "JOURNAL_ENTRY": {
+    "displayName": "JOURNAL_ENTRY",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "JOURNAL_ENTRY",
+    "properties": [
+      
+    ]
+  },
+  "NON_INVENTORY_PURCHASE_ITEM": {
+    "displayName": "NON_INVENTORY_PURCHASE_ITEM",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "NON_INVENTORY_PURCHASE_ITEM",
+    "properties": [
+      
+    ]
+  },
+  "NON_INVENTORY_RESALE_ITEM": {
+    "displayName": "NON_INVENTORY_RESALE_ITEM",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "NON_INVENTORY_RESALE_ITEM",
+    "properties": [
+      
+    ]
+  },
+  "NON_INVENTORY_SALE_ITEM": {
+    "displayName": "NON_INVENTORY_SALE_ITEM",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "NON_INVENTORY_SALE_ITEM",
+    "properties": [
+      
+    ]
+  },
+  "OPPORTUNITY": {
+    "displayName": "OPPORTUNITY",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "OPPORTUNITY",
+    "properties": [
+      
+    ]
+  },
+  "SALES_ORDER": {
+    "displayName": "SALES_ORDER",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "SALES_ORDER",
+    "properties": [
+      
+    ]
+  },
+  "CustomRecord__customrecord_ns_pivotlayout__269": {
+    "displayName": "SEARCH PIVOT LAYOUT",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CustomRecord__customrecord_ns_pivotlayout__269",
+    "properties": [
+      
+    ]
+  },
+  "CustomRecord__customrecord_newsfeed_icon__443": {
+    "displayName": "SUITESOCIAL ICON",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CustomRecord__customrecord_newsfeed_icon__443",
+    "properties": [
+      
+    ]
+  },
+  "SUPPORT_CASE": {
+    "displayName": "SUPPORT_CASE",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "SUPPORT_CASE",
+    "properties": [
+      
+    ]
+  }
+}

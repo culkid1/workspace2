@@ -1,0 +1,26 @@
+{
+  "format": "java",
+  "type": "Array",
+  "annotations": {
+    "classInformation": {
+      "classname": "java.util.Iterator",
+      "hasDefaultConstructor": false,
+      "isInterface": true,
+      "isInstantiable": false,
+      "isAbstract": true,
+      "isFinal": false,
+      "implementedInterfaces": [
+        
+      ],
+      "parent": "",
+      "genericTypes": [
+        
+      ],
+      "isMap": false
+    }
+  },
+  "item": {
+    "format": "xml",
+    "type": "Any"
+  }
+}

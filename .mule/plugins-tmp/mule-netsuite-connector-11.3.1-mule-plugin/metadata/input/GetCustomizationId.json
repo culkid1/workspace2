@@ -1,0 +1,78 @@
+{
+  "format": "xml",
+  "type": "Object",
+  "annotations": {
+    "typeId": "#root:{urn:messages_2020_2.platform.webservices.netsuite.com}getCustomizationId"
+  },
+  "fields": [
+    {
+      "key": {
+        "name": "{urn:messages_2020_2.platform.webservices.netsuite.com}getCustomizationId",
+        "required": "true"
+      },
+      "model": {
+        "type": "Object",
+        "annotations": {
+          "typeId": "{urn:messages_2020_2.platform.webservices.netsuite.com}GetCustomizationIdRequest"
+        },
+        "ordered": true,
+        "fields": [
+          {
+            "key": {
+              "name": "{urn:messages_2020_2.platform.webservices.netsuite.com}customizationType",
+              "attributes": [
+                {
+                  "key": {
+                    "name": "getCustomizationType"
+                  },
+                  "model": {
+                    "type": "String",
+                    "annotations": {
+                      "enum": {
+                        "type": "[Ljava.lang.String;",
+                        "values": [
+                          "crmCustomField",
+                          "customList",
+                          "customRecordCustomField",
+                          "customRecordType",
+                          "customSegment",
+                          "customTransactionType",
+                          "entityCustomField",
+                          "itemCustomField",
+                          "itemNumberCustomField",
+                          "itemOptionCustomField",
+                          "otherCustomField",
+                          "transactionBodyCustomField",
+                          "transactionColumnCustomField"
+                        ]
+                      }
+                    }
+                  }
+                }
+              ],
+              "required": "true"
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}CustomizationType"
+              },
+              "fields": [
+                
+              ]
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:messages_2020_2.platform.webservices.netsuite.com}includeInactives",
+              "required": "true"
+            },
+            "model": {
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

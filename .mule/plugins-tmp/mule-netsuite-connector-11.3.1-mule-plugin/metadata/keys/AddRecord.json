@@ -1,0 +1,3368 @@
+{
+  "Customer": {
+    "displayName": "Customer",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "Customer",
+    "properties": [
+      
+    ]
+  },
+  "CustomerPayment": {
+    "displayName": "CustomerPayment",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "CustomerPayment",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_ss_saved_search_subs__454": {
+    "displayName": "Saved Search Subscription",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_ss_saved_search_subs__454",
+    "properties": [
+      
+    ]
+  },
+  "pricingGroup": {
+    "displayName": "PricingGroup",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "pricingGroup",
+    "properties": [
+      
+    ]
+  },
+  "vendorSubsidiaryRelationship": {
+    "displayName": "VendorSubsidiaryRelationship",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "vendorSubsidiaryRelationship",
+    "properties": [
+      
+    ]
+  },
+  "SiteCategory": {
+    "displayName": "SiteCategory",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "SiteCategory",
+    "properties": [
+      
+    ]
+  },
+  "inventoryNumber": {
+    "displayName": "InventoryNumber",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "inventoryNumber",
+    "properties": [
+      
+    ]
+  },
+  "paymentCard": {
+    "displayName": "PaymentCard",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "paymentCard",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord1276183__1276183": {
+    "displayName": "GetCustomizationIdsName4627346",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord1276183__1276183",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_ncfar_altdepr_proposal__248": {
+    "displayName": "Alternate Depreciation",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_ncfar_altdepr_proposal__248",
+    "properties": [
+      
+    ]
+  },
+  "Department": {
+    "displayName": "Department",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "Department",
+    "properties": [
+      
+    ]
+  },
+  "generalToken": {
+    "displayName": "GeneralToken",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "generalToken",
+    "properties": [
+      
+    ]
+  },
+  "Currency": {
+    "displayName": "Currency",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "Currency",
+    "properties": [
+      
+    ]
+  },
+  "state": {
+    "displayName": "State",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "state",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord1187480__1187480": {
+    "displayName": "GetCustomRecordRecordName1690",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord1187480__1187480",
+    "properties": [
+      
+    ]
+  },
+  "itemGroup": {
+    "displayName": "ItemGroup",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "itemGroup",
+    "properties": [
+      
+    ]
+  },
+  "itemNumberCustomField": {
+    "displayName": "ItemNumberCustomField",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "itemNumberCustomField",
+    "properties": [
+      
+    ]
+  },
+  "CashRefund": {
+    "displayName": "CashRefund",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "CashRefund",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_2663_entity_bank_details__372": {
+    "displayName": "Entity Bank Details",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_2663_entity_bank_details__372",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord1446184__1446184": {
+    "displayName": "GetCustomRecordRecordName5804",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord1446184__1446184",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord1381585__1381585": {
+    "displayName": "GetCustomRecordRecordName1504",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord1381585__1381585",
+    "properties": [
+      
+    ]
+  },
+  "OtherChargePurchaseItem": {
+    "displayName": "OtherChargePurchaseItem",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "OtherChargePurchaseItem",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_ncfar_altdepreciation__250": {
+    "displayName": "FAM - Alternate Depreciation",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_ncfar_altdepreciation__250",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_2663_bank_details__374": {
+    "displayName": "Company Bank Details",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_2663_bank_details__374",
+    "properties": [
+      
+    ]
+  },
+  "interCompanyTransferOrder": {
+    "displayName": "InterCompanyTransferOrder",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "interCompanyTransferOrder",
+    "properties": [
+      
+    ]
+  },
+  "Employee": {
+    "displayName": "Employee",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "Employee",
+    "properties": [
+      
+    ]
+  },
+  "Note": {
+    "displayName": "Note",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "Note",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_eperform_ez_review_form__140": {
+    "displayName": "EP EZ Review Form",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_eperform_ez_review_form__140",
+    "properties": [
+      
+    ]
+  },
+  "deposit": {
+    "displayName": "Deposit",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "deposit",
+    "properties": [
+      
+    ]
+  },
+  "vendorCredit": {
+    "displayName": "VendorCredit",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "vendorCredit",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord1475487__1475487": {
+    "displayName": "GetCustomizationIdsName2390640",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord1475487__1475487",
+    "properties": [
+      
+    ]
+  },
+  "itemDemandPlan": {
+    "displayName": "ItemDemandPlan",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "itemDemandPlan",
+    "properties": [
+      
+    ]
+  },
+  "customPurchase": {
+    "displayName": "CustomPurchase",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "customPurchase",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_newsfeed_icon__443": {
+    "displayName": "SuiteSocial Icon",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_newsfeed_icon__443",
+    "properties": [
+      
+    ]
+  },
+  "Estimate": {
+    "displayName": "Estimate",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "Estimate",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_repairmaintcategory__78": {
+    "displayName": "FAM - Repair & Maint Category",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_repairmaintcategory__78",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_suitesocial_digest_schedule__453": {
+    "displayName": "SuiteSocial Digest Schedule",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_suitesocial_digest_schedule__453",
+    "properties": [
+      
+    ]
+  },
+  "EntityCustomField": {
+    "displayName": "EntityCustomField",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "EntityCustomField",
+    "properties": [
+      
+    ]
+  },
+  "EntityGroup": {
+    "displayName": "EntityGroup",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "EntityGroup",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord1289283__1289283": {
+    "displayName": "GetCustomRecordRecordName7697",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord1289283__1289283",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_2663_format_details__376": {
+    "displayName": "Format Details",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_2663_format_details__376",
+    "properties": [
+      
+    ]
+  },
+  "ContactCategory": {
+    "displayName": "ContactCategory",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "ContactCategory",
+    "properties": [
+      
+    ]
+  },
+  "CampaignCategory": {
+    "displayName": "CampaignCategory",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "CampaignCategory",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_assetlifetimes__67": {
+    "displayName": "FAM - Lifetimes",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_assetlifetimes__67",
+    "properties": [
+      
+    ]
+  },
+  "workOrderIssue": {
+    "displayName": "WorkOrderIssue",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "workOrderIssue",
+    "properties": [
+      
+    ]
+  },
+  "costCategory": {
+    "displayName": "CostCategory",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "costCategory",
+    "properties": [
+      
+    ]
+  },
+  "inventoryTransfer": {
+    "displayName": "InventoryTransfer",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "inventoryTransfer",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_ss_mock_inbox__469": {
+    "displayName": "SuiteSocial Mock Inbox",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_ss_mock_inbox__469",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_ns_pivotlayout__269": {
+    "displayName": "Search Pivot Layout",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_ns_pivotlayout__269",
+    "properties": [
+      
+    ]
+  },
+  "DescriptionItem": {
+    "displayName": "DescriptionItem",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "DescriptionItem",
+    "properties": [
+      
+    ]
+  },
+  "GiftCertificateItem": {
+    "displayName": "GiftCertificateItem",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "GiftCertificateItem",
+    "properties": [
+      
+    ]
+  },
+  "charge": {
+    "displayName": "Charge",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "charge",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_autopost__447": {
+    "displayName": "Scheduled Post",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_autopost__447",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_2663_file_admin__380": {
+    "displayName": "Payment File Administration",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_2663_file_admin__380",
+    "properties": [
+      
+    ]
+  },
+  "GiftCertificate": {
+    "displayName": "GiftCertificate",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "GiftCertificate",
+    "properties": [
+      
+    ]
+  },
+  "budgetCategory": {
+    "displayName": "BudgetCategory",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "budgetCategory",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord1296283__1296283": {
+    "displayName": "GetCustomizationIdsName8572684",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord1296283__1296283",
+    "properties": [
+      
+    ]
+  },
+  "inboundShipment": {
+    "displayName": "InboundShipment",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "inboundShipment",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_ncfar_systemsetup__66": {
+    "displayName": "FAM - System Setup",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_ncfar_systemsetup__66",
+    "properties": [
+      
+    ]
+  },
+  "CampaignAudience": {
+    "displayName": "CampaignAudience",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "CampaignAudience",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_ncfar_altmethods__251": {
+    "displayName": "FAM - Alternate Methods",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_ncfar_altmethods__251",
+    "properties": [
+      
+    ]
+  },
+  "NoteType": {
+    "displayName": "NoteType",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "NoteType",
+    "properties": [
+      
+    ]
+  },
+  "SupportCase": {
+    "displayName": "SupportCase",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "SupportCase",
+    "properties": [
+      
+    ]
+  },
+  "CampaignFamily": {
+    "displayName": "CampaignFamily",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "CampaignFamily",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_record_fld_definition__472": {
+    "displayName": "Record Field Definition",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_record_fld_definition__472",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_est_lab__368": {
+    "displayName": "Estimated Labor Costs",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_est_lab__368",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_ss_def_autosub_role__466": {
+    "displayName": "Default Subscription Role",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_ss_def_autosub_role__466",
+    "properties": [
+      
+    ]
+  },
+  "CampaignVertical": {
+    "displayName": "CampaignVertical",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "CampaignVertical",
+    "properties": [
+      
+    ]
+  },
+  "globalAccountMapping": {
+    "displayName": "GlobalAccountMapping",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "globalAccountMapping",
+    "properties": [
+      
+    ]
+  },
+  "otherNameCategory": {
+    "displayName": "OtherNameCategory",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "otherNameCategory",
+    "properties": [
+      
+    ]
+  },
+  "ServiceResaleItem": {
+    "displayName": "ServiceResaleItem",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "ServiceResaleItem",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_2663_payment_file_format__379": {
+    "displayName": "Payment File Format",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_2663_payment_file_format__379",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_autopost_schedule__442": {
+    "displayName": "SuiteSocial Auto Post Schedule",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_autopost_schedule__442",
+    "properties": [
+      
+    ]
+  },
+  "Issue": {
+    "displayName": "Issue",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "Issue",
+    "properties": [
+      
+    ]
+  },
+  "CampaignSearchEngine": {
+    "displayName": "CampaignSearchEngine",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "CampaignSearchEngine",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_suitesocial_colleague__445": {
+    "displayName": "SuiteSocial Colleague",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_suitesocial_colleague__445",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_ncbgp_procinstance__52": {
+    "displayName": "NC - Process Instance",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_ncbgp_procinstance__52",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord1302883__1302883": {
+    "displayName": "GetCustomizationIdsName4623090",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord1302883__1302883",
+    "properties": [
+      
+    ]
+  },
+  "manufacturingRouting": {
+    "displayName": "ManufacturingRouting",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "manufacturingRouting",
+    "properties": [
+      
+    ]
+  },
+  "OtherCustomField": {
+    "displayName": "OtherCustomField",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "OtherCustomField",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord1188081__1188081": {
+    "displayName": "GetCustomRecordRecordName31",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord1188081__1188081",
+    "properties": [
+      
+    ]
+  },
+  "TimeBill": {
+    "displayName": "TimeBill",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "TimeBill",
+    "properties": [
+      
+    ]
+  },
+  "hcmJob": {
+    "displayName": "HcmJob",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "hcmJob",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_pfc_configuration__288": {
+    "displayName": "Picture Frame Configuration",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_pfc_configuration__288",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord1327884__1327884": {
+    "displayName": "GetCustomizationIdsName7615031",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord1327884__1327884",
+    "properties": [
+      
+    ]
+  },
+  "Subsidiary": {
+    "displayName": "Subsidiary",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "Subsidiary",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_repairmaintsubcategory__71": {
+    "displayName": "FAM - Repair & Maint Sub A",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_repairmaintsubcategory__71",
+    "properties": [
+      
+    ]
+  },
+  "revRecTemplate": {
+    "displayName": "RevRecTemplate",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "revRecTemplate",
+    "properties": [
+      
+    ]
+  },
+  "SubtotalItem": {
+    "displayName": "SubtotalItem",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "SubtotalItem",
+    "properties": [
+      
+    ]
+  },
+  "DiscountItem": {
+    "displayName": "DiscountItem",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "DiscountItem",
+    "properties": [
+      
+    ]
+  },
+  "budget": {
+    "displayName": "Budget",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "budget",
+    "properties": [
+      
+    ]
+  },
+  "ItemCustomField": {
+    "displayName": "ItemCustomField",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "ItemCustomField",
+    "properties": [
+      
+    ]
+  },
+  "workOrder": {
+    "displayName": "WorkOrder",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "workOrder",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_gus_tr__42": {
+    "displayName": "Travel Request",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_gus_tr__42",
+    "properties": [
+      
+    ]
+  },
+  "Term": {
+    "displayName": "Term",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "Term",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord1191581__1191581": {
+    "displayName": "GetCustomRecordRecordName1664",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord1191581__1191581",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_suitesocial_status__467": {
+    "displayName": "SuiteSocial Status",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_suitesocial_status__467",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_ss_subscription_link__460": {
+    "displayName": "Related Record Subscription",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_ss_subscription_link__460",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_suitesocial_record__452": {
+    "displayName": "SuiteSocial Record",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_suitesocial_record__452",
+    "properties": [
+      
+    ]
+  },
+  "TaxType": {
+    "displayName": "TaxType",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "TaxType",
+    "properties": [
+      
+    ]
+  },
+  "Campaign": {
+    "displayName": "Campaign",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "Campaign",
+    "properties": [
+      
+    ]
+  },
+  "lotNumberedAssemblyItem": {
+    "displayName": "LotNumberedAssemblyItem",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "lotNumberedAssemblyItem",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord1381384__1381384": {
+    "displayName": "GetCustomRecordRecordName3541",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord1381384__1381384",
+    "properties": [
+      
+    ]
+  },
+  "paycheck": {
+    "displayName": "Paycheck",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "paycheck",
+    "properties": [
+      
+    ]
+  },
+  "inventoryCostRevaluation": {
+    "displayName": "InventoryCostRevaluation",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "inventoryCostRevaluation",
+    "properties": [
+      
+    ]
+  },
+  "InventoryItem": {
+    "displayName": "InventoryItem",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "InventoryItem",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_2663_bill_eft_details__381": {
+    "displayName": "Bill EFT Details",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_2663_bill_eft_details__381",
+    "properties": [
+      
+    ]
+  },
+  "PartnerCategory": {
+    "displayName": "PartnerCategory",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "PartnerCategory",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_suitesocial_profile_channel__463": {
+    "displayName": "SuiteSocial Profile Channel",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_suitesocial_profile_channel__463",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_ss_def_autosub_type__448": {
+    "displayName": "Default Record Subscription",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_ss_def_autosub_type__448",
+    "properties": [
+      
+    ]
+  },
+  "SerializedInventoryItem": {
+    "displayName": "SerializedInventoryItem",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "SerializedInventoryItem",
+    "properties": [
+      
+    ]
+  },
+  "customSegment": {
+    "displayName": "CustomSegment",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "customSegment",
+    "properties": [
+      
+    ]
+  },
+  "taxAcct": {
+    "displayName": "TaxAcct",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "taxAcct",
+    "properties": [
+      
+    ]
+  },
+  "workOrderClose": {
+    "displayName": "WorkOrderClose",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "workOrderClose",
+    "properties": [
+      
+    ]
+  },
+  "SupportCaseType": {
+    "displayName": "SupportCaseType",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "SupportCaseType",
+    "properties": [
+      
+    ]
+  },
+  "Opportunity": {
+    "displayName": "Opportunity",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "Opportunity",
+    "properties": [
+      
+    ]
+  },
+  "PhoneCall": {
+    "displayName": "PhoneCall",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "PhoneCall",
+    "properties": [
+      
+    ]
+  },
+  "CreditMemo": {
+    "displayName": "CreditMemo",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "CreditMemo",
+    "properties": [
+      
+    ]
+  },
+  "consolidatedExchangeRate": {
+    "displayName": "ConsolidatedExchangeRate",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "consolidatedExchangeRate",
+    "properties": [
+      
+    ]
+  },
+  "assemblyBuild": {
+    "displayName": "AssemblyBuild",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "assemblyBuild",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord31__31": {
+    "displayName": "Board Plan: Revenue Target",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord31__31",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord1301583__1301583": {
+    "displayName": "GetCustomizationIdsName1166282",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord1301583__1301583",
+    "properties": [
+      
+    ]
+  },
+  "customSale": {
+    "displayName": "CustomSale",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "customSale",
+    "properties": [
+      
+    ]
+  },
+  "ServiceSaleItem": {
+    "displayName": "ServiceSaleItem",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "ServiceSaleItem",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_ss_internal_setting__470": {
+    "displayName": "SuiteSocial Internal Setting",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_ss_internal_setting__470",
+    "properties": [
+      
+    ]
+  },
+  "kitItem": {
+    "displayName": "KitItem",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "kitItem",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_suitesocial_profile__465": {
+    "displayName": "SuiteSocial Profile",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_suitesocial_profile__465",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_suitesocial_field__459": {
+    "displayName": "SuiteSocial Field",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_suitesocial_field__459",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_rm_search__475": {
+    "displayName": "Project Task Manager Search",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_rm_search__475",
+    "properties": [
+      
+    ]
+  },
+  "CalendarEvent": {
+    "displayName": "CalendarEvent",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "CalendarEvent",
+    "properties": [
+      
+    ]
+  },
+  "manufacturingCostTemplate": {
+    "displayName": "ManufacturingCostTemplate",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "manufacturingCostTemplate",
+    "properties": [
+      
+    ]
+  },
+  "assemblyUnbuild": {
+    "displayName": "AssemblyUnbuild",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "assemblyUnbuild",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_ss_subscription_link_sub__439": {
+    "displayName": "My Related Record Subscription",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_ss_subscription_link_sub__439",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_exclude_track_field__457": {
+    "displayName": "Exclude Tracked Field",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_exclude_track_field__457",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_product_review__38": {
+    "displayName": "Product Review",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_product_review__38",
+    "properties": [
+      
+    ]
+  },
+  "ExpenseCategory": {
+    "displayName": "ExpenseCategory",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "ExpenseCategory",
+    "properties": [
+      
+    ]
+  },
+  "NonInventoryPurchaseItem": {
+    "displayName": "NonInventoryPurchaseItem",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "NonInventoryPurchaseItem",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord1475386__1475386": {
+    "displayName": "GetCustomizationIdsName676762",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord1475386__1475386",
+    "properties": [
+      
+    ]
+  },
+  "OtherChargeSaleItem": {
+    "displayName": "OtherChargeSaleItem",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "OtherChargeSaleItem",
+    "properties": [
+      
+    ]
+  },
+  "CampaignChannel": {
+    "displayName": "CampaignChannel",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "CampaignChannel",
+    "properties": [
+      
+    ]
+  },
+  "Location": {
+    "displayName": "Location",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "Location",
+    "properties": [
+      
+    ]
+  },
+  "Account": {
+    "displayName": "Account",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "Account",
+    "properties": [
+      
+    ]
+  },
+  "MarkupItem": {
+    "displayName": "MarkupItem",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "MarkupItem",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_repairmaintsubcategoryb__72": {
+    "displayName": "FAM - Repair & Maint Sub B",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_repairmaintsubcategoryb__72",
+    "properties": [
+      
+    ]
+  },
+  "Invoice": {
+    "displayName": "Invoice",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "Invoice",
+    "properties": [
+      
+    ]
+  },
+  "bin": {
+    "displayName": "Bin",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "bin",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_2663_bill_eft_payment__378": {
+    "displayName": "Bill EFT Payment Information",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_2663_bill_eft_payment__378",
+    "properties": [
+      
+    ]
+  },
+  "usage": {
+    "displayName": "Usage",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "usage",
+    "properties": [
+      
+    ]
+  },
+  "Check": {
+    "displayName": "Check",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "Check",
+    "properties": [
+      
+    ]
+  },
+  "paycheckJournal": {
+    "displayName": "PaycheckJournal",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "paycheckJournal",
+    "properties": [
+      
+    ]
+  },
+  "billingAccount": {
+    "displayName": "BillingAccount",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "billingAccount",
+    "properties": [
+      
+    ]
+  },
+  "paymentCardToken": {
+    "displayName": "PaymentCardToken",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "paymentCardToken",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_ncfar_deprhistory__75": {
+    "displayName": "FAM - Depreciation History",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_ncfar_deprhistory__75",
+    "properties": [
+      
+    ]
+  },
+  "itemSupplyPlan": {
+    "displayName": "ItemSupplyPlan",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "itemSupplyPlan",
+    "properties": [
+      
+    ]
+  },
+  "itemAccountMapping": {
+    "displayName": "ItemAccountMapping",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "itemAccountMapping",
+    "properties": [
+      
+    ]
+  },
+  "timeSheet": {
+    "displayName": "TimeSheet",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "timeSheet",
+    "properties": [
+      
+    ]
+  },
+  "ServicePurchaseItem": {
+    "displayName": "ServicePurchaseItem",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "ServicePurchaseItem",
+    "properties": [
+      
+    ]
+  },
+  "Classification": {
+    "displayName": "Classification",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "Classification",
+    "properties": [
+      
+    ]
+  },
+  "manufacturingOperationTask": {
+    "displayName": "ManufacturingOperationTask",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "manufacturingOperationTask",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord1469186__1469186": {
+    "displayName": "GetCustomizationIdsName3255332",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord1469186__1469186",
+    "properties": [
+      
+    ]
+  },
+  "CustomRecord": {
+    "displayName": "CustomRecord",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "CustomRecord",
+    "properties": [
+      
+    ]
+  },
+  "fairValuePrice": {
+    "displayName": "FairValuePrice",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "fairValuePrice",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_ncfar_expenseincome__68": {
+    "displayName": "FAM - Expense/Income",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_ncfar_expenseincome__68",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_ncfar_assetusage__74": {
+    "displayName": "FAM - Asset Usage",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_ncfar_assetusage__74",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_2663_payment_schedule__375": {
+    "displayName": "Payment Schedule",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_2663_payment_schedule__375",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_suitesocial_standard_record__473": {
+    "displayName": "SuiteSocial Standard Record",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_suitesocial_standard_record__473",
+    "properties": [
+      
+    ]
+  },
+  "customerMessage": {
+    "displayName": "CustomerMessage",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "customerMessage",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord1186280__1186280": {
+    "displayName": "GetCustomRecordRecordName5434",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord1186280__1186280",
+    "properties": [
+      
+    ]
+  },
+  "CampaignResponse": {
+    "displayName": "CampaignResponse",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "CampaignResponse",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_ncfar_assettype__65": {
+    "displayName": "FAM - Asset Type",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_ncfar_assettype__65",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord1262583__1262583": {
+    "displayName": "GetCustomizationIdsName4590720",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord1262583__1262583",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_suitesocial_autosubscribe__462": {
+    "displayName": "SuiteSocial Auto Subscribe",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_suitesocial_autosubscribe__462",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_suitesocial_subscription__438": {
+    "displayName": "SuiteSocial Subscription",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_suitesocial_subscription__438",
+    "properties": [
+      
+    ]
+  },
+  "vendorPayment": {
+    "displayName": "VendorPayment",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "vendorPayment",
+    "properties": [
+      
+    ]
+  },
+  "CampaignSubscription": {
+    "displayName": "CampaignSubscription",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "CampaignSubscription",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_scheduled_script_queue__440": {
+    "displayName": "Scheduled Script Queue",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_scheduled_script_queue__440",
+    "properties": [
+      
+    ]
+  },
+  "transferOrder": {
+    "displayName": "TransferOrder",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "transferOrder",
+    "properties": [
+      
+    ]
+  },
+  "CustomerCategory": {
+    "displayName": "CustomerCategory",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "CustomerCategory",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_suitesocial_autopost_field__441": {
+    "displayName": "Tracked Field",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_suitesocial_autopost_field__441",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_newsfeed__461": {
+    "displayName": "SuiteSocial News Feed",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_newsfeed__461",
+    "properties": [
+      
+    ]
+  },
+  "assemblyItem": {
+    "displayName": "AssemblyItem",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "assemblyItem",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_ncbgp_proclog__53": {
+    "displayName": "NC - Process Log",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_ncbgp_proclog__53",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_ss_my_saved_search_sub__450": {
+    "displayName": "My Saved Search Subscription",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_ss_my_saved_search_sub__450",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_ncfar_asset__77": {
+    "displayName": "FAM - Asset",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_ncfar_asset__77",
+    "properties": [
+      
+    ]
+  },
+  "SupportCaseOrigin": {
+    "displayName": "SupportCaseOrigin",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "SupportCaseOrigin",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_rm_searchcriteria__474": {
+    "displayName": "Project Task Manager Criteria",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_rm_searchcriteria__474",
+    "properties": [
+      
+    ]
+  },
+  "WinLossReason": {
+    "displayName": "WinLossReason",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "WinLossReason",
+    "properties": [
+      
+    ]
+  },
+  "customTransaction": {
+    "displayName": "CustomTransaction",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "customTransaction",
+    "properties": [
+      
+    ]
+  },
+  "binWorksheet": {
+    "displayName": "BinWorksheet",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "binWorksheet",
+    "properties": [
+      
+    ]
+  },
+  "CustomList": {
+    "displayName": "CustomList",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "CustomList",
+    "properties": [
+      
+    ]
+  },
+  "CampaignOffer": {
+    "displayName": "CampaignOffer",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "CampaignOffer",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord1198081__1198081": {
+    "displayName": "GetCustomRecordRecordName2384",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord1198081__1198081",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_ep_proc_results__370": {
+    "displayName": "EP Thread Processing Results",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_ep_proc_results__370",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_container_details__285": {
+    "displayName": "Container Details",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_container_details__285",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_2663_batch__373": {
+    "displayName": "Payment Batch",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_2663_batch__373",
+    "properties": [
+      
+    ]
+  },
+  "JournalEntry": {
+    "displayName": "JournalEntry",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "JournalEntry",
+    "properties": [
+      
+    ]
+  },
+  "ContactRole": {
+    "displayName": "ContactRole",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "ContactRole",
+    "properties": [
+      
+    ]
+  },
+  "workOrderCompletion": {
+    "displayName": "WorkOrderCompletion",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "workOrderCompletion",
+    "properties": [
+      
+    ]
+  },
+  "JobStatus": {
+    "displayName": "JobStatus",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "JobStatus",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_ncfar_proposaldates__76": {
+    "displayName": "FAM - Last Proposal Dates",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_ncfar_proposaldates__76",
+    "properties": [
+      
+    ]
+  },
+  "OtherChargeResaleItem": {
+    "displayName": "OtherChargeResaleItem",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "OtherChargeResaleItem",
+    "properties": [
+      
+    ]
+  },
+  "PriceLevel": {
+    "displayName": "PriceLevel",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "PriceLevel",
+    "properties": [
+      
+    ]
+  },
+  "binTransfer": {
+    "displayName": "BinTransfer",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "binTransfer",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord1446085__1446085": {
+    "displayName": "GetCustomRecordRecordName195",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord1446085__1446085",
+    "properties": [
+      
+    ]
+  },
+  "DepositApplication": {
+    "displayName": "DepositApplication",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "DepositApplication",
+    "properties": [
+      
+    ]
+  },
+  "StatisticalJournalEntry": {
+    "displayName": "StatisticalJournalEntry",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "StatisticalJournalEntry",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord1446284__1446284": {
+    "displayName": "SF_Quotes",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord1446284__1446284",
+    "properties": [
+      
+    ]
+  },
+  "InventoryAdjustment": {
+    "displayName": "InventoryAdjustment",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "InventoryAdjustment",
+    "properties": [
+      
+    ]
+  },
+  "Partner": {
+    "displayName": "Partner",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "Partner",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_ss_record_subscription_role__458": {
+    "displayName": "Record Subscription Role",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_ss_record_subscription_role__458",
+    "properties": [
+      
+    ]
+  },
+  "Solution": {
+    "displayName": "Solution",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "Solution",
+    "properties": [
+      
+    ]
+  },
+  "ItemFulfillment": {
+    "displayName": "ItemFulfillment",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "ItemFulfillment",
+    "properties": [
+      
+    ]
+  },
+  "vendorReturnAuthorization": {
+    "displayName": "VendorReturnAuthorization",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "vendorReturnAuthorization",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_ns_pivotfields__270": {
+    "displayName": "Search Pivot Field",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_ns_pivotfields__270",
+    "properties": [
+      
+    ]
+  },
+  "billingSchedule": {
+    "displayName": "BillingSchedule",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "billingSchedule",
+    "properties": [
+      
+    ]
+  },
+  "payrollItem": {
+    "displayName": "PayrollItem",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "payrollItem",
+    "properties": [
+      
+    ]
+  },
+  "bomRevision": {
+    "displayName": "BomRevision",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "bomRevision",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord1301883__1301883": {
+    "displayName": "GetCustomizationIdsName327825",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord1301883__1301883",
+    "properties": [
+      
+    ]
+  },
+  "CrmCustomField": {
+    "displayName": "CrmCustomField",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "CrmCustomField",
+    "properties": [
+      
+    ]
+  },
+  "CashSale": {
+    "displayName": "CashSale",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "CashSale",
+    "properties": [
+      
+    ]
+  },
+  "customerSubsidiaryRelationship": {
+    "displayName": "CustomerSubsidiaryRelationship",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "customerSubsidiaryRelationship",
+    "properties": [
+      
+    ]
+  },
+  "CustomerStatus": {
+    "displayName": "CustomerStatus",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "CustomerStatus",
+    "properties": [
+      
+    ]
+  },
+  "CustomerRefund": {
+    "displayName": "CustomerRefund",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "CustomerRefund",
+    "properties": [
+      
+    ]
+  },
+  "LotNumberedInventoryItem": {
+    "displayName": "LotNumberedInventoryItem",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "LotNumberedInventoryItem",
+    "properties": [
+      
+    ]
+  },
+  "periodEndJournal": {
+    "displayName": "PeriodEndJournal",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "periodEndJournal",
+    "properties": [
+      
+    ]
+  },
+  "CustomerDeposit": {
+    "displayName": "CustomerDeposit",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "CustomerDeposit",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_suitesocial_autosub_type__449": {
+    "displayName": "Record Subscription",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_suitesocial_autosub_type__449",
+    "properties": [
+      
+    ]
+  },
+  "PurchaseOrder": {
+    "displayName": "PurchaseOrder",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "PurchaseOrder",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_suitesocial_role__446": {
+    "displayName": "SuiteSocial Role",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_suitesocial_role__446",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_ncfar_altdeprdef__246": {
+    "displayName": "Default Alternate Depreciation",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_ncfar_altdeprdef__246",
+    "properties": [
+      
+    ]
+  },
+  "currencyRate": {
+    "displayName": "CurrencyRate",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "currencyRate",
+    "properties": [
+      
+    ]
+  },
+  "AdvInterCompanyJournalEntry": {
+    "displayName": "AdvInterCompanyJournalEntry",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "AdvInterCompanyJournalEntry",
+    "properties": [
+      
+    ]
+  },
+  "couponCode": {
+    "displayName": "CouponCode",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "couponCode",
+    "properties": [
+      
+    ]
+  },
+  "UnitsType": {
+    "displayName": "UnitsType",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "UnitsType",
+    "properties": [
+      
+    ]
+  },
+  "ItemOptionCustomField": {
+    "displayName": "ItemOptionCustomField",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "ItemOptionCustomField",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_ncfar_transferaccounts__69": {
+    "displayName": "FAM - Asset Transfer Accounts",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_ncfar_transferaccounts__69",
+    "properties": [
+      
+    ]
+  },
+  "merchandiseHierarchyNode": {
+    "displayName": "MerchandiseHierarchyNode",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "merchandiseHierarchyNode",
+    "properties": [
+      
+    ]
+  },
+  "Task": {
+    "displayName": "Task",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "Task",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord1315583__1315583": {
+    "displayName": "GetCustomizationIdsName1614067782555",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord1315583__1315583",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_newsfeed_channel__456": {
+    "displayName": "SuiteSocial Channel",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_newsfeed_channel__456",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_suitesocial_nf_post_link__455": {
+    "displayName": "Newsfeed Post Link",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_suitesocial_nf_post_link__455",
+    "properties": [
+      
+    ]
+  },
+  "VendorCategory": {
+    "displayName": "VendorCategory",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "VendorCategory",
+    "properties": [
+      
+    ]
+  },
+  "CustomRecordCustomField": {
+    "displayName": "CustomRecordCustomField",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "CustomRecordCustomField",
+    "properties": [
+      
+    ]
+  },
+  "PaymentItem": {
+    "displayName": "PaymentItem",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "PaymentItem",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_suitesocial_scripted_record__468": {
+    "displayName": "SuiteSocial Scripted Record",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_suitesocial_scripted_record__468",
+    "properties": [
+      
+    ]
+  },
+  "resourceAllocation": {
+    "displayName": "ResourceAllocation",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "resourceAllocation",
+    "properties": [
+      
+    ]
+  },
+  "NonInventorySaleItem": {
+    "displayName": "NonInventorySaleItem",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "NonInventorySaleItem",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord1453887__1453887": {
+    "displayName": "GetCustomRT_Name_6PXBr0nQ1Y",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord1453887__1453887",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_ncfar_assetproposal__73": {
+    "displayName": "FAM - Asset Proposal",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_ncfar_assetproposal__73",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_suitesocial_status_type__451": {
+    "displayName": "SuiteSocial Status Type",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_suitesocial_status_type__451",
+    "properties": [
+      
+    ]
+  },
+  "accountingPeriod": {
+    "displayName": "AccountingPeriod",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "accountingPeriod",
+    "properties": [
+      
+    ]
+  },
+  "SupportCasePriority": {
+    "displayName": "SupportCasePriority",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "SupportCasePriority",
+    "properties": [
+      
+    ]
+  },
+  "Job": {
+    "displayName": "Job",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "Job",
+    "properties": [
+      
+    ]
+  },
+  "ItemReceipt": {
+    "displayName": "ItemReceipt",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "ItemReceipt",
+    "properties": [
+      
+    ]
+  },
+  "SalesOrder": {
+    "displayName": "SalesOrder",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "SalesOrder",
+    "properties": [
+      
+    ]
+  },
+  "VendorBill": {
+    "displayName": "VendorBill",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "VendorBill",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_ncfar_deprmethod__70": {
+    "displayName": "FAM - Depreciation Method",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_ncfar_deprmethod__70",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord1192280__1192280": {
+    "displayName": "GetCustomRecordRecordName303",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord1192280__1192280",
+    "properties": [
+      
+    ]
+  },
+  "TransactionColumnCustomField": {
+    "displayName": "TransactionColumnCustomField",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "TransactionColumnCustomField",
+    "properties": [
+      
+    ]
+  },
+  "promotionCode": {
+    "displayName": "PromotionCode",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "promotionCode",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord1334083__1334083": {
+    "displayName": "GetCustomizationIdsName1921645",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord1334083__1334083",
+    "properties": [
+      
+    ]
+  },
+  "downloadItem": {
+    "displayName": "DownloadItem",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "downloadItem",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_est_spl__367": {
+    "displayName": "Estimated Special Costs",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_est_spl__367",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_bg_procinstance__247": {
+    "displayName": "BG - Process Instance",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_bg_procinstance__247",
+    "properties": [
+      
+    ]
+  },
+  "LeadSource": {
+    "displayName": "LeadSource",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "LeadSource",
+    "properties": [
+      
+    ]
+  },
+  "TaxGroup": {
+    "displayName": "TaxGroup",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "TaxGroup",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_ssr_ss_related_record__464": {
+    "displayName": "SuiteSocial Related Record",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_ssr_ss_related_record__464",
+    "properties": [
+      
+    ]
+  },
+  "expenseReport": {
+    "displayName": "ExpenseReport",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "expenseReport",
+    "properties": [
+      
+    ]
+  },
+  "PaymentMethod": {
+    "displayName": "PaymentMethod",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "PaymentMethod",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord1296183__1296183": {
+    "displayName": "GetCustomizationIdsName2782026",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord1296183__1296183",
+    "properties": [
+      
+    ]
+  },
+  "purchaseRequisition": {
+    "displayName": "PurchaseRequisition",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "purchaseRequisition",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_2663_payment_aggregation__371": {
+    "displayName": "Payment Aggregation",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_2663_payment_aggregation__371",
+    "properties": [
+      
+    ]
+  },
+  "bom": {
+    "displayName": "Bom",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "bom",
+    "properties": [
+      
+    ]
+  },
+  "nexus": {
+    "displayName": "Nexus",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "nexus",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord11__11": {
+    "displayName": "E-Commerce Survey",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord11__11",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_est_mat__369": {
+    "displayName": "Estimated Material Costs",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_est_mat__369",
+    "properties": [
+      
+    ]
+  },
+  "Message": {
+    "displayName": "Message",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "Message",
+    "properties": [
+      
+    ]
+  },
+  "projectTask": {
+    "displayName": "ProjectTask",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "projectTask",
+    "properties": [
+      
+    ]
+  },
+  "ReturnAuthorization": {
+    "displayName": "ReturnAuthorization",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "ReturnAuthorization",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord1381183__1381183": {
+    "displayName": "GetCustomRecordRecordName6826",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord1381183__1381183",
+    "properties": [
+      
+    ]
+  },
+  "InterCompanyJournalEntry": {
+    "displayName": "InterCompanyJournalEntry",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "InterCompanyJournalEntry",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord1193580__1193580": {
+    "displayName": "CustomRecordTypeForTesting",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord1193580__1193580",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_serial__299": {
+    "displayName": "Serial Numbers",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_serial__299",
+    "properties": [
+      
+    ]
+  },
+  "TransactionBodyCustomField": {
+    "displayName": "TransactionBodyCustomField",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "TransactionBodyCustomField",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_bg_proclog__249": {
+    "displayName": "BG - Process Log",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_bg_proclog__249",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_rctni__444": {
+    "displayName": "Record Code To Name and Id",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_rctni__444",
+    "properties": [
+      
+    ]
+  },
+  "SupportCaseIssue": {
+    "displayName": "SupportCaseIssue",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "SupportCaseIssue",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_pf_kb_sol_fb__279": {
+    "displayName": "KB Solution Feedback",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_pf_kb_sol_fb__279",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord989898__1252082": {
+    "displayName": "TestRecord",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord989898__1252082",
+    "properties": [
+      
+    ]
+  },
+  "NonInventoryResaleItem": {
+    "displayName": "NonInventoryResaleItem",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "NonInventoryResaleItem",
+    "properties": [
+      
+    ]
+  },
+  "Topic": {
+    "displayName": "Topic",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "Topic",
+    "properties": [
+      
+    ]
+  },
+  "SalesTaxItem": {
+    "displayName": "SalesTaxItem",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "SalesTaxItem",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_ep_preference__377": {
+    "displayName": "Electronic Payments Preference",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_ep_preference__377",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_container__284": {
+    "displayName": "Container",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_container__284",
+    "properties": [
+      
+    ]
+  },
+  "itemRevision": {
+    "displayName": "ItemRevision",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "itemRevision",
+    "properties": [
+      
+    ]
+  },
+  "CustomRecordType": {
+    "displayName": "CustomRecordType",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "CustomRecordType",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_est__366": {
+    "displayName": "Estimate",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_est__366",
+    "properties": [
+      
+    ]
+  },
+  "Vendor": {
+    "displayName": "Vendor",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "Vendor",
+    "properties": [
+      
+    ]
+  },
+  "revRecSchedule": {
+    "displayName": "RevRecSchedule",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "revRecSchedule",
+    "properties": [
+      
+    ]
+  },
+  "serializedAssemblyItem": {
+    "displayName": "SerializedAssemblyItem",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "serializedAssemblyItem",
+    "properties": [
+      
+    ]
+  },
+  "Contact": {
+    "displayName": "Contact",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "Contact",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord168__87": {
+    "displayName": "Sq ft added",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord168__87",
+    "properties": [
+      
+    ]
+  },
+  "JobType": {
+    "displayName": "JobType",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "JobType",
+    "properties": [
+      
+    ]
+  },
+  "SalesRole": {
+    "displayName": "SalesRole",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "SalesRole",
+    "properties": [
+      
+    ]
+  },
+  "SupportCaseStatus": {
+    "displayName": "SupportCaseStatus",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "SupportCaseStatus",
+    "properties": [
+      
+    ]
+  },
+  "__customRecordType__customrecord_added_autosub__471": {
+    "displayName": "Suite Social Added AutoSub",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "__customRecordType__customrecord_added_autosub__471",
+    "properties": [
+      
+    ]
+  }
+}

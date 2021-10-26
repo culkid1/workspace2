@@ -1,0 +1,143 @@
+<getCustomizationIdResponse xmlns="urn:messages_2020_2.platform.webservices.netsuite.com">
+    <platformCore:getCustomizationIdResult xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com">
+        <platformCore:status isSuccess="true"/>
+        <platformCore:totalRecords>45</platformCore:totalRecords>
+        <platformCore:customizationRefList>
+            <platformCore:customizationRef scriptId="custbody_powf_ctrl_dt" internalId="219" type="transactionBodyCustomField">
+                <platformCore:name>Controller Approval Date</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody_powf_ctrl_ok" internalId="220" type="transactionBodyCustomField">
+                <platformCore:name>Controller Approval</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody_powf_ctrl" internalId="221" type="transactionBodyCustomField">
+                <platformCore:name>Controller</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody_powf_se_dt" internalId="222" type="transactionBodyCustomField">
+                <platformCore:name>Senior Executive Approval Date</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody_powf_se_ok" internalId="223" type="transactionBodyCustomField">
+                <platformCore:name>Senior Executive Approval</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody_powf_se" internalId="224" type="transactionBodyCustomField">
+                <platformCore:name>Senior Executive</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody_cp" internalId="3" type="transactionBodyCustomField">
+                <platformCore:name>Customer Priority</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody_promisedate" internalId="4" type="transactionBodyCustomField">
+                <platformCore:name>Promise Date</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody9" internalId="196" type="transactionBodyCustomField">
+                <platformCore:name>Vendor Lead Time (Days)</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody_promisedate_2" internalId="197" type="transactionBodyCustomField">
+                <platformCore:name>Promise Date (2)</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody11" internalId="700" type="transactionBodyCustomField">
+                <platformCore:name>Invoice On Hold</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody_reasonforreturn" internalId="702" type="transactionBodyCustomField">
+                <platformCore:name>Reason for Return</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody_pfc_pfitemid" internalId="3142" type="transactionBodyCustomField">
+                <platformCore:name>Picture Frame Item ID</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody14" internalId="3148" type="transactionBodyCustomField">
+                <platformCore:name>Email</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody15" internalId="3149" type="transactionBodyCustomField">
+                <platformCore:name>Contact(s)</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody_cust_priority" internalId="4563" type="transactionBodyCustomField">
+                <platformCore:name>Priority</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody3" internalId="102" type="transactionBodyCustomField">
+                <platformCore:name>Inspected By</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody4" internalId="103" type="transactionBodyCustomField">
+                <platformCore:name>Inspection Date</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody5" internalId="104" type="transactionBodyCustomField">
+                <platformCore:name>Failed inspection?</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody6" internalId="105" type="transactionBodyCustomField">
+                <platformCore:name>Inspection Test 1</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody7" internalId="106" type="transactionBodyCustomField">
+                <platformCore:name>Inspection Test 2</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody8" internalId="107" type="transactionBodyCustomField">
+                <platformCore:name>Comments</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody_fmt_req_sales_manager_app" internalId="174" type="transactionBodyCustomField">
+                <platformCore:name>Requires Sales Manager Approval</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody_fmt_sales_manager_app" internalId="169" type="transactionBodyCustomField">
+                <platformCore:name>Sales Manager Approved</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody_fmt_sales_manager_app_date" internalId="172" type="transactionBodyCustomField">
+                <platformCore:name>Sales Manager Approved Date</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody_fmt_sales_manager_declined" internalId="171" type="transactionBodyCustomField">
+                <platformCore:name>Sales Manager Declined</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody_fmt_senior_executive_app" internalId="168" type="transactionBodyCustomField">
+                <platformCore:name>Senior Executive Approved</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody_fmt_senior_executive_app_date" internalId="173" type="transactionBodyCustomField">
+                <platformCore:name>Senior Executive Approved Date</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody_fmt_senior_exec_declined" internalId="167" type="transactionBodyCustomField">
+                <platformCore:name>Senior Executive Declined</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody19" internalId="3154" type="transactionBodyCustomField">
+                <platformCore:name>Machine Shop</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody20" internalId="3155" type="transactionBodyCustomField">
+                <platformCore:name>Shipping Dept</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody10" internalId="230" type="transactionBodyCustomField">
+                <platformCore:name>Shipment Status</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody_fmt_finance_app" internalId="179" type="transactionBodyCustomField">
+                <platformCore:name>Finance Approved</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody_fmt_req_financial_app" internalId="180" type="transactionBodyCustomField">
+                <platformCore:name>Requires Finance Approval</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody_fmt_finance_declined" internalId="181" type="transactionBodyCustomField">
+                <platformCore:name>Finance Declined</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody_fmt_finance_app_date" internalId="182" type="transactionBodyCustomField">
+                <platformCore:name>Finance Approved Date</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody1" internalId="1" type="transactionBodyCustomField">
+                <platformCore:name>Customer Phone</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody2" internalId="2" type="transactionBodyCustomField">
+                <platformCore:name>Delivery Instructions</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody12" internalId="3146" type="transactionBodyCustomField">
+                <platformCore:name>Item</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody13" internalId="3147" type="transactionBodyCustomField">
+                <platformCore:name>Serial/Lot Number</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody16" internalId="3150" type="transactionBodyCustomField">
+                <platformCore:name>Phone Number</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody17" internalId="3151" type="transactionBodyCustomField">
+                <platformCore:name>Copy Employees</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbody18" internalId="3153" type="transactionBodyCustomField">
+                <platformCore:name>Assy Dept</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbodytestbodyfield" internalId="4575" type="transactionBodyCustomField">
+                <platformCore:name>TEST BODY FIELD</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custbodycustbody_pacejet_shipped_metho" internalId="4588" type="transactionBodyCustomField">
+                <platformCore:name>custbody_pacejet_shipped_method</platformCore:name>
+            </platformCore:customizationRef>
+        </platformCore:customizationRefList>
+    </platformCore:getCustomizationIdResult>
+</getCustomizationIdResponse>

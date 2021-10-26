@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="ad5c9767-6320-40d7-a161-6e060550203b" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="my_db_mysqlFlow" doc:id="3115f416-5c00-4ec9-aa41-ccf0d4943ee3" >
+		<http:listener doc:name="Listener" doc:id="9be68578-3da0-4747-9411-a9c45ba222ed" config-ref="HTTP_Listener_config" path="db"/>
+		<ee:transform doc:name="Transform Message" doc:id="08c1925f-084e-49e8-8c0a-34d51b4dd6dd" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+payload map ( payload01 , indexOfPayload01 ) -> {
+	StateId: payload01.StateId,
+	StateName: payload01.StateName,
+	CountryId: payload01.CountryId,
+	Abbreviation: payload01.Abbreviation
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<logger level="INFO" doc:name="Logger" doc:id="4eb55f07-edac-4bdc-96c1-5f23f13698e6" message="#[payload]"/>
+	</flow>
+</mule>

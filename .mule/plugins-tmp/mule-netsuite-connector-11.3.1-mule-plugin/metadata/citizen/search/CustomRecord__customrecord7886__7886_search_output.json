@@ -1,0 +1,1183 @@
+{
+  "format": "java",
+  "type": "Array",
+  "annotations": {
+    "classInformation": {
+      "classname": "java.util.Iterator",
+      "hasDefaultConstructor": false,
+      "isInterface": true,
+      "isInstantiable": false,
+      "isAbstract": true,
+      "isFinal": false,
+      "implementedInterfaces": [
+        
+      ],
+      "parent": "",
+      "genericTypes": [
+        
+      ],
+      "isMap": false
+    }
+  },
+  "item": {
+    "format": "xml",
+    "type": "Object",
+    "annotations": {
+      "label": "All fields custom type"
+    },
+    "fields": [
+      {
+        "key": {
+          "name": "{urn:core_2020_2.platform.webservices.netsuite.com}record",
+          "annotations": {
+            "label": "Record"
+          },
+          "attributes": [
+            {
+              "key": {
+                "name": "internalId"
+              },
+              "model": {
+                "type": "String"
+              }
+            },
+            {
+              "key": {
+                "name": "externalId"
+              },
+              "model": {
+                "type": "String"
+              }
+            }
+          ],
+          "required": "true"
+        },
+        "model": {
+          "type": "Object",
+          "annotations": {
+            "typeId": "{urn:customization_2020_2.setup.webservices.netsuite.com}CustomRecord"
+          },
+          "ordered": true,
+          "fields": [
+            {
+              "key": {
+                "name": "{urn:core_2020_2.platform.webservices.netsuite.com}nullFieldList",
+                "annotations": {
+                  "label": "Null Field List"
+                }
+              },
+              "model": {
+                "type": "Object",
+                "annotations": {
+                  "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}NullField"
+                },
+                "ordered": true,
+                "fields": [
+                  {
+                    "key": {
+                      "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                      "annotations": {
+                        "label": "Name"
+                      },
+                      "repeated": "true"
+                    },
+                    "model": {
+                      "type": "String"
+                    }
+                  }
+                ]
+              },
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}NullField"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}customRecordId",
+                "annotations": {
+                  "label": "Custom Record Id"
+                }
+              },
+              "model": {
+                "type": "String"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}customForm",
+                "annotations": {
+                  "label": "Custom Form"
+                },
+                "attributes": [
+                  {
+                    "key": {
+                      "name": "internalId"
+                    },
+                    "model": {
+                      "type": "String"
+                    }
+                  },
+                  {
+                    "key": {
+                      "name": "externalId"
+                    },
+                    "model": {
+                      "type": "String"
+                    }
+                  },
+                  {
+                    "key": {
+                      "name": "type"
+                    },
+                    "model": {
+                      "type": "String"
+                    }
+                  }
+                ]
+              },
+              "model": {
+                "type": "Object",
+                "annotations": {
+                  "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+                },
+                "ordered": true,
+                "fields": [
+                  {
+                    "key": {
+                      "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                      "annotations": {
+                        "label": "Name"
+                      }
+                    },
+                    "model": {
+                      "type": "String"
+                    }
+                  }
+                ]
+              },
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}isInactive",
+                "annotations": {
+                  "label": "Is Inactive"
+                }
+              },
+              "model": {
+                "type": "Boolean"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}parent",
+                "annotations": {
+                  "label": "Parent"
+                },
+                "attributes": [
+                  {
+                    "key": {
+                      "name": "internalId"
+                    },
+                    "model": {
+                      "type": "String"
+                    }
+                  },
+                  {
+                    "key": {
+                      "name": "externalId"
+                    },
+                    "model": {
+                      "type": "String"
+                    }
+                  },
+                  {
+                    "key": {
+                      "name": "type"
+                    },
+                    "model": {
+                      "type": "String"
+                    }
+                  }
+                ]
+              },
+              "model": {
+                "type": "Object",
+                "annotations": {
+                  "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+                },
+                "ordered": true,
+                "fields": [
+                  {
+                    "key": {
+                      "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                      "annotations": {
+                        "label": "Name"
+                      }
+                    },
+                    "model": {
+                      "type": "String"
+                    }
+                  }
+                ]
+              },
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}disclaimer",
+                "annotations": {
+                  "label": "Disclaimer"
+                }
+              },
+              "model": {
+                "type": "String"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}created",
+                "annotations": {
+                  "label": "Created"
+                }
+              },
+              "model": {
+                "type": "DateTime"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}lastModified",
+                "annotations": {
+                  "label": "Last Modified"
+                }
+              },
+              "model": {
+                "type": "DateTime"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}name",
+                "annotations": {
+                  "label": "Name"
+                }
+              },
+              "model": {
+                "type": "String"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}autoName",
+                "annotations": {
+                  "label": "Auto Name"
+                }
+              },
+              "model": {
+                "type": "Boolean"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}altName",
+                "annotations": {
+                  "label": "Alt Name"
+                }
+              },
+              "model": {
+                "type": "String"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}owner",
+                "annotations": {
+                  "label": "Owner"
+                },
+                "attributes": [
+                  {
+                    "key": {
+                      "name": "internalId"
+                    },
+                    "model": {
+                      "type": "String"
+                    }
+                  },
+                  {
+                    "key": {
+                      "name": "externalId"
+                    },
+                    "model": {
+                      "type": "String"
+                    }
+                  },
+                  {
+                    "key": {
+                      "name": "type"
+                    },
+                    "model": {
+                      "type": "String"
+                    }
+                  }
+                ]
+              },
+              "model": {
+                "type": "Object",
+                "annotations": {
+                  "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+                },
+                "ordered": true,
+                "fields": [
+                  {
+                    "key": {
+                      "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                      "annotations": {
+                        "label": "Name"
+                      }
+                    },
+                    "model": {
+                      "type": "String"
+                    }
+                  }
+                ]
+              },
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}recType",
+                "annotations": {
+                  "label": "Rec Type"
+                },
+                "attributes": [
+                  {
+                    "key": {
+                      "name": "internalId"
+                    },
+                    "model": {
+                      "type": "String"
+                    }
+                  },
+                  {
+                    "key": {
+                      "name": "externalId"
+                    },
+                    "model": {
+                      "type": "String"
+                    }
+                  },
+                  {
+                    "key": {
+                      "name": "type"
+                    },
+                    "model": {
+                      "type": "String"
+                    }
+                  }
+                ]
+              },
+              "model": {
+                "type": "Object",
+                "annotations": {
+                  "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+                },
+                "ordered": true,
+                "fields": [
+                  {
+                    "key": {
+                      "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                      "annotations": {
+                        "label": "Name"
+                      }
+                    },
+                    "model": {
+                      "type": "String"
+                    }
+                  }
+                ]
+              },
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}enableNumbering",
+                "annotations": {
+                  "label": "Enable Numbering"
+                }
+              },
+              "model": {
+                "type": "Boolean"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}numberingPrefix",
+                "annotations": {
+                  "label": "Numbering Prefix"
+                }
+              },
+              "model": {
+                "type": "String"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}numberingSuffix",
+                "annotations": {
+                  "label": "Numbering Suffix"
+                }
+              },
+              "model": {
+                "type": "String"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}numberingMinDigits",
+                "annotations": {
+                  "label": "Numbering Min Digits"
+                }
+              },
+              "model": {
+                "type": "Number",
+                "annotations": {
+                  "int": {
+                    
+                  }
+                }
+              },
+              "annotations": {
+                "range": {
+                  "from": -9.223372036854776E+18,
+                  "to": 9.223372036854776E+18
+                }
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}description",
+                "annotations": {
+                  "label": "Description"
+                }
+              },
+              "model": {
+                "type": "String"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}numberingInit",
+                "annotations": {
+                  "label": "Numbering Init"
+                }
+              },
+              "model": {
+                "type": "Number",
+                "annotations": {
+                  "int": {
+                    
+                  }
+                }
+              },
+              "annotations": {
+                "range": {
+                  "from": -9.223372036854776E+18,
+                  "to": 9.223372036854776E+18
+                }
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}numberingCurrentNumber",
+                "annotations": {
+                  "label": "Numbering Current Number"
+                }
+              },
+              "model": {
+                "type": "Number",
+                "annotations": {
+                  "int": {
+                    
+                  }
+                }
+              },
+              "annotations": {
+                "range": {
+                  "from": -9.223372036854776E+18,
+                  "to": 9.223372036854776E+18
+                }
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}allowNumberingOverride",
+                "annotations": {
+                  "label": "Allow Numbering Override"
+                }
+              },
+              "model": {
+                "type": "Boolean"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}isNumberingUpdateable",
+                "annotations": {
+                  "label": "Is Numbering Updateable"
+                }
+              },
+              "model": {
+                "type": "Boolean"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}translationsList",
+                "annotations": {
+                  "label": "Translations List"
+                },
+                "attributes": [
+                  {
+                    "key": {
+                      "name": "replaceAll"
+                    },
+                    "model": {
+                      "type": "String"
+                    }
+                  }
+                ]
+              },
+              "model": {
+                "type": "Object",
+                "annotations": {
+                  "typeId": "{urn:customization_2020_2.setup.webservices.netsuite.com}CustomRecordTranslationsList"
+                },
+                "ordered": true,
+                "fields": [
+                  {
+                    "key": {
+                      "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}customRecordTranslations",
+                      "annotations": {
+                        "label": "Custom Record Translations"
+                      },
+                      "repeated": "true"
+                    },
+                    "model": {
+                      "type": "Object",
+                      "annotations": {
+                        "typeId": "{urn:customization_2020_2.setup.webservices.netsuite.com}CustomRecordTranslations"
+                      },
+                      "ordered": true,
+                      "fields": [
+                        {
+                          "key": {
+                            "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}locale",
+                            "annotations": {
+                              "label": "Locale"
+                            }
+                          },
+                          "model": {
+                            "type": "String",
+                            "annotations": {
+                              "enum": {
+                                "type": "[Ljava.lang.String;",
+                                "values": [
+                                  "_afrikaans",
+                                  "_albanian",
+                                  "_arabic",
+                                  "_armenian",
+                                  "_bengali",
+                                  "_bosnian",
+                                  "_bulgarian",
+                                  "_catalan",
+                                  "_chineseSimplified",
+                                  "_chineseTraditional",
+                                  "_croatian",
+                                  "_czech",
+                                  "_danish",
+                                  "_dutch",
+                                  "_englishAu",
+                                  "_englishCa",
+                                  "_englishInternational",
+                                  "_englishUK",
+                                  "_englishUS",
+                                  "_estonian",
+                                  "_filipino",
+                                  "_finnish",
+                                  "_frenchCanada",
+                                  "_frenchFrance",
+                                  "_german",
+                                  "_greek",
+                                  "_gujarati",
+                                  "_haitian",
+                                  "_hebrew",
+                                  "_hindi",
+                                  "_hungarian",
+                                  "_icelandic",
+                                  "_indonesian",
+                                  "_italian",
+                                  "_japanese",
+                                  "_kannada",
+                                  "_korean",
+                                  "_latinAmericanSpanish",
+                                  "_latvian",
+                                  "_lithuanian",
+                                  "_luxembourgish",
+                                  "_malay",
+                                  "_marathi",
+                                  "_norwegian",
+                                  "_persianIran",
+                                  "_polish",
+                                  "_portugueseBrazil",
+                                  "_portuguesePortugal",
+                                  "_punjabi",
+                                  "_romanian",
+                                  "_russian",
+                                  "_serbianCyrillic",
+                                  "_serbianLatin",
+                                  "_slovak",
+                                  "_slovenian",
+                                  "_spanish",
+                                  "_swedish",
+                                  "_tamil",
+                                  "_telugu",
+                                  "_thai",
+                                  "_turkish",
+                                  "_ukrainian",
+                                  "_vietnamese"
+                                ]
+                              }
+                            }
+                          },
+                          "annotations": {
+                            "enum": {
+                              "type": "[Ljava.lang.String;",
+                              "values": [
+                                "_afrikaans",
+                                "_albanian",
+                                "_arabic",
+                                "_armenian",
+                                "_bengali",
+                                "_bosnian",
+                                "_bulgarian",
+                                "_catalan",
+                                "_chineseSimplified",
+                                "_chineseTraditional",
+                                "_croatian",
+                                "_czech",
+                                "_danish",
+                                "_dutch",
+                                "_englishAu",
+                                "_englishCa",
+                                "_englishInternational",
+                                "_englishUK",
+                                "_englishUS",
+                                "_estonian",
+                                "_filipino",
+                                "_finnish",
+                                "_frenchCanada",
+                                "_frenchFrance",
+                                "_german",
+                                "_greek",
+                                "_gujarati",
+                                "_haitian",
+                                "_hebrew",
+                                "_hindi",
+                                "_hungarian",
+                                "_icelandic",
+                                "_indonesian",
+                                "_italian",
+                                "_japanese",
+                                "_kannada",
+                                "_korean",
+                                "_latinAmericanSpanish",
+                                "_latvian",
+                                "_lithuanian",
+                                "_luxembourgish",
+                                "_malay",
+                                "_marathi",
+                                "_norwegian",
+                                "_persianIran",
+                                "_polish",
+                                "_portugueseBrazil",
+                                "_portuguesePortugal",
+                                "_punjabi",
+                                "_romanian",
+                                "_russian",
+                                "_serbianCyrillic",
+                                "_serbianLatin",
+                                "_slovak",
+                                "_slovenian",
+                                "_spanish",
+                                "_swedish",
+                                "_tamil",
+                                "_telugu",
+                                "_thai",
+                                "_turkish",
+                                "_ukrainian",
+                                "_vietnamese"
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "key": {
+                            "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}language",
+                            "annotations": {
+                              "label": "Language"
+                            }
+                          },
+                          "model": {
+                            "type": "String"
+                          }
+                        },
+                        {
+                          "key": {
+                            "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}label",
+                            "annotations": {
+                              "label": "Label"
+                            }
+                          },
+                          "model": {
+                            "type": "String"
+                          }
+                        }
+                      ]
+                    },
+                    "annotations": {
+                      "typeId": "{urn:customization_2020_2.setup.webservices.netsuite.com}CustomRecordTranslations"
+                    }
+                  }
+                ]
+              },
+              "annotations": {
+                "typeId": "{urn:customization_2020_2.setup.webservices.netsuite.com}CustomRecordTranslationsList"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}includeName",
+                "annotations": {
+                  "label": "Include Name"
+                }
+              },
+              "model": {
+                "type": "Boolean"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}showId",
+                "annotations": {
+                  "label": "Show Id"
+                }
+              },
+              "model": {
+                "type": "Boolean"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}showCreationDate",
+                "annotations": {
+                  "label": "Show Creation Date"
+                }
+              },
+              "model": {
+                "type": "Boolean"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}showCreationDateOnList",
+                "annotations": {
+                  "label": "Show Creation Date On List"
+                }
+              },
+              "model": {
+                "type": "Boolean"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}showLastModified",
+                "annotations": {
+                  "label": "Show Last Modified"
+                }
+              },
+              "model": {
+                "type": "Boolean"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}showLastModifiedOnList",
+                "annotations": {
+                  "label": "Show Last Modified On List"
+                }
+              },
+              "model": {
+                "type": "Boolean"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}showOwner",
+                "annotations": {
+                  "label": "Show Owner"
+                }
+              },
+              "model": {
+                "type": "Boolean"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}showOwnerOnList",
+                "annotations": {
+                  "label": "Show Owner On List"
+                }
+              },
+              "model": {
+                "type": "Boolean"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}showOwnerAllowChange",
+                "annotations": {
+                  "label": "Show Owner Allow Change"
+                }
+              },
+              "model": {
+                "type": "Boolean"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}usePermissions",
+                "annotations": {
+                  "label": "Use Permissions"
+                }
+              },
+              "model": {
+                "type": "Boolean"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}allowAttachments",
+                "annotations": {
+                  "label": "Allow Attachments"
+                }
+              },
+              "model": {
+                "type": "Boolean"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}showNotes",
+                "annotations": {
+                  "label": "Show Notes"
+                }
+              },
+              "model": {
+                "type": "Boolean"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}enablEmailMerge",
+                "annotations": {
+                  "label": "Enabl Email Merge"
+                }
+              },
+              "model": {
+                "type": "Boolean"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}isOrdered",
+                "annotations": {
+                  "label": "Is Ordered"
+                }
+              },
+              "model": {
+                "type": "Boolean"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}allowInlineEditing",
+                "annotations": {
+                  "label": "Allow Inline Editing"
+                }
+              },
+              "model": {
+                "type": "Boolean"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}isAvailableOffline",
+                "annotations": {
+                  "label": "Is Available Offline"
+                }
+              },
+              "model": {
+                "type": "Boolean"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}allowQuickSearch",
+                "annotations": {
+                  "label": "Allow Quick Search"
+                }
+              },
+              "model": {
+                "type": "Boolean"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}recordName",
+                "annotations": {
+                  "label": "Record Name"
+                }
+              },
+              "model": {
+                "type": "String"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}scriptId",
+                "annotations": {
+                  "label": "Script Id"
+                }
+              },
+              "model": {
+                "type": "String"
+              }
+            },
+            {
+              "key": {
+                "name": "{urn:customization_2020_2.setup.webservices.netsuite.com}customFieldList",
+                "annotations": {
+                  "label": "Custom Field List"
+                }
+              },
+              "model": {
+                "type": "Object",
+                "fields": [
+                  {
+                    "key": {
+                      "name": "{urn:core_2020_2.platform.webservices.netsuite.com}BooleanCustomFieldRef__custrecord1409__4627",
+                      "annotations": {
+                        "label": "BooleanField"
+                      }
+                    },
+                    "model": {
+                      "type": "Boolean"
+                    }
+                  },
+                  {
+                    "key": {
+                      "name": "{urn:core_2020_2.platform.webservices.netsuite.com}DateCustomFieldRef__custrecord1404__4622",
+                      "annotations": {
+                        "label": "DateField"
+                      }
+                    },
+                    "model": {
+                      "type": "DateTime",
+                      "annotations": {
+                        "pattern": "YYYY-MM-DDThh:mm:ss"
+                      }
+                    }
+                  },
+                  {
+                    "key": {
+                      "name": "{urn:core_2020_2.platform.webservices.netsuite.com}DoubleCustomFieldRef__custrecord1405__4623",
+                      "annotations": {
+                        "label": "DoubleField"
+                      }
+                    },
+                    "model": {
+                      "type": "Number"
+                    }
+                  },
+                  {
+                    "key": {
+                      "name": "{urn:core_2020_2.platform.webservices.netsuite.com}LongCustomFieldRef__custrecord1408__4626",
+                      "annotations": {
+                        "label": "IntegerField"
+                      }
+                    },
+                    "model": {
+                      "type": "Number",
+                      "annotations": {
+                        "range": {
+                          "from": -9.223372036854776E+18,
+                          "to": 9.223372036854776E+18
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "key": {
+                      "name": "{urn:core_2020_2.platform.webservices.netsuite.com}MultiSelectCustomFieldRef__custrecord1407__4625",
+                      "annotations": {
+                        "label": "MultiSelectAccount"
+                      }
+                    },
+                    "model": {
+                      "type": "Object",
+                      "fields": [
+                        {
+                          "key": {
+                            "name": "{urn:core_2020_2.platform.webservices.netsuite.com}value",
+                            "annotations": {
+                              "label": "Value"
+                            },
+                            "attributes": [
+                              {
+                                "key": {
+                                  "name": "internalId"
+                                },
+                                "model": {
+                                  "type": "String"
+                                }
+                              },
+                              {
+                                "key": {
+                                  "name": "externalId"
+                                },
+                                "model": {
+                                  "type": "String"
+                                }
+                              },
+                              {
+                                "key": {
+                                  "name": "typeId"
+                                },
+                                "model": {
+                                  "type": "String"
+                                }
+                              }
+                            ],
+                            "repeated": "true",
+                            "required": "true"
+                          },
+                          "model": {
+                            "type": "Object",
+                            "annotations": {
+                              "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}ListOrRecordRef"
+                            },
+                            "ordered": true,
+                            "fields": [
+                              {
+                                "key": {
+                                  "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                                  "annotations": {
+                                    "label": "Name"
+                                  }
+                                },
+                                "model": {
+                                  "type": "String"
+                                }
+                              }
+                            ]
+                          },
+                          "annotations": {
+                            "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}ListOrRecordRef"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "key": {
+                      "name": "{urn:core_2020_2.platform.webservices.netsuite.com}SelectCustomFieldRef__custrecord1406__4624",
+                      "annotations": {
+                        "label": "SelectField"
+                      },
+                      "attributes": [
+                        {
+                          "key": {
+                            "name": "internalId"
+                          },
+                          "model": {
+                            "type": "String"
+                          }
+                        },
+                        {
+                          "key": {
+                            "name": "externalId"
+                          },
+                          "model": {
+                            "type": "String"
+                          }
+                        },
+                        {
+                          "key": {
+                            "name": "typeId"
+                          },
+                          "model": {
+                            "type": "String"
+                          }
+                        }
+                      ]
+                    },
+                    "model": {
+                      "type": "Object",
+                      "annotations": {
+                        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}ListOrRecordRef"
+                      },
+                      "ordered": true,
+                      "fields": [
+                        {
+                          "key": {
+                            "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                            "annotations": {
+                              "label": "Name"
+                            }
+                          },
+                          "model": {
+                            "type": "String"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "key": {
+                      "name": "{urn:core_2020_2.platform.webservices.netsuite.com}StringCustomFieldRef__custrecord1403__4621",
+                      "annotations": {
+                        "label": "StringLabel"
+                      }
+                    },
+                    "model": {
+                      "type": "String"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

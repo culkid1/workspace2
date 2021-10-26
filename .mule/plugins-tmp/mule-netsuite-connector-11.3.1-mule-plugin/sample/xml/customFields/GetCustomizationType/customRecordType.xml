@@ -1,0 +1,329 @@
+<getCustomizationIdResponse xmlns="urn:messages_2020_2.platform.webservices.netsuite.com">
+    <platformCore:getCustomizationIdResult xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com">
+        <platformCore:status isSuccess="true"/>
+        <platformCore:totalRecords>107</platformCore:totalRecords>
+        <platformCore:customizationRefList>
+            <platformCore:customizationRef scriptId="customrecord11" internalId="11" type="customRecordType">
+                <platformCore:name>E-Commerce Survey</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord31" internalId="31" type="customRecordType">
+                <platformCore:name>Board Plan: Revenue Target</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_gus_tr" internalId="42" type="customRecordType">
+                <platformCore:name>Travel Request</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_ncbgp_procinstance" internalId="52" type="customRecordType">
+                <platformCore:name>NC - Process Instance</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_ncbgp_proclog" internalId="53" type="customRecordType">
+                <platformCore:name>NC - Process Log</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_ncfar_assettype" internalId="65" type="customRecordType">
+                <platformCore:name>FAM - Asset Type</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_ncfar_systemsetup" internalId="66" type="customRecordType">
+                <platformCore:name>FAM - System Setup</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_assetlifetimes" internalId="67" type="customRecordType">
+                <platformCore:name>FAM - Lifetimes</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_ncfar_expenseincome" internalId="68" type="customRecordType">
+                <platformCore:name>FAM - Expense/Income</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_ncfar_transferaccounts" internalId="69" type="customRecordType">
+                <platformCore:name>FAM - Asset Transfer Accounts</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_ncfar_deprmethod" internalId="70" type="customRecordType">
+                <platformCore:name>FAM - Depreciation Method</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_repairmaintsubcategory" internalId="71" type="customRecordType">
+                <platformCore:name>FAM - Repair & Maint Sub A</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_repairmaintsubcategoryb" internalId="72" type="customRecordType">
+                <platformCore:name>FAM - Repair & Maint Sub B</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_ncfar_assetproposal" internalId="73" type="customRecordType">
+                <platformCore:name>FAM - Asset Proposal</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_ncfar_assetusage" internalId="74" type="customRecordType">
+                <platformCore:name>FAM - Asset Usage</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_ncfar_deprhistory" internalId="75" type="customRecordType">
+                <platformCore:name>FAM - Depreciation History</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_ncfar_proposaldates" internalId="76" type="customRecordType">
+                <platformCore:name>FAM - Last Proposal Dates</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_ncfar_asset" internalId="77" type="customRecordType">
+                <platformCore:name>FAM - Asset</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_repairmaintcategory" internalId="78" type="customRecordType">
+                <platformCore:name>FAM - Repair & Maint Category</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_eperform_ez_review_form" internalId="140" type="customRecordType">
+                <platformCore:name>eP EZ Review Form</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_ncfar_altdeprdef" internalId="246" type="customRecordType">
+                <platformCore:name>Default Alternate Depreciation</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_bg_procinstance" internalId="247" type="customRecordType">
+                <platformCore:name>BG - Process Instance</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_ncfar_altdepr_proposal" internalId="248" type="customRecordType">
+                <platformCore:name>Alternate Depreciation</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_bg_proclog" internalId="249" type="customRecordType">
+                <platformCore:name>BG - Process Log</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_ncfar_altdepreciation" internalId="250" type="customRecordType">
+                <platformCore:name>FAM - Alternate Depreciation</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_ncfar_altmethods" internalId="251" type="customRecordType">
+                <platformCore:name>FAM - Alternate Methods</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_ns_pivotlayout" internalId="269" type="customRecordType">
+                <platformCore:name>Search Pivot Layout</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_ns_pivotfields" internalId="270" type="customRecordType">
+                <platformCore:name>Search Pivot Field</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_pf_kb_sol_fb" internalId="279" type="customRecordType">
+                <platformCore:name>KB Solution Feedback</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_container" internalId="284" type="customRecordType">
+                <platformCore:name>Container</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_container_details" internalId="285" type="customRecordType">
+                <platformCore:name>Container Details</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_pfc_configuration" internalId="288" type="customRecordType">
+                <platformCore:name>Picture Frame Configuration</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_serial" internalId="299" type="customRecordType">
+                <platformCore:name>Serial Numbers</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_est" internalId="366" type="customRecordType">
+                <platformCore:name>Estimate</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_est_spl" internalId="367" type="customRecordType">
+                <platformCore:name>Estimated Special Costs</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_est_lab" internalId="368" type="customRecordType">
+                <platformCore:name>Estimated Labor Costs</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_est_mat" internalId="369" type="customRecordType">
+                <platformCore:name>Estimated Material Costs</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_ep_proc_results" internalId="370" type="customRecordType">
+                <platformCore:name>EP Thread Processing Results</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_2663_payment_aggregation" internalId="371" type="customRecordType">
+                <platformCore:name>Payment Aggregation</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_2663_entity_bank_details" internalId="372" type="customRecordType">
+                <platformCore:name>Entity Bank Details</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_2663_batch" internalId="373" type="customRecordType">
+                <platformCore:name>Payment Batch</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_2663_bank_details" internalId="374" type="customRecordType">
+                <platformCore:name>Company Bank Details</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_2663_payment_schedule" internalId="375" type="customRecordType">
+                <platformCore:name>Payment Schedule</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_2663_format_details" internalId="376" type="customRecordType">
+                <platformCore:name>Format Details</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_ep_preference" internalId="377" type="customRecordType">
+                <platformCore:name>Electronic Payments Preference</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_2663_bill_eft_payment" internalId="378" type="customRecordType">
+                <platformCore:name>Bill EFT Payment Information</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_2663_payment_file_format" internalId="379" type="customRecordType">
+                <platformCore:name>Payment File Format</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_2663_file_admin" internalId="380" type="customRecordType">
+                <platformCore:name>Payment File Administration</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_2663_bill_eft_details" internalId="381" type="customRecordType">
+                <platformCore:name>Bill EFT Details</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_suitesocial_subscription" internalId="438" type="customRecordType">
+                <platformCore:name>SuiteSocial Subscription</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_ss_subscription_link_sub" internalId="439" type="customRecordType">
+                <platformCore:name>My Related Record Subscription</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_scheduled_script_queue" internalId="440" type="customRecordType">
+                <platformCore:name>Scheduled Script Queue</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_suitesocial_autopost_field" internalId="441" type="customRecordType">
+                <platformCore:name>Tracked Field</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_autopost_schedule" internalId="442" type="customRecordType">
+                <platformCore:name>SuiteSocial Auto Post Schedule</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_newsfeed_icon" internalId="443" type="customRecordType">
+                <platformCore:name>SuiteSocial Icon</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_rctni" internalId="444" type="customRecordType">
+                <platformCore:name>Record Code To Name and Id</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_suitesocial_colleague" internalId="445" type="customRecordType">
+                <platformCore:name>SuiteSocial Colleague</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_suitesocial_role" internalId="446" type="customRecordType">
+                <platformCore:name>SuiteSocial Role</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_autopost" internalId="447" type="customRecordType">
+                <platformCore:name>Scheduled Post</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_ss_def_autosub_type" internalId="448" type="customRecordType">
+                <platformCore:name>Default Record Subscription</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_suitesocial_autosub_type" internalId="449" type="customRecordType">
+                <platformCore:name>Record Subscription</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_ss_my_saved_search_sub" internalId="450" type="customRecordType">
+                <platformCore:name>My Saved Search Subscription</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_suitesocial_status_type" internalId="451" type="customRecordType">
+                <platformCore:name>SuiteSocial Status Type</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_suitesocial_record" internalId="452" type="customRecordType">
+                <platformCore:name>SuiteSocial Record</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_suitesocial_digest_schedule" internalId="453" type="customRecordType">
+                <platformCore:name>SuiteSocial Digest Schedule</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_ss_saved_search_subs" internalId="454" type="customRecordType">
+                <platformCore:name>Saved Search Subscription</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_suitesocial_nf_post_link" internalId="455" type="customRecordType">
+                <platformCore:name>Newsfeed Post Link</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_newsfeed_channel" internalId="456" type="customRecordType">
+                <platformCore:name>SuiteSocial Channel</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_exclude_track_field" internalId="457" type="customRecordType">
+                <platformCore:name>Exclude Tracked Field</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_ss_record_subscription_role" internalId="458" type="customRecordType">
+                <platformCore:name>Record Subscription Role</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_suitesocial_field" internalId="459" type="customRecordType">
+                <platformCore:name>SuiteSocial Field</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_ss_subscription_link" internalId="460" type="customRecordType">
+                <platformCore:name>Related Record Subscription</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_newsfeed" internalId="461" type="customRecordType">
+                <platformCore:name>SuiteSocial News Feed</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_suitesocial_autosubscribe" internalId="462" type="customRecordType">
+                <platformCore:name>SuiteSocial Auto Subscribe</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_suitesocial_profile_channel" internalId="463" type="customRecordType">
+                <platformCore:name>SuiteSocial Profile Channel</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_ssr_ss_related_record" internalId="464" type="customRecordType">
+                <platformCore:name>SuiteSocial Related Record</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_suitesocial_profile" internalId="465" type="customRecordType">
+                <platformCore:name>SuiteSocial Profile</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_ss_def_autosub_role" internalId="466" type="customRecordType">
+                <platformCore:name>Default Subscription Role</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_suitesocial_status" internalId="467" type="customRecordType">
+                <platformCore:name>SuiteSocial Status</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_suitesocial_scripted_record" internalId="468" type="customRecordType">
+                <platformCore:name>SuiteSocial Scripted Record</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_ss_mock_inbox" internalId="469" type="customRecordType">
+                <platformCore:name>SuiteSocial Mock Inbox</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_ss_internal_setting" internalId="470" type="customRecordType">
+                <platformCore:name>SuiteSocial Internal Setting</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_added_autosub" internalId="471" type="customRecordType">
+                <platformCore:name>Suite Social Added AutoSub</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_record_fld_definition" internalId="472" type="customRecordType">
+                <platformCore:name>Record Field Definition</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_suitesocial_standard_record" internalId="473" type="customRecordType">
+                <platformCore:name>SuiteSocial Standard Record</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_rm_searchcriteria" internalId="474" type="customRecordType">
+                <platformCore:name>Project Task Manager Criteria</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_rm_search" internalId="475" type="customRecordType">
+                <platformCore:name>Project Task Manager Search</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord1186280" internalId="1186280" type="customRecordType">
+                <platformCore:name>getCustomRecordRecordName5434</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord1187480" internalId="1187480" type="customRecordType">
+                <platformCore:name>getCustomRecordRecordName1690</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord1188081" internalId="1188081" type="customRecordType">
+                <platformCore:name>getCustomRecordRecordName31</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord1191581" internalId="1191581" type="customRecordType">
+                <platformCore:name>getCustomRecordRecordName1664</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord1192280" internalId="1192280" type="customRecordType">
+                <platformCore:name>getCustomRecordRecordName303</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord1193580" internalId="1193580" type="customRecordType">
+                <platformCore:name>customRecordTypeForTesting</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord1198081" internalId="1198081" type="customRecordType">
+                <platformCore:name>getCustomRecordRecordName2384</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord989898" internalId="1252082" type="customRecordType">
+                <platformCore:name>testRecord</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord1262583" internalId="1262583" type="customRecordType">
+                <platformCore:name>getCustomizationIdsName4590720</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord1276183" internalId="1276183" type="customRecordType">
+                <platformCore:name>getCustomizationIdsName4627346</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord1289283" internalId="1289283" type="customRecordType">
+                <platformCore:name>getCustomRecordRecordName7697</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord1296183" internalId="1296183" type="customRecordType">
+                <platformCore:name>getCustomizationIdsName2782026</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord1296283" internalId="1296283" type="customRecordType">
+                <platformCore:name>getCustomizationIdsName8572684</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord1301583" internalId="1301583" type="customRecordType">
+                <platformCore:name>getCustomizationIdsName1166282</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord1301883" internalId="1301883" type="customRecordType">
+                <platformCore:name>getCustomizationIdsName327825</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord1302883" internalId="1302883" type="customRecordType">
+                <platformCore:name>getCustomizationIdsName4623090</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord1315583" internalId="1315583" type="customRecordType">
+                <platformCore:name>getCustomizationIdsName1614067782555</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord1327884" internalId="1327884" type="customRecordType">
+                <platformCore:name>getCustomizationIdsName7615031</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord_product_review" internalId="38" type="customRecordType">
+                <platformCore:name>Product Review</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customrecord168" internalId="87" type="customRecordType">
+                <platformCore:name>Sq ft added</platformCore:name>
+            </platformCore:customizationRef>
+        </platformCore:customizationRefList>
+    </platformCore:getCustomizationIdResult>
+</getCustomizationIdResponse>

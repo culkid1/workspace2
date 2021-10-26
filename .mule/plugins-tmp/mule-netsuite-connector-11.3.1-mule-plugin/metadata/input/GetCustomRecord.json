@@ -1,0 +1,81 @@
+{
+  "format": "xml",
+  "type": "Object",
+  "annotations": {
+    "typeId": "#root:{urn:messages_2020_2.platform.webservices.netsuite.com}get"
+  },
+  "fields": [
+    {
+      "key": {
+        "name": "{urn:messages_2020_2.platform.webservices.netsuite.com}get",
+        "required": "true"
+      },
+      "model": {
+        "type": "Object",
+        "annotations": {
+          "typeId": "{urn:messages_2020_2.platform.webservices.netsuite.com}GetRequest"
+        },
+        "ordered": true,
+        "fields": [
+          {
+            "key": {
+              "name": "{urn:core_2020_2.platform.webservices.netsuite.com}baseRef",
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "typeId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "scriptId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ],
+              "required": "true"
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}BaseRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

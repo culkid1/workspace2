@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:salesforce="http://www.mulesoft.org/schema/mule/salesforce" xmlns:file="http://www.mulesoft.org/schema/mule/file"
+	xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:batch="http://www.mulesoft.org/schema/mule/batch" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/batch http://www.mulesoft.org/schema/mule/batch/current/mule-batch.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.mulesoft.org/schema/mule/salesforce http://www.mulesoft.org/schema/mule/salesforce/current/mule-salesforce.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="9df8e159-8961-4112-8f2c-95e29f2c3377" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<file:config name="File_Config" doc:name="File Config" doc:id="d0c481b5-9380-4f6e-85ce-a8d0d9727667" />
+	<salesforce:sfdc-config name="Salesforce_Config" doc:name="Salesforce Config" doc:id="b7bc1464-eab2-4eac-a949-c98a5d356303" >
+		<salesforce:basic-connection username="prashanth@mulesoft.com" password="M@gicw0rld" securityToken="5UjjwnZ6PFgCYHA8UOZSPCJm" />
+	</salesforce:sfdc-config>
+	<flow name="batch_salesforceFlow" doc:id="5cd6088e-35ef-4792-a155-6b042052e2a0" initialState="stopped">
+		<http:listener doc:name="Listener" doc:id="cf0d0774-746b-4758-a847-4c0472794aa7" config-ref="HTTP_Listener_config" path="sf_batch"/>
+		<ee:transform doc:name="Transform Message" doc:id="6c46457e-64f4-4635-8b73-2cd58d807aea" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+payload map {
+	"Name" : payload.Name,
+	"Phone" : payload.Phone,
+	"Email" : payload.Email
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<batch:job jobName="batch_salesforceBatch_Job" doc:id="74d310a6-31dd-4848-afa7-cb1e6d365bd7" maxFailedRecords="50">
+			<batch:process-records >
+				<batch:step name="Batch_Step" doc:id="847b1232-7e5c-457d-8c3c-7d278f9541bc" acceptPolicy="ALL">
+					<salesforce:create type="Contact" doc:id="f2c72dc2-2d99-454e-83b4-f6851b327c89" config-ref="Salesforce_Config" />
+					<batch:aggregator doc:name="Batch Aggregator" doc:id="31232d64-17a8-44dc-a4f0-00e79a76e5a6" size="5">
+						<logger level="INFO" doc:name="Logger" doc:id="25fca631-ee1c-4bb6-89b0-ba08465784f7" message="#[payload]"/>
+					</batch:aggregator>
+				</batch:step>
+			</batch:process-records>
+			<batch:on-complete >
+				<ee:transform doc:name="Transform Message" doc:id="9c3e50ee-efd5-4435-a244-dccbf4147c4b" >
+					<ee:message >
+						<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+payload]]></ee:set-payload>
+					</ee:message>
+				</ee:transform>
+				<logger level="INFO" doc:name="Logger" doc:id="ee80740e-d462-4535-999b-831f468c0b53" message="#[payload]"/>
+			</batch:on-complete>
+		</batch:job>
+	</flow>
+</mule>

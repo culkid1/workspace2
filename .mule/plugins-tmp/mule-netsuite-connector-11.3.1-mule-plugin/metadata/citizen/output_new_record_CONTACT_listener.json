@@ -1,0 +1,1996 @@
+{
+  "format": "xml",
+  "type": "Object",
+  "annotations": {
+    "label": "CONTACT"
+  },
+  "fields": [
+    {
+      "key": {
+        "name": "{urn:core_2020_2.platform.webservices.netsuite.com}record",
+        "annotations": {
+          "label": "Record"
+        },
+        "attributes": [
+          {
+            "key": {
+              "name": "internalId"
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "externalId"
+            },
+            "model": {
+              "type": "String"
+            }
+          }
+        ],
+        "required": "true"
+      },
+      "model": {
+        "type": "Object",
+        "annotations": {
+          "typeId": "{urn:relationships_2020_2.lists.webservices.netsuite.com}Contact"
+        },
+        "ordered": true,
+        "fields": [
+          {
+            "key": {
+              "name": "{urn:core_2020_2.platform.webservices.netsuite.com}nullFieldList",
+              "annotations": {
+                "label": "Null Field List"
+              }
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}NullField"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                    "annotations": {
+                      "label": "Name"
+                    },
+                    "repeated": "true"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}NullField"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}customForm",
+              "annotations": {
+                "label": "Custom Form"
+              },
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "type"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                    "annotations": {
+                      "label": "Name"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}entityId",
+              "annotations": {
+                "label": "Entity Id"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}contactSource",
+              "annotations": {
+                "label": "Contact Source"
+              },
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "type"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                    "annotations": {
+                      "label": "Name"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}company",
+              "annotations": {
+                "label": "Company"
+              },
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "type"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                    "annotations": {
+                      "label": "Name"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}salutation",
+              "annotations": {
+                "label": "Salutation"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}firstName",
+              "annotations": {
+                "label": "First Name"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}middleName",
+              "annotations": {
+                "label": "Middle Name"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}lastName",
+              "annotations": {
+                "label": "Last Name"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}title",
+              "annotations": {
+                "label": "Title"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}phone",
+              "annotations": {
+                "label": "Phone"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}fax",
+              "annotations": {
+                "label": "Fax"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}email",
+              "annotations": {
+                "label": "Email"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}defaultAddress",
+              "annotations": {
+                "label": "Default Address"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}isPrivate",
+              "annotations": {
+                "label": "Is Private"
+              }
+            },
+            "model": {
+              "type": "Boolean"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}isInactive",
+              "annotations": {
+                "label": "Is Inactive"
+              }
+            },
+            "model": {
+              "type": "Boolean"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}subsidiary",
+              "annotations": {
+                "label": "Subsidiary"
+              },
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "type"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                    "annotations": {
+                      "label": "Name"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}phoneticName",
+              "annotations": {
+                "label": "Phonetic Name"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}categoryList",
+              "annotations": {
+                "label": "Category List"
+              }
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:relationships_2020_2.lists.webservices.netsuite.com}CategoryList"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}category",
+                    "annotations": {
+                      "label": "Category"
+                    },
+                    "attributes": [
+                      {
+                        "key": {
+                          "name": "internalId"
+                        },
+                        "model": {
+                          "type": "String"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "externalId"
+                        },
+                        "model": {
+                          "type": "String"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "type"
+                        },
+                        "model": {
+                          "type": "String"
+                        }
+                      }
+                    ],
+                    "repeated": "true",
+                    "required": "true"
+                  },
+                  "model": {
+                    "type": "Object",
+                    "annotations": {
+                      "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+                    },
+                    "ordered": true,
+                    "fields": [
+                      {
+                        "key": {
+                          "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                          "annotations": {
+                            "label": "Name"
+                          }
+                        },
+                        "model": {
+                          "type": "String"
+                        }
+                      }
+                    ]
+                  },
+                  "annotations": {
+                    "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:relationships_2020_2.lists.webservices.netsuite.com}CategoryList"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}altEmail",
+              "annotations": {
+                "label": "Alt Email"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}officePhone",
+              "annotations": {
+                "label": "Office Phone"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}homePhone",
+              "annotations": {
+                "label": "Home Phone"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}mobilePhone",
+              "annotations": {
+                "label": "Mobile Phone"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}supervisor",
+              "annotations": {
+                "label": "Supervisor"
+              },
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "type"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                    "annotations": {
+                      "label": "Name"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}supervisorPhone",
+              "annotations": {
+                "label": "Supervisor Phone"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}assistant",
+              "annotations": {
+                "label": "Assistant"
+              },
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "type"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                    "annotations": {
+                      "label": "Name"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}assistantPhone",
+              "annotations": {
+                "label": "Assistant Phone"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}comments",
+              "annotations": {
+                "label": "Comments"
+              }
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}globalSubscriptionStatus",
+              "annotations": {
+                "label": "Global Subscription Status"
+              }
+            },
+            "model": {
+              "type": "String",
+              "annotations": {
+                "enum": {
+                  "type": "[Ljava.lang.String;",
+                  "values": [
+                    "_confirmedOptIn",
+                    "_confirmedOptOut",
+                    "_softOptIn",
+                    "_softOptOut"
+                  ]
+                }
+              }
+            },
+            "annotations": {
+              "enum": {
+                "type": "[Ljava.lang.String;",
+                "values": [
+                  "_confirmedOptIn",
+                  "_confirmedOptOut",
+                  "_softOptIn",
+                  "_softOptOut"
+                ]
+              }
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}image",
+              "annotations": {
+                "label": "Image"
+              },
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "type"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                    "annotations": {
+                      "label": "Name"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}billPay",
+              "annotations": {
+                "label": "Bill Pay"
+              }
+            },
+            "model": {
+              "type": "Boolean"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}dateCreated",
+              "annotations": {
+                "label": "Date Created"
+              }
+            },
+            "model": {
+              "type": "DateTime"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}lastModifiedDate",
+              "annotations": {
+                "label": "Last Modified Date"
+              }
+            },
+            "model": {
+              "type": "DateTime"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}addressbookList",
+              "annotations": {
+                "label": "Addressbook List"
+              },
+              "attributes": [
+                {
+                  "key": {
+                    "name": "replaceAll"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:relationships_2020_2.lists.webservices.netsuite.com}ContactAddressbookList"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}addressbook",
+                    "annotations": {
+                      "label": "Addressbook"
+                    },
+                    "repeated": "true"
+                  },
+                  "model": {
+                    "type": "Object",
+                    "annotations": {
+                      "typeId": "{urn:relationships_2020_2.lists.webservices.netsuite.com}ContactAddressbook"
+                    },
+                    "ordered": true,
+                    "fields": [
+                      {
+                        "key": {
+                          "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}defaultShipping",
+                          "annotations": {
+                            "label": "Default Shipping"
+                          }
+                        },
+                        "model": {
+                          "type": "Boolean"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}defaultBilling",
+                          "annotations": {
+                            "label": "Default Billing"
+                          }
+                        },
+                        "model": {
+                          "type": "Boolean"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}label",
+                          "annotations": {
+                            "label": "Label"
+                          }
+                        },
+                        "model": {
+                          "type": "String"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}addressbookAddress",
+                          "annotations": {
+                            "label": "Addressbook Address"
+                          }
+                        },
+                        "model": {
+                          "type": "Object",
+                          "annotations": {
+                            "typeId": "{urn:common_2020_2.platform.webservices.netsuite.com}Address"
+                          },
+                          "ordered": true,
+                          "fields": [
+                            {
+                              "key": {
+                                "name": "{urn:core_2020_2.platform.webservices.netsuite.com}nullFieldList",
+                                "annotations": {
+                                  "label": "Null Field List"
+                                }
+                              },
+                              "model": {
+                                "type": "Object",
+                                "annotations": {
+                                  "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}NullField"
+                                },
+                                "ordered": true,
+                                "fields": [
+                                  {
+                                    "key": {
+                                      "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                                      "annotations": {
+                                        "label": "Name"
+                                      },
+                                      "repeated": "true"
+                                    },
+                                    "model": {
+                                      "type": "String"
+                                    }
+                                  }
+                                ]
+                              },
+                              "annotations": {
+                                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}NullField"
+                              }
+                            },
+                            {
+                              "key": {
+                                "name": "{urn:common_2020_2.platform.webservices.netsuite.com}internalId",
+                                "annotations": {
+                                  "label": "Internal Id"
+                                }
+                              },
+                              "model": {
+                                "type": "String"
+                              }
+                            },
+                            {
+                              "key": {
+                                "name": "{urn:common_2020_2.platform.webservices.netsuite.com}country",
+                                "annotations": {
+                                  "label": "Country"
+                                }
+                              },
+                              "model": {
+                                "type": "String",
+                                "annotations": {
+                                  "enum": {
+                                    "type": "[Ljava.lang.String;",
+                                    "values": [
+                                      "_afghanistan",
+                                      "_alandIslands",
+                                      "_albania",
+                                      "_algeria",
+                                      "_americanSamoa",
+                                      "_andorra",
+                                      "_angola",
+                                      "_anguilla",
+                                      "_antarctica",
+                                      "_antiguaAndBarbuda",
+                                      "_argentina",
+                                      "_armenia",
+                                      "_aruba",
+                                      "_australia",
+                                      "_austria",
+                                      "_azerbaijan",
+                                      "_bahamas",
+                                      "_bahrain",
+                                      "_bangladesh",
+                                      "_barbados",
+                                      "_belarus",
+                                      "_belgium",
+                                      "_belize",
+                                      "_benin",
+                                      "_bermuda",
+                                      "_bhutan",
+                                      "_bolivia",
+                                      "_bonaireSaintEustatiusAndSaba",
+                                      "_bosniaAndHerzegovina",
+                                      "_botswana",
+                                      "_bouvetIsland",
+                                      "_brazil",
+                                      "_britishIndianOceanTerritory",
+                                      "_bruneiDarussalam",
+                                      "_bulgaria",
+                                      "_burkinaFaso",
+                                      "_burundi",
+                                      "_cambodia",
+                                      "_cameroon",
+                                      "_canada",
+                                      "_canaryIslands",
+                                      "_capeVerde",
+                                      "_caymanIslands",
+                                      "_centralAfricanRepublic",
+                                      "_ceutaAndMelilla",
+                                      "_chad",
+                                      "_chile",
+                                      "_china",
+                                      "_christmasIsland",
+                                      "_cocosKeelingIslands",
+                                      "_colombia",
+                                      "_comoros",
+                                      "_congoDemocraticPeoplesRepublic",
+                                      "_congoRepublicOf",
+                                      "_cookIslands",
+                                      "_costaRica",
+                                      "_coteDIvoire",
+                                      "_croatiaHrvatska",
+                                      "_cuba",
+                                      "_curacao",
+                                      "_cyprus",
+                                      "_czechRepublic",
+                                      "_denmark",
+                                      "_djibouti",
+                                      "_dominica",
+                                      "_dominicanRepublic",
+                                      "_eastTimor",
+                                      "_ecuador",
+                                      "_egypt",
+                                      "_elSalvador",
+                                      "_equatorialGuinea",
+                                      "_eritrea",
+                                      "_estonia",
+                                      "_ethiopia",
+                                      "_falklandIslands",
+                                      "_faroeIslands",
+                                      "_fiji",
+                                      "_finland",
+                                      "_france",
+                                      "_frenchGuiana",
+                                      "_frenchPolynesia",
+                                      "_frenchSouthernTerritories",
+                                      "_gabon",
+                                      "_gambia",
+                                      "_georgia",
+                                      "_germany",
+                                      "_ghana",
+                                      "_gibraltar",
+                                      "_greece",
+                                      "_greenland",
+                                      "_grenada",
+                                      "_guadeloupe",
+                                      "_guam",
+                                      "_guatemala",
+                                      "_guernsey",
+                                      "_guinea",
+                                      "_guineaBissau",
+                                      "_guyana",
+                                      "_haiti",
+                                      "_heardAndMcDonaldIslands",
+                                      "_holySeeCityVaticanState",
+                                      "_honduras",
+                                      "_hongKong",
+                                      "_hungary",
+                                      "_iceland",
+                                      "_india",
+                                      "_indonesia",
+                                      "_iranIslamicRepublicOf",
+                                      "_iraq",
+                                      "_ireland",
+                                      "_isleOfMan",
+                                      "_israel",
+                                      "_italy",
+                                      "_jamaica",
+                                      "_japan",
+                                      "_jersey",
+                                      "_jordan",
+                                      "_kazakhstan",
+                                      "_kenya",
+                                      "_kiribati",
+                                      "_koreaDemocraticPeoplesRepublic",
+                                      "_koreaRepublicOf",
+                                      "_kosovo",
+                                      "_kuwait",
+                                      "_kyrgyzstan",
+                                      "_laoPeoplesDemocraticRepublic",
+                                      "_latvia",
+                                      "_lebanon",
+                                      "_lesotho",
+                                      "_liberia",
+                                      "_libya",
+                                      "_liechtenstein",
+                                      "_lithuania",
+                                      "_luxembourg",
+                                      "_macau",
+                                      "_macedonia",
+                                      "_madagascar",
+                                      "_malawi",
+                                      "_malaysia",
+                                      "_maldives",
+                                      "_mali",
+                                      "_malta",
+                                      "_marshallIslands",
+                                      "_martinique",
+                                      "_mauritania",
+                                      "_mauritius",
+                                      "_mayotte",
+                                      "_mexico",
+                                      "_micronesiaFederalStateOf",
+                                      "_moldovaRepublicOf",
+                                      "_monaco",
+                                      "_mongolia",
+                                      "_montenegro",
+                                      "_montserrat",
+                                      "_morocco",
+                                      "_mozambique",
+                                      "_myanmar",
+                                      "_namibia",
+                                      "_nauru",
+                                      "_nepal",
+                                      "_netherlands",
+                                      "_newCaledonia",
+                                      "_newZealand",
+                                      "_nicaragua",
+                                      "_niger",
+                                      "_nigeria",
+                                      "_niue",
+                                      "_norfolkIsland",
+                                      "_northernMarianaIslands",
+                                      "_norway",
+                                      "_oman",
+                                      "_pakistan",
+                                      "_palau",
+                                      "_panama",
+                                      "_papuaNewGuinea",
+                                      "_paraguay",
+                                      "_peru",
+                                      "_philippines",
+                                      "_pitcairnIsland",
+                                      "_poland",
+                                      "_portugal",
+                                      "_puertoRico",
+                                      "_qatar",
+                                      "_reunionIsland",
+                                      "_romania",
+                                      "_russianFederation",
+                                      "_rwanda",
+                                      "_saintBarthelemy",
+                                      "_saintHelena",
+                                      "_saintKittsAndNevis",
+                                      "_saintLucia",
+                                      "_saintMartin",
+                                      "_saintVincentAndTheGrenadines",
+                                      "_samoa",
+                                      "_sanMarino",
+                                      "_saoTomeAndPrincipe",
+                                      "_saudiArabia",
+                                      "_senegal",
+                                      "_serbia",
+                                      "_seychelles",
+                                      "_sierraLeone",
+                                      "_singapore",
+                                      "_sintMaarten",
+                                      "_slovakRepublic",
+                                      "_slovenia",
+                                      "_solomonIslands",
+                                      "_somalia",
+                                      "_southAfrica",
+                                      "_southGeorgia",
+                                      "_southSudan",
+                                      "_spain",
+                                      "_sriLanka",
+                                      "_stateOfPalestine",
+                                      "_stPierreAndMiquelon",
+                                      "_sudan",
+                                      "_suriname",
+                                      "_svalbardAndJanMayenIslands",
+                                      "_swaziland",
+                                      "_sweden",
+                                      "_switzerland",
+                                      "_syrianArabRepublic",
+                                      "_taiwan",
+                                      "_tajikistan",
+                                      "_tanzania",
+                                      "_thailand",
+                                      "_togo",
+                                      "_tokelau",
+                                      "_tonga",
+                                      "_trinidadAndTobago",
+                                      "_tunisia",
+                                      "_turkey",
+                                      "_turkmenistan",
+                                      "_turksAndCaicosIslands",
+                                      "_tuvalu",
+                                      "_uganda",
+                                      "_ukraine",
+                                      "_unitedArabEmirates",
+                                      "_unitedKingdom",
+                                      "_unitedStates",
+                                      "_uruguay",
+                                      "_uSMinorOutlyingIslands",
+                                      "_uzbekistan",
+                                      "_vanuatu",
+                                      "_venezuela",
+                                      "_vietnam",
+                                      "_virginIslandsBritish",
+                                      "_virginIslandsUSA",
+                                      "_wallisAndFutunaIslands",
+                                      "_westernSahara",
+                                      "_yemen",
+                                      "_zambia",
+                                      "_zimbabwe"
+                                    ]
+                                  }
+                                }
+                              },
+                              "annotations": {
+                                "enum": {
+                                  "type": "[Ljava.lang.String;",
+                                  "values": [
+                                    "_afghanistan",
+                                    "_alandIslands",
+                                    "_albania",
+                                    "_algeria",
+                                    "_americanSamoa",
+                                    "_andorra",
+                                    "_angola",
+                                    "_anguilla",
+                                    "_antarctica",
+                                    "_antiguaAndBarbuda",
+                                    "_argentina",
+                                    "_armenia",
+                                    "_aruba",
+                                    "_australia",
+                                    "_austria",
+                                    "_azerbaijan",
+                                    "_bahamas",
+                                    "_bahrain",
+                                    "_bangladesh",
+                                    "_barbados",
+                                    "_belarus",
+                                    "_belgium",
+                                    "_belize",
+                                    "_benin",
+                                    "_bermuda",
+                                    "_bhutan",
+                                    "_bolivia",
+                                    "_bonaireSaintEustatiusAndSaba",
+                                    "_bosniaAndHerzegovina",
+                                    "_botswana",
+                                    "_bouvetIsland",
+                                    "_brazil",
+                                    "_britishIndianOceanTerritory",
+                                    "_bruneiDarussalam",
+                                    "_bulgaria",
+                                    "_burkinaFaso",
+                                    "_burundi",
+                                    "_cambodia",
+                                    "_cameroon",
+                                    "_canada",
+                                    "_canaryIslands",
+                                    "_capeVerde",
+                                    "_caymanIslands",
+                                    "_centralAfricanRepublic",
+                                    "_ceutaAndMelilla",
+                                    "_chad",
+                                    "_chile",
+                                    "_china",
+                                    "_christmasIsland",
+                                    "_cocosKeelingIslands",
+                                    "_colombia",
+                                    "_comoros",
+                                    "_congoDemocraticPeoplesRepublic",
+                                    "_congoRepublicOf",
+                                    "_cookIslands",
+                                    "_costaRica",
+                                    "_coteDIvoire",
+                                    "_croatiaHrvatska",
+                                    "_cuba",
+                                    "_curacao",
+                                    "_cyprus",
+                                    "_czechRepublic",
+                                    "_denmark",
+                                    "_djibouti",
+                                    "_dominica",
+                                    "_dominicanRepublic",
+                                    "_eastTimor",
+                                    "_ecuador",
+                                    "_egypt",
+                                    "_elSalvador",
+                                    "_equatorialGuinea",
+                                    "_eritrea",
+                                    "_estonia",
+                                    "_ethiopia",
+                                    "_falklandIslands",
+                                    "_faroeIslands",
+                                    "_fiji",
+                                    "_finland",
+                                    "_france",
+                                    "_frenchGuiana",
+                                    "_frenchPolynesia",
+                                    "_frenchSouthernTerritories",
+                                    "_gabon",
+                                    "_gambia",
+                                    "_georgia",
+                                    "_germany",
+                                    "_ghana",
+                                    "_gibraltar",
+                                    "_greece",
+                                    "_greenland",
+                                    "_grenada",
+                                    "_guadeloupe",
+                                    "_guam",
+                                    "_guatemala",
+                                    "_guernsey",
+                                    "_guinea",
+                                    "_guineaBissau",
+                                    "_guyana",
+                                    "_haiti",
+                                    "_heardAndMcDonaldIslands",
+                                    "_holySeeCityVaticanState",
+                                    "_honduras",
+                                    "_hongKong",
+                                    "_hungary",
+                                    "_iceland",
+                                    "_india",
+                                    "_indonesia",
+                                    "_iranIslamicRepublicOf",
+                                    "_iraq",
+                                    "_ireland",
+                                    "_isleOfMan",
+                                    "_israel",
+                                    "_italy",
+                                    "_jamaica",
+                                    "_japan",
+                                    "_jersey",
+                                    "_jordan",
+                                    "_kazakhstan",
+                                    "_kenya",
+                                    "_kiribati",
+                                    "_koreaDemocraticPeoplesRepublic",
+                                    "_koreaRepublicOf",
+                                    "_kosovo",
+                                    "_kuwait",
+                                    "_kyrgyzstan",
+                                    "_laoPeoplesDemocraticRepublic",
+                                    "_latvia",
+                                    "_lebanon",
+                                    "_lesotho",
+                                    "_liberia",
+                                    "_libya",
+                                    "_liechtenstein",
+                                    "_lithuania",
+                                    "_luxembourg",
+                                    "_macau",
+                                    "_macedonia",
+                                    "_madagascar",
+                                    "_malawi",
+                                    "_malaysia",
+                                    "_maldives",
+                                    "_mali",
+                                    "_malta",
+                                    "_marshallIslands",
+                                    "_martinique",
+                                    "_mauritania",
+                                    "_mauritius",
+                                    "_mayotte",
+                                    "_mexico",
+                                    "_micronesiaFederalStateOf",
+                                    "_moldovaRepublicOf",
+                                    "_monaco",
+                                    "_mongolia",
+                                    "_montenegro",
+                                    "_montserrat",
+                                    "_morocco",
+                                    "_mozambique",
+                                    "_myanmar",
+                                    "_namibia",
+                                    "_nauru",
+                                    "_nepal",
+                                    "_netherlands",
+                                    "_newCaledonia",
+                                    "_newZealand",
+                                    "_nicaragua",
+                                    "_niger",
+                                    "_nigeria",
+                                    "_niue",
+                                    "_norfolkIsland",
+                                    "_northernMarianaIslands",
+                                    "_norway",
+                                    "_oman",
+                                    "_pakistan",
+                                    "_palau",
+                                    "_panama",
+                                    "_papuaNewGuinea",
+                                    "_paraguay",
+                                    "_peru",
+                                    "_philippines",
+                                    "_pitcairnIsland",
+                                    "_poland",
+                                    "_portugal",
+                                    "_puertoRico",
+                                    "_qatar",
+                                    "_reunionIsland",
+                                    "_romania",
+                                    "_russianFederation",
+                                    "_rwanda",
+                                    "_saintBarthelemy",
+                                    "_saintHelena",
+                                    "_saintKittsAndNevis",
+                                    "_saintLucia",
+                                    "_saintMartin",
+                                    "_saintVincentAndTheGrenadines",
+                                    "_samoa",
+                                    "_sanMarino",
+                                    "_saoTomeAndPrincipe",
+                                    "_saudiArabia",
+                                    "_senegal",
+                                    "_serbia",
+                                    "_seychelles",
+                                    "_sierraLeone",
+                                    "_singapore",
+                                    "_sintMaarten",
+                                    "_slovakRepublic",
+                                    "_slovenia",
+                                    "_solomonIslands",
+                                    "_somalia",
+                                    "_southAfrica",
+                                    "_southGeorgia",
+                                    "_southSudan",
+                                    "_spain",
+                                    "_sriLanka",
+                                    "_stateOfPalestine",
+                                    "_stPierreAndMiquelon",
+                                    "_sudan",
+                                    "_suriname",
+                                    "_svalbardAndJanMayenIslands",
+                                    "_swaziland",
+                                    "_sweden",
+                                    "_switzerland",
+                                    "_syrianArabRepublic",
+                                    "_taiwan",
+                                    "_tajikistan",
+                                    "_tanzania",
+                                    "_thailand",
+                                    "_togo",
+                                    "_tokelau",
+                                    "_tonga",
+                                    "_trinidadAndTobago",
+                                    "_tunisia",
+                                    "_turkey",
+                                    "_turkmenistan",
+                                    "_turksAndCaicosIslands",
+                                    "_tuvalu",
+                                    "_uganda",
+                                    "_ukraine",
+                                    "_unitedArabEmirates",
+                                    "_unitedKingdom",
+                                    "_unitedStates",
+                                    "_uruguay",
+                                    "_uSMinorOutlyingIslands",
+                                    "_uzbekistan",
+                                    "_vanuatu",
+                                    "_venezuela",
+                                    "_vietnam",
+                                    "_virginIslandsBritish",
+                                    "_virginIslandsUSA",
+                                    "_wallisAndFutunaIslands",
+                                    "_westernSahara",
+                                    "_yemen",
+                                    "_zambia",
+                                    "_zimbabwe"
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "key": {
+                                "name": "{urn:common_2020_2.platform.webservices.netsuite.com}attention",
+                                "annotations": {
+                                  "label": "Attention"
+                                }
+                              },
+                              "model": {
+                                "type": "String"
+                              }
+                            },
+                            {
+                              "key": {
+                                "name": "{urn:common_2020_2.platform.webservices.netsuite.com}addressee",
+                                "annotations": {
+                                  "label": "Addressee"
+                                }
+                              },
+                              "model": {
+                                "type": "String"
+                              }
+                            },
+                            {
+                              "key": {
+                                "name": "{urn:common_2020_2.platform.webservices.netsuite.com}addrPhone",
+                                "annotations": {
+                                  "label": "Addr Phone"
+                                }
+                              },
+                              "model": {
+                                "type": "String"
+                              }
+                            },
+                            {
+                              "key": {
+                                "name": "{urn:common_2020_2.platform.webservices.netsuite.com}addr1",
+                                "annotations": {
+                                  "label": "Addr 1"
+                                }
+                              },
+                              "model": {
+                                "type": "String"
+                              }
+                            },
+                            {
+                              "key": {
+                                "name": "{urn:common_2020_2.platform.webservices.netsuite.com}addr2",
+                                "annotations": {
+                                  "label": "Addr 2"
+                                }
+                              },
+                              "model": {
+                                "type": "String"
+                              }
+                            },
+                            {
+                              "key": {
+                                "name": "{urn:common_2020_2.platform.webservices.netsuite.com}addr3",
+                                "annotations": {
+                                  "label": "Addr 3"
+                                }
+                              },
+                              "model": {
+                                "type": "String"
+                              }
+                            },
+                            {
+                              "key": {
+                                "name": "{urn:common_2020_2.platform.webservices.netsuite.com}city",
+                                "annotations": {
+                                  "label": "City"
+                                }
+                              },
+                              "model": {
+                                "type": "String"
+                              }
+                            },
+                            {
+                              "key": {
+                                "name": "{urn:common_2020_2.platform.webservices.netsuite.com}state",
+                                "annotations": {
+                                  "label": "State"
+                                }
+                              },
+                              "model": {
+                                "type": "String"
+                              }
+                            },
+                            {
+                              "key": {
+                                "name": "{urn:common_2020_2.platform.webservices.netsuite.com}zip",
+                                "annotations": {
+                                  "label": "Zip"
+                                }
+                              },
+                              "model": {
+                                "type": "String"
+                              }
+                            },
+                            {
+                              "key": {
+                                "name": "{urn:common_2020_2.platform.webservices.netsuite.com}addrText",
+                                "annotations": {
+                                  "label": "Addr Text"
+                                }
+                              },
+                              "model": {
+                                "type": "String"
+                              }
+                            },
+                            {
+                              "key": {
+                                "name": "{urn:common_2020_2.platform.webservices.netsuite.com}override",
+                                "annotations": {
+                                  "label": "Override"
+                                }
+                              },
+                              "model": {
+                                "type": "Boolean"
+                              }
+                            },
+                            {
+                              "key": {
+                                "name": "{urn:common_2020_2.platform.webservices.netsuite.com}customFieldList",
+                                "annotations": {
+                                  "label": "Custom Field List"
+                                }
+                              },
+                              "model": {
+                                "type": "Object",
+                                "fields": [
+                                  
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        "annotations": {
+                          "typeId": "{urn:common_2020_2.platform.webservices.netsuite.com}Address"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}internalId",
+                          "annotations": {
+                            "label": "Internal Id"
+                          }
+                        },
+                        "model": {
+                          "type": "String"
+                        }
+                      }
+                    ]
+                  },
+                  "annotations": {
+                    "typeId": "{urn:relationships_2020_2.lists.webservices.netsuite.com}ContactAddressbook"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:relationships_2020_2.lists.webservices.netsuite.com}ContactAddressbookList"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}subscriptionsList",
+              "annotations": {
+                "label": "Subscriptions List"
+              },
+              "attributes": [
+                {
+                  "key": {
+                    "name": "replaceAll"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:relationships_2020_2.lists.webservices.netsuite.com}SubscriptionsList"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}subscriptions",
+                    "annotations": {
+                      "label": "Subscriptions"
+                    },
+                    "repeated": "true"
+                  },
+                  "model": {
+                    "type": "Object",
+                    "annotations": {
+                      "typeId": "{urn:relationships_2020_2.lists.webservices.netsuite.com}Subscriptions"
+                    },
+                    "ordered": true,
+                    "fields": [
+                      {
+                        "key": {
+                          "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}subscribed",
+                          "annotations": {
+                            "label": "Subscribed"
+                          }
+                        },
+                        "model": {
+                          "type": "Boolean"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}subscription",
+                          "annotations": {
+                            "label": "Subscription"
+                          },
+                          "attributes": [
+                            {
+                              "key": {
+                                "name": "internalId"
+                              },
+                              "model": {
+                                "type": "String"
+                              }
+                            },
+                            {
+                              "key": {
+                                "name": "externalId"
+                              },
+                              "model": {
+                                "type": "String"
+                              }
+                            },
+                            {
+                              "key": {
+                                "name": "type"
+                              },
+                              "model": {
+                                "type": "String"
+                              }
+                            }
+                          ]
+                        },
+                        "model": {
+                          "type": "Object",
+                          "annotations": {
+                            "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+                          },
+                          "ordered": true,
+                          "fields": [
+                            {
+                              "key": {
+                                "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                                "annotations": {
+                                  "label": "Name"
+                                }
+                              },
+                              "model": {
+                                "type": "String"
+                              }
+                            }
+                          ]
+                        },
+                        "annotations": {
+                          "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}lastModifiedDate",
+                          "annotations": {
+                            "label": "Last Modified Date"
+                          }
+                        },
+                        "model": {
+                          "type": "DateTime"
+                        }
+                      }
+                    ]
+                  },
+                  "annotations": {
+                    "typeId": "{urn:relationships_2020_2.lists.webservices.netsuite.com}Subscriptions"
+                  }
+                }
+              ]
+            },
+            "annotations": {
+              "typeId": "{urn:relationships_2020_2.lists.webservices.netsuite.com}SubscriptionsList"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:relationships_2020_2.lists.webservices.netsuite.com}customFieldList",
+              "annotations": {
+                "label": "Custom Field List"
+              }
+            },
+            "model": {
+              "type": "Object",
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}BooleanCustomFieldRef__custentitymycustomfield2__4572",
+                    "annotations": {
+                      "label": "My Custom Field 2"
+                    }
+                  },
+                  "model": {
+                    "type": "Boolean"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}DateCustomFieldRef__custentity23__4578",
+                    "annotations": {
+                      "label": "DateField"
+                    }
+                  },
+                  "model": {
+                    "type": "DateTime",
+                    "annotations": {
+                      "pattern": "YYYY-MM-DDThh:mm:ss"
+                    }
+                  }
+                },
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}DoubleCustomFieldRef__custentity28__4583",
+                    "annotations": {
+                      "label": "DecimalField"
+                    }
+                  },
+                  "model": {
+                    "type": "Number"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}LongCustomFieldRef__custentity25__4580",
+                    "annotations": {
+                      "label": "IntegerField"
+                    }
+                  },
+                  "model": {
+                    "type": "Number",
+                    "annotations": {
+                      "range": {
+                        "from": -9.223372036854776E+18,
+                        "to": 9.223372036854776E+18
+                      }
+                    }
+                  }
+                },
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}MultiSelectCustomFieldRef__custentity_skills__693",
+                    "annotations": {
+                      "label": "Skills"
+                    }
+                  },
+                  "model": {
+                    "type": "Object",
+                    "fields": [
+                      {
+                        "key": {
+                          "name": "{urn:core_2020_2.platform.webservices.netsuite.com}value",
+                          "annotations": {
+                            "label": "Value"
+                          },
+                          "attributes": [
+                            {
+                              "key": {
+                                "name": "internalId"
+                              },
+                              "model": {
+                                "type": "String"
+                              }
+                            },
+                            {
+                              "key": {
+                                "name": "externalId"
+                              },
+                              "model": {
+                                "type": "String"
+                              }
+                            },
+                            {
+                              "key": {
+                                "name": "typeId"
+                              },
+                              "model": {
+                                "type": "String"
+                              }
+                            }
+                          ],
+                          "repeated": "true",
+                          "required": "true"
+                        },
+                        "model": {
+                          "type": "Object",
+                          "annotations": {
+                            "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}ListOrRecordRef"
+                          },
+                          "ordered": true,
+                          "fields": [
+                            {
+                              "key": {
+                                "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                                "annotations": {
+                                  "label": "Name"
+                                }
+                              },
+                              "model": {
+                                "type": "String"
+                              }
+                            }
+                          ]
+                        },
+                        "annotations": {
+                          "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}ListOrRecordRef"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}SelectCustomFieldRef__custentity_supervisor__3744",
+                    "annotations": {
+                      "label": "Supervisore"
+                    },
+                    "attributes": [
+                      {
+                        "key": {
+                          "name": "internalId"
+                        },
+                        "model": {
+                          "type": "String"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "externalId"
+                        },
+                        "model": {
+                          "type": "String"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "typeId"
+                        },
+                        "model": {
+                          "type": "String"
+                        }
+                      }
+                    ]
+                  },
+                  "model": {
+                    "type": "Object",
+                    "annotations": {
+                      "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}ListOrRecordRef"
+                    },
+                    "ordered": true,
+                    "fields": [
+                      {
+                        "key": {
+                          "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name",
+                          "annotations": {
+                            "label": "Name"
+                          }
+                        },
+                        "model": {
+                          "type": "String"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}StringCustomFieldRef__custentitymycustomfield__4569",
+                    "annotations": {
+                      "label": "My Custom Field"
+                    }
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

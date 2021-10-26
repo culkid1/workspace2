@@ -1,0 +1,10 @@
+package snippet;
+
+public class Snippet {
+	x-special/nautilus-clipboard
+	copy
+	file:///home/culkid/Documents/keystores/client-truststore.jks
+	file:///home/culkid/Documents/keystores/server-keystore.jks
+	
+}
+

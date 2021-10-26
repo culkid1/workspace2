@@ -1,0 +1,74 @@
+<getCustomizationIdResponse xmlns="urn:messages_2020_2.platform.webservices.netsuite.com">
+    <platformCore:getCustomizationIdResult xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com">
+        <platformCore:status isSuccess="true"/>
+        <platformCore:totalRecords>22</platformCore:totalRecords>
+        <platformCore:customizationRefList>
+            <platformCore:customizationRef scriptId="custitem1" internalId="43" type="itemCustomField">
+                <platformCore:name>Store Warranty Available</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custitem_popup" internalId="57" type="itemCustomField">
+                <platformCore:name>Popup Image</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custitem16" internalId="194" type="itemCustomField">
+                <platformCore:name>Demo Item</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custitem17" internalId="701" type="itemCustomField">
+                <platformCore:name>Planning Method (Demo)</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custitem_msrp_2" internalId="3143" type="itemCustomField">
+                <platformCore:name>MSRP</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custitem_part_lookup" internalId="3297" type="itemCustomField">
+                <platformCore:name>Part Lookup</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custitem18" internalId="4011" type="itemCustomField">
+                <platformCore:name>Engineering Status</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custitem_mfr_wrnty_subtab_help" internalId="56" type="itemCustomField">
+                <platformCore:name>Mfr Wrnty Subtab Help</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custitem_manufacturer" internalId="55" type="itemCustomField">
+                <platformCore:name>Manufacturer</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custitem_wrnty_center_phone" internalId="65" type="itemCustomField">
+                <platformCore:name>Wrnty Center Phone</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custitem_helmetsize" internalId="54" type="itemCustomField">
+                <platformCore:name>Helmet Size</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custitem_ropetype" internalId="64" type="itemCustomField">
+                <platformCore:name>Rope Type</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custitem_ropehand" internalId="63" type="itemCustomField">
+                <platformCore:name>Hand</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custitem13" internalId="45" type="itemCustomField">
+                <platformCore:name>Finish</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custitem14" internalId="46" type="itemCustomField">
+                <platformCore:name>Hardware</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custitem_pfc_framewidth" internalId="3145" type="itemCustomField">
+                <platformCore:name>Frame Width</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custitem_custom_altimage1" internalId="52" type="itemCustomField">
+                <platformCore:name>Alternate Image 1</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custitem_custom_altimageth" internalId="53" type="itemCustomField">
+                <platformCore:name>Alternate Image 1 (Thumb)</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custitem_zoom_big" internalId="66" type="itemCustomField">
+                <platformCore:name>Zoomed Image</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custitem_zoom_small" internalId="68" type="itemCustomField">
+                <platformCore:name>Large Image</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custitem_specifications" internalId="694" type="itemCustomField">
+                <platformCore:name>Specifications</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custitem_pfc_laborrate" internalId="3144" type="itemCustomField">
+                <platformCore:name>Labor Rate</platformCore:name>
+            </platformCore:customizationRef>
+        </platformCore:customizationRefList>
+    </platformCore:getCustomizationIdResult>
+</getCustomizationIdResponse>

@@ -1,0 +1,72 @@
+{
+  "format": "java",
+  "type": "Array",
+  "annotations": {
+    "classInformation": {
+      "classname": "java.util.Iterator",
+      "hasDefaultConstructor": false,
+      "isInterface": true,
+      "isInstantiable": false,
+      "isAbstract": true,
+      "isFinal": false,
+      "implementedInterfaces": [
+        
+      ],
+      "parent": "",
+      "genericTypes": [
+        
+      ],
+      "isMap": false
+    }
+  },
+  "item": {
+    "format": "xml",
+    "type": "Object",
+    "annotations": {
+      "label": "SALES_ORDER"
+    },
+    "fields": [
+      {
+        "key": {
+          "name": "{urn:core_2020_2.platform.webservices.netsuite.com}record",
+          "annotations": {
+            "label": "Record"
+          },
+          "required": "true"
+        },
+        "model": {
+          "type": "Object",
+          "annotations": {
+            "typeId": "{urn:sales_2020_2.transactions.webservices.netsuite.com}SalesOrder"
+          },
+          "fields": [
+            {
+              "key": {
+                "name": "{urn:sales_2020_2.transactions.webservices.netsuite.com}customFieldList",
+                "annotations": {
+                  "label": "Custom Field List"
+                }
+              },
+              "model": {
+                "type": "Object",
+                "fields": [
+                  {
+                    "key": {
+                      "name": "{urn:core_2020_2.platform.webservices.netsuite.com}BooleanCustomFieldRef__custbody_fmt_senior_executive_app__168",
+                      "annotations": {
+                        "label": "Senior Executive Approved"
+                      }
+                    },
+                    "model": {
+                      "type": "Boolean"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

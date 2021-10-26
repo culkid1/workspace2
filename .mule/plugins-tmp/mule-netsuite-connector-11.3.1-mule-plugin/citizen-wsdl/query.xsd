@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:complexType name="Field">
+        <xs:sequence>
+            <xs:element name="field">
+                <xs:simpleType>
+                    <xs:list itemType="xs:string"/>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Values">
+        <xs:sequence>
+            <xs:element name="value">
+                <xs:simpleType>
+                    <xs:list itemType="xs:string"/>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Conditions">
+        <xs:sequence>
+            <xs:element name="condition" type="Condition" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Condition">
+        <xs:sequence>
+            <xs:element name="field" type="xs:string"/>
+            <xs:element name="operator">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="is"/>
+                        <xs:enumeration value="isNot"/>
+                        <xs:enumeration value="contains"/>
+                        <xs:enumeration value="doesNotContain"/>
+                        <xs:enumeration value="hasKeywords"/>
+                        <xs:enumeration value="startsWith"/>
+                        <xs:enumeration value="doesNotStartWith"/>
+                        <xs:enumeration value="equalTo"/>
+                        <xs:enumeration value="lessThan"/>
+                        <xs:enumeration value="greaterThan"/>
+                        <xs:enumeration value="lessThanOrEqualTo"/>
+                        <xs:enumeration value="greaterThanOrEqualTo"/>
+                        <xs:enumeration value="on"/>
+                        <xs:enumeration value="notOn"/>
+                        <xs:enumeration value="before"/>
+                        <xs:enumeration value="after"/>
+                        <xs:enumeration value="onOrBefore"/>
+                        <xs:enumeration value="onOrAfter"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="values" type="Values">
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="CriteriaSelection">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="AND"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="query">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="objectType" type="xs:string"/>
+                <xs:element minOccurs="0" name="criteriaSelection" default="NONE" type="CriteriaSelection"/>
+                <xs:element name="conditions" type="Conditions"/>
+                <xs:element minOccurs="0" name="fields" type="Field"/>
+                <xs:element name="limit" type="xs:integer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

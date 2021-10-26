@@ -1,0 +1,27 @@
+{
+  "configs": [
+    "one-way-ssl-demo.xml"
+  ],
+  "secureProperties": [],
+  "redeploymentEnabled": true,
+  "name": "com.mycompany:one-way-ssl-demo:1.0.0-SNAPSHOT",
+  "minMuleVersion": "4.4.0",
+  "requiredProduct": "MULE",
+  "classLoaderModelLoaderDescriptor": {
+    "id": "mule",
+    "attributes": {
+      "exportedPackages": [],
+      "exportedResources": [
+        "server-keystore.jks",
+        "application-types.xml",
+        "log4j2.xml",
+        "client-truststore.jks",
+        "one-way-ssl-demo.xml"
+      ]
+    }
+  },
+  "bundleDescriptorLoader": {
+    "id": "mule",
+    "attributes": {}
+  }
+}

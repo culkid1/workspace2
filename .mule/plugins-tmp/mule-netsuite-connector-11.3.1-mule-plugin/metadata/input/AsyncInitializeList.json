@@ -1,0 +1,326 @@
+{
+  "format": "xml",
+  "type": "Object",
+  "annotations": {
+    "typeId": "#root:{urn:messages_2020_2.platform.webservices.netsuite.com}asyncInitializeList"
+  },
+  "fields": [
+    {
+      "key": {
+        "name": "{urn:messages_2020_2.platform.webservices.netsuite.com}asyncInitializeList",
+        "required": "true"
+      },
+      "model": {
+        "type": "Object",
+        "annotations": {
+          "typeId": "{urn:messages_2020_2.platform.webservices.netsuite.com}AsyncInitializeListRequest"
+        },
+        "ordered": true,
+        "fields": [
+          {
+            "key": {
+              "name": "{urn:messages_2020_2.platform.webservices.netsuite.com}initializeRecord",
+              "repeated": "true",
+              "required": "true"
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}InitializeRecord"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}type",
+                    "required": "true"
+                  },
+                  "model": {
+                    "type": "String",
+                    "annotations": {
+                      "enum": {
+                        "type": "[Ljava.lang.String;",
+                        "values": [
+                          "assemblyBuild",
+                          "assemblyUnbuild",
+                          "binWorksheet",
+                          "cashRefund",
+                          "cashSale",
+                          "creditMemo",
+                          "customerPayment",
+                          "customerRefund",
+                          "customPurchase",
+                          "customSale",
+                          "depositApplication",
+                          "estimate",
+                          "invoice",
+                          "itemFulfillment",
+                          "itemReceipt",
+                          "inventoryTransfer",
+                          "purchaseOrder",
+                          "returnAuthorization",
+                          "salesOrder",
+                          "vendorBill",
+                          "vendorCredit",
+                          "vendorReturnAuthorization",
+                          "vendorPayment",
+                          "workOrder",
+                          "workOrderIssue",
+                          "workOrderCompletion",
+                          "workOrderClose"
+                        ]
+                      }
+                    }
+                  }
+                },
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}reference",
+                    "attributes": [
+                      {
+                        "key": {
+                          "name": "type"
+                        },
+                        "model": {
+                          "type": "String",
+                          "annotations": {
+                            "enum": {
+                              "type": "[Ljava.lang.String;",
+                              "values": [
+                                "assemblyItem",
+                                "assemblyBuild",
+                                "cashSale",
+                                "creditMemo",
+                                "customer",
+                                "customerDeposit",
+                                "customPurchase",
+                                "customSale",
+                                "employee",
+                                "estimate",
+                                "interCompanyTransferOrder",
+                                "invoice",
+                                "location",
+                                "lotNumberedAssemblyItem",
+                                "opportunity",
+                                "purchaseOrder",
+                                "purchaseRequisition",
+                                "returnAuthorization",
+                                "salesOrder",
+                                "serializedAssemblyItem",
+                                "transferOrder",
+                                "vendor",
+                                "vendorBill",
+                                "vendorReturnAuthorization",
+                                "workOrder"
+                              ]
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "internalId"
+                        },
+                        "model": {
+                          "type": "String"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "externalId"
+                        },
+                        "model": {
+                          "type": "String"
+                        }
+                      }
+                    ]
+                  },
+                  "model": {
+                    "type": "Object",
+                    "annotations": {
+                      "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}InitializeRef"
+                    },
+                    "ordered": true,
+                    "fields": [
+                      {
+                        "key": {
+                          "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name"
+                        },
+                        "model": {
+                          "type": "String"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}auxReference",
+                    "attributes": [
+                      {
+                        "key": {
+                          "name": "type"
+                        },
+                        "model": {
+                          "type": "String",
+                          "annotations": {
+                            "enum": {
+                              "type": "[Ljava.lang.String;",
+                              "values": [
+                                "shippingGroup",
+                                "arAccount",
+                                "apAccount",
+                                "itemFulfillment",
+                                "tranType"
+                              ]
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "internalId"
+                        },
+                        "model": {
+                          "type": "String"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "externalId"
+                        },
+                        "model": {
+                          "type": "String"
+                        }
+                      },
+                      {
+                        "key": {
+                          "name": "scriptId"
+                        },
+                        "model": {
+                          "type": "String"
+                        }
+                      }
+                    ]
+                  },
+                  "model": {
+                    "type": "Object",
+                    "annotations": {
+                      "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}InitializeAuxRef"
+                    },
+                    "ordered": true,
+                    "fields": [
+                      {
+                        "key": {
+                          "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name"
+                        },
+                        "model": {
+                          "type": "String"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}referenceList"
+                  },
+                  "model": {
+                    "type": "Object",
+                    "annotations": {
+                      "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}InitializeRefList"
+                    },
+                    "ordered": true,
+                    "fields": [
+                      {
+                        "key": {
+                          "name": "{urn:core_2020_2.platform.webservices.netsuite.com}initializeRef",
+                          "attributes": [
+                            {
+                              "key": {
+                                "name": "type"
+                              },
+                              "model": {
+                                "type": "String",
+                                "annotations": {
+                                  "enum": {
+                                    "type": "[Ljava.lang.String;",
+                                    "values": [
+                                      "assemblyItem",
+                                      "assemblyBuild",
+                                      "cashSale",
+                                      "creditMemo",
+                                      "customer",
+                                      "customerDeposit",
+                                      "customPurchase",
+                                      "customSale",
+                                      "employee",
+                                      "estimate",
+                                      "interCompanyTransferOrder",
+                                      "invoice",
+                                      "location",
+                                      "lotNumberedAssemblyItem",
+                                      "opportunity",
+                                      "purchaseOrder",
+                                      "purchaseRequisition",
+                                      "returnAuthorization",
+                                      "salesOrder",
+                                      "serializedAssemblyItem",
+                                      "transferOrder",
+                                      "vendor",
+                                      "vendorBill",
+                                      "vendorReturnAuthorization",
+                                      "workOrder"
+                                    ]
+                                  }
+                                }
+                              }
+                            },
+                            {
+                              "key": {
+                                "name": "internalId"
+                              },
+                              "model": {
+                                "type": "String"
+                              }
+                            },
+                            {
+                              "key": {
+                                "name": "externalId"
+                              },
+                              "model": {
+                                "type": "String"
+                              }
+                            }
+                          ],
+                          "repeated": "true"
+                        },
+                        "model": {
+                          "type": "Object",
+                          "annotations": {
+                            "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}InitializeRef"
+                          },
+                          "ordered": true,
+                          "fields": [
+                            {
+                              "key": {
+                                "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name"
+                              },
+                              "model": {
+                                "type": "String"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

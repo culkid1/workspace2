@@ -1,0 +1,178 @@
+{
+  "CASH_REFUND": {
+    "displayName": "CASH_REFUND",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CASH_REFUND"
+  },
+  "CASH_SALE": {
+    "displayName": "CASH_SALE",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CASH_SALE"
+  },
+  "CONTACT": {
+    "displayName": "CONTACT",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CONTACT"
+  },
+  "CREDIT_MEMO": {
+    "displayName": "CREDIT_MEMO",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CREDIT_MEMO"
+  },
+  "CUSTOMER": {
+    "displayName": "CUSTOMER",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CUSTOMER"
+  },
+  "CUSTOMER_DEPOSIT": {
+    "displayName": "CUSTOMER_DEPOSIT",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CUSTOMER_DEPOSIT"
+  },
+  "CUSTOMER_PAYMENT": {
+    "displayName": "CUSTOMER_PAYMENT",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CUSTOMER_PAYMENT"
+  },
+  "CUSTOMER_REFUND": {
+    "displayName": "CUSTOMER_REFUND",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CUSTOMER_REFUND"
+  },
+  "EMPLOYEE": {
+    "displayName": "EMPLOYEE",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "EMPLOYEE"
+  },
+  "ESTIMATE": {
+    "displayName": "ESTIMATE",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "ESTIMATE"
+  },
+  "INVENTORY_ITEM": {
+    "displayName": "INVENTORY_ITEM",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "INVENTORY_ITEM"
+  },
+  "INVOICE": {
+    "displayName": "INVOICE",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "INVOICE"
+  },
+  "JOURNAL_ENTRY": {
+    "displayName": "JOURNAL_ENTRY",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "JOURNAL_ENTRY"
+  },
+  "NON_INVENTORY_PURCHASE_ITEM": {
+    "displayName": "NON_INVENTORY_PURCHASE_ITEM",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "NON_INVENTORY_PURCHASE_ITEM"
+  },
+  "NON_INVENTORY_RESALE_ITEM": {
+    "displayName": "NON_INVENTORY_RESALE_ITEM",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "NON_INVENTORY_RESALE_ITEM"
+  },
+  "NON_INVENTORY_SALE_ITEM": {
+    "displayName": "NON_INVENTORY_SALE_ITEM",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "NON_INVENTORY_SALE_ITEM"
+  },
+  "OPPORTUNITY": {
+    "displayName": "OPPORTUNITY",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "OPPORTUNITY"
+  },
+  "PAYMENT_ITEM": {
+    "displayName": "PAYMENT_ITEM",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "PAYMENT_ITEM"
+  },
+  "SALES_ORDER": {
+    "displayName": "SALES_ORDER",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "SALES_ORDER"
+  },
+  "CustomRecord__customrecord_ns_pivotlayout__269": {
+    "displayName": "SEARCH PIVOT LAYOUT",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CustomRecord__customrecord_ns_pivotlayout__269"
+  },
+  "CustomRecord__customrecord_newsfeed_icon__443": {
+    "displayName": "SUITESOCIAL ICON",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CustomRecord__customrecord_newsfeed_icon__443"
+  },
+  "SUPPORT_CASE": {
+    "displayName": "SUPPORT_CASE",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "SUPPORT_CASE"
+  }
+}

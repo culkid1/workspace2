@@ -1,0 +1,8 @@
+
+<changeEmailResponse xmlns="urn:messages_2020_2.platform.webservices.netsuite.com">
+    <sessionResponse>
+        <platformCore:status isSuccess="true"
+                             xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com"/>
+
+    </sessionResponse>
+</changeEmailResponse>

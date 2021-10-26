@@ -1,0 +1,499 @@
+<getListResponse xmlns="messages_2020_2.platform.webservices.netsuite.com">
+    <platformMsgs:readResponseList xmlns:platformMsgs="urn:messages_2020_2.platform.webservices.netsuite.com">
+        <platformCore:status xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" isSuccess="true"/>
+        <platformMsgs:readResponse>
+            <platformCore:status xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" isSuccess="true"/>
+            <platformMsgs:record xmlns:setupCustom="urn:customization_2020_2.setup.webservices.netsuite.com" internalId="42" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="setupCustom:CrmCustomField">
+                <setupCustom:label>Help Desk Case Type</setupCustom:label>
+                <setupCustom:selectRecordType xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="32">
+                    <platformCore:name>Help Desk Case List</platformCore:name>
+                </setupCustom:selectRecordType>
+                <setupCustom:storeValue>true</setupCustom:storeValue>
+                <setupCustom:showInList>false</setupCustom:showInList>
+                <setupCustom:globalSearch>false</setupCustom:globalSearch>
+                <setupCustom:isParent>false</setupCustom:isParent>
+                <setupCustom:subtab xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="-20">
+                    <platformCore:name>Main</platformCore:name>
+                </setupCustom:subtab>
+                <setupCustom:displayType>_normal</setupCustom:displayType>
+                <setupCustom:isMandatory>false</setupCustom:isMandatory>
+                <setupCustom:checkSpelling>false</setupCustom:checkSpelling>
+                <setupCustom:defaultChecked>false</setupCustom:defaultChecked>
+                <setupCustom:isFormula>false</setupCustom:isFormula>
+                <setupCustom:appliesToTask>false</setupCustom:appliesToTask>
+                <setupCustom:appliesToMfgProjectTask>false</setupCustom:appliesToMfgProjectTask>
+                <setupCustom:appliesToProjectTask>false</setupCustom:appliesToProjectTask>
+                <setupCustom:appliesToPhoneCall>false</setupCustom:appliesToPhoneCall>
+                <setupCustom:appliesToEvent>false</setupCustom:appliesToEvent>
+                <setupCustom:appliesToCase>true</setupCustom:appliesToCase>
+                <setupCustom:appliesToCampaign>false</setupCustom:appliesToCampaign>
+                <setupCustom:appliesPerKeyword>false</setupCustom:appliesPerKeyword>
+                <setupCustom:appliesToSolution>false</setupCustom:appliesToSolution>
+                <setupCustom:availableExternally>true</setupCustom:availableExternally>
+                <setupCustom:accessLevel>_edit</setupCustom:accessLevel>
+                <setupCustom:searchLevel>_edit</setupCustom:searchLevel>
+                <setupCustom:translationsList>
+                    <setupCustom:translations/>
+                </setupCustom:translationsList>
+                <setupCustom:fieldType>_listRecord</setupCustom:fieldType>
+                <setupCustom:scriptId>custevent_ishdcasetype</setupCustom:scriptId>
+            </platformMsgs:record>
+        </platformMsgs:readResponse>
+        <platformMsgs:readResponse>
+            <platformCore:status xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" isSuccess="true"/>
+            <platformMsgs:record xmlns:setupCustom="urn:customization_2020_2.setup.webservices.netsuite.com" internalId="3051" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="setupCustom:CrmCustomField">
+                <setupCustom:label>Review Status</setupCustom:label>
+                <setupCustom:owner xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="23">
+                    <platformCore:name>Clark Koozer</platformCore:name>
+                </setupCustom:owner>
+                <setupCustom:selectRecordType xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="280">
+                    <platformCore:name>-Solution Review Status</platformCore:name>
+                </setupCustom:selectRecordType>
+                <setupCustom:storeValue>true</setupCustom:storeValue>
+                <setupCustom:showInList>false</setupCustom:showInList>
+                <setupCustom:globalSearch>false</setupCustom:globalSearch>
+                <setupCustom:isParent>false</setupCustom:isParent>
+                <setupCustom:subtab xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="-20">
+                    <platformCore:name>Main</platformCore:name>
+                </setupCustom:subtab>
+                <setupCustom:displayType>_normal</setupCustom:displayType>
+                <setupCustom:isMandatory>false</setupCustom:isMandatory>
+                <setupCustom:checkSpelling>false</setupCustom:checkSpelling>
+                <setupCustom:defaultChecked>false</setupCustom:defaultChecked>
+                <setupCustom:isFormula>false</setupCustom:isFormula>
+                <setupCustom:appliesToTask>false</setupCustom:appliesToTask>
+                <setupCustom:appliesToMfgProjectTask>false</setupCustom:appliesToMfgProjectTask>
+                <setupCustom:appliesToProjectTask>false</setupCustom:appliesToProjectTask>
+                <setupCustom:appliesToPhoneCall>false</setupCustom:appliesToPhoneCall>
+                <setupCustom:appliesToEvent>false</setupCustom:appliesToEvent>
+                <setupCustom:appliesToCase>false</setupCustom:appliesToCase>
+                <setupCustom:appliesToCampaign>false</setupCustom:appliesToCampaign>
+                <setupCustom:appliesPerKeyword>false</setupCustom:appliesPerKeyword>
+                <setupCustom:appliesToSolution>true</setupCustom:appliesToSolution>
+                <setupCustom:availableExternally>false</setupCustom:availableExternally>
+                <setupCustom:accessLevel>_edit</setupCustom:accessLevel>
+                <setupCustom:searchLevel>_edit</setupCustom:searchLevel>
+                <setupCustom:translationsList>
+                    <setupCustom:translations/>
+                </setupCustom:translationsList>
+                <setupCustom:fieldType>_listRecord</setupCustom:fieldType>
+                <setupCustom:scriptId>custevent_review_status</setupCustom:scriptId>
+            </platformMsgs:record>
+        </platformMsgs:readResponse>
+        <platformMsgs:readResponse>
+            <platformCore:status xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" isSuccess="true"/>
+            <platformMsgs:record xmlns:setupCustom="urn:customization_2020_2.setup.webservices.netsuite.com" internalId="3052" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="setupCustom:CrmCustomField">
+                <setupCustom:label>Review Date</setupCustom:label>
+                <setupCustom:owner xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="23">
+                    <platformCore:name>Clark Koozer</platformCore:name>
+                </setupCustom:owner>
+                <setupCustom:storeValue>true</setupCustom:storeValue>
+                <setupCustom:showInList>false</setupCustom:showInList>
+                <setupCustom:globalSearch>false</setupCustom:globalSearch>
+                <setupCustom:isParent>false</setupCustom:isParent>
+                <setupCustom:subtab xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="-20">
+                    <platformCore:name>Main</platformCore:name>
+                </setupCustom:subtab>
+                <setupCustom:displayType>_normal</setupCustom:displayType>
+                <setupCustom:isMandatory>false</setupCustom:isMandatory>
+                <setupCustom:checkSpelling>false</setupCustom:checkSpelling>
+                <setupCustom:defaultChecked>false</setupCustom:defaultChecked>
+                <setupCustom:isFormula>false</setupCustom:isFormula>
+                <setupCustom:appliesToTask>false</setupCustom:appliesToTask>
+                <setupCustom:appliesToMfgProjectTask>false</setupCustom:appliesToMfgProjectTask>
+                <setupCustom:appliesToProjectTask>false</setupCustom:appliesToProjectTask>
+                <setupCustom:appliesToPhoneCall>false</setupCustom:appliesToPhoneCall>
+                <setupCustom:appliesToEvent>false</setupCustom:appliesToEvent>
+                <setupCustom:appliesToCase>false</setupCustom:appliesToCase>
+                <setupCustom:appliesToCampaign>false</setupCustom:appliesToCampaign>
+                <setupCustom:appliesPerKeyword>false</setupCustom:appliesPerKeyword>
+                <setupCustom:appliesToSolution>true</setupCustom:appliesToSolution>
+                <setupCustom:availableExternally>false</setupCustom:availableExternally>
+                <setupCustom:accessLevel>_edit</setupCustom:accessLevel>
+                <setupCustom:searchLevel>_edit</setupCustom:searchLevel>
+                <setupCustom:translationsList>
+                    <setupCustom:translations/>
+                </setupCustom:translationsList>
+                <setupCustom:fieldType>_date</setupCustom:fieldType>
+                <setupCustom:scriptId>custevent_review_date</setupCustom:scriptId>
+            </platformMsgs:record>
+        </platformMsgs:readResponse>
+        <platformMsgs:readResponse>
+            <platformCore:status xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" isSuccess="true"/>
+            <platformMsgs:record xmlns:setupCustom="urn:customization_2020_2.setup.webservices.netsuite.com" internalId="3053" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="setupCustom:CrmCustomField">
+                <setupCustom:label>Related Case Link Type</setupCustom:label>
+                <setupCustom:owner xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="23">
+                    <platformCore:name>Clark Koozer</platformCore:name>
+                </setupCustom:owner>
+                <setupCustom:selectRecordType xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="281">
+                    <platformCore:name>Link Type List</platformCore:name>
+                </setupCustom:selectRecordType>
+                <setupCustom:storeValue>true</setupCustom:storeValue>
+                <setupCustom:showInList>false</setupCustom:showInList>
+                <setupCustom:globalSearch>false</setupCustom:globalSearch>
+                <setupCustom:isParent>false</setupCustom:isParent>
+                <setupCustom:subtab xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="-20">
+                    <platformCore:name>Main</platformCore:name>
+                </setupCustom:subtab>
+                <setupCustom:displayType>_normal</setupCustom:displayType>
+                <setupCustom:help>Please select the link type - the reason as to why this case is related to the current case shown.</setupCustom:help>
+                <setupCustom:isMandatory>false</setupCustom:isMandatory>
+                <setupCustom:checkSpelling>false</setupCustom:checkSpelling>
+                <setupCustom:defaultChecked>false</setupCustom:defaultChecked>
+                <setupCustom:isFormula>false</setupCustom:isFormula>
+                <setupCustom:appliesToTask>false</setupCustom:appliesToTask>
+                <setupCustom:appliesToMfgProjectTask>false</setupCustom:appliesToMfgProjectTask>
+                <setupCustom:appliesToProjectTask>false</setupCustom:appliesToProjectTask>
+                <setupCustom:appliesToPhoneCall>false</setupCustom:appliesToPhoneCall>
+                <setupCustom:appliesToEvent>false</setupCustom:appliesToEvent>
+                <setupCustom:appliesToCase>true</setupCustom:appliesToCase>
+                <setupCustom:appliesToCampaign>false</setupCustom:appliesToCampaign>
+                <setupCustom:appliesPerKeyword>false</setupCustom:appliesPerKeyword>
+                <setupCustom:appliesToSolution>false</setupCustom:appliesToSolution>
+                <setupCustom:availableExternally>false</setupCustom:availableExternally>
+                <setupCustom:accessLevel>_edit</setupCustom:accessLevel>
+                <setupCustom:searchLevel>_edit</setupCustom:searchLevel>
+                <setupCustom:translationsList>
+                    <setupCustom:translations/>
+                </setupCustom:translationsList>
+                <setupCustom:fieldType>_listRecord</setupCustom:fieldType>
+                <setupCustom:scriptId>custevent_relatedcaselinktype</setupCustom:scriptId>
+            </platformMsgs:record>
+        </platformMsgs:readResponse>
+        <platformMsgs:readResponse>
+            <platformCore:status xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" isSuccess="true"/>
+            <platformMsgs:record xmlns:setupCustom="urn:customization_2020_2.setup.webservices.netsuite.com" internalId="3054" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="setupCustom:CrmCustomField">
+                <setupCustom:label>Related Case</setupCustom:label>
+                <setupCustom:owner xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="23">
+                    <platformCore:name>Clark Koozer</platformCore:name>
+                </setupCustom:owner>
+                <setupCustom:selectRecordType xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="-23">
+                    <platformCore:name>Case</platformCore:name>
+                </setupCustom:selectRecordType>
+                <setupCustom:storeValue>true</setupCustom:storeValue>
+                <setupCustom:showInList>false</setupCustom:showInList>
+                <setupCustom:globalSearch>false</setupCustom:globalSearch>
+                <setupCustom:isParent>true</setupCustom:isParent>
+                <setupCustom:subtab xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="-20">
+                    <platformCore:name>Main</platformCore:name>
+                </setupCustom:subtab>
+                <setupCustom:displayType>_normal</setupCustom:displayType>
+                <setupCustom:help>Choose a related case - should another case need to be linked to this one - such as:  for reference, or because this case is the same as another, and one of them needs to be closed, etc...  Use the Link type field below to describe the relationship to this case.</setupCustom:help>
+                <setupCustom:parentSubtab xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="208">
+                    <platformCore:name>Related Cases</platformCore:name>
+                </setupCustom:parentSubtab>
+                <setupCustom:isMandatory>false</setupCustom:isMandatory>
+                <setupCustom:checkSpelling>false</setupCustom:checkSpelling>
+                <setupCustom:defaultChecked>false</setupCustom:defaultChecked>
+                <setupCustom:isFormula>false</setupCustom:isFormula>
+                <setupCustom:appliesToTask>false</setupCustom:appliesToTask>
+                <setupCustom:appliesToMfgProjectTask>false</setupCustom:appliesToMfgProjectTask>
+                <setupCustom:appliesToProjectTask>false</setupCustom:appliesToProjectTask>
+                <setupCustom:appliesToPhoneCall>false</setupCustom:appliesToPhoneCall>
+                <setupCustom:appliesToEvent>false</setupCustom:appliesToEvent>
+                <setupCustom:appliesToCase>true</setupCustom:appliesToCase>
+                <setupCustom:appliesToCampaign>false</setupCustom:appliesToCampaign>
+                <setupCustom:appliesPerKeyword>false</setupCustom:appliesPerKeyword>
+                <setupCustom:appliesToSolution>false</setupCustom:appliesToSolution>
+                <setupCustom:availableExternally>false</setupCustom:availableExternally>
+                <setupCustom:accessLevel>_edit</setupCustom:accessLevel>
+                <setupCustom:searchLevel>_edit</setupCustom:searchLevel>
+                <setupCustom:translationsList>
+                    <setupCustom:translations/>
+                </setupCustom:translationsList>
+                <setupCustom:fieldType>_listRecord</setupCustom:fieldType>
+                <setupCustom:scriptId>custevent_relatedcase</setupCustom:scriptId>
+            </platformMsgs:record>
+        </platformMsgs:readResponse>
+        <platformMsgs:readResponse>
+            <platformCore:status xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" isSuccess="true"/>
+            <platformMsgs:record xmlns:setupCustom="urn:customization_2020_2.setup.webservices.netsuite.com" internalId="3055" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="setupCustom:CrmCustomField">
+                <setupCustom:label>Close Reason</setupCustom:label>
+                <setupCustom:owner xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="23">
+                    <platformCore:name>Clark Koozer</platformCore:name>
+                </setupCustom:owner>
+                <setupCustom:selectRecordType xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="282">
+                    <platformCore:name>Close Reason List</platformCore:name>
+                </setupCustom:selectRecordType>
+                <setupCustom:storeValue>true</setupCustom:storeValue>
+                <setupCustom:showInList>false</setupCustom:showInList>
+                <setupCustom:globalSearch>false</setupCustom:globalSearch>
+                <setupCustom:isParent>false</setupCustom:isParent>
+                <setupCustom:subtab xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="-20">
+                    <platformCore:name>Main</platformCore:name>
+                </setupCustom:subtab>
+                <setupCustom:displayType>_normal</setupCustom:displayType>
+                <setupCustom:help>What is the reason the case is being closed?</setupCustom:help>
+                <setupCustom:isMandatory>false</setupCustom:isMandatory>
+                <setupCustom:checkSpelling>false</setupCustom:checkSpelling>
+                <setupCustom:defaultChecked>false</setupCustom:defaultChecked>
+                <setupCustom:isFormula>false</setupCustom:isFormula>
+                <setupCustom:appliesToTask>false</setupCustom:appliesToTask>
+                <setupCustom:appliesToMfgProjectTask>false</setupCustom:appliesToMfgProjectTask>
+                <setupCustom:appliesToProjectTask>false</setupCustom:appliesToProjectTask>
+                <setupCustom:appliesToPhoneCall>false</setupCustom:appliesToPhoneCall>
+                <setupCustom:appliesToEvent>false</setupCustom:appliesToEvent>
+                <setupCustom:appliesToCase>true</setupCustom:appliesToCase>
+                <setupCustom:appliesToCampaign>false</setupCustom:appliesToCampaign>
+                <setupCustom:appliesPerKeyword>false</setupCustom:appliesPerKeyword>
+                <setupCustom:appliesToSolution>false</setupCustom:appliesToSolution>
+                <setupCustom:availableExternally>false</setupCustom:availableExternally>
+                <setupCustom:accessLevel>_edit</setupCustom:accessLevel>
+                <setupCustom:searchLevel>_edit</setupCustom:searchLevel>
+                <setupCustom:translationsList>
+                    <setupCustom:translations/>
+                </setupCustom:translationsList>
+                <setupCustom:fieldType>_listRecord</setupCustom:fieldType>
+                <setupCustom:scriptId>custevent_closereason</setupCustom:scriptId>
+            </platformMsgs:record>
+        </platformMsgs:readResponse>
+        <platformMsgs:readResponse>
+            <platformCore:status xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" isSuccess="true"/>
+            <platformMsgs:record xmlns:setupCustom="urn:customization_2020_2.setup.webservices.netsuite.com" internalId="3056" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="setupCustom:CrmCustomField">
+                <setupCustom:label>From KB Solution</setupCustom:label>
+                <setupCustom:owner xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="23">
+                    <platformCore:name>Clark Koozer</platformCore:name>
+                </setupCustom:owner>
+                <setupCustom:selectRecordType xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="-25">
+                    <platformCore:name>Solution</platformCore:name>
+                </setupCustom:selectRecordType>
+                <setupCustom:storeValue>true</setupCustom:storeValue>
+                <setupCustom:showInList>false</setupCustom:showInList>
+                <setupCustom:globalSearch>false</setupCustom:globalSearch>
+                <setupCustom:isParent>false</setupCustom:isParent>
+                <setupCustom:subtab xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="-20">
+                    <platformCore:name>Main</platformCore:name>
+                </setupCustom:subtab>
+                <setupCustom:displayType>_normal</setupCustom:displayType>
+                <setupCustom:isMandatory>false</setupCustom:isMandatory>
+                <setupCustom:checkSpelling>false</setupCustom:checkSpelling>
+                <setupCustom:defaultChecked>false</setupCustom:defaultChecked>
+                <setupCustom:isFormula>false</setupCustom:isFormula>
+                <setupCustom:appliesToTask>false</setupCustom:appliesToTask>
+                <setupCustom:appliesToMfgProjectTask>false</setupCustom:appliesToMfgProjectTask>
+                <setupCustom:appliesToProjectTask>false</setupCustom:appliesToProjectTask>
+                <setupCustom:appliesToPhoneCall>false</setupCustom:appliesToPhoneCall>
+                <setupCustom:appliesToEvent>false</setupCustom:appliesToEvent>
+                <setupCustom:appliesToCase>true</setupCustom:appliesToCase>
+                <setupCustom:appliesToCampaign>false</setupCustom:appliesToCampaign>
+                <setupCustom:appliesPerKeyword>false</setupCustom:appliesPerKeyword>
+                <setupCustom:appliesToSolution>false</setupCustom:appliesToSolution>
+                <setupCustom:availableExternally>false</setupCustom:availableExternally>
+                <setupCustom:accessLevel>_edit</setupCustom:accessLevel>
+                <setupCustom:searchLevel>_edit</setupCustom:searchLevel>
+                <setupCustom:translationsList>
+                    <setupCustom:translations/>
+                </setupCustom:translationsList>
+                <setupCustom:fieldType>_listRecord</setupCustom:fieldType>
+                <setupCustom:scriptId>custevent_pf_zms_solution</setupCustom:scriptId>
+            </platformMsgs:record>
+        </platformMsgs:readResponse>
+        <platformMsgs:readResponse>
+            <platformCore:status xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" isSuccess="true"/>
+            <platformMsgs:record xmlns:setupCustom="urn:customization_2020_2.setup.webservices.netsuite.com" internalId="3748" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="setupCustom:CrmCustomField">
+                <setupCustom:label>Address</setupCustom:label>
+                <setupCustom:owner xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="-5">
+                    <platformCore:name>Alex Wolfe</platformCore:name>
+                </setupCustom:owner>
+                <setupCustom:description>Address</setupCustom:description>
+                <setupCustom:storeValue>true</setupCustom:storeValue>
+                <setupCustom:showInList>false</setupCustom:showInList>
+                <setupCustom:globalSearch>false</setupCustom:globalSearch>
+                <setupCustom:isParent>false</setupCustom:isParent>
+                <setupCustom:subtab xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="-20">
+                    <platformCore:name>Main</platformCore:name>
+                </setupCustom:subtab>
+                <setupCustom:displayType>_normal</setupCustom:displayType>
+                <setupCustom:displayWidth>60</setupCustom:displayWidth>
+                <setupCustom:displayHeight>4</setupCustom:displayHeight>
+                <setupCustom:isMandatory>false</setupCustom:isMandatory>
+                <setupCustom:checkSpelling>false</setupCustom:checkSpelling>
+                <setupCustom:defaultChecked>false</setupCustom:defaultChecked>
+                <setupCustom:isFormula>false</setupCustom:isFormula>
+                <setupCustom:appliesToTask>false</setupCustom:appliesToTask>
+                <setupCustom:appliesToMfgProjectTask>false</setupCustom:appliesToMfgProjectTask>
+                <setupCustom:appliesToProjectTask>false</setupCustom:appliesToProjectTask>
+                <setupCustom:appliesToPhoneCall>false</setupCustom:appliesToPhoneCall>
+                <setupCustom:appliesToEvent>true</setupCustom:appliesToEvent>
+                <setupCustom:appliesToCase>false</setupCustom:appliesToCase>
+                <setupCustom:appliesToCampaign>false</setupCustom:appliesToCampaign>
+                <setupCustom:appliesPerKeyword>false</setupCustom:appliesPerKeyword>
+                <setupCustom:appliesToSolution>false</setupCustom:appliesToSolution>
+                <setupCustom:availableExternally>false</setupCustom:availableExternally>
+                <setupCustom:accessLevel>_edit</setupCustom:accessLevel>
+                <setupCustom:searchLevel>_edit</setupCustom:searchLevel>
+                <setupCustom:translationsList>
+                    <setupCustom:translations/>
+                </setupCustom:translationsList>
+                <setupCustom:fieldType>_longText</setupCustom:fieldType>
+                <setupCustom:scriptId>custevent_address</setupCustom:scriptId>
+            </platformMsgs:record>
+        </platformMsgs:readResponse>
+        <platformMsgs:readResponse>
+            <platformCore:status xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" isSuccess="true"/>
+            <platformMsgs:record xmlns:setupCustom="urn:customization_2020_2.setup.webservices.netsuite.com" internalId="3749" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="setupCustom:CrmCustomField">
+                <setupCustom:label>Latitude</setupCustom:label>
+                <setupCustom:owner xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="-5">
+                    <platformCore:name>Alex Wolfe</platformCore:name>
+                </setupCustom:owner>
+                <setupCustom:description>Geo Code Latitude for Address</setupCustom:description>
+                <setupCustom:storeValue>true</setupCustom:storeValue>
+                <setupCustom:showInList>false</setupCustom:showInList>
+                <setupCustom:globalSearch>false</setupCustom:globalSearch>
+                <setupCustom:isParent>false</setupCustom:isParent>
+                <setupCustom:subtab xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="-20">
+                    <platformCore:name>Main</platformCore:name>
+                </setupCustom:subtab>
+                <setupCustom:displayType>_normal</setupCustom:displayType>
+                <setupCustom:isMandatory>false</setupCustom:isMandatory>
+                <setupCustom:checkSpelling>false</setupCustom:checkSpelling>
+                <setupCustom:defaultChecked>false</setupCustom:defaultChecked>
+                <setupCustom:isFormula>false</setupCustom:isFormula>
+                <setupCustom:appliesToTask>false</setupCustom:appliesToTask>
+                <setupCustom:appliesToMfgProjectTask>false</setupCustom:appliesToMfgProjectTask>
+                <setupCustom:appliesToProjectTask>false</setupCustom:appliesToProjectTask>
+                <setupCustom:appliesToPhoneCall>false</setupCustom:appliesToPhoneCall>
+                <setupCustom:appliesToEvent>true</setupCustom:appliesToEvent>
+                <setupCustom:appliesToCase>false</setupCustom:appliesToCase>
+                <setupCustom:appliesToCampaign>false</setupCustom:appliesToCampaign>
+                <setupCustom:appliesPerKeyword>false</setupCustom:appliesPerKeyword>
+                <setupCustom:appliesToSolution>false</setupCustom:appliesToSolution>
+                <setupCustom:availableExternally>false</setupCustom:availableExternally>
+                <setupCustom:accessLevel>_edit</setupCustom:accessLevel>
+                <setupCustom:searchLevel>_edit</setupCustom:searchLevel>
+                <setupCustom:translationsList>
+                    <setupCustom:translations/>
+                </setupCustom:translationsList>
+                <setupCustom:fieldType>_decimalNumber</setupCustom:fieldType>
+                <setupCustom:scriptId>custevent_latitude</setupCustom:scriptId>
+            </platformMsgs:record>
+        </platformMsgs:readResponse>
+        <platformMsgs:readResponse>
+            <platformCore:status xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" isSuccess="true"/>
+            <platformMsgs:record xmlns:setupCustom="urn:customization_2020_2.setup.webservices.netsuite.com" internalId="3750" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="setupCustom:CrmCustomField">
+                <setupCustom:label>Longitude</setupCustom:label>
+                <setupCustom:owner xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="-5">
+                    <platformCore:name>Alex Wolfe</platformCore:name>
+                </setupCustom:owner>
+                <setupCustom:description>Geo Code Longitude for Address</setupCustom:description>
+                <setupCustom:storeValue>true</setupCustom:storeValue>
+                <setupCustom:showInList>false</setupCustom:showInList>
+                <setupCustom:globalSearch>false</setupCustom:globalSearch>
+                <setupCustom:isParent>false</setupCustom:isParent>
+                <setupCustom:subtab xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="-20">
+                    <platformCore:name>Main</platformCore:name>
+                </setupCustom:subtab>
+                <setupCustom:displayType>_normal</setupCustom:displayType>
+                <setupCustom:isMandatory>false</setupCustom:isMandatory>
+                <setupCustom:checkSpelling>false</setupCustom:checkSpelling>
+                <setupCustom:defaultChecked>false</setupCustom:defaultChecked>
+                <setupCustom:isFormula>false</setupCustom:isFormula>
+                <setupCustom:appliesToTask>false</setupCustom:appliesToTask>
+                <setupCustom:appliesToMfgProjectTask>false</setupCustom:appliesToMfgProjectTask>
+                <setupCustom:appliesToProjectTask>false</setupCustom:appliesToProjectTask>
+                <setupCustom:appliesToPhoneCall>false</setupCustom:appliesToPhoneCall>
+                <setupCustom:appliesToEvent>true</setupCustom:appliesToEvent>
+                <setupCustom:appliesToCase>false</setupCustom:appliesToCase>
+                <setupCustom:appliesToCampaign>false</setupCustom:appliesToCampaign>
+                <setupCustom:appliesPerKeyword>false</setupCustom:appliesPerKeyword>
+                <setupCustom:appliesToSolution>false</setupCustom:appliesToSolution>
+                <setupCustom:availableExternally>false</setupCustom:availableExternally>
+                <setupCustom:accessLevel>_edit</setupCustom:accessLevel>
+                <setupCustom:searchLevel>_edit</setupCustom:searchLevel>
+                <setupCustom:translationsList>
+                    <setupCustom:translations/>
+                </setupCustom:translationsList>
+                <setupCustom:fieldType>_decimalNumber</setupCustom:fieldType>
+                <setupCustom:scriptId>custevent_longitude</setupCustom:scriptId>
+            </platformMsgs:record>
+        </platformMsgs:readResponse>
+        <platformMsgs:readResponse>
+            <platformCore:status xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" isSuccess="true"/>
+            <platformMsgs:record xmlns:setupCustom="urn:customization_2020_2.setup.webservices.netsuite.com" internalId="40" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="setupCustom:CrmCustomField">
+                <setupCustom:label>Sales Associate</setupCustom:label>
+                <setupCustom:selectRecordType xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="-4">
+                    <platformCore:name>Employee</platformCore:name>
+                </setupCustom:selectRecordType>
+                <setupCustom:storeValue>true</setupCustom:storeValue>
+                <setupCustom:showInList>false</setupCustom:showInList>
+                <setupCustom:globalSearch>false</setupCustom:globalSearch>
+                <setupCustom:isParent>false</setupCustom:isParent>
+                <setupCustom:subtab xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="6">
+                    <platformCore:name>Sales Associate</platformCore:name>
+                </setupCustom:subtab>
+                <setupCustom:displayType>_disabled</setupCustom:displayType>
+                <setupCustom:help>Name of the Sales Associate.
+                    Note: This is a custom field example.</setupCustom:help>
+                <setupCustom:isMandatory>false</setupCustom:isMandatory>
+                <setupCustom:checkSpelling>false</setupCustom:checkSpelling>
+                <setupCustom:defaultChecked>false</setupCustom:defaultChecked>
+                <setupCustom:isFormula>false</setupCustom:isFormula>
+                <setupCustom:sourceList xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="-2097">
+                    <platformCore:name>Company</platformCore:name>
+                </setupCustom:sourceList>
+                <setupCustom:sourceFrom xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="-88">
+                    <platformCore:name>Sales Rep</platformCore:name>
+                </setupCustom:sourceFrom>
+                <setupCustom:appliesToTask>false</setupCustom:appliesToTask>
+                <setupCustom:appliesToMfgProjectTask>false</setupCustom:appliesToMfgProjectTask>
+                <setupCustom:appliesToProjectTask>false</setupCustom:appliesToProjectTask>
+                <setupCustom:appliesToPhoneCall>false</setupCustom:appliesToPhoneCall>
+                <setupCustom:appliesToEvent>false</setupCustom:appliesToEvent>
+                <setupCustom:appliesToCase>true</setupCustom:appliesToCase>
+                <setupCustom:appliesToCampaign>false</setupCustom:appliesToCampaign>
+                <setupCustom:appliesPerKeyword>false</setupCustom:appliesPerKeyword>
+                <setupCustom:appliesToSolution>false</setupCustom:appliesToSolution>
+                <setupCustom:availableExternally>false</setupCustom:availableExternally>
+                <setupCustom:accessLevel>_edit</setupCustom:accessLevel>
+                <setupCustom:searchLevel>_edit</setupCustom:searchLevel>
+                <setupCustom:translationsList>
+                    <setupCustom:translations/>
+                </setupCustom:translationsList>
+                <setupCustom:fieldType>_listRecord</setupCustom:fieldType>
+                <setupCustom:scriptId>custevent1</setupCustom:scriptId>
+            </platformMsgs:record>
+        </platformMsgs:readResponse>
+        <platformMsgs:readResponse>
+            <platformCore:status xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" isSuccess="true"/>
+            <platformMsgs:record xmlns:setupCustom="urn:customization_2020_2.setup.webservices.netsuite.com" internalId="41" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="setupCustom:CrmCustomField">
+                <setupCustom:label>Sales Associate Phone</setupCustom:label>
+                <setupCustom:storeValue>false</setupCustom:storeValue>
+                <setupCustom:showInList>false</setupCustom:showInList>
+                <setupCustom:globalSearch>false</setupCustom:globalSearch>
+                <setupCustom:isParent>false</setupCustom:isParent>
+                <setupCustom:subtab xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="6">
+                    <platformCore:name>Sales Associate</platformCore:name>
+                </setupCustom:subtab>
+                <setupCustom:displayType>_disabled</setupCustom:displayType>
+                <setupCustom:help>Phone number of the Sales Associate.  Note: This is a custom field example.</setupCustom:help>
+                <setupCustom:isMandatory>false</setupCustom:isMandatory>
+                <setupCustom:checkSpelling>false</setupCustom:checkSpelling>
+                <setupCustom:defaultChecked>false</setupCustom:defaultChecked>
+                <setupCustom:isFormula>false</setupCustom:isFormula>
+                <setupCustom:sourceList xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="40">
+                    <platformCore:name>Sales Associate</platformCore:name>
+                </setupCustom:sourceList>
+                <setupCustom:sourceFrom xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="-97">
+                    <platformCore:name>Phone</platformCore:name>
+                </setupCustom:sourceFrom>
+                <setupCustom:appliesToTask>false</setupCustom:appliesToTask>
+                <setupCustom:appliesToMfgProjectTask>false</setupCustom:appliesToMfgProjectTask>
+                <setupCustom:appliesToProjectTask>false</setupCustom:appliesToProjectTask>
+                <setupCustom:appliesToPhoneCall>false</setupCustom:appliesToPhoneCall>
+                <setupCustom:appliesToEvent>false</setupCustom:appliesToEvent>
+                <setupCustom:appliesToCase>true</setupCustom:appliesToCase>
+                <setupCustom:appliesToCampaign>false</setupCustom:appliesToCampaign>
+                <setupCustom:appliesPerKeyword>false</setupCustom:appliesPerKeyword>
+                <setupCustom:appliesToSolution>false</setupCustom:appliesToSolution>
+                <setupCustom:availableExternally>false</setupCustom:availableExternally>
+                <setupCustom:accessLevel>_edit</setupCustom:accessLevel>
+                <setupCustom:searchLevel>_edit</setupCustom:searchLevel>
+                <setupCustom:translationsList>
+                    <setupCustom:translations/>
+                </setupCustom:translationsList>
+                <setupCustom:fieldType>_phoneNumber</setupCustom:fieldType>
+                <setupCustom:scriptId>custevent2</setupCustom:scriptId>
+            </platformMsgs:record>
+        </platformMsgs:readResponse>
+    </platformMsgs:readResponseList>
+</getListResponse>

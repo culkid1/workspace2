@@ -1,0 +1,35 @@
+<getCustomizationIdResponse xmlns="urn:messages_2020_2.platform.webservices.netsuite.com">
+    <platformCore:getCustomizationIdResult xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com">
+        <platformCore:status isSuccess="true"/>
+        <platformCore:totalRecords>9</platformCore:totalRecords>
+        <platformCore:customizationRefList>
+            <platformCore:customizationRef scriptId="custrecord_bin_max_volume" internalId="228" type="otherCustomField">
+                <platformCore:name>Max Volume</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custrecord_bin_max_weight" internalId="229" type="otherCustomField">
+                <platformCore:name>Max Weight</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custrecord_bin_zone" internalId="2773" type="otherCustomField">
+                <platformCore:name>Zone</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custrecord1391" internalId="2774" type="otherCustomField">
+                <platformCore:name>Aisle</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custrecord_bin_rack" internalId="2776" type="otherCustomField">
+                <platformCore:name>Rack</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custrecord_fam_account_showinfixedasset" internalId="2895" type="otherCustomField">
+                <platformCore:name>Show in Fixed Assets Management</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custrecord1392" internalId="4580" type="otherCustomField">
+                <platformCore:name>itemDemandPlanOtherCF</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custrecord1393" internalId="4581" type="otherCustomField">
+                <platformCore:name>classificationOtherCF</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custrecord1394" internalId="4582" type="otherCustomField">
+                <platformCore:name>promotionCodeOtherCF</platformCore:name>
+            </platformCore:customizationRef>
+        </platformCore:customizationRefList>
+    </platformCore:getCustomizationIdResult>
+</getCustomizationIdResponse>

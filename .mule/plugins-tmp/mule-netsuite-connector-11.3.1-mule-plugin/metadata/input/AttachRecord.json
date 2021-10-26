@@ -1,0 +1,83 @@
+{
+  "format": "xml",
+  "type": "Object",
+  "annotations": {
+    "typeId": "#root:{urn:messages_2020_2.platform.webservices.netsuite.com}attach"
+  },
+  "fields": [
+    {
+      "key": {
+        "name": "{urn:messages_2020_2.platform.webservices.netsuite.com}attach",
+        "required": "true"
+      },
+      "model": {
+        "type": "Object",
+        "annotations": {
+          "typeId": "{urn:messages_2020_2.platform.webservices.netsuite.com}AttachRequest"
+        },
+        "ordered": true,
+        "fields": [
+          {
+            "key": {
+              "name": "{urn:messages_2020_2.platform.webservices.netsuite.com}attachReference",
+              "required": "true"
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}AttachBasicReference"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}attachTo"
+                  },
+                  "model": {
+                    "type": "Object",
+                    "annotations": {
+                      "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}BaseRef"
+                    },
+                    "ordered": true,
+                    "fields": [
+                      {
+                        "key": {
+                          "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name"
+                        },
+                        "model": {
+                          "type": "String"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}attachedRecord"
+                  },
+                  "model": {
+                    "type": "Object",
+                    "annotations": {
+                      "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}BaseRef"
+                    },
+                    "ordered": true,
+                    "fields": [
+                      {
+                        "key": {
+                          "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name"
+                        },
+                        "model": {
+                          "type": "String"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

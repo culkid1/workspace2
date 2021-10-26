@@ -1,0 +1,88 @@
+{
+  "format": "xml",
+  "type": "Object",
+  "annotations": {
+    "typeId": "#root:{urn:messages_2020_2.platform.webservices.netsuite.com}asyncUpsertListResponse"
+  },
+  "fields": [
+    {
+      "key": {
+        "name": "{urn:messages_2020_2.platform.webservices.netsuite.com}asyncUpsertListResponse",
+        "required": "true"
+      },
+      "model": {
+        "type": "Object",
+        "annotations": {
+          "typeId": "{urn:messages_2020_2.platform.webservices.netsuite.com}AsyncStatusResponse"
+        },
+        "ordered": true,
+        "fields": [
+          {
+            "key": {
+              "name": "{urn:core_2020_2.platform.webservices.netsuite.com}asyncStatusResult",
+              "required": "true"
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}AsyncStatusResult"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}jobId",
+                    "required": "true"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}status",
+                    "required": "true"
+                  },
+                  "model": {
+                    "type": "String",
+                    "annotations": {
+                      "enum": {
+                        "type": "[Ljava.lang.String;",
+                        "values": [
+                          "failed",
+                          "finishedWithErrors",
+                          "pending",
+                          "processing",
+                          "finished",
+                          "retry"
+                        ]
+                      }
+                    }
+                  }
+                },
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}percentCompleted",
+                    "required": "true"
+                  },
+                  "model": {
+                    "type": "Number"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}estRemainingDuration",
+                    "required": "true"
+                  },
+                  "model": {
+                    "type": "Number"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

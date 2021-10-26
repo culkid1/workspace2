@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <soapenv:Header>
+        <platformMsgs:documentInfo xmlns:platformMsgs="urn:messages_2020_2.platform.webservices.netsuite.com">
+            <platformMsgs:nsId>WEBSERVICES_TSTDRV1372796_021520211481254087285871116_64a44b</platformMsgs:nsId>
+        </platformMsgs:documentInfo>
+    </soapenv:Header>
+    <soapenv:Body>
+        <searchResponse xmlns="urn:messages_2020_2.platform.webservices.netsuite.com">
+            <platformCore:searchResult xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com">
+                <platformCore:status isSuccess="true"/>
+                <platformCore:totalRecords>1</platformCore:totalRecords>
+                <platformCore:pageSize>10</platformCore:pageSize>
+                <platformCore:totalPages>1</platformCore:totalPages>
+                <platformCore:pageIndex>1</platformCore:pageIndex>
+                <platformCore:searchId>WEBSERVICES_TSTDRV1372796_021520211481254087285871116_64a44b
+                </platformCore:searchId>
+                <platformCore:recordList>
+                    <platformCore:record internalId="10225191" xsi:type="listEmp:Employee"
+                                         xmlns:listEmp="urn:employees_2020_2.lists.webservices.netsuite.com">
+                        <listEmp:entityId>FNEMPLOYEE526740 LNEMPLOYEE526740</listEmp:entityId>
+                        <listEmp:firstName>FNEMPLOYEE526740</listEmp:firstName>
+                        <listEmp:lastName>LNEMPLOYEE526740</listEmp:lastName>
+                        <listEmp:isInactive>false</listEmp:isInactive>
+                        <listEmp:lastModifiedDate>2021-02-15T13:59:35.000-08:00</listEmp:lastModifiedDate>
+                        <listEmp:dateCreated>2021-02-15T13:59:35.000-08:00</listEmp:dateCreated>
+                        <listEmp:initials>FL</listEmp:initials>
+                        <listEmp:subsidiary internalId="3">
+                            <platformCore:name>Honeycomb Holdings Inc.</platformCore:name>
+                        </listEmp:subsidiary>
+                        <listEmp:globalSubscriptionStatus>_softOptIn</listEmp:globalSubscriptionStatus>
+                        <listEmp:currency internalId="1">
+                            <platformCore:name>USA</platformCore:name>
+                        </listEmp:currency>
+                        <listEmp:purchaseOrderLimit>0.0</listEmp:purchaseOrderLimit>
+                        <listEmp:isSalesRep>false</listEmp:isSalesRep>
+                        <listEmp:isSupportRep>false</listEmp:isSupportRep>
+                        <listEmp:isJobResource>false</listEmp:isJobResource>
+                        <listEmp:hireDate>2019-12-06T00:00:00.000-08:00</listEmp:hireDate>
+                        <listEmp:gender>_omitted</listEmp:gender>
+                        <listEmp:workCalendar internalId="1">
+                            <platformCore:name>Default Work Calendar</platformCore:name>
+                        </listEmp:workCalendar>
+                        <listEmp:giveAccess>false</listEmp:giveAccess>
+                        <listEmp:defaultExpenseReportCurrency internalId="1">
+                            <platformCore:name>USA</platformCore:name>
+                        </listEmp:defaultExpenseReportCurrency>
+                        <listEmp:billPay>false</listEmp:billPay>
+                        <listEmp:eligibleForCommission>false</listEmp:eligibleForCommission>
+                        <listEmp:customFieldList>
+                            <platformCore:customField internalId="696" scriptId="custentity2"
+                                                      xsi:type="platformCore:BooleanCustomFieldRef">
+                                <platformCore:value>false</platformCore:value>
+                            </platformCore:customField>
+                            <platformCore:customField internalId="3992" scriptId="custentity_2663_payment_method"
+                                                      xsi:type="platformCore:BooleanCustomFieldRef">
+                                <platformCore:value>false</platformCore:value>
+                            </platformCore:customField>
+                        </listEmp:customFieldList>
+                    </platformCore:record>
+                </platformCore:recordList>
+            </platformCore:searchResult>
+        </searchResponse>
+    </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,5 @@
+<get xmlns="messages_2020_2.platform.webservices.netsuite.com"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com">
+    <baseRef scriptId="custrecord_bin_max_weight" internalId="229" type="otherCustomField" xsi:type="platformCore:CustomizationRef"/>
+</get>

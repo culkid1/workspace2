@@ -1,0 +1,8 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:urn="urn:messages_${api_version}.platform.webservices.netsuite.com">
+    <soapenv:Body>
+        <urn:getDataCenterUrls>
+            <urn:account>${account}</urn:account>
+        </urn:getDataCenterUrls>
+    </soapenv:Body>
+</soapenv:Envelope>

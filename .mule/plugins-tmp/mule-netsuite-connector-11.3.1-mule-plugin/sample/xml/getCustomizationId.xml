@@ -1,0 +1,11 @@
+<getCustomizationIdResponse xmlns="urn:messages_2017_1.platform.webservices.netsuite.com">
+    <platformCore:getCustomizationIdResult xmlns:platformCore="urn:core_2017_1.platform.webservices.netsuite.com">
+        <platformCore:status isSuccess="true"/>
+        <platformCore:totalRecords>1</platformCore:totalRecords>
+        <platformCore:customizationRefList>
+            <platformCore:customizationRef internalId="15" scriptId="customrecord15" type="customRecordType">
+                <platformCore:name>Customer Satisfaction Survey</platformCore:name>
+            </platformCore:customizationRef>
+        </platformCore:customizationRefList>
+    </platformCore:getCustomizationIdResult>
+</getCustomizationIdResponse>

@@ -1,0 +1,48 @@
+#%RAML 1.0
+title: cricket
+version: v1
+protocols:
+  - HTTP
+mediaType: 
+- application/json
+
+
+/search:
+  get:
+    queryParameters:
+      num1:
+        type: number
+        default: 1
+      num2:
+        type: number      
+        default: 1  
+      
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {
+                "message" : "success"
+              }
+      400:
+        body:
+          application/json:
+            example:
+              {
+                "message" : "Bad Request"
+              }
+      404:
+        body:
+          application/json:
+            example:
+              {
+                "message" : "Not found"
+              }
+      500:
+        body:
+          application/json:
+            example:
+              {
+                "message" : "Internal server error"
+              }

@@ -1,0 +1,14 @@
+<getCustomizationIdResponse xmlns="urn:messages_2020_2.platform.webservices.netsuite.com">
+    <platformCore:getCustomizationIdResult xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com">
+        <platformCore:status isSuccess="true"/>
+        <platformCore:totalRecords>2</platformCore:totalRecords>
+        <platformCore:customizationRefList>
+            <platformCore:customizationRef scriptId="custitemnumber_firmware" internalId="51" type="itemNumberCustomField">
+                <platformCore:name>Firmware</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custitemnumber1" internalId="4585" type="itemNumberCustomField">
+                <platformCore:name>TEST ITEM NUMBER FIELD</platformCore:name>
+            </platformCore:customizationRef>
+        </platformCore:customizationRefList>
+    </platformCore:getCustomizationIdResult>
+</getCustomizationIdResponse>

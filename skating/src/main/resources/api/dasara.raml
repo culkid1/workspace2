@@ -1,0 +1,74 @@
+#%RAML 1.0
+title: dasara
+
+/books:
+  get:
+    queryParameters:
+      author:
+        displayName: Author
+        type: string
+        description: Name of the author
+        required: false
+        example:  Mary Roach        
+      publicationyear:
+        displayName: pubYear
+        type: number
+        description: Book released in year
+        required: false
+        example:  1996          
+      rating:
+        displayName: Rating
+        type: number
+        description: Average rating 3-5 submitted by users
+        required: false
+        example:  3.4          
+      isbn:
+        displayName: ISBN
+        type: string
+        minLength: 10
+        example:  O321456987
+    responses:
+          200:
+                body:
+                      application/json:
+                            example:
+                                  {"message" : "granted success..."}     
+  put:
+    queryParameters:
+      access_token:
+        displayName: Access Token
+        type: string
+        description: Access token to be given when its called
+        required: true
+  post:
+  /{booktitle}:
+    get:
+    put:
+    delete:
+  /author:
+    get:
+  /publisher:
+    get:
+
+/booksdata:
+  /{booktitle}:
+    get:
+      description: fetching the book title from books section
+      responses:
+        200:
+          body:
+            application/json:
+              example:  |
+                {
+                  "data": {
+                    "id": "SbBGk",
+                    "title": "Stiff: The Curious Lives of Human Cadavers",
+                    "description": null,
+                    "datetime": 1341533193,
+                    "genre": "science",
+                    "author": "Mary Roach",
+                    "link": "http://e-bookmobile.com/books/Stiff"
+                  },
+                  "success": true,
+                  "status": 200
+                }

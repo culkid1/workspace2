@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+        </Console>
+    </Appenders>
+    <Loggers>
+
+        <Logger name="org.mule.module.netsuite" level="info" />
+        <Logger name="com.mulesoft.connector.netsuite" level="debug" />
+        <Logger name="com.mulesoft.connector.netsuite.internal.metadata.citizen.MetadataRecordResolver" level="trace" />
+        <Logger name="com.mulesoft.connector.netsuite.internal.metadata.MetadataRetriever" level="debug" />
+        <Logger name="com.mulesoft.connector.netsuite.internal.connection.NetSuiteSoapConnection" level="debug" />
+
+        <Logger name="com.mulesoft.connector.netsuite.internal.connection.provider" level="info" />
+<!--        <Logger name="HttpMessageDispatcher " level="info" />-->
+
+        <AsyncLogger name="org.mule.runtime.core.internal.processor.LoggerMessageProcessor" level="INFO"/>
+
+        <Logger name="org.apache.cxf.service" level="info" />
+        <Logger name="org.apache.cxf.interceptor.LoggingInInterceptor" level="info" />
+        <Logger name="org.apache.cxf.interceptor.LoggingOutInterceptor" level="info" />
+        <Logger name="org.glassfish.grizzly" level="info" />
+        <Logger name="org.mule.runtime.core" level="info" />
+        <Logger name="org.mule.munit.runner.remote" level="info" />
+        <Logger name="org.mule.service" level="info" />
+        <Logger name="org.mule.runtime.module.artifact.api.classloader" level="info" />
+        <Logger name="org.mule.weave.v2" level="error" />
+        <Logger name="org.mule.commons.atlantic.execution.context.executor" level="info" />
+
+
+        <Logger name="org.mule" level="info" />
+<!--        <Logger name="org.mule.module.netsuite.extension.internal.connection.HttpWithCookieMessageDispatcher" level="debug" />-->
+        <Logger name="org.mule.module.netsuite.extension.internal.connection.HttpWithCookieMessageDispatcher" level="info" />
+
+        <Root level="info">
+            <AppenderRef ref="Console" />
+        </Root>
+
+    </Loggers>
+</Configuration>

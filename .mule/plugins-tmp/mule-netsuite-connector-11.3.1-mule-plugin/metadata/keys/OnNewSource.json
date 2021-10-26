@@ -1,0 +1,321 @@
+{
+  "SupportCaseSearchBasic": {
+    "displayName": "SupportCase",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "SupportCaseSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "ContactSearchBasic": {
+    "displayName": "Contact",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "ContactSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "OpportunitySearchBasic": {
+    "displayName": "Opportunity",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "OpportunitySearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "BomRevisionSearchBasic": {
+    "displayName": "BomRevision",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "BomRevisionSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "VendorSearchBasic": {
+    "displayName": "Vendor",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "VendorSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "TaskSearchBasic": {
+    "displayName": "Task",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "TaskSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "IssueSearchBasic": {
+    "displayName": "Issue",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "IssueSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "TransactionSearchBasic": {
+    "displayName": "Transaction",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "TransactionSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "TimeEntrySearchBasic": {
+    "displayName": "TimeEntry",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "TimeEntrySearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "PartnerSearchBasic": {
+    "displayName": "Partner",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "PartnerSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "PhoneCallSearchBasic": {
+    "displayName": "PhoneCall",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "PhoneCallSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "FileSearchBasic": {
+    "displayName": "File",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "FileSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "CampaignSearchBasic": {
+    "displayName": "Campaign",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "CampaignSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "JobSearchBasic": {
+    "displayName": "Job",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "JobSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "GiftCertificateSearchBasic": {
+    "displayName": "GiftCertificate",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "GiftCertificateSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "ChargeSearchBasic": {
+    "displayName": "Charge",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "ChargeSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "BillingAccountSearchBasic": {
+    "displayName": "BillingAccount",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "BillingAccountSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "BomSearchBasic": {
+    "displayName": "Bom",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "BomSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "CustomerSearchBasic": {
+    "displayName": "Customer",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "CustomerSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "ProjectTaskSearchBasic": {
+    "displayName": "ProjectTask",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "ProjectTaskSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "InboundShipmentSearchBasic": {
+    "displayName": "InboundShipment",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "InboundShipmentSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "TimeBillSearchBasic": {
+    "displayName": "TimeBill",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "TimeBillSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "SolutionSearchBasic": {
+    "displayName": "Solution",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "SolutionSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "CalendarEventSearchBasic": {
+    "displayName": "CalendarEvent",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "CalendarEventSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "EntitySearchBasic": {
+    "displayName": "Entity",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "EntitySearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "ItemSearchBasic": {
+    "displayName": "Item",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "ItemSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "CustomRecordSearchBasic": {
+    "displayName": "CustomRecord",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "CustomRecordSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "OriginatingLeadSearchBasic": {
+    "displayName": "OriginatingLead",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "OriginatingLeadSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "EmployeeSearchBasic": {
+    "displayName": "Employee",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "EmployeeSearchBasic",
+    "properties": [
+      
+    ]
+  }
+}

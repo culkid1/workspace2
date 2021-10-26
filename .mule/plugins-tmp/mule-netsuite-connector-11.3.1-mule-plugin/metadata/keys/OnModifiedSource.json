@@ -1,0 +1,266 @@
+{
+  "SupportCaseSearchBasic": {
+    "displayName": "SupportCase",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "SupportCaseSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "ContactSearchBasic": {
+    "displayName": "Contact",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "ContactSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "OpportunitySearchBasic": {
+    "displayName": "Opportunity",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "OpportunitySearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "CustomerSearchBasic": {
+    "displayName": "Customer",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "CustomerSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "ProjectTaskSearchBasic": {
+    "displayName": "ProjectTask",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "ProjectTaskSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "VendorSearchBasic": {
+    "displayName": "Vendor",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "VendorSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "TaskSearchBasic": {
+    "displayName": "Task",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "TaskSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "IssueSearchBasic": {
+    "displayName": "Issue",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "IssueSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "TransactionSearchBasic": {
+    "displayName": "Transaction",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "TransactionSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "PartnerSearchBasic": {
+    "displayName": "Partner",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "PartnerSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "FolderSearchBasic": {
+    "displayName": "Folder",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "FolderSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "PhoneCallSearchBasic": {
+    "displayName": "PhoneCall",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "PhoneCallSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "SolutionSearchBasic": {
+    "displayName": "Solution",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "SolutionSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "FileSearchBasic": {
+    "displayName": "File",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "FileSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "CalendarEventSearchBasic": {
+    "displayName": "CalendarEvent",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "CalendarEventSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "EntitySearchBasic": {
+    "displayName": "Entity",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "EntitySearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "CampaignSearchBasic": {
+    "displayName": "Campaign",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "CampaignSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "JobSearchBasic": {
+    "displayName": "Job",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "JobSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "EntityGroupSearchBasic": {
+    "displayName": "EntityGroup",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "EntityGroupSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "ItemSearchBasic": {
+    "displayName": "Item",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "ItemSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "OriginatingLeadSearchBasic": {
+    "displayName": "OriginatingLead",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "OriginatingLeadSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "ItemDemandPlanSearchBasic": {
+    "displayName": "ItemDemandPlan",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "ItemDemandPlanSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "ItemSupplyPlanSearchBasic": {
+    "displayName": "ItemSupplyPlan",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "ItemSupplyPlanSearchBasic",
+    "properties": [
+      
+    ]
+  },
+  "EmployeeSearchBasic": {
+    "displayName": "Employee",
+    "childs": {
+      
+    },
+    "partName": "objectType",
+    "id": "EmployeeSearchBasic",
+    "properties": [
+      
+    ]
+  }
+}

@@ -1,0 +1,352 @@
+[
+  {
+    "StateId": 1,
+    "StateName": "Alabama",
+      
+    "CountryId": 1,
+    "Abbreviation": "AL"
+  }, 
+  {
+    "StateId": 2,
+    "StateName": "Alaska",
+      
+    "CountryId": 1,
+    "Abbreviation": "AK"
+  }, 
+  {
+    "StateId": 3,
+    "StateName": "Arizona",
+      
+    "CountryId": 1,
+    "Abbreviation": "AZ"
+  }, 
+  {
+    "StateId": 4,
+    "StateName": "Arkansas",
+      
+    "CountryId": 1,
+    "Abbreviation": "AR"
+  }, 
+  {
+    "StateId": 5,
+    "StateName": "California",
+      
+    "CountryId": 1,
+    "Abbreviation": "CA"
+  }, 
+  {
+    "StateId": 6,
+    "StateName": "Colorado",
+      
+    "CountryId": 1,
+    "Abbreviation": "CO"
+  }, 
+  {
+    "StateId": 7,
+    "StateName": "Connecticut",
+      
+    "CountryId": 1,
+    "Abbreviation": "CT"
+  }, 
+  {
+    "StateId": 8,
+    "StateName": "Delaware",
+      
+    "CountryId": 1,
+    "Abbreviation": "DE"
+  }, 
+  {
+    "StateId": 9,
+    "StateName": "Florida",
+      
+    "CountryId": 1,
+    "Abbreviation": "FL"
+  }, 
+  {
+    "StateId": 10,
+    "StateName": "Georgia",
+      
+    "CountryId": 1,
+    "Abbreviation": "GA"
+  }, 
+  {
+    "StateId": 11,
+    "StateName": "Hawaii",
+      
+    "CountryId": 1,
+    "Abbreviation": "HI"
+  }, 
+  {
+    "StateId": 12,
+    "StateName": "Idaho",
+      
+    "CountryId": 1,
+    "Abbreviation": "ID"
+  }, 
+  {
+    "StateId": 13,
+    "StateName": "Illinois",
+      
+    "CountryId": 1,
+    "Abbreviation": "IL"
+  }, 
+  {
+    "StateId": 14,
+    "StateName": "Indiana",
+      
+    "CountryId": 1,
+    "Abbreviation": "IN"
+  }, 
+  {
+    "StateId": 15,
+    "StateName": "Iowa",
+      
+    "CountryId": 1,
+    "Abbreviation": "IA"
+  }, 
+  {
+    "StateId": 16,
+    "StateName": "Kansas",
+      
+    "CountryId": 1,
+    "Abbreviation": "KS"
+  }, 
+  {
+    "StateId": 17,
+    "StateName": "Kentucky",
+      
+    "CountryId": 1,
+    "Abbreviation": "KY"
+  }, 
+  {
+    "StateId": 18,
+    "StateName": "Louisiana",
+      
+    "CountryId": 1,
+    "Abbreviation": "LA"
+  }, 
+  {
+    "StateId": 19,
+    "StateName": "Maine",
+      
+    "CountryId": 1,
+    "Abbreviation": "ME"
+  }, 
+  {
+    "StateId": 20,
+    "StateName": "Maryland",
+      
+    "CountryId": 1,
+    "Abbreviation": "MD"
+  }, 
+  {
+    "StateId": 21,
+    "StateName": "Massachusetts",
+      
+    "CountryId": 1,
+    "Abbreviation": "MA"
+  }, 
+  {
+    "StateId": 22,
+    "StateName": "Michigan",
+      
+    "CountryId": 1,
+    "Abbreviation": "MI"
+  }, 
+  {
+    "StateId": 23,
+    "StateName": "Minnesota",
+      
+    "CountryId": 1,
+    "Abbreviation": "MN"
+  }, 
+  {
+    "StateId": 24,
+    "StateName": "Mississippi",
+      
+    "CountryId": 1,
+    "Abbreviation": "MS"
+  }, 
+  {
+    "StateId": 25,
+    "StateName": "Missouri",
+      
+    "CountryId": 1,
+    "Abbreviation": "MO"
+  }, 
+  {
+    "StateId": 26,
+    "StateName": "Montana",
+      
+    "CountryId": 1,
+    "Abbreviation": "MT"
+  }, 
+  {
+    "StateId": 27,
+    "StateName": "Nebraska",
+      
+    "CountryId": 1,
+    "Abbreviation": "NE"
+  }, 
+  {
+    "StateId": 28,
+    "StateName": "Nevada",
+      
+    "CountryId": 1,
+    "Abbreviation": "NV"
+  }, 
+  {
+    "StateId": 29,
+    "StateName": "New Hampshire",
+      
+    "CountryId": 1,
+    "Abbreviation": "NH"
+  }, 
+  {
+    "StateId": 30,
+    "StateName": "New Jersey",
+      
+    "CountryId": 1,
+    "Abbreviation": "NJ"
+  }, 
+  {
+    "StateId": 31,
+    "StateName": "New Mexico",
+      
+    "CountryId": 1,
+    "Abbreviation": "NM"
+  }, 
+  {
+    "StateId": 32,
+    "StateName": "New York",
+      
+    "CountryId": 1,
+    "Abbreviation": "NY"
+  }, 
+  {
+    "StateId": 33,
+    "StateName": "North Carolina",
+      
+    "CountryId": 1,
+    "Abbreviation": "NC"
+  }, 
+  {
+    "StateId": 34,
+    "StateName": "North Dakota",
+      
+    "CountryId": 1,
+    "Abbreviation": "ND"
+  }, 
+  {
+    "StateId": 35,
+    "StateName": "Ohio",
+      
+    "CountryId": 1,
+    "Abbreviation": "OH"
+  }, 
+  {
+    "StateId": 36,
+    "StateName": "Oklahoma",
+      
+    "CountryId": 1,
+    "Abbreviation": "OK"
+  }, 
+  {
+    "StateId": 37,
+    "StateName": "Oregon",
+      
+    "CountryId": 1,
+    "Abbreviation": "OR"
+  }, 
+  {
+    "StateId": 38,
+    "StateName": "Pennsylvania",
+      
+    "CountryId": 1,
+    "Abbreviation": "PA"
+  }, 
+  {
+    "StateId": 39,
+    "StateName": "Rhode Island",
+      
+    "CountryId": 1,
+    "Abbreviation": "RI"
+  }, 
+  {
+    "StateId": 40,
+    "StateName": "South Carolina",
+      
+    "CountryId": 1,
+    "Abbreviation": "SC"
+  }, 
+  {
+    "StateId": 41,
+    "StateName": "South Dakota",
+      
+    "CountryId": 1,
+    "Abbreviation": "SD"
+  }, 
+  {
+    "StateId": 42,
+    "StateName": "Tennessee",
+      
+    "CountryId": 1,
+    "Abbreviation": "TN"
+  }, 
+  {
+    "StateId": 43,
+    "StateName": "Texas",
+      
+    "CountryId": 1,
+    "Abbreviation": "TX"
+  }, 
+  {
+    "StateId": 44,
+    "StateName": "Utah",
+      
+    "CountryId": 1,
+    "Abbreviation": "UT"
+  }, 
+  {
+    "StateId": 45,
+    "StateName": "Vermont",
+      
+    "CountryId": 1,
+    "Abbreviation": "VT"
+  }, 
+  {
+    "StateId": 46,
+    "StateName": "Virginia",
+      
+    "CountryId": 1,
+    "Abbreviation": "VA"
+  }, 
+  {
+    "StateId": 47,
+    "StateName": "Washington",
+      
+    "CountryId": 1,
+    "Abbreviation": "WA"
+  }, 
+  {
+    "StateId": 48,
+    "StateName": "West Virginia",
+      
+    "CountryId": 1,
+    "Abbreviation": "WV"
+  }, 
+  {
+    "StateId": 49,
+    "StateName": "Wisconsin",
+      
+    "CountryId": 1,
+    "Abbreviation": "WI"
+  }, 
+  {
+    "StateId": 50,
+    "StateName": "Wyoming",
+      
+    "CountryId": 1,
+    "Abbreviation": "WY"
+  }
+]

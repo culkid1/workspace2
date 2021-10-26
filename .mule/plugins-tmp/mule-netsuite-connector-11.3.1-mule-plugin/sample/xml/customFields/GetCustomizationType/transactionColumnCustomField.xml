@@ -1,0 +1,41 @@
+<getCustomizationIdResponse xmlns="urn:messages_2020_2.platform.webservices.netsuite.com">
+    <platformCore:getCustomizationIdResult xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com">
+        <platformCore:status isSuccess="true"/>
+        <platformCore:totalRecords>11</platformCore:totalRecords>
+        <platformCore:customizationRefList>
+            <platformCore:customizationRef scriptId="custcol2" internalId="6" type="transactionColumnCustomField">
+                <platformCore:name>Store Wrnty Avail</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custcol3" internalId="7" type="transactionColumnCustomField">
+                <platformCore:name>Est. GP %</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custcol4" internalId="8" type="transactionColumnCustomField">
+                <platformCore:name>Est. Cost</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custcol_far_trn_relatedasset" internalId="653" type="transactionColumnCustomField">
+                <platformCore:name>Related Asset</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custcol_gw_inv" internalId="2979" type="transactionColumnCustomField">
+                <platformCore:name>Check Inventory</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custcol_pfc_configuration" internalId="3139" type="transactionColumnCustomField">
+                <platformCore:name>Picture Frame Configuration</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custcol_pfc_pfconfigurator" internalId="3140" type="transactionColumnCustomField">
+                <platformCore:name>Picture Frame</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custcol_pfc_wo" internalId="3141" type="transactionColumnCustomField">
+                <platformCore:name>PFC WO</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custcol8" internalId="3152" type="transactionColumnCustomField">
+                <platformCore:name>Logo</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custcoltestcolumnfield" internalId="4576" type="transactionColumnCustomField">
+                <platformCore:name>TEST COLUMN FIELD</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custcolcustbody_pacejet_shipped_2" internalId="4589" type="transactionColumnCustomField">
+                <platformCore:name>custbody_pacejet_shipped_2</platformCore:name>
+            </platformCore:customizationRef>
+        </platformCore:customizationRefList>
+    </platformCore:getCustomizationIdResult>
+</getCustomizationIdResponse>

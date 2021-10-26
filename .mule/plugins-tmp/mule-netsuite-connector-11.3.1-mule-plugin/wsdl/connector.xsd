@@ -1,0 +1,707 @@
+<schema
+        xmlns:connectoor="http://mulesoft.org/connectors/netsuite"
+        xmlns:platformMsgs="urn:messages_2020_2.platform.webservices.netsuite.com"
+        xmlns:platformFaultTyp="urn:types.faults_2020_2.platform.webservices.netsuite.com"
+        xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com"
+        xmlns:platformCommonTyp="urn:types.common_2020_2.platform.webservices.netsuite.com"
+        xmlns:platformCommon="urn:common_2020_2.platform.webservices.netsuite.com"
+        xmlns:actSched="urn:scheduling_2020_2.activities.webservices.netsuite.com"
+        xmlns:tranSales="urn:sales_2020_2.transactions.webservices.netsuite.com"
+        xmlns:tranPurch="urn:purchases_2020_2.transactions.webservices.netsuite.com"
+        xmlns:setupCustom="urn:customization_2020_2.setup.webservices.netsuite.com"
+        xmlns:listEmp="urn:employees_2020_2.lists.webservices.netsuite.com"
+        xmlns:actSchedTyp="urn:types.scheduling_2020_2.activities.webservices.netsuite.com"
+        xmlns:docFileCab="urn:filecabinet_2020_2.documents.webservices.netsuite.com"
+        xmlns:docFileCabTyp="urn:types.filecabinet_2020_2.documents.webservices.netsuite.com"
+        xmlns:generalComm="urn:communication_2020_2.general.webservices.netsuite.com"
+        xmlns:generalCommTyp="urn:types.communication_2020_2.general.webservices.netsuite.com"
+        xmlns:listAcct="urn:accounting_2020_2.lists.webservices.netsuite.com"
+        xmlns:listEmpTyp="urn:types.employees_2020_2.lists.webservices.netsuite.com"
+        xmlns:listMkt="urn:marketing_2020_2.lists.webservices.netsuite.com"
+        xmlns:listMktTyp="urn:types.marketing_2020_2.lists.webservices.netsuite.com"
+        xmlns:listRel="urn:relationships_2020_2.lists.webservices.netsuite.com"
+        xmlns:listRelTyp="urn:types.relationships_2020_2.lists.webservices.netsuite.com"
+        xmlns:listScm="urn:supplychain_2020_2.lists.webservices.netsuite.com"
+        xmlns:listScmTyp="urn:types.supplychain_2020_2.lists.webservices.netsuite.com"
+        xmlns:listSupportTyp="urn:types.support_2020_2.lists.webservices.netsuite.com"
+        xmlns:listSupport="urn:support_2020_2.lists.webservices.netsuite.com"
+        xmlns:listSite="urn:website_2020_2.lists.webservices.netsuite.com"
+        xmlns:platformCoreTyp="urn:types.core_2020_2.platform.webservices.netsuite.com"
+        xmlns:listSiteTyp="urn:types.website_2020_2.lists.webservices.netsuite.com"
+        xmlns:setupCustomTyp="urn:types.customization_2020_2.setup.webservices.netsuite.com"
+        xmlns:tranBank="urn:bank_2020_2.transactions.webservices.netsuite.com"
+        xmlns:tranBankTyp="urn:types.bank_2020_2.transactions.webservices.netsuite.com"
+        xmlns:tranCust="urn:customers_2020_2.transactions.webservices.netsuite.com"
+        xmlns:tranCustomersTyp="urn:types.customers_2020_2.transactions.webservices.netsuite.com"
+        xmlns:demandPlanning="urn:demandplanning_2020_2.transactions.webservices.netsuite.com"
+        xmlns:demandPlanningTyp="urn:types.demandplanning_2020_2.transactions.webservices.netsuite.com"
+        xmlns:tranEmp="urn:employees_2020_2.transactions.webservices.netsuite.com"
+        xmlns:tranEmployeesTyp="urn:types.employees_2020_2.transactions.webservices.netsuite.com"
+        xmlns:tranFin="urn:financial_2020_2.transactions.webservices.netsuite.com"
+        xmlns:tranFinancialTyp="urn:types.financial_2020_2.transactions.webservices.netsuite.com"
+        xmlns:tranGeneral="urn:general_2020_2.transactions.webservices.netsuite.com"
+        xmlns:tranInvt="urn:inventory_2020_2.transactions.webservices.netsuite.com"
+        xmlns:tranInvtTyp="urn:types.inventory_2020_2.transactions.webservices.netsuite.com"
+        xmlns:tranPurchTyp="urn:types.purchases_2020_2.transactions.webservices.netsuite.com"
+        xmlns:tranSalesTyp="urn:types.sales_2020_2.transactions.webservices.netsuite.com"
+        xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://mulesoft.org/connectors/netsuite"
+        elementFormDefault="qualified"
+        attributeFormDefault="unqualified">
+    <xsd:import namespace="urn:core_2020_2.platform.webservices.netsuite.com" schemaLocation="platform.core.xsd"/>
+    <xsd:import namespace="urn:faults_2020_2.platform.webservices.netsuite.com" schemaLocation="platform.faults.xsd"/>
+    <xsd:import namespace="urn:messages_2020_2.platform.webservices.netsuite.com" schemaLocation="platform.messages.xsd"/>
+    <xsd:import namespace="urn:common_2020_2.platform.webservices.netsuite.com" schemaLocation="platform.common.xsd"/>
+    <xsd:import namespace="urn:scheduling_2020_2.activities.webservices.netsuite.com" schemaLocation="activities.scheduling.xsd"/>
+    <xsd:import namespace="urn:types.scheduling_2020_2.activities.webservices.netsuite.com" schemaLocation="activities.schedulingTypes.xsd"/>
+    <xsd:import namespace="urn:communication_2020_2.general.webservices.netsuite.com" schemaLocation="general.communication.xsd"/>
+    <xsd:import namespace="urn:types.communication_2020_2.general.webservices.netsuite.com" schemaLocation="general.communicationTypes.xsd"/>
+    <xsd:import namespace="urn:relationships_2020_2.lists.webservices.netsuite.com" schemaLocation="lists.relationships.xsd"/>
+    <xsd:import namespace="urn:types.relationships_2020_2.lists.webservices.netsuite.com" schemaLocation="lists.relationshipTypes.xsd"/>
+    <xsd:import namespace="urn:support_2020_2.lists.webservices.netsuite.com" schemaLocation="lists.support.xsd"/>
+    <xsd:import namespace="urn:types.support_2020_2.lists.webservices.netsuite.com" schemaLocation="lists.supportTypes.xsd"/>
+    <xsd:import namespace="urn:accounting_2020_2.lists.webservices.netsuite.com" schemaLocation="lists.accounting.xsd"/>
+    <xsd:import namespace="urn:types.accounting_2020_2.lists.webservices.netsuite.com" schemaLocation="lists.accountingTypes.xsd"/>
+    <xsd:import namespace="urn:sales_2020_2.transactions.webservices.netsuite.com" schemaLocation="transactions.sales.xsd"/>
+    <xsd:import namespace="urn:types.sales_2020_2.transactions.webservices.netsuite.com" schemaLocation="transactions.saleTypes.xsd"/>
+    <xsd:import namespace="urn:purchases_2020_2.transactions.webservices.netsuite.com" schemaLocation="transactions.purchases.xsd"/>
+    <xsd:import namespace="urn:customers_2020_2.transactions.webservices.netsuite.com" schemaLocation="transactions.customers.xsd"/>
+    <xsd:import namespace="urn:financial_2020_2.transactions.webservices.netsuite.com" schemaLocation="transactions.financial.xsd"/>
+    <xsd:import namespace="urn:bank_2020_2.transactions.webservices.netsuite.com" schemaLocation="transactions.bank.xsd"/>
+    <xsd:import namespace="urn:inventory_2020_2.transactions.webservices.netsuite.com" schemaLocation="transactions.inventory.xsd"/>
+    <xsd:import namespace="urn:types.inventory_2020_2.transactions.webservices.netsuite.com" schemaLocation="transactions.inventoryTypes.xsd"/>
+    <xsd:import namespace="urn:general_2020_2.transactions.webservices.netsuite.com" schemaLocation="transactions.general.xsd"/>
+    <xsd:import namespace="urn:customization_2020_2.setup.webservices.netsuite.com" schemaLocation="setup.customization.xsd"/>
+    <xsd:import namespace="urn:types.customization_2020_2.setup.webservices.netsuite.com" schemaLocation="setup.customizationTypes.xsd"/>
+    <xsd:import namespace="urn:employees_2020_2.lists.webservices.netsuite.com" schemaLocation="lists.employees.xsd"/>
+    <xsd:import namespace="urn:types.employees_2020_2.lists.webservices.netsuite.com" schemaLocation="lists.employeeTypes.xsd"/>
+    <xsd:import namespace="urn:filecabinet_2020_2.documents.webservices.netsuite.com" schemaLocation="documents.fileCabinet.xsd"/>
+    <xsd:import namespace="urn:types.filecabinet_2020_2.documents.webservices.netsuite.com" schemaLocation="documents.fileCabinetTypes.xsd"/>
+    <xsd:import namespace="urn:website_2020_2.lists.webservices.netsuite.com" schemaLocation="lists.website.xsd"/>
+    <xsd:import namespace="urn:types.website_2020_2.lists.webservices.netsuite.com" schemaLocation="lists.websiteTypes.xsd"/>
+    <xsd:import namespace="urn:employees_2020_2.transactions.webservices.netsuite.com" schemaLocation="transactions.employees.xsd"/>
+    <xsd:import namespace="urn:marketing_2020_2.lists.webservices.netsuite.com" schemaLocation="lists.marketing.xsd"/>
+    <xsd:import namespace="urn:types.marketing_2020_2.lists.webservices.netsuite.com" schemaLocation="lists.marketingTypes.xsd"/>
+    <xsd:import namespace="urn:demandplanning_2020_2.transactions.webservices.netsuite.com" schemaLocation="transactions.demandPlanning.xsd"/>
+    <xsd:import namespace="urn:types.demandplanning_2020_2.transactions.webservices.netsuite.com" schemaLocation="transactions.demandPlanningTypes.xsd"/>
+    <xsd:import namespace="urn:supplychain_2020_2.lists.webservices.netsuite.com" schemaLocation="lists.supplyChain.xsd"/>
+    <xsd:import namespace="urn:types.supplychain_2020_2.lists.webservices.netsuite.com" schemaLocation="lists.supplyChainTypes.xsd"/>
+    <xsd:import namespace="urn:types.supplychain_2020_2.lists.webservices.netsuite.com" schemaLocation="lists.supplyChainTypes.xsd"/>
+
+
+<!--    Root elements to enable the usage of XmlTypeLoader-->
+<!--    BaseRef types-->
+    <element name="customizationRef" type="platformCore:CustomizationRef" />
+    <element name="recordRef" type="platformCore:RecordRef" />
+    <element name="customRecordRef" type="platformCore:CustomRecordRef" />
+    <element name="customTransactionRef" type="platformCore:CustomTransactionRef" />
+    <element name="initializeRef" type="platformCore:InitializeRef" />
+    <element name="initializeAuxRef" type="platformCore:InitializeAuxRef" />
+
+    <!--  Netsuite Connector specific elements START -->
+    <element name="attachBasicReference" type="platformCore:AttachBasicReference" />
+    <element name="attachContactReference" type="platformCore:AttachContactReference" />
+    <element name="detachBasicReference" type="platformCore:DetachBasicReference" />
+
+    <!--  Netsuite Connector specific elements END -->
+
+
+    <!--    CustomFieldRef types-->
+    <element name="longCustomFieldRef" type="platformCore:LongCustomFieldRef" />
+    <element name="doubleCustomFieldRef" type="platformCore:DoubleCustomFieldRef" />
+    <element name="booleanCustomFieldRef" type="platformCore:BooleanCustomFieldRef" />
+    <element name="stringCustomFieldRef" type="platformCore:StringCustomFieldRef" />
+    <element name="dateCustomFieldRef" type="platformCore:DateCustomFieldRef" />
+    <element name="selectCustomFieldRef" type="platformCore:SelectCustomFieldRef" />
+    <element name="multiSelectCustomFieldRef" type="platformCore:MultiSelectCustomFieldRef" />
+
+    <element name="getDeletedFilter" type="platformCore:GetDeletedFilter"/>
+    <element name="deletedRecord" type="platformCore:DeletedRecord"/>
+
+<!--    Search types: -->
+    <!--    wsdl-->
+    <!--    activities.scheduling.xsd-->
+        <element name="calendarEventSearch" type="actSched:CalendarEventSearch"/>
+    <element name="calendarEventSearchAdvanced" type="actSched:CalendarEventSearchAdvanced"/>
+    <element name="calendarEventSearchRow" type="actSched:CalendarEventSearchRow"/>
+        <element name="taskSearch" type="actSched:TaskSearch"/>
+        <element name="taskSearchAdvanced" type="actSched:TaskSearchAdvanced"/>
+        <element name="taskSearchRow" type="actSched:TaskSearchRow"/>
+        <element name="phoneCallSearch" type="actSched:PhoneCallSearch"/>
+        <element name="phoneCallSearchAdvanced" type="actSched:PhoneCallSearchAdvanced"/>
+        <element name="phoneCallSearchRow" type="actSched:PhoneCallSearchRow"/>
+        <element name="projectTaskSearch" type="actSched:ProjectTaskSearch"/>
+        <element name="projectTaskSearchAdvanced" type="actSched:ProjectTaskSearchAdvanced"/>
+        <element name="projectTaskSearchRow" type="actSched:ProjectTaskSearchRow"/>
+        <element name="resourceAllocationSearch" type="actSched:ResourceAllocationSearch"/>
+        <element name="resourceAllocationSearchAdvanced" type="actSched:ResourceAllocationSearchAdvanced"/>
+        <element name="resourceAllocationSearchRow" type="actSched:ResourceAllocationSearchRow"/>
+        <!--    documents.fileCabinet.xsd-->
+        <element name="fileSearch" type="docFileCab:FileSearch"/>
+        <element name="fileSearchAdvanced" type="docFileCab:FileSearchAdvanced"/>
+        <element name="fileSearchRow" type="docFileCab:FileSearchRow"/>
+        <element name="folderSearch" type="docFileCab:FolderSearch"/>
+        <element name="folderSearchAdvanced" type="docFileCab:FolderSearchAdvanced"/>
+        <element name="folderSearchRow" type="docFileCab:FolderSearchRow"/>
+        <!--    general.communication.xsd-->
+        <element name="noteSearch" type="generalComm:NoteSearch"/>
+        <element name="noteSearchAdvanced" type="generalComm:NoteSearchAdvanced"/>
+        <element name="noteSearchRow" type="generalComm:NoteSearchRow"/>
+        <element name="messageSearch" type="generalComm:MessageSearch"/>
+        <element name="messageSearchAdvanced" type="generalComm:MessageSearchAdvanced"/>
+        <element name="messageSearchRow" type="generalComm:MessageSearchRow"/>
+        <!--    lists.accounting.xsd-->
+        <element name="accountSearch" type="listAcct:AccountSearch"/>
+        <element name="accountSearchAdvanced" type="listAcct:AccountSearchAdvanced"/>
+        <element name="accountSearchRow" type="listAcct:AccountSearchRow"/>
+        <element name="departmentSearch" type="listAcct:DepartmentSearch"/>
+        <element name="departmentSearchAdvanced" type="listAcct:DepartmentSearchAdvanced"/>
+        <element name="departmentSearchRow" type="listAcct:DepartmentSearchRow"/>
+        <element name="classificationSearch" type="listAcct:ClassificationSearch"/>
+        <element name="classificationSearchAdvanced" type="listAcct:ClassificationSearchAdvanced"/>
+        <element name="classificationSearchRow" type="listAcct:ClassificationSearchRow"/>
+        <element name="locationSearch" type="listAcct:LocationSearch"/>
+        <element name="locationSearchAdvanced" type="listAcct:LocationSearchAdvanced"/>
+        <element name="locationSearchRow" type="listAcct:LocationSearchRow"/>
+        <element name="itemSearch" type="listAcct:ItemSearch"/>
+        <element name="itemSearchAdvanced" type="listAcct:ItemSearchAdvanced"/>
+        <element name="itemSearchRow" type="listAcct:ItemSearchRow"/>
+        <element name="binSearch" type="listAcct:BinSearch"/>
+        <element name="binSearchAdvanced" type="listAcct:BinSearchAdvanced"/>
+        <element name="binSearchRow" type="listAcct:BinSearchRow"/>
+        <element name="subsidiarySearch" type="listAcct:SubsidiarySearch"/>
+        <element name="subsidiarySearchAdvanced" type="listAcct:SubsidiarySearchAdvanced"/>
+        <element name="subsidiarySearchRow" type="listAcct:SubsidiarySearchRow"/>
+        <element name="giftCertificateSearch" type="listAcct:GiftCertificateSearch"/>
+        <element name="giftCertificateSearchAdvanced" type="listAcct:GiftCertificateSearchAdvanced"/>
+        <element name="giftCertificateSearchRow" type="listAcct:GiftCertificateSearchRow"/>
+        <element name="accountingPeriodSearch" type="listAcct:AccountingPeriodSearch"/>
+        <element name="accountingPeriodSearchAdvanced" type="listAcct:AccountingPeriodSearchAdvanced"/>
+        <element name="accountingPeriodSearchRow" type="listAcct:AccountingPeriodSearchRow"/>
+        <element name="contactCategorySearch" type="listAcct:ContactCategorySearch"/>
+        <element name="contactCategorySearchAdvanced" type="listAcct:ContactCategorySearchAdvanced"/>
+        <element name="contactCategorySearchRow" type="listAcct:ContactCategorySearchRow"/>
+        <element name="contactRoleSearch" type="listAcct:ContactRoleSearch"/>
+        <element name="contactRoleSearchAdvanced" type="listAcct:ContactRoleSearchAdvanced"/>
+        <element name="contactRoleSearchRow" type="listAcct:ContactRoleSearchRow"/>
+        <element name="customerCategorySearch" type="listAcct:CustomerCategorySearch"/>
+        <element name="customerCategorySearchAdvanced" type="listAcct:CustomerCategorySearchAdvanced"/>
+        <element name="customerCategorySearchRow" type="listAcct:CustomerCategorySearchRow"/>
+        <element name="expenseCategorySearch" type="listAcct:ExpenseCategorySearch"/>
+        <element name="expenseCategorySearchAdvanced" type="listAcct:ExpenseCategorySearchAdvanced"/>
+        <element name="expenseCategorySearchRow" type="listAcct:ExpenseCategorySearchRow"/>
+        <element name="noteTypeSearch" type="listAcct:NoteTypeSearch"/>
+        <element name="noteTypeSearchAdvanced" type="listAcct:NoteTypeSearchAdvanced"/>
+        <element name="noteTypeSearchRow" type="listAcct:NoteTypeSearchRow"/>
+        <element name="partnerCategorySearch" type="listAcct:PartnerCategorySearch"/>
+        <element name="partnerCategorySearchAdvanced" type="listAcct:PartnerCategorySearchAdvanced"/>
+        <element name="partnerCategorySearchRow" type="listAcct:PartnerCategorySearchRow"/>
+        <element name="paymentMethodSearch" type="listAcct:PaymentMethodSearch"/>
+        <element name="paymentMethodSearchAdvanced" type="listAcct:PaymentMethodSearchAdvanced"/>
+        <element name="paymentMethodSearchRow" type="listAcct:PaymentMethodSearchRow"/>
+        <element name="priceLevelSearch" type="listAcct:PriceLevelSearch"/>
+        <element name="priceLevelSearchAdvanced" type="listAcct:PriceLevelSearchAdvanced"/>
+        <element name="priceLevelSearchRow" type="listAcct:PriceLevelSearchRow"/>
+        <element name="salesRoleSearch" type="listAcct:SalesRoleSearch"/>
+        <element name="salesRoleSearchAdvanced" type="listAcct:SalesRoleSearchAdvanced"/>
+        <element name="salesRoleSearchRow" type="listAcct:SalesRoleSearchRow"/>
+        <element name="termSearch" type="listAcct:TermSearch"/>
+        <element name="termSearchAdvanced" type="listAcct:TermSearchAdvanced"/>
+        <element name="termSearchRow" type="listAcct:TermSearchRow"/>
+        <element name="vendorCategorySearch" type="listAcct:VendorCategorySearch"/>
+        <element name="vendorCategorySearchAdvanced" type="listAcct:VendorCategorySearchAdvanced"/>
+        <element name="vendorCategorySearchRow" type="listAcct:VendorCategorySearchRow"/>
+        <element name="winLossReasonSearch" type="listAcct:WinLossReasonSearch"/>
+        <element name="winLossReasonSearchAdvanced" type="listAcct:WinLossReasonSearchAdvanced"/>
+        <element name="winLossReasonSearchRow" type="listAcct:WinLossReasonSearchRow"/>
+        <element name="unitsTypeSearch" type="listAcct:UnitsTypeSearch"/>
+        <element name="unitsTypeSearchAdvanced" type="listAcct:UnitsTypeSearchAdvanced"/>
+        <element name="unitsTypeSearchRow" type="listAcct:UnitsTypeSearchRow"/>
+        <element name="pricingGroupSearch" type="listAcct:PricingGroupSearch"/>
+        <element name="pricingGroupSearchAdvanced" type="listAcct:PricingGroupSearchAdvanced"/>
+        <element name="pricingGroupSearchRow" type="listAcct:PricingGroupSearchRow"/>
+        <element name="inventoryNumberSearch" type="listAcct:InventoryNumberSearch"/>
+        <element name="inventoryNumberSearchAdvanced" type="listAcct:InventoryNumberSearchAdvanced"/>
+        <element name="inventoryNumberSearchRow" type="listAcct:InventoryNumberSearchRow"/>
+        <element name="revRecScheduleSearch" type="listAcct:RevRecScheduleSearch"/>
+        <element name="revRecScheduleSearchAdvanced" type="listAcct:RevRecScheduleSearchAdvanced"/>
+        <element name="revRecScheduleSearchRow" type="listAcct:RevRecScheduleSearchRow"/>
+        <element name="revRecTemplateSearch" type="listAcct:RevRecTemplateSearch"/>
+        <element name="revRecTemplateSearchAdvanced" type="listAcct:RevRecTemplateSearchAdvanced"/>
+        <element name="revRecTemplateSearchRow" type="listAcct:RevRecTemplateSearchRow"/>
+        <element name="nexusSearch" type="listAcct:NexusSearch"/>
+        <element name="nexusSearchAdvanced" type="listAcct:NexusSearchAdvanced"/>
+        <element name="nexusSearchRow" type="listAcct:NexusSearchRow"/>
+        <element name="otherNameCategorySearch" type="listAcct:OtherNameCategorySearch"/>
+        <element name="otherNameCategorySearchAdvanced" type="listAcct:OtherNameCategorySearchAdvanced"/>
+        <element name="otherNameCategorySearchRow" type="listAcct:OtherNameCategorySearchRow"/>
+        <element name="customerMessageSearch" type="listAcct:CustomerMessageSearch"/>
+        <element name="customerMessageSearchAdvanced" type="listAcct:CustomerMessageSearchAdvanced"/>
+        <element name="customerMessageSearchRow" type="listAcct:CustomerMessageSearchRow"/>
+        <element name="currencyRateSearch" type="listAcct:CurrencyRateSearch"/>
+        <element name="currencyRateSearchAdvanced" type="listAcct:CurrencyRateSearchAdvanced"/>
+        <element name="currencyRateSearchRow" type="listAcct:CurrencyRateSearchRow"/>
+        <element name="itemRevisionSearch" type="listAcct:ItemRevisionSearch"/>
+        <element name="itemRevisionSearchAdvanced" type="listAcct:ItemRevisionSearchAdvanced"/>
+        <element name="itemRevisionSearchRow" type="listAcct:ItemRevisionSearchRow"/>
+        <element name="billingScheduleSearch" type="listAcct:BillingScheduleSearch"/>
+        <element name="billingScheduleSearchAdvanced" type="listAcct:BillingScheduleSearchAdvanced"/>
+        <element name="billingScheduleSearchRow" type="listAcct:BillingScheduleSearchRow"/>
+        <element name="globalAccountMappingSearch" type="listAcct:GlobalAccountMappingSearch"/>
+        <element name="globalAccountMappingSearchAdvanced" type="listAcct:GlobalAccountMappingSearchAdvanced"/>
+        <element name="globalAccountMappingSearchRow" type="listAcct:GlobalAccountMappingSearchRow"/>
+        <element name="itemAccountMappingSearch" type="listAcct:ItemAccountMappingSearch"/>
+        <element name="itemAccountMappingSearchAdvanced" type="listAcct:ItemAccountMappingSearchAdvanced"/>
+        <element name="itemAccountMappingSearchRow" type="listAcct:ItemAccountMappingSearchRow"/>
+        <element name="fairValuePriceSearch" type="listAcct:FairValuePriceSearch"/>
+        <element name="fairValuePriceSearchAdvanced" type="listAcct:FairValuePriceSearchAdvanced"/>
+        <element name="fairValuePriceSearchRow" type="listAcct:FairValuePriceSearchRow"/>
+        <element name="costCategorySearch" type="listAcct:CostCategorySearch"/>
+        <element name="costCategorySearchAdvanced" type="listAcct:CostCategorySearchAdvanced"/>
+        <element name="costCategorySearchRow" type="listAcct:CostCategorySearchRow"/>
+        <element name="consolidatedExchangeRateSearch" type="listAcct:ConsolidatedExchangeRateSearch"/>
+        <element name="consolidatedExchangeRateSearchAdvanced" type="listAcct:ConsolidatedExchangeRateSearchAdvanced"/>
+        <element name="consolidatedExchangeRateSearchRow" type="listAcct:ConsolidatedExchangeRateSearchRow"/>
+        <element name="taxGroupSearch" type="listAcct:TaxGroupSearch"/>
+        <element name="taxGroupSearchAdvanced" type="listAcct:TaxGroupSearchAdvanced"/>
+        <element name="taxGroupSearchRow" type="listAcct:TaxGroupSearchRow"/>
+        <element name="salesTaxItemSearch" type="listAcct:SalesTaxItemSearch"/>
+        <element name="salesTaxItemSearchAdvanced" type="listAcct:SalesTaxItemSearchAdvanced"/>
+        <element name="salesTaxItemSearchRow" type="listAcct:SalesTaxItemSearchRow"/>
+        <element name="taxTypeSearch" type="listAcct:TaxTypeSearch"/>
+        <element name="taxTypeSearchAdvanced" type="listAcct:TaxTypeSearchAdvanced"/>
+        <element name="taxTypeSearchRow" type="listAcct:TaxTypeSearchRow"/>
+        <element name="bomSearch" type="listAcct:BomSearch"/>
+        <element name="bomSearchAdvanced" type="listAcct:BomSearchAdvanced"/>
+        <element name="bomSearchRow" type="listAcct:BomSearchRow"/>
+        <element name="bomRevisionSearch" type="listAcct:BomRevisionSearch"/>
+        <element name="bomRevisionSearchAdvanced" type="listAcct:BomRevisionSearchAdvanced"/>
+        <element name="bomRevisionSearchRow" type="listAcct:BomRevisionSearchRow"/>
+        <element name="paymentInstrumentSearch" type="listAcct:PaymentInstrumentSearch"/>
+        <element name="paymentInstrumentSearchAdvanced" type="listAcct:PaymentInstrumentSearchAdvanced"/>
+        <element name="paymentInstrumentSearchRow" type="listAcct:PaymentInstrumentSearchRow"/>
+        <element name="paymentOptionSearch" type="listAcct:PaymentOptionSearch"/>
+        <element name="paymentOptionSearchAdvanced" type="listAcct:PaymentOptionSearchAdvanced"/>
+        <element name="paymentOptionSearchRow" type="listAcct:PaymentOptionSearchRow"/>
+        <element name="merchandiseHierarchyNodeSearch" type="listAcct:MerchandiseHierarchyNodeSearch"/>
+        <element name="merchandiseHierarchyNodeSearchAdvanced" type="listAcct:MerchandiseHierarchyNodeSearchAdvanced"/>
+        <element name="merchandiseHierarchyNodeSearchRow" type="listAcct:MerchandiseHierarchyNodeSearchRow"/>
+        <!--    lists.employees.xsd-->
+        <element name="employeeSearch" type="listEmp:EmployeeSearch"/>
+        <element name="employeeSearchAdvanced" type="listEmp:EmployeeSearchAdvanced"/>
+        <element name="employeeSearchRow" type="listEmp:EmployeeSearchRow"/>
+        <element name="payrollItemSearch" type="listEmp:PayrollItemSearch"/>
+        <element name="payrollItemSearchAdvanced" type="listEmp:PayrollItemSearchAdvanced"/>
+        <element name="payrollItemSearchRow" type="listEmp:PayrollItemSearchRow"/>
+        <element name="hcmJobSearch" type="listEmp:HcmJobSearch"/>
+        <element name="hcmJobSearchAdvanced" type="listEmp:HcmJobSearchAdvanced"/>
+        <element name="hcmJobSearchRow" type="listEmp:HcmJobSearchRow"/>
+        <!--    lists.marketing.xsd-->
+        <element name="campaignSearch" type="listMkt:CampaignSearch"/>
+        <element name="campaignSearchAdvanced" type="listMkt:CampaignSearchAdvanced"/>
+        <element name="campaignSearchRow" type="listMkt:CampaignSearchRow"/>
+        <element name="campaignSearchEngine" type="listMkt:CampaignSearchEngine"/>
+        <element name="promotionCodeSearch" type="listMkt:PromotionCodeSearch"/>
+        <element name="promotionCodeSearchAdvanced" type="listMkt:PromotionCodeSearchAdvanced"/>
+        <element name="promotionCodeSearchRow" type="listMkt:PromotionCodeSearchRow"/>
+        <element name="couponCodeSearch" type="listMkt:CouponCodeSearch"/>
+        <element name="couponCodeSearchAdvanced" type="listMkt:CouponCodeSearchAdvanced"/>
+        <element name="couponCodeSearchRow" type="listMkt:CouponCodeSearchRow"/>
+        <!--    lists.relationships.xsd-->
+        <element name="contactSearch" type="listRel:ContactSearch"/>
+        <element name="contactSearchAdvanced" type="listRel:ContactSearchAdvanced"/>
+        <element name="contactSearchRow" type="listRel:ContactSearchRow"/>
+        <element name="customerSearch" type="listRel:CustomerSearch"/>
+        <element name="customerSearchAdvanced" type="listRel:CustomerSearchAdvanced"/>
+        <element name="customerSearchRow" type="listRel:CustomerSearchRow"/>
+        <element name="partnerSearch" type="listRel:PartnerSearch"/>
+        <element name="partnerSearchAdvanced" type="listRel:PartnerSearchAdvanced"/>
+        <element name="partnerSearchRow" type="listRel:PartnerSearchRow"/>
+        <element name="vendorSearch" type="listRel:VendorSearch"/>
+        <element name="vendorSearchAdvanced" type="listRel:VendorSearchAdvanced"/>
+        <element name="vendorSearchRow" type="listRel:VendorSearchRow"/>
+        <element name="entityGroupSearch" type="listRel:EntityGroupSearch"/>
+        <element name="entityGroupSearchAdvanced" type="listRel:EntityGroupSearchAdvanced"/>
+        <element name="entityGroupSearchRow" type="listRel:EntityGroupSearchRow"/>
+        <element name="jobSearch" type="listRel:JobSearch"/>
+        <element name="jobSearchAdvanced" type="listRel:JobSearchAdvanced"/>
+        <element name="jobSearchRow" type="listRel:JobSearchRow"/>
+        <element name="customerStatusSearch" type="listRel:CustomerStatusSearch"/>
+        <element name="customerStatusSearchAdvanced" type="listRel:CustomerStatusSearchAdvanced"/>
+        <element name="customerStatusSearchRow" type="listRel:CustomerStatusSearchRow"/>
+        <element name="jobStatusSearch" type="listRel:JobStatusSearch"/>
+        <element name="jobStatusSearchAdvanced" type="listRel:JobStatusSearchAdvanced"/>
+        <element name="jobStatusSearchRow" type="listRel:JobStatusSearchRow"/>
+        <element name="jobTypeSearch" type="listRel:JobTypeSearch"/>
+        <element name="jobTypeSearchAdvanced" type="listRel:JobTypeSearchAdvanced"/>
+        <element name="jobTypeSearchRow" type="listRel:JobTypeSearchRow"/>
+        <element name="originatingLeadSearch" type="listRel:OriginatingLeadSearch"/>
+        <element name="originatingLeadSearchRow" type="listRel:OriginatingLeadSearchRow"/>
+        <element name="billingAccountSearch" type="listRel:BillingAccountSearch"/>
+        <element name="billingAccountSearchAdvanced" type="listRel:BillingAccountSearchAdvanced"/>
+        <element name="billingAccountSearchRow" type="listRel:BillingAccountSearchRow"/>
+        <element name="customerSubsidiaryRelationshipSearch" type="listRel:CustomerSubsidiaryRelationshipSearch"/>
+        <element name="customerSubsidiaryRelationshipSearchAdvanced" type="listRel:CustomerSubsidiaryRelationshipSearchAdvanced"/>
+        <element name="customerSubsidiaryRelationshipSearchRow" type="listRel:CustomerSubsidiaryRelationshipSearchRow"/>
+        <element name="vendorSubsidiaryRelationshipSearch" type="listRel:VendorSubsidiaryRelationshipSearch"/>
+        <element name="vendorSubsidiaryRelationshipSearchAdvanced" type="listRel:VendorSubsidiaryRelationshipSearchAdvanced"/>
+        <element name="vendorSubsidiaryRelationshipSearchRow" type="listRel:VendorSubsidiaryRelationshipSearchRow"/>
+        <!--    lists.supplyChain.xsd-->
+        <element name="manufacturingCostTemplateSearch" type="listScm:ManufacturingCostTemplateSearch"/>
+        <element name="manufacturingCostTemplateSearchAdvanced" type="listScm:ManufacturingCostTemplateSearchAdvanced"/>
+        <element name="manufacturingCostTemplateSearchRow" type="listScm:ManufacturingCostTemplateSearchRow"/>
+        <element name="manufacturingRoutingSearch" type="listScm:ManufacturingRoutingSearch"/>
+        <element name="manufacturingRoutingSearchAdvanced" type="listScm:ManufacturingRoutingSearchAdvanced"/>
+        <element name="manufacturingRoutingSearchRow" type="listScm:ManufacturingRoutingSearchRow"/>
+        <element name="manufacturingOperationTaskSearch" type="listScm:ManufacturingOperationTaskSearch"/>
+        <element name="manufacturingOperationTaskSearchAdvanced" type="listScm:ManufacturingOperationTaskSearchAdvanced"/>
+        <element name="manufacturingOperationTaskSearchRow" type="listScm:ManufacturingOperationTaskSearchRow"/>
+        <!--    lists.support.xsd-->
+        <element name="supportCaseSearch" type="listSupport:SupportCaseSearch"/>
+        <element name="supportCaseSearchAdvanced" type="listSupport:SupportCaseSearchAdvanced"/>
+        <element name="supportCaseSearchRow" type="listSupport:SupportCaseSearchRow"/>
+        <element name="solutionSearch" type="listSupport:SolutionSearch"/>
+        <element name="solutionSearchAdvanced" type="listSupport:SolutionSearchAdvanced"/>
+        <element name="solutionSearchRow" type="listSupport:SolutionSearchRow"/>
+        <element name="topicSearch" type="listSupport:TopicSearch"/>
+        <element name="topicSearchAdvanced" type="listSupport:TopicSearchAdvanced"/>
+        <element name="topicSearchRow" type="listSupport:TopicSearchRow"/>
+        <element name="issueSearch" type="listSupport:IssueSearch"/>
+        <element name="issueSearchAdvanced" type="listSupport:IssueSearchAdvanced"/>
+        <element name="issueSearchRow" type="listSupport:IssueSearchRow"/>
+        <!--    lists.website.xsd-->
+        <element name="siteCategorySearch" type="listSite:SiteCategorySearch"/>
+        <element name="siteCategorySearchAdvanced" type="listSite:SiteCategorySearchAdvanced"/>
+        <element name="siteCategorySearchRow" type="listSite:SiteCategorySearchRow"/>
+        <!--    platform.common.xsd-->
+        <element name="inventoryDetailSearchBasic" type="platformCommon:InventoryDetailSearchBasic"/>
+        <element name="inventoryDetailSearchRowBasic" type="platformCommon:InventoryDetailSearchRowBasic"/>
+        <element name="entitySearchBasic" type="platformCommon:EntitySearchBasic"/>
+        <element name="entitySearchRowBasic" type="platformCommon:EntitySearchRowBasic"/>
+        <element name="contactSearchBasic" type="platformCommon:ContactSearchBasic"/>
+        <element name="contactSearchRowBasic" type="platformCommon:ContactSearchRowBasic"/>
+        <element name="customerSearchBasic" type="platformCommon:CustomerSearchBasic"/>
+        <element name="customerSearchRowBasic" type="platformCommon:CustomerSearchRowBasic"/>
+        <element name="calendarEventSearchBasic" type="platformCommon:CalendarEventSearchBasic"/>
+        <element name="calendarEventSearchRowBasic" type="platformCommon:CalendarEventSearchRowBasic"/>
+        <element name="taskSearchBasic" type="platformCommon:TaskSearchBasic"/>
+        <element name="taskSearchRowBasic" type="platformCommon:TaskSearchRowBasic"/>
+        <element name="opportunitySearchBasic" type="platformCommon:OpportunitySearchBasic"/>
+        <element name="opportunitySearchRowBasic" type="platformCommon:OpportunitySearchRowBasic"/>
+        <element name="employeeSearchBasic" type="platformCommon:EmployeeSearchBasic"/>
+        <element name="employeeSearchRowBasic" type="platformCommon:EmployeeSearchRowBasic"/>
+        <element name="phoneCallSearchBasic" type="platformCommon:PhoneCallSearchBasic"/>
+        <element name="phoneCallSearchRowBasic" type="platformCommon:PhoneCallSearchRowBasic"/>
+        <element name="supportCaseSearchBasic" type="platformCommon:SupportCaseSearchBasic"/>
+        <element name="supportCaseSearchRowBasic" type="platformCommon:SupportCaseSearchRowBasic"/>
+        <element name="messageSearchBasic" type="platformCommon:MessageSearchBasic"/>
+        <element name="messageSearchRowBasic" type="platformCommon:MessageSearchRowBasic"/>
+        <element name="noteSearchBasic" type="platformCommon:NoteSearchBasic"/>
+        <element name="noteSearchRowBasic" type="platformCommon:NoteSearchRowBasic"/>
+        <element name="customRecordSearchBasic" type="platformCommon:CustomRecordSearchBasic"/>
+        <element name="customRecordSearchRowBasic" type="platformCommon:CustomRecordSearchRowBasic"/>
+        <element name="accountSearchBasic" type="platformCommon:AccountSearchBasic"/>
+        <element name="accountSearchRowBasic" type="platformCommon:AccountSearchRowBasic"/>
+        <element name="revRecScheduleSearchBasic" type="platformCommon:RevRecScheduleSearchBasic"/>
+        <element name="revRecScheduleSearchRowBasic" type="platformCommon:RevRecScheduleSearchRowBasic"/>
+        <element name="revRecTemplateSearchBasic" type="platformCommon:RevRecTemplateSearchBasic"/>
+        <element name="revRecTemplateSearchRowBasic" type="platformCommon:RevRecTemplateSearchRowBasic"/>
+        <element name="binSearchBasic" type="platformCommon:BinSearchBasic"/>
+        <element name="binSearchRowBasic" type="platformCommon:BinSearchRowBasic"/>
+        <element name="departmentSearchBasic" type="platformCommon:DepartmentSearchBasic"/>
+        <element name="departmentSearchRowBasic" type="platformCommon:DepartmentSearchRowBasic"/>
+        <element name="locationSearchBasic" type="platformCommon:LocationSearchBasic"/>
+        <element name="locationSearchRowBasic" type="platformCommon:LocationSearchRowBasic"/>
+        <element name="classificationSearchBasic" type="platformCommon:ClassificationSearchBasic"/>
+        <element name="classificationSearchRowBasic" type="platformCommon:ClassificationSearchRowBasic"/>
+        <element name="transactionSearchBasic" type="platformCommon:TransactionSearchBasic"/>
+        <element name="transactionSearchRowBasic" type="platformCommon:TransactionSearchRowBasic"/>
+        <element name="itemSearchBasic" type="platformCommon:ItemSearchBasic"/>
+        <element name="itemSearchRowBasic" type="platformCommon:ItemSearchRowBasic"/>
+        <element name="partnerSearchBasic" type="platformCommon:PartnerSearchBasic"/>
+        <element name="partnerSearchRowBasic" type="platformCommon:PartnerSearchRowBasic"/>
+        <element name="vendorSearchBasic" type="platformCommon:VendorSearchBasic"/>
+        <element name="vendorSearchRowBasic" type="platformCommon:VendorSearchRowBasic"/>
+        <element name="siteCategorySearchBasic" type="platformCommon:SiteCategorySearchBasic"/>
+        <element name="siteCategorySearchRowBasic" type="platformCommon:SiteCategorySearchRowBasic"/>
+        <element name="timeBillSearchBasic" type="platformCommon:TimeBillSearchBasic"/>
+        <element name="timeBillSearchRowBasic" type="platformCommon:TimeBillSearchRowBasic"/>
+        <element name="solutionSearchBasic" type="platformCommon:SolutionSearchBasic"/>
+        <element name="solutionSearchRowBasic" type="platformCommon:SolutionSearchRowBasic"/>
+        <element name="topicSearchBasic" type="platformCommon:TopicSearchBasic"/>
+        <element name="topicSearchRowBasic" type="platformCommon:TopicSearchRowBasic"/>
+        <element name="subsidiarySearchBasic" type="platformCommon:SubsidiarySearchBasic"/>
+        <element name="subsidiarySearchRowBasic" type="platformCommon:SubsidiarySearchRowBasic"/>
+        <element name="giftCertificateSearchBasic" type="platformCommon:GiftCertificateSearchBasic"/>
+        <element name="giftCertificateSearchRowBasic" type="platformCommon:GiftCertificateSearchRowBasic"/>
+        <element name="folderSearchBasic" type="platformCommon:FolderSearchBasic"/>
+        <element name="folderSearchRowBasic" type="platformCommon:FolderSearchRowBasic"/>
+        <element name="fileSearchBasic" type="platformCommon:FileSearchBasic"/>
+        <element name="fileSearchRowBasic" type="platformCommon:FileSearchRowBasic"/>
+        <element name="jobSearchBasic" type="platformCommon:JobSearchBasic"/>
+        <element name="jobSearchRowBasic" type="platformCommon:JobSearchRowBasic"/>
+        <element name="issueSearchBasic" type="platformCommon:IssueSearchBasic"/>
+        <element name="issueSearchRowBasic" type="platformCommon:IssueSearchRowBasic"/>
+        <element name="groupMemberSearchBasic" type="platformCommon:GroupMemberSearchBasic"/>
+        <element name="campaignSearchBasic" type="platformCommon:CampaignSearchBasic"/>
+        <element name="campaignSearchRowBasic" type="platformCommon:CampaignSearchRowBasic"/>
+        <element name="entityGroupSearchBasic" type="platformCommon:EntityGroupSearchBasic"/>
+        <element name="entityGroupSearchRowBasic" type="platformCommon:EntityGroupSearchRowBasic"/>
+        <element name="promotionCodeSearchBasic" type="platformCommon:PromotionCodeSearchBasic"/>
+        <element name="promotionCodeSearchRowBasic" type="platformCommon:PromotionCodeSearchRowBasic"/>
+        <element name="budgetSearchBasic" type="platformCommon:BudgetSearchBasic"/>
+        <element name="budgetSearchRowBasic" type="platformCommon:BudgetSearchRowBasic"/>
+        <element name="projectTaskSearchBasic" type="platformCommon:ProjectTaskSearchBasic"/>
+        <element name="projectTaskSearchRowBasic" type="platformCommon:ProjectTaskSearchRowBasic"/>
+        <element name="projectTaskAssignmentSearchBasic" type="platformCommon:ProjectTaskAssignmentSearchBasic"/>
+        <element name="projectTaskAssignmentSearchRowBasic" type="platformCommon:ProjectTaskAssignmentSearchRowBasic"/>
+        <element name="accountingPeriodSearchBasic" type="platformCommon:AccountingPeriodSearchBasic"/>
+        <element name="accountingPeriodSearchRowBasic" type="platformCommon:AccountingPeriodSearchRowBasic"/>
+        <element name="contactCategorySearchBasic" type="platformCommon:ContactCategorySearchBasic"/>
+        <element name="contactCategorySearchRowBasic" type="platformCommon:ContactCategorySearchRowBasic"/>
+        <element name="contactRoleSearchBasic" type="platformCommon:ContactRoleSearchBasic"/>
+        <element name="contactRoleSearchRowBasic" type="platformCommon:ContactRoleSearchRowBasic"/>
+        <element name="customerCategorySearchBasic" type="platformCommon:CustomerCategorySearchBasic"/>
+        <element name="customerCategorySearchRowBasic" type="platformCommon:CustomerCategorySearchRowBasic"/>
+        <element name="customerStatusSearchBasic" type="platformCommon:CustomerStatusSearchBasic"/>
+        <element name="customerStatusSearchRowBasic" type="platformCommon:CustomerStatusSearchRowBasic"/>
+        <element name="expenseCategorySearchBasic" type="platformCommon:ExpenseCategorySearchBasic"/>
+        <element name="expenseCategorySearchRowBasic" type="platformCommon:ExpenseCategorySearchRowBasic"/>
+        <element name="jobStatusSearchBasic" type="platformCommon:JobStatusSearchBasic"/>
+        <element name="jobStatusSearchRowBasic" type="platformCommon:JobStatusSearchRowBasic"/>
+        <element name="jobTypeSearchBasic" type="platformCommon:JobTypeSearchBasic"/>
+        <element name="jobTypeSearchRowBasic" type="platformCommon:JobTypeSearchRowBasic"/>
+        <element name="noteTypeSearchBasic" type="platformCommon:NoteTypeSearchBasic"/>
+        <element name="noteTypeSearchRowBasic" type="platformCommon:NoteTypeSearchRowBasic"/>
+        <element name="partnerCategorySearchBasic" type="platformCommon:PartnerCategorySearchBasic"/>
+        <element name="partnerCategorySearchRowBasic" type="platformCommon:PartnerCategorySearchRowBasic"/>
+        <element name="paymentMethodSearchBasic" type="platformCommon:PaymentMethodSearchBasic"/>
+        <element name="paymentMethodSearchRowBasic" type="platformCommon:PaymentMethodSearchRowBasic"/>
+        <element name="priceLevelSearchBasic" type="platformCommon:PriceLevelSearchBasic"/>
+        <element name="priceLevelSearchRowBasic" type="platformCommon:PriceLevelSearchRowBasic"/>
+        <element name="salesRoleSearchBasic" type="platformCommon:SalesRoleSearchBasic"/>
+        <element name="salesRoleSearchRowBasic" type="platformCommon:SalesRoleSearchRowBasic"/>
+        <element name="termSearchBasic" type="platformCommon:TermSearchBasic"/>
+        <element name="termSearchRowBasic" type="platformCommon:TermSearchRowBasic"/>
+        <element name="vendorCategorySearchBasic" type="platformCommon:VendorCategorySearchBasic"/>
+        <element name="vendorCategorySearchRowBasic" type="platformCommon:VendorCategorySearchRowBasic"/>
+        <element name="winLossReasonSearchBasic" type="platformCommon:WinLossReasonSearchBasic"/>
+        <element name="winLossReasonSearchRowBasic" type="platformCommon:WinLossReasonSearchRowBasic"/>
+        <element name="originatingLeadSearchBasic" type="platformCommon:OriginatingLeadSearchBasic"/>
+        <element name="originatingLeadSearchRowBasic" type="platformCommon:OriginatingLeadSearchRowBasic"/>
+        <element name="unitsTypeSearchBasic" type="platformCommon:UnitsTypeSearchBasic"/>
+        <element name="unitsTypeSearchRowBasic" type="platformCommon:UnitsTypeSearchRowBasic"/>
+        <element name="customListSearchBasic" type="platformCommon:CustomListSearchBasic"/>
+        <element name="customListSearchRowBasic" type="platformCommon:CustomListSearchRowBasic"/>
+        <element name="pricingGroupSearchBasic" type="platformCommon:PricingGroupSearchBasic"/>
+        <element name="pricingGroupSearchRowBasic" type="platformCommon:PricingGroupSearchRowBasic"/>
+        <element name="inventoryNumberSearchBasic" type="platformCommon:InventoryNumberSearchBasic"/>
+        <element name="inventoryNumberSearchRowBasic" type="platformCommon:InventoryNumberSearchRowBasic"/>
+        <element name="inventoryNumberBinSearchBasic" type="platformCommon:InventoryNumberBinSearchBasic"/>
+        <element name="inventoryNumberBinSearchRowBasic" type="platformCommon:InventoryNumberBinSearchRowBasic"/>
+        <element name="itemBinNumberSearchBasic" type="platformCommon:ItemBinNumberSearchBasic"/>
+        <element name="itemBinNumberSearchRowBasic" type="platformCommon:ItemBinNumberSearchRowBasic"/>
+        <element name="pricingSearchBasic" type="platformCommon:PricingSearchBasic"/>
+        <element name="pricingSearchRowBasic" type="platformCommon:PricingSearchRowBasic"/>
+        <element name="nexusSearchBasic" type="platformCommon:NexusSearchBasic"/>
+        <element name="nexusSearchRowBasic" type="platformCommon:NexusSearchRowBasic"/>
+        <element name="otherNameCategorySearchBasic" type="platformCommon:OtherNameCategorySearchBasic"/>
+        <element name="otherNameCategorySearchRowBasic" type="platformCommon:OtherNameCategorySearchRowBasic"/>
+        <element name="customerMessageSearchBasic" type="platformCommon:CustomerMessageSearchBasic"/>
+        <element name="customerMessageSearchRowBasic" type="platformCommon:CustomerMessageSearchRowBasic"/>
+        <element name="itemDemandPlanSearchBasic" type="platformCommon:ItemDemandPlanSearchBasic"/>
+        <element name="itemDemandPlanSearchRowBasic" type="platformCommon:ItemDemandPlanSearchRowBasic"/>
+        <element name="itemSupplyPlanSearchBasic" type="platformCommon:ItemSupplyPlanSearchBasic"/>
+        <element name="itemSupplyPlanSearchRowBasic" type="platformCommon:ItemSupplyPlanSearchRowBasic"/>
+        <element name="currencyRateSearchBasic" type="platformCommon:CurrencyRateSearchBasic"/>
+        <element name="currencyRateSearchRowBasic" type="platformCommon:CurrencyRateSearchRowBasic"/>
+        <element name="itemRevisionSearchBasic" type="platformCommon:ItemRevisionSearchBasic"/>
+        <element name="itemRevisionSearchRowBasic" type="platformCommon:ItemRevisionSearchRowBasic"/>
+        <element name="couponCodeSearchBasic" type="platformCommon:CouponCodeSearchBasic"/>
+        <element name="couponCodeSearchRowBasic" type="platformCommon:CouponCodeSearchRowBasic"/>
+        <element name="payrollItemSearchBasic" type="platformCommon:PayrollItemSearchBasic"/>
+        <element name="payrollItemSearchRowBasic" type="platformCommon:PayrollItemSearchRowBasic"/>
+        <element name="manufacturingCostTemplateSearchBasic" type="platformCommon:ManufacturingCostTemplateSearchBasic"/>
+        <element name="manufacturingCostTemplateSearchRowBasic" type="platformCommon:ManufacturingCostTemplateSearchRowBasic"/>
+        <element name="manufacturingRoutingSearchBasic" type="platformCommon:ManufacturingRoutingSearchBasic"/>
+        <element name="manufacturingRoutingSearchRowBasic" type="platformCommon:ManufacturingRoutingSearchRowBasic"/>
+        <element name="manufacturingOperationTaskSearchBasic" type="platformCommon:ManufacturingOperationTaskSearchBasic"/>
+        <element name="manufacturingOperationTaskSearchRowBasic" type="platformCommon:ManufacturingOperationTaskSearchRowBasic"/>
+        <element name="resourceAllocationSearchBasic" type="platformCommon:ResourceAllocationSearchBasic"/>
+        <element name="resourceAllocationSearchRowBasic" type="platformCommon:ResourceAllocationSearchRowBasic"/>
+        <element name="customSearchJoin" type="platformCommon:CustomSearchJoin"/>
+        <element name="customSearchRowBasic" type="platformCommon:CustomSearchRowBasic"/>
+        <element name="chargeSearchBasic" type="platformCommon:ChargeSearchBasic"/>
+        <element name="chargeSearchRowBasic" type="platformCommon:ChargeSearchRowBasic"/>
+        <element name="billingScheduleSearchBasic" type="platformCommon:BillingScheduleSearchBasic"/>
+        <element name="billingScheduleSearchRowBasic" type="platformCommon:BillingScheduleSearchRowBasic"/>
+        <element name="globalAccountMappingSearchBasic" type="platformCommon:GlobalAccountMappingSearchBasic"/>
+        <element name="globalAccountMappingSearchRowBasic" type="platformCommon:GlobalAccountMappingSearchRowBasic"/>
+        <element name="itemAccountMappingSearchBasic" type="platformCommon:ItemAccountMappingSearchBasic"/>
+        <element name="itemAccountMappingSearchRowBasic" type="platformCommon:ItemAccountMappingSearchRowBasic"/>
+        <element name="timeEntrySearchBasic" type="platformCommon:TimeEntrySearchBasic"/>
+        <element name="timeEntrySearchRowBasic" type="platformCommon:TimeEntrySearchRowBasic"/>
+        <element name="timeSheetSearchBasic" type="platformCommon:TimeSheetSearchBasic"/>
+        <element name="timeSheetSearchRowBasic" type="platformCommon:TimeSheetSearchRowBasic"/>
+        <element name="accountingTransactionSearchBasic" type="platformCommon:AccountingTransactionSearchBasic"/>
+        <element name="accountingTransactionSearchRowBasic" type="platformCommon:AccountingTransactionSearchRowBasic"/>
+        <element name="addressSearchBasic" type="platformCommon:AddressSearchBasic"/>
+        <element name="addressSearchRowBasic" type="platformCommon:AddressSearchRowBasic"/>
+        <element name="billingAccountSearchBasic" type="platformCommon:BillingAccountSearchBasic"/>
+        <element name="billingAccountSearchRowBasic" type="platformCommon:BillingAccountSearchRowBasic"/>
+        <element name="fairValuePriceSearchBasic" type="platformCommon:FairValuePriceSearchBasic"/>
+        <element name="fairValuePriceSearchRowBasic" type="platformCommon:FairValuePriceSearchRowBasic"/>
+        <element name="usageSearchBasic" type="platformCommon:UsageSearchBasic"/>
+        <element name="usageSearchRowBasic" type="platformCommon:UsageSearchRowBasic"/>
+        <element name="costCategorySearchBasic" type="platformCommon:CostCategorySearchBasic"/>
+        <element name="costCategorySearchRowBasic" type="platformCommon:CostCategorySearchRowBasic"/>
+        <element name="consolidatedExchangeRateSearchBasic" type="platformCommon:ConsolidatedExchangeRateSearchBasic"/>
+        <element name="consolidatedExchangeRateSearchRowBasic" type="platformCommon:ConsolidatedExchangeRateSearchRowBasic"/>
+        <element name="taxDetailSearchBasic" type="platformCommon:TaxDetailSearchBasic"/>
+        <element name="taxDetailSearchRowBasic" type="platformCommon:TaxDetailSearchRowBasic"/>
+        <element name="taxGroupSearchBasic" type="platformCommon:TaxGroupSearchBasic"/>
+        <element name="taxGroupSearchRowBasic" type="platformCommon:TaxGroupSearchRowBasic"/>
+        <element name="salesTaxItemSearchBasic" type="platformCommon:SalesTaxItemSearchBasic"/>
+        <element name="salesTaxItemSearchRowBasic" type="platformCommon:SalesTaxItemSearchRowBasic"/>
+        <element name="taxTypeSearchBasic" type="platformCommon:TaxTypeSearchBasic"/>
+        <element name="taxTypeSearchRowBasic" type="platformCommon:TaxTypeSearchRowBasic"/>
+        <element name="paycheckSearchBasic" type="platformCommon:PaycheckSearchBasic"/>
+        <element name="paycheckSearchRowBasic" type="platformCommon:PaycheckSearchRowBasic"/>
+        <element name="hcmJobSearchBasic" type="platformCommon:HcmJobSearchBasic"/>
+        <element name="hcmJobSearchRowBasic" type="platformCommon:HcmJobSearchRowBasic"/>
+        <element name="bomSearchBasic" type="platformCommon:BomSearchBasic"/>
+        <element name="bomSearchRowBasic" type="platformCommon:BomSearchRowBasic"/>
+        <element name="bomRevisionSearchBasic" type="platformCommon:BomRevisionSearchBasic"/>
+        <element name="bomRevisionSearchRowBasic" type="platformCommon:BomRevisionSearchRowBasic"/>
+        <element name="bomRevisionComponentSearchBasic" type="platformCommon:BomRevisionComponentSearchBasic"/>
+        <element name="bomRevisionComponentSearchRowBasic" type="platformCommon:BomRevisionComponentSearchRowBasic"/>
+        <element name="inboundShipmentSearchBasic" type="platformCommon:InboundShipmentSearchBasic"/>
+        <element name="inboundShipmentSearchRowBasic" type="platformCommon:InboundShipmentSearchRowBasic"/>
+        <element name="assemblyItemBomSearchBasic" type="platformCommon:AssemblyItemBomSearchBasic"/>
+        <element name="assemblyItemBomSearchRowBasic" type="platformCommon:AssemblyItemBomSearchRowBasic"/>
+        <element name="mseSubsidiarySearchBasic" type="platformCommon:MseSubsidiarySearchBasic"/>
+        <element name="mseSubsidiarySearchRowBasic" type="platformCommon:MseSubsidiarySearchRowBasic"/>
+        <element name="entityTaxRegistrationSearchBasic" type="platformCommon:EntityTaxRegistrationSearchBasic"/>
+        <element name="entityTaxRegistrationSearchRowBasic" type="platformCommon:EntityTaxRegistrationSearchRowBasic"/>
+        <element name="merchandiseHierarchyNodeSearchBasic" type="platformCommon:MerchandiseHierarchyNodeSearchBasic"/>
+        <element name="merchandiseHierarchyNodeSearchRowBasic" type="platformCommon:MerchandiseHierarchyNodeSearchRowBasic"/>
+        <element name="customerSubsidiaryRelationshipSearchBasic" type="platformCommon:CustomerSubsidiaryRelationshipSearchBasic"/>
+        <element name="customerSubsidiaryRelationshipSearchRowBasic" type="platformCommon:CustomerSubsidiaryRelationshipSearchRowBasic"/>
+        <element name="vendorSubsidiaryRelationshipSearchBasic" type="platformCommon:VendorSubsidiaryRelationshipSearchBasic"/>
+        <element name="vendorSubsidiaryRelationshipSearchRowBasic" type="platformCommon:VendorSubsidiaryRelationshipSearchRowBasic"/>
+        <element name="installmentSearchBasic" type="platformCommon:InstallmentSearchBasic"/>
+        <element name="installmentSearchRowBasic" type="platformCommon:InstallmentSearchRowBasic"/>
+        <element name="paymentInstrumentSearchBasic" type="platformCommon:PaymentInstrumentSearchBasic"/>
+        <element name="paymentInstrumentSearchRowBasic" type="platformCommon:PaymentInstrumentSearchRowBasic"/>
+        <element name="paymentOptionSearchBasic" type="platformCommon:PaymentOptionSearchBasic"/>
+        <element name="paymentOptionSearchRowBasic" type="platformCommon:PaymentOptionSearchRowBasic"/>
+        <!--    platform.core.xsd-->
+        <element name="searchRecord" type="platformCore:SearchRecord" abstract="true"/>
+        <element name="searchRecordBasic" type="platformCore:SearchRecordBasic" abstract="true"/>
+        <element name="searchRow" type="platformCore:SearchRow" abstract="true"/>
+        <element name="searchRowBasic" type="platformCore:SearchRowBasic" abstract="true"/>
+        <element name="searchResult" type="platformCore:SearchResult"/>
+        <element name="getSavedSearchResult" type="platformCore:GetSavedSearchResult"/>
+        <element name="searchRowList" type="platformCore:SearchRowList"/>
+        <element name="getSavedSearchRecord" type="platformCore:GetSavedSearchRecord"/>
+        <element name="searchBooleanField" type="platformCore:SearchBooleanField"/>
+        <element name="searchStringField" type="platformCore:SearchStringField"/>
+        <element name="searchLongField" type="platformCore:SearchLongField"/>
+        <element name="searchTextNumberField" type="platformCore:SearchTextNumberField"/>
+        <element name="searchDoubleField" type="platformCore:SearchDoubleField"/>
+        <element name="searchDateField" type="platformCore:SearchDateField"/>
+        <element name="searchEnumMultiSelectField" type="platformCore:SearchEnumMultiSelectField"/>
+        <element name="searchMultiSelectField" type="platformCore:SearchMultiSelectField"/>
+        <element name="searchCustomField" type="platformCore:SearchCustomField" abstract="true"/>
+        <element name="searchBooleanCustomField" type="platformCore:SearchBooleanCustomField"/>
+        <element name="searchStringCustomField" type="platformCore:SearchStringCustomField"/>
+        <element name="searchLongCustomField" type="platformCore:SearchLongCustomField"/>
+        <element name="searchDoubleCustomField" type="platformCore:SearchDoubleCustomField"/>
+        <element name="searchDateCustomField" type="platformCore:SearchDateCustomField"/>
+        <element name="searchEnumMultiSelectCustomField" type="platformCore:SearchEnumMultiSelectCustomField"/>
+        <element name="searchMultiSelectCustomField" type="platformCore:SearchMultiSelectCustomField"/>
+        <element name="searchCustomFieldList" type="platformCore:SearchCustomFieldList"/>
+        <element name="searchColumnField" type="platformCore:SearchColumnField" abstract="true"/>
+        <element name="searchColumnBooleanField" type="platformCore:SearchColumnBooleanField"/>
+        <element name="searchColumnStringField" type="platformCore:SearchColumnStringField"/>
+        <element name="searchColumnLongField" type="platformCore:SearchColumnLongField"/>
+        <element name="searchColumnTextNumberField" type="platformCore:SearchColumnTextNumberField"/>
+        <element name="searchColumnDoubleField" type="platformCore:SearchColumnDoubleField"/>
+        <element name="searchColumnDateField" type="platformCore:SearchColumnDateField"/>
+        <element name="searchColumnEnumSelectField" type="platformCore:SearchColumnEnumSelectField"/>
+        <element name="searchColumnSelectField" type="platformCore:SearchColumnSelectField"/>
+        <element name="searchColumnCustomField" type="platformCore:SearchColumnCustomField" abstract="true"/>
+        <element name="searchColumnBooleanCustomField" type="platformCore:SearchColumnBooleanCustomField"/>
+        <element name="searchColumnStringCustomField" type="platformCore:SearchColumnStringCustomField"/>
+        <element name="searchColumnLongCustomField" type="platformCore:SearchColumnLongCustomField"/>
+        <element name="searchColumnDoubleCustomField" type="platformCore:SearchColumnDoubleCustomField"/>
+        <element name="searchColumnDateCustomField" type="platformCore:SearchColumnDateCustomField"/>
+        <element name="searchColumnEnumMultiSelectCustomField" type="platformCore:SearchColumnEnumMultiSelectCustomField"/>
+        <element name="searchColumnSelectCustomField" type="platformCore:SearchColumnSelectCustomField"/>
+        <element name="searchColumnMultiSelectCustomField" type="platformCore:SearchColumnMultiSelectCustomField"/>
+        <element name="searchColumnCustomFieldList" type="platformCore:SearchColumnCustomFieldList"/>
+        <!--    platform.messages.xsd-->
+        <element name="searchPreferences" type="platformMsgs:SearchPreferences"/>
+        <element name="searchResponse" type="platformMsgs:SearchResponse"/>
+        <element name="searchMoreWithIdResponse" type="platformMsgs:SearchMoreWithIdResponse"/>
+        <element name="getSavedSearchResponse" type="platformMsgs:GetSavedSearchResponse"/>
+        <element name="asyncSearchResult" type="platformMsgs:AsyncSearchResult"/>
+        <element name="searchRequest" type="platformMsgs:SearchRequest"/>
+        <element name="searchMoreWithIdRequest" type="platformMsgs:SearchMoreWithIdRequest"/>
+        <element name="getSavedSearchRequest" type="platformMsgs:GetSavedSearchRequest"/>
+        <element name="asyncSearchRequest" type="platformMsgs:AsyncSearchRequest"/>
+        <!--    setup.customization.xsd-->
+        <element name="customRecordSearch" type="setupCustom:CustomRecordSearch"/>
+        <element name="customRecordSearchAdvanced" type="setupCustom:CustomRecordSearchAdvanced"/>
+        <element name="customRecordSearchRow" type="setupCustom:CustomRecordSearchRow"/>
+        <element name="customListSearch" type="setupCustom:CustomListSearch"/>
+        <element name="customListSearchAdvanced" type="setupCustom:CustomListSearchAdvanced"/>
+        <element name="customListSearchRow" type="setupCustom:CustomListSearchRow"/>
+        <!--    transactions.customers.xsd-->
+        <element name="chargeSearch" type="tranCust:ChargeSearch"/>
+        <element name="chargeSearchAdvanced" type="tranCust:ChargeSearchAdvanced"/>
+        <element name="chargeSearchRow" type="tranCust:ChargeSearchRow"/>
+        <!--    transactions.demandPlanning.xsd-->
+        <element name="itemDemandPlanSearch" type="demandPlanning:ItemDemandPlanSearch"/>
+        <element name="itemDemandPlanSearchAdvanced" type="demandPlanning:ItemDemandPlanSearchAdvanced"/>
+        <element name="itemDemandPlanSearchRow" type="demandPlanning:ItemDemandPlanSearchRow"/>
+        <element name="itemSupplyPlanSearch" type="demandPlanning:ItemSupplyPlanSearch"/>
+        <element name="itemSupplyPlanSearchAdvanced" type="demandPlanning:ItemSupplyPlanSearchAdvanced"/>
+        <element name="itemSupplyPlanSearchRow" type="demandPlanning:ItemSupplyPlanSearchRow"/>
+        <!--    transactions.employees.xsd-->
+        <element name="timeBillSearch" type="tranEmp:TimeBillSearch"/>
+        <element name="timeBillSearchAdvanced" type="tranEmp:TimeBillSearchAdvanced"/>
+        <element name="timeBillSearchRow" type="tranEmp:TimeBillSearchRow"/>
+        <element name="timeEntrySearch" type="tranEmp:TimeEntrySearch"/>
+        <element name="timeEntrySearchAdvanced" type="tranEmp:TimeEntrySearchAdvanced"/>
+        <element name="timeEntrySearchRow" type="tranEmp:TimeEntrySearchRow"/>
+        <element name="timeSheetSearch" type="tranEmp:TimeSheetSearch"/>
+        <element name="timeSheetSearchAdvanced" type="tranEmp:TimeSheetSearchAdvanced"/>
+        <element name="timeSheetSearchRow" type="tranEmp:TimeSheetSearchRow"/>
+        <element name="paycheckSearch" type="tranEmp:PaycheckSearch"/>
+        <element name="paycheckSearchAdvanced" type="tranEmp:PaycheckSearchAdvanced"/>
+        <element name="paycheckSearchRow" type="tranEmp:PaycheckSearchRow"/>
+        <!--    transactions.financial.xsd-->
+        <element name="budgetSearch" type="tranFin:BudgetSearch"/>
+        <element name="budgetSearchAdvanced" type="tranFin:BudgetSearchAdvanced"/>
+        <element name="budgetSearchRow" type="tranFin:BudgetSearchRow"/>
+        <!--    transactions.purchases.xsd-->
+        <element name="inboundShipmentSearch" type="tranPurch:InboundShipmentSearch"/>
+        <element name="inboundShipmentSearchAdvanced" type="tranPurch:InboundShipmentSearchAdvanced"/>
+        <element name="inboundShipmentSearchRow" type="tranPurch:InboundShipmentSearchRow"/>
+        <!--    transactions.sales.xsd-->
+        <element name="opportunitySearch" type="tranSales:OpportunitySearch"/>
+        <element name="opportunitySearchAdvanced" type="tranSales:OpportunitySearchAdvanced"/>
+        <element name="opportunitySearchRow" type="tranSales:OpportunitySearchRow"/>
+        <element name="transactionSearch" type="tranSales:TransactionSearch"/>
+        <element name="transactionSearchAdvanced" type="tranSales:TransactionSearchAdvanced"/>
+        <element name="transactionSearchRow" type="tranSales:TransactionSearchRow"/>
+        <element name="accountingTransactionSearch" type="tranSales:AccountingTransactionSearch"/>
+        <element name="accountingTransactionSearchAdvanced" type="tranSales:AccountingTransactionSearchAdvanced"/>
+        <element name="accountingTransactionSearchRow" type="tranSales:AccountingTransactionSearchRow"/>
+        <element name="usageSearch" type="tranSales:UsageSearch"/>
+        <element name="usageSearchAdvanced" type="tranSales:UsageSearchAdvanced"/>
+        <element name="usageSearchRow" type="tranSales:UsageSearchRow"/>
+</schema>

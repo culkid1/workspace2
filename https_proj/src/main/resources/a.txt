@@ -1,0 +1,4 @@
+keytool -genkey -alias key-alias -keystore keystore-name.jks -keyalg RSA -storetype JKS
+
+keytool -genkey -keyalg EC -alias prashanth -keystore prashanth_keystore.jks
+

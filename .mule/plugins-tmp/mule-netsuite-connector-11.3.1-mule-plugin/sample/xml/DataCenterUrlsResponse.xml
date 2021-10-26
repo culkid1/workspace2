@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+>
+    <soapenv:Header>
+        <platformMsgs:documentInfo xmlns:platformMsgs="urn:messages_2020_2.platform.webservices.netsuite.com">
+            <platformMsgs:nsId>WEBSERVICES__0217202113293490141263712503_577ceefe98447fda66</platformMsgs:nsId>
+        </platformMsgs:documentInfo>
+    </soapenv:Header>
+    <soapenv:Body>
+        <getDataCenterUrlsResponse xmlns="urn:messages_2020_2.platform.webservices.netsuite.com">
+            <platformCore:getDataCenterUrlsResult
+                    xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com">
+                <platformCore:status isSuccess="true"/>
+                <platformCore:dataCenterUrls>
+                    <platformCore:restDomain>https://tstdrv1372796.restlets.api.netsuite.com</platformCore:restDomain>
+                    <platformCore:webservicesDomain>https://tstdrv1372796.suitetalk.api.netsuite.com
+                    </platformCore:webservicesDomain>
+                    <platformCore:systemDomain>https://tstdrv1372796.app.netsuite.com</platformCore:systemDomain>
+                </platformCore:dataCenterUrls>
+            </platformCore:getDataCenterUrlsResult>
+        </getDataCenterUrlsResponse>
+    </soapenv:Body>
+</soapenv:Envelope>

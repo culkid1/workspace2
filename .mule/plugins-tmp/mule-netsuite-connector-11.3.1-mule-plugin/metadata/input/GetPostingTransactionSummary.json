@@ -1,0 +1,104 @@
+{
+  "format": "xml",
+  "type": "Object",
+  "annotations": {
+    "typeId": "#root:getPostingTransactionSummary"
+  },
+  "fields": [
+    {
+      "key": {
+        "name": "{urn:messages_2020_2.platform.webservices.netsuite.com}fields",
+        "required": "true"
+      },
+      "model": {
+        "type": "Object",
+        "annotations": {
+          "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}PostingTransactionSummaryField"
+        },
+        "ordered": true,
+        "fields": [
+          {
+            "key": {
+              "name": "{urn:core_2020_2.platform.webservices.netsuite.com}period"
+            },
+            "model": {
+              "type": "Boolean"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:core_2020_2.platform.webservices.netsuite.com}account"
+            },
+            "model": {
+              "type": "Boolean"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:core_2020_2.platform.webservices.netsuite.com}parentItem"
+            },
+            "model": {
+              "type": "Boolean"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:core_2020_2.platform.webservices.netsuite.com}item"
+            },
+            "model": {
+              "type": "Boolean"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:core_2020_2.platform.webservices.netsuite.com}entity"
+            },
+            "model": {
+              "type": "Boolean"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:core_2020_2.platform.webservices.netsuite.com}department"
+            },
+            "model": {
+              "type": "Boolean"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:core_2020_2.platform.webservices.netsuite.com}class"
+            },
+            "model": {
+              "type": "Boolean"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:core_2020_2.platform.webservices.netsuite.com}location"
+            },
+            "model": {
+              "type": "Boolean"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:core_2020_2.platform.webservices.netsuite.com}subsidiary"
+            },
+            "model": {
+              "type": "Boolean"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:core_2020_2.platform.webservices.netsuite.com}book"
+            },
+            "model": {
+              "type": "Boolean"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

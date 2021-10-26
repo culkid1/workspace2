@@ -1,0 +1,28 @@
+{
+  "configs": [
+    "two-way-ssl-demo.xml"
+  ],
+  "secureProperties": [],
+  "redeploymentEnabled": true,
+  "name": "com.mycompany:two-way-ssl-demo:1.0.0-SNAPSHOT",
+  "minMuleVersion": "4.4.0",
+  "requiredProduct": "MULE",
+  "classLoaderModelLoaderDescriptor": {
+    "id": "mule",
+    "attributes": {
+      "exportedPackages": [],
+      "exportedResources": [
+        "server-truststore.jks",
+        "client-keystore.jks",
+        "server-keystore.jks",
+        "two-way-ssl-demo.xml",
+        "log4j2.xml",
+        "client-truststore.jks"
+      ]
+    }
+  },
+  "bundleDescriptorLoader": {
+    "id": "mule",
+    "attributes": {}
+  }
+}

@@ -1,0 +1,36 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <preferences xmlns="urn:messages_2020_2.platform.webservices.netsuite.com">
+            <warningAsError xmlns="">
+                false
+            </warningAsError>
+            <disableMandatoryCustomFieldValidation xmlns="">false</disableMandatoryCustomFieldValidation>
+            <disableSystemNotesForCustomFields xmlns="">false</disableSystemNotesForCustomFields>
+            <ignoreReadOnlyFields xmlns="">false</ignoreReadOnlyFields>
+            <runServerSuiteScriptAndTriggerWorkflows xmlns="">false</runServerSuiteScriptAndTriggerWorkflows>
+        </preferences>
+        <tokenPassport xmlns="urn:messages_2020_2.platform.webservices.netsuite.com">
+            <account xmlns="urn:core_2020_2.platform.webservices.netsuite.com">TSTDRV1372796</account>
+            <consumerKey xmlns="urn:core_2020_2.platform.webservices.netsuite.com">
+                8ab7bef97bdc6c8d7dc7e6babb773ceccc6fe85a61f26a2cb73ca28c4259c634
+            </consumerKey>
+            <token xmlns="urn:core_2020_2.platform.webservices.netsuite.com">
+                406b7995b5f21d3fa8a29e268c4af7253ab8e1695062dfc67f6ba2652f82a413
+            </token>
+            <nonce xmlns="urn:core_2020_2.platform.webservices.netsuite.com">
+                f127fabbfde2f57886919dfd7734c222baf641061c100d0caa62a8dbfae4ba0f
+            </nonce>
+            <timestamp xmlns="urn:core_2020_2.platform.webservices.netsuite.com">1615301950</timestamp>
+            <signature xmlns="urn:core_2020_2.platform.webservices.netsuite.com" algorithm="HMAC_SHA256">
+                v1prvWT7CEv/+vL0PsdTlt13HdN9zkg021SgKA/azks=
+            </signature>
+        </tokenPassport>
+    </soap:Header>
+    <soap:Body>
+        <ns0:get xmlns:ns0="urn:messages_2020_2.platform.webservices.netsuite.com">
+            <ns01:baseRef xmlns:ns01="urn:core_2020_2.platform.webservices.netsuite.com"
+                          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" internalId="10477887" type="employee"
+                          xsi:type="ns01:RecordRef"/>
+        </ns0:get>
+    </soap:Body>
+</soap:Envelope>

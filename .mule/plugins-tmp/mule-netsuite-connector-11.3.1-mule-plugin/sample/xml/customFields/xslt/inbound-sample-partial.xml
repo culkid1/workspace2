@@ -1,0 +1,103 @@
+        <record
+                xmlns="urn:messages_2020_2.platform.webservices.netsuite.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xmlns:listEmp="urn:employees_2020_2.lists.webservices.netsuite.com" externalId="asyncEmployee1217602" internalId="10226581" xsi:type="listEmp:Employee">
+            <listEmp:customForm xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="115">
+                <platformCore:name>Ramsey Employee Form</platformCore:name>
+            </listEmp:customForm>
+            <listEmp:entityId>FNasyncEmployee1217602 LNasyncEmployee1217602</listEmp:entityId>
+            <listEmp:firstName>FNasyncEmployee1217602</listEmp:firstName>
+            <listEmp:lastName>LNasyncEmployee1217602</listEmp:lastName>
+            <listEmp:isInactive>false</listEmp:isInactive>
+            <listEmp:lastModifiedDate>2021-02-15T20:37:05.000-08:00</listEmp:lastModifiedDate>
+            <listEmp:dateCreated>2021-02-15T20:37:05.000-08:00</listEmp:dateCreated>
+            <listEmp:initials>FL</listEmp:initials>
+            <listEmp:subsidiary xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="3">
+                <platformCore:name>Honeycomb Holdings Inc.</platformCore:name>
+            </listEmp:subsidiary>
+            <listEmp:globalSubscriptionStatus>_softOptIn</listEmp:globalSubscriptionStatus>
+            <listEmp:currency xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="1">
+                <platformCore:name>USA</platformCore:name>
+            </listEmp:currency>
+            <listEmp:purchaseOrderLimit>0.0</listEmp:purchaseOrderLimit>
+            <listEmp:isSalesRep>false</listEmp:isSalesRep>
+            <listEmp:isSupportRep>false</listEmp:isSupportRep>
+            <listEmp:isJobResource>false</listEmp:isJobResource>
+            <listEmp:hireDate>2021-02-15T00:00:00.000-08:00</listEmp:hireDate>
+            <listEmp:gender>_omitted</listEmp:gender>
+            <listEmp:workCalendar xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="1">
+                <platformCore:name>Default Work Calendar</platformCore:name>
+            </listEmp:workCalendar>
+            <listEmp:giveAccess>false</listEmp:giveAccess>
+            <listEmp:defaultExpenseReportCurrency xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="1">
+                <platformCore:name>USA</platformCore:name>
+            </listEmp:defaultExpenseReportCurrency>
+            <listEmp:sendEmail>false</listEmp:sendEmail>
+            <listEmp:requirePwdChange>false</listEmp:requirePwdChange>
+            <listEmp:billPay>false</listEmp:billPay>
+            <listEmp:eligibleForCommission>false</listEmp:eligibleForCommission>
+            <listEmp:subscriptionsList>
+                <listEmp:subscriptions>
+                    <listEmp:subscribed>T</listEmp:subscribed>
+                    <listEmp:subscription>2</listEmp:subscription>
+                    <listEmp:lastModifiedDate>2021-02-15T20:37:05.000-08:00</listEmp:lastModifiedDate>
+                </listEmp:subscriptions>
+                <listEmp:subscriptions>
+                    <listEmp:subscribed>T</listEmp:subscribed>
+                    <listEmp:subscription>1</listEmp:subscription>
+                    <listEmp:lastModifiedDate>2021-02-15T20:37:05.000-08:00</listEmp:lastModifiedDate>
+                </listEmp:subscriptions>
+                <listEmp:subscriptions>
+                    <listEmp:subscribed>T</listEmp:subscribed>
+                    <listEmp:subscription>4</listEmp:subscription>
+                    <listEmp:lastModifiedDate>2021-02-15T20:37:05.000-08:00</listEmp:lastModifiedDate>
+                </listEmp:subscriptions>
+                <listEmp:subscriptions>
+                    <listEmp:subscribed>T</listEmp:subscribed>
+                    <listEmp:subscription>5</listEmp:subscription>
+                    <listEmp:lastModifiedDate>2021-02-15T20:37:05.000-08:00</listEmp:lastModifiedDate>
+                </listEmp:subscriptions>
+                <listEmp:subscriptions>
+                    <listEmp:subscribed>T</listEmp:subscribed>
+                    <listEmp:subscription>3</listEmp:subscription>
+                    <listEmp:lastModifiedDate>2021-02-15T20:37:05.000-08:00</listEmp:lastModifiedDate>
+                </listEmp:subscriptions>
+            </listEmp:subscriptionsList>
+            <listEmp:currencyList>
+                <listEmp:employeeCurrency>
+                    <listEmp:currency xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="1">
+                        <platformCore:name>USA</platformCore:name>
+                    </listEmp:currency>
+                </listEmp:employeeCurrency>
+            </listEmp:currencyList>
+            <listEmp:customFieldList xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com">
+                <customField internalId="3992-b" scriptId="custentity_2663_payment_method-b" xsi:type="platformCore:BooleanCustomFieldRef">
+                    <platformCore:value>false</platformCore:value>
+                </customField>
+                <customField internalId="696" scriptId="custentity3" xsi:type="platformCore:BooleanCustomFieldRef">
+                    <platformCore:value>true</platformCore:value>
+                </customField>
+                <customField internalId="internalId2" scriptId="scriptId-from-attr-1" xsi:type="platformCore:SelectCustomFieldRef">
+                    <platformCore:value xsi:type="platformCore:ListOrRecordRef">true</platformCore:value>
+                </customField>
+                <customField scriptId="scriptId-from-attr-2" xsi:type="platformCore:SelectCustomFieldRef">
+                    <platformCore:value xsi:type="platformCore:ListOrRecordRef">true</platformCore:value>
+                </customField>
+                <customField internalId="2" scriptId="custentity2" xsi:type="platformCore:MultiSelectCustomFieldRef">
+                    <platformCore:value externalId="externalId1" internalId="int1" typeId="typeId1" xsi:type="platformCore:ListOrRecordRef">
+                        <platformCore:name>name1</platformCore:name>
+                        <platformCore:name>name2</platformCore:name>
+                        <platformCore:name>name3</platformCore:name>
+                    </platformCore:value>
+                </customField>
+                <customField scriptId="custentity2" xsi:type="platformCore:MultiSelectCustomFieldRef">
+                    <platformCore:value externalId="externalId1" internalId="int1" typeId="typeId1" xsi:type="platformCore:ListOrRecordRef">
+                        <platformCore:name>name4</platformCore:name>
+                        <platformCore:name>name5</platformCore:name>
+                        <platformCore:name>name6</platformCore:name>
+                    </platformCore:value>
+                </customField>
+                <customField internalId="696" scriptId="custentity2" xsi:type="platformCore:BooleanCustomFieldRef">
+                    <platformCore:value>false</platformCore:value>
+                </customField>
+            </listEmp:customFieldList>
+        </record>

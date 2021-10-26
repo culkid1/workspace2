@@ -1,0 +1,1835 @@
+{
+  "format": "xml",
+  "type": "Object",
+  "annotations": {
+    "label": "PAYMENT_ITEM"
+  },
+  "fields": [
+    {
+      "key": {
+        "name": "{urn:core_2020_2.platform.webservices.netsuite.com}record",
+        "attributes": [
+          {
+            "key": {
+              "name": "internalId"
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "externalId"
+            },
+            "model": {
+              "type": "String"
+            }
+          }
+        ]
+      },
+      "model": {
+        "type": "Object",
+        "annotations": {
+          "typeId": "{urn:accounting_2020_2.lists.webservices.netsuite.com}PaymentItem"
+        },
+        "ordered": true,
+        "fields": [
+          {
+            "key": {
+              "name": "{urn:accounting_2020_2.lists.webservices.netsuite.com}createdDate"
+            },
+            "model": {
+              "type": "DateTime"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:accounting_2020_2.lists.webservices.netsuite.com}lastModifiedDate"
+            },
+            "model": {
+              "type": "DateTime"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:accounting_2020_2.lists.webservices.netsuite.com}description"
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:accounting_2020_2.lists.webservices.netsuite.com}paymentMethod",
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "type"
+                  },
+                  "model": {
+                    "type": "String",
+                    "annotations": {
+                      "enum": {
+                        "type": "[Ljava.lang.String;",
+                        "values": [
+                          "account",
+                          "accountingPeriod",
+                          "advInterCompanyJournalEntry",
+                          "assemblyBuild",
+                          "assemblyUnbuild",
+                          "assemblyItem",
+                          "billingAccount",
+                          "billingSchedule",
+                          "bin",
+                          "binTransfer",
+                          "binWorksheet",
+                          "bom",
+                          "bomRevision",
+                          "budget",
+                          "budgetCategory",
+                          "calendarEvent",
+                          "campaign",
+                          "campaignAudience",
+                          "campaignCategory",
+                          "campaignChannel",
+                          "campaignFamily",
+                          "campaignOffer",
+                          "campaignResponse",
+                          "campaignSearchEngine",
+                          "campaignSubscription",
+                          "campaignVertical",
+                          "cashRefund",
+                          "cashSale",
+                          "check",
+                          "charge",
+                          "classification",
+                          "consolidatedExchangeRate",
+                          "contact",
+                          "contactCategory",
+                          "contactRole",
+                          "costCategory",
+                          "couponCode",
+                          "creditMemo",
+                          "crmCustomField",
+                          "currency",
+                          "currencyRate",
+                          "customList",
+                          "customPurchase",
+                          "customRecord",
+                          "customRecordCustomField",
+                          "customRecordType",
+                          "customSale",
+                          "customSegment",
+                          "customTransaction",
+                          "customTransactionType",
+                          "customer",
+                          "customerCategory",
+                          "customerDeposit",
+                          "customerMessage",
+                          "customerPayment",
+                          "customerRefund",
+                          "customerStatus",
+                          "customerSubsidiaryRelationship",
+                          "deposit",
+                          "depositApplication",
+                          "department",
+                          "descriptionItem",
+                          "discountItem",
+                          "downloadItem",
+                          "employee",
+                          "entityCustomField",
+                          "entityGroup",
+                          "estimate",
+                          "expenseCategory",
+                          "expenseReport",
+                          "fairValuePrice",
+                          "file",
+                          "folder",
+                          "generalToken",
+                          "giftCertificate",
+                          "giftCertificateItem",
+                          "globalAccountMapping",
+                          "hcmJob",
+                          "inboundShipment",
+                          "interCompanyJournalEntry",
+                          "interCompanyTransferOrder",
+                          "inventoryAdjustment",
+                          "inventoryCostRevaluation",
+                          "inventoryItem",
+                          "inventoryNumber",
+                          "inventoryTransfer",
+                          "invoice",
+                          "itemAccountMapping",
+                          "itemCustomField",
+                          "itemDemandPlan",
+                          "itemFulfillment",
+                          "itemGroup",
+                          "itemNumberCustomField",
+                          "itemOptionCustomField",
+                          "itemSupplyPlan",
+                          "itemRevision",
+                          "issue",
+                          "job",
+                          "jobStatus",
+                          "jobType",
+                          "itemReceipt",
+                          "journalEntry",
+                          "kitItem",
+                          "leadSource",
+                          "location",
+                          "lotNumberedInventoryItem",
+                          "lotNumberedAssemblyItem",
+                          "markupItem",
+                          "merchandiseHierarchyNode",
+                          "message",
+                          "manufacturingCostTemplate",
+                          "manufacturingOperationTask",
+                          "manufacturingRouting",
+                          "nexus",
+                          "nonInventoryPurchaseItem",
+                          "nonInventoryResaleItem",
+                          "nonInventorySaleItem",
+                          "note",
+                          "noteType",
+                          "opportunity",
+                          "otherChargePurchaseItem",
+                          "otherChargeResaleItem",
+                          "otherChargeSaleItem",
+                          "otherCustomField",
+                          "otherNameCategory",
+                          "partner",
+                          "partnerCategory",
+                          "paycheck",
+                          "paycheckJournal",
+                          "paymentCard",
+                          "paymentCardToken",
+                          "paymentItem",
+                          "paymentMethod",
+                          "payrollItem",
+                          "periodEndJournal",
+                          "phoneCall",
+                          "priceLevel",
+                          "pricingGroup",
+                          "projectTask",
+                          "promotionCode",
+                          "purchaseOrder",
+                          "purchaseRequisition",
+                          "resourceAllocation",
+                          "returnAuthorization",
+                          "revRecSchedule",
+                          "revRecTemplate",
+                          "salesOrder",
+                          "salesRole",
+                          "salesTaxItem",
+                          "serializedInventoryItem",
+                          "serializedAssemblyItem",
+                          "servicePurchaseItem",
+                          "serviceResaleItem",
+                          "serviceSaleItem",
+                          "solution",
+                          "siteCategory",
+                          "state",
+                          "statisticalJournalEntry",
+                          "subsidiary",
+                          "subtotalItem",
+                          "supportCase",
+                          "supportCaseIssue",
+                          "supportCaseOrigin",
+                          "supportCasePriority",
+                          "supportCaseStatus",
+                          "supportCaseType",
+                          "task",
+                          "taxAcct",
+                          "taxGroup",
+                          "taxType",
+                          "term",
+                          "timeBill",
+                          "timeSheet",
+                          "topic",
+                          "transferOrder",
+                          "transactionBodyCustomField",
+                          "transactionColumnCustomField",
+                          "unitsType",
+                          "usage",
+                          "vendor",
+                          "vendorCategory",
+                          "vendorBill",
+                          "vendorCredit",
+                          "vendorPayment",
+                          "vendorReturnAuthorization",
+                          "vendorSubsidiaryRelationship",
+                          "winLossReason",
+                          "workOrder",
+                          "workOrderIssue",
+                          "workOrderCompletion",
+                          "workOrderClose"
+                        ]
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:accounting_2020_2.lists.webservices.netsuite.com}undepFunds"
+            },
+            "model": {
+              "type": "Boolean"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:accounting_2020_2.lists.webservices.netsuite.com}includeChildren"
+            },
+            "model": {
+              "type": "Boolean"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:accounting_2020_2.lists.webservices.netsuite.com}issueProduct",
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "type"
+                  },
+                  "model": {
+                    "type": "String",
+                    "annotations": {
+                      "enum": {
+                        "type": "[Ljava.lang.String;",
+                        "values": [
+                          "account",
+                          "accountingPeriod",
+                          "advInterCompanyJournalEntry",
+                          "assemblyBuild",
+                          "assemblyUnbuild",
+                          "assemblyItem",
+                          "billingAccount",
+                          "billingSchedule",
+                          "bin",
+                          "binTransfer",
+                          "binWorksheet",
+                          "bom",
+                          "bomRevision",
+                          "budget",
+                          "budgetCategory",
+                          "calendarEvent",
+                          "campaign",
+                          "campaignAudience",
+                          "campaignCategory",
+                          "campaignChannel",
+                          "campaignFamily",
+                          "campaignOffer",
+                          "campaignResponse",
+                          "campaignSearchEngine",
+                          "campaignSubscription",
+                          "campaignVertical",
+                          "cashRefund",
+                          "cashSale",
+                          "check",
+                          "charge",
+                          "classification",
+                          "consolidatedExchangeRate",
+                          "contact",
+                          "contactCategory",
+                          "contactRole",
+                          "costCategory",
+                          "couponCode",
+                          "creditMemo",
+                          "crmCustomField",
+                          "currency",
+                          "currencyRate",
+                          "customList",
+                          "customPurchase",
+                          "customRecord",
+                          "customRecordCustomField",
+                          "customRecordType",
+                          "customSale",
+                          "customSegment",
+                          "customTransaction",
+                          "customTransactionType",
+                          "customer",
+                          "customerCategory",
+                          "customerDeposit",
+                          "customerMessage",
+                          "customerPayment",
+                          "customerRefund",
+                          "customerStatus",
+                          "customerSubsidiaryRelationship",
+                          "deposit",
+                          "depositApplication",
+                          "department",
+                          "descriptionItem",
+                          "discountItem",
+                          "downloadItem",
+                          "employee",
+                          "entityCustomField",
+                          "entityGroup",
+                          "estimate",
+                          "expenseCategory",
+                          "expenseReport",
+                          "fairValuePrice",
+                          "file",
+                          "folder",
+                          "generalToken",
+                          "giftCertificate",
+                          "giftCertificateItem",
+                          "globalAccountMapping",
+                          "hcmJob",
+                          "inboundShipment",
+                          "interCompanyJournalEntry",
+                          "interCompanyTransferOrder",
+                          "inventoryAdjustment",
+                          "inventoryCostRevaluation",
+                          "inventoryItem",
+                          "inventoryNumber",
+                          "inventoryTransfer",
+                          "invoice",
+                          "itemAccountMapping",
+                          "itemCustomField",
+                          "itemDemandPlan",
+                          "itemFulfillment",
+                          "itemGroup",
+                          "itemNumberCustomField",
+                          "itemOptionCustomField",
+                          "itemSupplyPlan",
+                          "itemRevision",
+                          "issue",
+                          "job",
+                          "jobStatus",
+                          "jobType",
+                          "itemReceipt",
+                          "journalEntry",
+                          "kitItem",
+                          "leadSource",
+                          "location",
+                          "lotNumberedInventoryItem",
+                          "lotNumberedAssemblyItem",
+                          "markupItem",
+                          "merchandiseHierarchyNode",
+                          "message",
+                          "manufacturingCostTemplate",
+                          "manufacturingOperationTask",
+                          "manufacturingRouting",
+                          "nexus",
+                          "nonInventoryPurchaseItem",
+                          "nonInventoryResaleItem",
+                          "nonInventorySaleItem",
+                          "note",
+                          "noteType",
+                          "opportunity",
+                          "otherChargePurchaseItem",
+                          "otherChargeResaleItem",
+                          "otherChargeSaleItem",
+                          "otherCustomField",
+                          "otherNameCategory",
+                          "partner",
+                          "partnerCategory",
+                          "paycheck",
+                          "paycheckJournal",
+                          "paymentCard",
+                          "paymentCardToken",
+                          "paymentItem",
+                          "paymentMethod",
+                          "payrollItem",
+                          "periodEndJournal",
+                          "phoneCall",
+                          "priceLevel",
+                          "pricingGroup",
+                          "projectTask",
+                          "promotionCode",
+                          "purchaseOrder",
+                          "purchaseRequisition",
+                          "resourceAllocation",
+                          "returnAuthorization",
+                          "revRecSchedule",
+                          "revRecTemplate",
+                          "salesOrder",
+                          "salesRole",
+                          "salesTaxItem",
+                          "serializedInventoryItem",
+                          "serializedAssemblyItem",
+                          "servicePurchaseItem",
+                          "serviceResaleItem",
+                          "serviceSaleItem",
+                          "solution",
+                          "siteCategory",
+                          "state",
+                          "statisticalJournalEntry",
+                          "subsidiary",
+                          "subtotalItem",
+                          "supportCase",
+                          "supportCaseIssue",
+                          "supportCaseOrigin",
+                          "supportCasePriority",
+                          "supportCaseStatus",
+                          "supportCaseType",
+                          "task",
+                          "taxAcct",
+                          "taxGroup",
+                          "taxType",
+                          "term",
+                          "timeBill",
+                          "timeSheet",
+                          "topic",
+                          "transferOrder",
+                          "transactionBodyCustomField",
+                          "transactionColumnCustomField",
+                          "unitsType",
+                          "usage",
+                          "vendor",
+                          "vendorCategory",
+                          "vendorBill",
+                          "vendorCredit",
+                          "vendorPayment",
+                          "vendorReturnAuthorization",
+                          "vendorSubsidiaryRelationship",
+                          "winLossReason",
+                          "workOrder",
+                          "workOrderIssue",
+                          "workOrderCompletion",
+                          "workOrderClose"
+                        ]
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:accounting_2020_2.lists.webservices.netsuite.com}account",
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "type"
+                  },
+                  "model": {
+                    "type": "String",
+                    "annotations": {
+                      "enum": {
+                        "type": "[Ljava.lang.String;",
+                        "values": [
+                          "account",
+                          "accountingPeriod",
+                          "advInterCompanyJournalEntry",
+                          "assemblyBuild",
+                          "assemblyUnbuild",
+                          "assemblyItem",
+                          "billingAccount",
+                          "billingSchedule",
+                          "bin",
+                          "binTransfer",
+                          "binWorksheet",
+                          "bom",
+                          "bomRevision",
+                          "budget",
+                          "budgetCategory",
+                          "calendarEvent",
+                          "campaign",
+                          "campaignAudience",
+                          "campaignCategory",
+                          "campaignChannel",
+                          "campaignFamily",
+                          "campaignOffer",
+                          "campaignResponse",
+                          "campaignSearchEngine",
+                          "campaignSubscription",
+                          "campaignVertical",
+                          "cashRefund",
+                          "cashSale",
+                          "check",
+                          "charge",
+                          "classification",
+                          "consolidatedExchangeRate",
+                          "contact",
+                          "contactCategory",
+                          "contactRole",
+                          "costCategory",
+                          "couponCode",
+                          "creditMemo",
+                          "crmCustomField",
+                          "currency",
+                          "currencyRate",
+                          "customList",
+                          "customPurchase",
+                          "customRecord",
+                          "customRecordCustomField",
+                          "customRecordType",
+                          "customSale",
+                          "customSegment",
+                          "customTransaction",
+                          "customTransactionType",
+                          "customer",
+                          "customerCategory",
+                          "customerDeposit",
+                          "customerMessage",
+                          "customerPayment",
+                          "customerRefund",
+                          "customerStatus",
+                          "customerSubsidiaryRelationship",
+                          "deposit",
+                          "depositApplication",
+                          "department",
+                          "descriptionItem",
+                          "discountItem",
+                          "downloadItem",
+                          "employee",
+                          "entityCustomField",
+                          "entityGroup",
+                          "estimate",
+                          "expenseCategory",
+                          "expenseReport",
+                          "fairValuePrice",
+                          "file",
+                          "folder",
+                          "generalToken",
+                          "giftCertificate",
+                          "giftCertificateItem",
+                          "globalAccountMapping",
+                          "hcmJob",
+                          "inboundShipment",
+                          "interCompanyJournalEntry",
+                          "interCompanyTransferOrder",
+                          "inventoryAdjustment",
+                          "inventoryCostRevaluation",
+                          "inventoryItem",
+                          "inventoryNumber",
+                          "inventoryTransfer",
+                          "invoice",
+                          "itemAccountMapping",
+                          "itemCustomField",
+                          "itemDemandPlan",
+                          "itemFulfillment",
+                          "itemGroup",
+                          "itemNumberCustomField",
+                          "itemOptionCustomField",
+                          "itemSupplyPlan",
+                          "itemRevision",
+                          "issue",
+                          "job",
+                          "jobStatus",
+                          "jobType",
+                          "itemReceipt",
+                          "journalEntry",
+                          "kitItem",
+                          "leadSource",
+                          "location",
+                          "lotNumberedInventoryItem",
+                          "lotNumberedAssemblyItem",
+                          "markupItem",
+                          "merchandiseHierarchyNode",
+                          "message",
+                          "manufacturingCostTemplate",
+                          "manufacturingOperationTask",
+                          "manufacturingRouting",
+                          "nexus",
+                          "nonInventoryPurchaseItem",
+                          "nonInventoryResaleItem",
+                          "nonInventorySaleItem",
+                          "note",
+                          "noteType",
+                          "opportunity",
+                          "otherChargePurchaseItem",
+                          "otherChargeResaleItem",
+                          "otherChargeSaleItem",
+                          "otherCustomField",
+                          "otherNameCategory",
+                          "partner",
+                          "partnerCategory",
+                          "paycheck",
+                          "paycheckJournal",
+                          "paymentCard",
+                          "paymentCardToken",
+                          "paymentItem",
+                          "paymentMethod",
+                          "payrollItem",
+                          "periodEndJournal",
+                          "phoneCall",
+                          "priceLevel",
+                          "pricingGroup",
+                          "projectTask",
+                          "promotionCode",
+                          "purchaseOrder",
+                          "purchaseRequisition",
+                          "resourceAllocation",
+                          "returnAuthorization",
+                          "revRecSchedule",
+                          "revRecTemplate",
+                          "salesOrder",
+                          "salesRole",
+                          "salesTaxItem",
+                          "serializedInventoryItem",
+                          "serializedAssemblyItem",
+                          "servicePurchaseItem",
+                          "serviceResaleItem",
+                          "serviceSaleItem",
+                          "solution",
+                          "siteCategory",
+                          "state",
+                          "statisticalJournalEntry",
+                          "subsidiary",
+                          "subtotalItem",
+                          "supportCase",
+                          "supportCaseIssue",
+                          "supportCaseOrigin",
+                          "supportCasePriority",
+                          "supportCaseStatus",
+                          "supportCaseType",
+                          "task",
+                          "taxAcct",
+                          "taxGroup",
+                          "taxType",
+                          "term",
+                          "timeBill",
+                          "timeSheet",
+                          "topic",
+                          "transferOrder",
+                          "transactionBodyCustomField",
+                          "transactionColumnCustomField",
+                          "unitsType",
+                          "usage",
+                          "vendor",
+                          "vendorCategory",
+                          "vendorBill",
+                          "vendorCredit",
+                          "vendorPayment",
+                          "vendorReturnAuthorization",
+                          "vendorSubsidiaryRelationship",
+                          "winLossReason",
+                          "workOrder",
+                          "workOrderIssue",
+                          "workOrderCompletion",
+                          "workOrderClose"
+                        ]
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:accounting_2020_2.lists.webservices.netsuite.com}customForm",
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "type"
+                  },
+                  "model": {
+                    "type": "String",
+                    "annotations": {
+                      "enum": {
+                        "type": "[Ljava.lang.String;",
+                        "values": [
+                          "account",
+                          "accountingPeriod",
+                          "advInterCompanyJournalEntry",
+                          "assemblyBuild",
+                          "assemblyUnbuild",
+                          "assemblyItem",
+                          "billingAccount",
+                          "billingSchedule",
+                          "bin",
+                          "binTransfer",
+                          "binWorksheet",
+                          "bom",
+                          "bomRevision",
+                          "budget",
+                          "budgetCategory",
+                          "calendarEvent",
+                          "campaign",
+                          "campaignAudience",
+                          "campaignCategory",
+                          "campaignChannel",
+                          "campaignFamily",
+                          "campaignOffer",
+                          "campaignResponse",
+                          "campaignSearchEngine",
+                          "campaignSubscription",
+                          "campaignVertical",
+                          "cashRefund",
+                          "cashSale",
+                          "check",
+                          "charge",
+                          "classification",
+                          "consolidatedExchangeRate",
+                          "contact",
+                          "contactCategory",
+                          "contactRole",
+                          "costCategory",
+                          "couponCode",
+                          "creditMemo",
+                          "crmCustomField",
+                          "currency",
+                          "currencyRate",
+                          "customList",
+                          "customPurchase",
+                          "customRecord",
+                          "customRecordCustomField",
+                          "customRecordType",
+                          "customSale",
+                          "customSegment",
+                          "customTransaction",
+                          "customTransactionType",
+                          "customer",
+                          "customerCategory",
+                          "customerDeposit",
+                          "customerMessage",
+                          "customerPayment",
+                          "customerRefund",
+                          "customerStatus",
+                          "customerSubsidiaryRelationship",
+                          "deposit",
+                          "depositApplication",
+                          "department",
+                          "descriptionItem",
+                          "discountItem",
+                          "downloadItem",
+                          "employee",
+                          "entityCustomField",
+                          "entityGroup",
+                          "estimate",
+                          "expenseCategory",
+                          "expenseReport",
+                          "fairValuePrice",
+                          "file",
+                          "folder",
+                          "generalToken",
+                          "giftCertificate",
+                          "giftCertificateItem",
+                          "globalAccountMapping",
+                          "hcmJob",
+                          "inboundShipment",
+                          "interCompanyJournalEntry",
+                          "interCompanyTransferOrder",
+                          "inventoryAdjustment",
+                          "inventoryCostRevaluation",
+                          "inventoryItem",
+                          "inventoryNumber",
+                          "inventoryTransfer",
+                          "invoice",
+                          "itemAccountMapping",
+                          "itemCustomField",
+                          "itemDemandPlan",
+                          "itemFulfillment",
+                          "itemGroup",
+                          "itemNumberCustomField",
+                          "itemOptionCustomField",
+                          "itemSupplyPlan",
+                          "itemRevision",
+                          "issue",
+                          "job",
+                          "jobStatus",
+                          "jobType",
+                          "itemReceipt",
+                          "journalEntry",
+                          "kitItem",
+                          "leadSource",
+                          "location",
+                          "lotNumberedInventoryItem",
+                          "lotNumberedAssemblyItem",
+                          "markupItem",
+                          "merchandiseHierarchyNode",
+                          "message",
+                          "manufacturingCostTemplate",
+                          "manufacturingOperationTask",
+                          "manufacturingRouting",
+                          "nexus",
+                          "nonInventoryPurchaseItem",
+                          "nonInventoryResaleItem",
+                          "nonInventorySaleItem",
+                          "note",
+                          "noteType",
+                          "opportunity",
+                          "otherChargePurchaseItem",
+                          "otherChargeResaleItem",
+                          "otherChargeSaleItem",
+                          "otherCustomField",
+                          "otherNameCategory",
+                          "partner",
+                          "partnerCategory",
+                          "paycheck",
+                          "paycheckJournal",
+                          "paymentCard",
+                          "paymentCardToken",
+                          "paymentItem",
+                          "paymentMethod",
+                          "payrollItem",
+                          "periodEndJournal",
+                          "phoneCall",
+                          "priceLevel",
+                          "pricingGroup",
+                          "projectTask",
+                          "promotionCode",
+                          "purchaseOrder",
+                          "purchaseRequisition",
+                          "resourceAllocation",
+                          "returnAuthorization",
+                          "revRecSchedule",
+                          "revRecTemplate",
+                          "salesOrder",
+                          "salesRole",
+                          "salesTaxItem",
+                          "serializedInventoryItem",
+                          "serializedAssemblyItem",
+                          "servicePurchaseItem",
+                          "serviceResaleItem",
+                          "serviceSaleItem",
+                          "solution",
+                          "siteCategory",
+                          "state",
+                          "statisticalJournalEntry",
+                          "subsidiary",
+                          "subtotalItem",
+                          "supportCase",
+                          "supportCaseIssue",
+                          "supportCaseOrigin",
+                          "supportCasePriority",
+                          "supportCaseStatus",
+                          "supportCaseType",
+                          "task",
+                          "taxAcct",
+                          "taxGroup",
+                          "taxType",
+                          "term",
+                          "timeBill",
+                          "timeSheet",
+                          "topic",
+                          "transferOrder",
+                          "transactionBodyCustomField",
+                          "transactionColumnCustomField",
+                          "unitsType",
+                          "usage",
+                          "vendor",
+                          "vendorCategory",
+                          "vendorBill",
+                          "vendorCredit",
+                          "vendorPayment",
+                          "vendorReturnAuthorization",
+                          "vendorSubsidiaryRelationship",
+                          "winLossReason",
+                          "workOrder",
+                          "workOrderIssue",
+                          "workOrderCompletion",
+                          "workOrderClose"
+                        ]
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:accounting_2020_2.lists.webservices.netsuite.com}itemId"
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:accounting_2020_2.lists.webservices.netsuite.com}displayName"
+            },
+            "model": {
+              "type": "String"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:accounting_2020_2.lists.webservices.netsuite.com}isInactive"
+            },
+            "model": {
+              "type": "Boolean"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:accounting_2020_2.lists.webservices.netsuite.com}availableToPartners"
+            },
+            "model": {
+              "type": "Boolean"
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:accounting_2020_2.lists.webservices.netsuite.com}department",
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "type"
+                  },
+                  "model": {
+                    "type": "String",
+                    "annotations": {
+                      "enum": {
+                        "type": "[Ljava.lang.String;",
+                        "values": [
+                          "account",
+                          "accountingPeriod",
+                          "advInterCompanyJournalEntry",
+                          "assemblyBuild",
+                          "assemblyUnbuild",
+                          "assemblyItem",
+                          "billingAccount",
+                          "billingSchedule",
+                          "bin",
+                          "binTransfer",
+                          "binWorksheet",
+                          "bom",
+                          "bomRevision",
+                          "budget",
+                          "budgetCategory",
+                          "calendarEvent",
+                          "campaign",
+                          "campaignAudience",
+                          "campaignCategory",
+                          "campaignChannel",
+                          "campaignFamily",
+                          "campaignOffer",
+                          "campaignResponse",
+                          "campaignSearchEngine",
+                          "campaignSubscription",
+                          "campaignVertical",
+                          "cashRefund",
+                          "cashSale",
+                          "check",
+                          "charge",
+                          "classification",
+                          "consolidatedExchangeRate",
+                          "contact",
+                          "contactCategory",
+                          "contactRole",
+                          "costCategory",
+                          "couponCode",
+                          "creditMemo",
+                          "crmCustomField",
+                          "currency",
+                          "currencyRate",
+                          "customList",
+                          "customPurchase",
+                          "customRecord",
+                          "customRecordCustomField",
+                          "customRecordType",
+                          "customSale",
+                          "customSegment",
+                          "customTransaction",
+                          "customTransactionType",
+                          "customer",
+                          "customerCategory",
+                          "customerDeposit",
+                          "customerMessage",
+                          "customerPayment",
+                          "customerRefund",
+                          "customerStatus",
+                          "customerSubsidiaryRelationship",
+                          "deposit",
+                          "depositApplication",
+                          "department",
+                          "descriptionItem",
+                          "discountItem",
+                          "downloadItem",
+                          "employee",
+                          "entityCustomField",
+                          "entityGroup",
+                          "estimate",
+                          "expenseCategory",
+                          "expenseReport",
+                          "fairValuePrice",
+                          "file",
+                          "folder",
+                          "generalToken",
+                          "giftCertificate",
+                          "giftCertificateItem",
+                          "globalAccountMapping",
+                          "hcmJob",
+                          "inboundShipment",
+                          "interCompanyJournalEntry",
+                          "interCompanyTransferOrder",
+                          "inventoryAdjustment",
+                          "inventoryCostRevaluation",
+                          "inventoryItem",
+                          "inventoryNumber",
+                          "inventoryTransfer",
+                          "invoice",
+                          "itemAccountMapping",
+                          "itemCustomField",
+                          "itemDemandPlan",
+                          "itemFulfillment",
+                          "itemGroup",
+                          "itemNumberCustomField",
+                          "itemOptionCustomField",
+                          "itemSupplyPlan",
+                          "itemRevision",
+                          "issue",
+                          "job",
+                          "jobStatus",
+                          "jobType",
+                          "itemReceipt",
+                          "journalEntry",
+                          "kitItem",
+                          "leadSource",
+                          "location",
+                          "lotNumberedInventoryItem",
+                          "lotNumberedAssemblyItem",
+                          "markupItem",
+                          "merchandiseHierarchyNode",
+                          "message",
+                          "manufacturingCostTemplate",
+                          "manufacturingOperationTask",
+                          "manufacturingRouting",
+                          "nexus",
+                          "nonInventoryPurchaseItem",
+                          "nonInventoryResaleItem",
+                          "nonInventorySaleItem",
+                          "note",
+                          "noteType",
+                          "opportunity",
+                          "otherChargePurchaseItem",
+                          "otherChargeResaleItem",
+                          "otherChargeSaleItem",
+                          "otherCustomField",
+                          "otherNameCategory",
+                          "partner",
+                          "partnerCategory",
+                          "paycheck",
+                          "paycheckJournal",
+                          "paymentCard",
+                          "paymentCardToken",
+                          "paymentItem",
+                          "paymentMethod",
+                          "payrollItem",
+                          "periodEndJournal",
+                          "phoneCall",
+                          "priceLevel",
+                          "pricingGroup",
+                          "projectTask",
+                          "promotionCode",
+                          "purchaseOrder",
+                          "purchaseRequisition",
+                          "resourceAllocation",
+                          "returnAuthorization",
+                          "revRecSchedule",
+                          "revRecTemplate",
+                          "salesOrder",
+                          "salesRole",
+                          "salesTaxItem",
+                          "serializedInventoryItem",
+                          "serializedAssemblyItem",
+                          "servicePurchaseItem",
+                          "serviceResaleItem",
+                          "serviceSaleItem",
+                          "solution",
+                          "siteCategory",
+                          "state",
+                          "statisticalJournalEntry",
+                          "subsidiary",
+                          "subtotalItem",
+                          "supportCase",
+                          "supportCaseIssue",
+                          "supportCaseOrigin",
+                          "supportCasePriority",
+                          "supportCaseStatus",
+                          "supportCaseType",
+                          "task",
+                          "taxAcct",
+                          "taxGroup",
+                          "taxType",
+                          "term",
+                          "timeBill",
+                          "timeSheet",
+                          "topic",
+                          "transferOrder",
+                          "transactionBodyCustomField",
+                          "transactionColumnCustomField",
+                          "unitsType",
+                          "usage",
+                          "vendor",
+                          "vendorCategory",
+                          "vendorBill",
+                          "vendorCredit",
+                          "vendorPayment",
+                          "vendorReturnAuthorization",
+                          "vendorSubsidiaryRelationship",
+                          "winLossReason",
+                          "workOrder",
+                          "workOrderIssue",
+                          "workOrderCompletion",
+                          "workOrderClose"
+                        ]
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:accounting_2020_2.lists.webservices.netsuite.com}class",
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "type"
+                  },
+                  "model": {
+                    "type": "String",
+                    "annotations": {
+                      "enum": {
+                        "type": "[Ljava.lang.String;",
+                        "values": [
+                          "account",
+                          "accountingPeriod",
+                          "advInterCompanyJournalEntry",
+                          "assemblyBuild",
+                          "assemblyUnbuild",
+                          "assemblyItem",
+                          "billingAccount",
+                          "billingSchedule",
+                          "bin",
+                          "binTransfer",
+                          "binWorksheet",
+                          "bom",
+                          "bomRevision",
+                          "budget",
+                          "budgetCategory",
+                          "calendarEvent",
+                          "campaign",
+                          "campaignAudience",
+                          "campaignCategory",
+                          "campaignChannel",
+                          "campaignFamily",
+                          "campaignOffer",
+                          "campaignResponse",
+                          "campaignSearchEngine",
+                          "campaignSubscription",
+                          "campaignVertical",
+                          "cashRefund",
+                          "cashSale",
+                          "check",
+                          "charge",
+                          "classification",
+                          "consolidatedExchangeRate",
+                          "contact",
+                          "contactCategory",
+                          "contactRole",
+                          "costCategory",
+                          "couponCode",
+                          "creditMemo",
+                          "crmCustomField",
+                          "currency",
+                          "currencyRate",
+                          "customList",
+                          "customPurchase",
+                          "customRecord",
+                          "customRecordCustomField",
+                          "customRecordType",
+                          "customSale",
+                          "customSegment",
+                          "customTransaction",
+                          "customTransactionType",
+                          "customer",
+                          "customerCategory",
+                          "customerDeposit",
+                          "customerMessage",
+                          "customerPayment",
+                          "customerRefund",
+                          "customerStatus",
+                          "customerSubsidiaryRelationship",
+                          "deposit",
+                          "depositApplication",
+                          "department",
+                          "descriptionItem",
+                          "discountItem",
+                          "downloadItem",
+                          "employee",
+                          "entityCustomField",
+                          "entityGroup",
+                          "estimate",
+                          "expenseCategory",
+                          "expenseReport",
+                          "fairValuePrice",
+                          "file",
+                          "folder",
+                          "generalToken",
+                          "giftCertificate",
+                          "giftCertificateItem",
+                          "globalAccountMapping",
+                          "hcmJob",
+                          "inboundShipment",
+                          "interCompanyJournalEntry",
+                          "interCompanyTransferOrder",
+                          "inventoryAdjustment",
+                          "inventoryCostRevaluation",
+                          "inventoryItem",
+                          "inventoryNumber",
+                          "inventoryTransfer",
+                          "invoice",
+                          "itemAccountMapping",
+                          "itemCustomField",
+                          "itemDemandPlan",
+                          "itemFulfillment",
+                          "itemGroup",
+                          "itemNumberCustomField",
+                          "itemOptionCustomField",
+                          "itemSupplyPlan",
+                          "itemRevision",
+                          "issue",
+                          "job",
+                          "jobStatus",
+                          "jobType",
+                          "itemReceipt",
+                          "journalEntry",
+                          "kitItem",
+                          "leadSource",
+                          "location",
+                          "lotNumberedInventoryItem",
+                          "lotNumberedAssemblyItem",
+                          "markupItem",
+                          "merchandiseHierarchyNode",
+                          "message",
+                          "manufacturingCostTemplate",
+                          "manufacturingOperationTask",
+                          "manufacturingRouting",
+                          "nexus",
+                          "nonInventoryPurchaseItem",
+                          "nonInventoryResaleItem",
+                          "nonInventorySaleItem",
+                          "note",
+                          "noteType",
+                          "opportunity",
+                          "otherChargePurchaseItem",
+                          "otherChargeResaleItem",
+                          "otherChargeSaleItem",
+                          "otherCustomField",
+                          "otherNameCategory",
+                          "partner",
+                          "partnerCategory",
+                          "paycheck",
+                          "paycheckJournal",
+                          "paymentCard",
+                          "paymentCardToken",
+                          "paymentItem",
+                          "paymentMethod",
+                          "payrollItem",
+                          "periodEndJournal",
+                          "phoneCall",
+                          "priceLevel",
+                          "pricingGroup",
+                          "projectTask",
+                          "promotionCode",
+                          "purchaseOrder",
+                          "purchaseRequisition",
+                          "resourceAllocation",
+                          "returnAuthorization",
+                          "revRecSchedule",
+                          "revRecTemplate",
+                          "salesOrder",
+                          "salesRole",
+                          "salesTaxItem",
+                          "serializedInventoryItem",
+                          "serializedAssemblyItem",
+                          "servicePurchaseItem",
+                          "serviceResaleItem",
+                          "serviceSaleItem",
+                          "solution",
+                          "siteCategory",
+                          "state",
+                          "statisticalJournalEntry",
+                          "subsidiary",
+                          "subtotalItem",
+                          "supportCase",
+                          "supportCaseIssue",
+                          "supportCaseOrigin",
+                          "supportCasePriority",
+                          "supportCaseStatus",
+                          "supportCaseType",
+                          "task",
+                          "taxAcct",
+                          "taxGroup",
+                          "taxType",
+                          "term",
+                          "timeBill",
+                          "timeSheet",
+                          "topic",
+                          "transferOrder",
+                          "transactionBodyCustomField",
+                          "transactionColumnCustomField",
+                          "unitsType",
+                          "usage",
+                          "vendor",
+                          "vendorCategory",
+                          "vendorBill",
+                          "vendorCredit",
+                          "vendorPayment",
+                          "vendorReturnAuthorization",
+                          "vendorSubsidiaryRelationship",
+                          "winLossReason",
+                          "workOrder",
+                          "workOrderIssue",
+                          "workOrderCompletion",
+                          "workOrderClose"
+                        ]
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "key": {
+              "name": "{urn:accounting_2020_2.lists.webservices.netsuite.com}location",
+              "attributes": [
+                {
+                  "key": {
+                    "name": "internalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "externalId"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                },
+                {
+                  "key": {
+                    "name": "type"
+                  },
+                  "model": {
+                    "type": "String",
+                    "annotations": {
+                      "enum": {
+                        "type": "[Ljava.lang.String;",
+                        "values": [
+                          "account",
+                          "accountingPeriod",
+                          "advInterCompanyJournalEntry",
+                          "assemblyBuild",
+                          "assemblyUnbuild",
+                          "assemblyItem",
+                          "billingAccount",
+                          "billingSchedule",
+                          "bin",
+                          "binTransfer",
+                          "binWorksheet",
+                          "bom",
+                          "bomRevision",
+                          "budget",
+                          "budgetCategory",
+                          "calendarEvent",
+                          "campaign",
+                          "campaignAudience",
+                          "campaignCategory",
+                          "campaignChannel",
+                          "campaignFamily",
+                          "campaignOffer",
+                          "campaignResponse",
+                          "campaignSearchEngine",
+                          "campaignSubscription",
+                          "campaignVertical",
+                          "cashRefund",
+                          "cashSale",
+                          "check",
+                          "charge",
+                          "classification",
+                          "consolidatedExchangeRate",
+                          "contact",
+                          "contactCategory",
+                          "contactRole",
+                          "costCategory",
+                          "couponCode",
+                          "creditMemo",
+                          "crmCustomField",
+                          "currency",
+                          "currencyRate",
+                          "customList",
+                          "customPurchase",
+                          "customRecord",
+                          "customRecordCustomField",
+                          "customRecordType",
+                          "customSale",
+                          "customSegment",
+                          "customTransaction",
+                          "customTransactionType",
+                          "customer",
+                          "customerCategory",
+                          "customerDeposit",
+                          "customerMessage",
+                          "customerPayment",
+                          "customerRefund",
+                          "customerStatus",
+                          "customerSubsidiaryRelationship",
+                          "deposit",
+                          "depositApplication",
+                          "department",
+                          "descriptionItem",
+                          "discountItem",
+                          "downloadItem",
+                          "employee",
+                          "entityCustomField",
+                          "entityGroup",
+                          "estimate",
+                          "expenseCategory",
+                          "expenseReport",
+                          "fairValuePrice",
+                          "file",
+                          "folder",
+                          "generalToken",
+                          "giftCertificate",
+                          "giftCertificateItem",
+                          "globalAccountMapping",
+                          "hcmJob",
+                          "inboundShipment",
+                          "interCompanyJournalEntry",
+                          "interCompanyTransferOrder",
+                          "inventoryAdjustment",
+                          "inventoryCostRevaluation",
+                          "inventoryItem",
+                          "inventoryNumber",
+                          "inventoryTransfer",
+                          "invoice",
+                          "itemAccountMapping",
+                          "itemCustomField",
+                          "itemDemandPlan",
+                          "itemFulfillment",
+                          "itemGroup",
+                          "itemNumberCustomField",
+                          "itemOptionCustomField",
+                          "itemSupplyPlan",
+                          "itemRevision",
+                          "issue",
+                          "job",
+                          "jobStatus",
+                          "jobType",
+                          "itemReceipt",
+                          "journalEntry",
+                          "kitItem",
+                          "leadSource",
+                          "location",
+                          "lotNumberedInventoryItem",
+                          "lotNumberedAssemblyItem",
+                          "markupItem",
+                          "merchandiseHierarchyNode",
+                          "message",
+                          "manufacturingCostTemplate",
+                          "manufacturingOperationTask",
+                          "manufacturingRouting",
+                          "nexus",
+                          "nonInventoryPurchaseItem",
+                          "nonInventoryResaleItem",
+                          "nonInventorySaleItem",
+                          "note",
+                          "noteType",
+                          "opportunity",
+                          "otherChargePurchaseItem",
+                          "otherChargeResaleItem",
+                          "otherChargeSaleItem",
+                          "otherCustomField",
+                          "otherNameCategory",
+                          "partner",
+                          "partnerCategory",
+                          "paycheck",
+                          "paycheckJournal",
+                          "paymentCard",
+                          "paymentCardToken",
+                          "paymentItem",
+                          "paymentMethod",
+                          "payrollItem",
+                          "periodEndJournal",
+                          "phoneCall",
+                          "priceLevel",
+                          "pricingGroup",
+                          "projectTask",
+                          "promotionCode",
+                          "purchaseOrder",
+                          "purchaseRequisition",
+                          "resourceAllocation",
+                          "returnAuthorization",
+                          "revRecSchedule",
+                          "revRecTemplate",
+                          "salesOrder",
+                          "salesRole",
+                          "salesTaxItem",
+                          "serializedInventoryItem",
+                          "serializedAssemblyItem",
+                          "servicePurchaseItem",
+                          "serviceResaleItem",
+                          "serviceSaleItem",
+                          "solution",
+                          "siteCategory",
+                          "state",
+                          "statisticalJournalEntry",
+                          "subsidiary",
+                          "subtotalItem",
+                          "supportCase",
+                          "supportCaseIssue",
+                          "supportCaseOrigin",
+                          "supportCasePriority",
+                          "supportCaseStatus",
+                          "supportCaseType",
+                          "task",
+                          "taxAcct",
+                          "taxGroup",
+                          "taxType",
+                          "term",
+                          "timeBill",
+                          "timeSheet",
+                          "topic",
+                          "transferOrder",
+                          "transactionBodyCustomField",
+                          "transactionColumnCustomField",
+                          "unitsType",
+                          "usage",
+                          "vendor",
+                          "vendorCategory",
+                          "vendorBill",
+                          "vendorCredit",
+                          "vendorPayment",
+                          "vendorReturnAuthorization",
+                          "vendorSubsidiaryRelationship",
+                          "winLossReason",
+                          "workOrder",
+                          "workOrderIssue",
+                          "workOrderCompletion",
+                          "workOrderClose"
+                        ]
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "model": {
+              "type": "Object",
+              "annotations": {
+                "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}RecordRef"
+              },
+              "ordered": true,
+              "fields": [
+                {
+                  "key": {
+                    "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name"
+                  },
+                  "model": {
+                    "type": "String"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

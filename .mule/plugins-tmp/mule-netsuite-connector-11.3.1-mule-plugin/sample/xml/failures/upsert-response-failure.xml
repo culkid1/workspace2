@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <soapenv:Header>
+        <platformMsgs:documentInfo xmlns:platformMsgs="urn:messages_2020_2.platform.webservices.netsuite.com">
+            <platformMsgs:nsId>WEBSERVICES_TSTDRV2156656_041220219811566711464799698_26aeae</platformMsgs:nsId>
+        </platformMsgs:documentInfo>
+    </soapenv:Header>
+    <soapenv:Body>
+        <upsertResponse xmlns="urn:messages_2020_2.platform.webservices.netsuite.com">
+            <writeResponse>
+                <platformCore:status isSuccess="false"
+                                     xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com">
+                    <platformCore:statusDetail type="ERROR">
+                        <platformCore:code>USER_ERROR</platformCore:code>
+                        <platformCore:message>Please enter value(s) for: Contact</platformCore:message>
+                    </platformCore:statusDetail>
+                </platformCore:status>
+                <baseRef externalId="100" type="contact" xsi:type="platformCore:RecordRef"
+                         xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com"/>
+            </writeResponse>
+        </upsertResponse>
+    </soapenv:Body>
+</soapenv:Envelope>

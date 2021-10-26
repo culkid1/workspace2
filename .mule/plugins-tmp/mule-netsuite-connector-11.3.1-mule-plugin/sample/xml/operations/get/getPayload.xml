@@ -1,0 +1,5 @@
+<get xmlns="urn:messages_2020_2.platform.webservices.netsuite.com">
+    <baseRef xmlns="urn:core_2020_2.platform.webservices.netsuite.com" scriptId="custrecord_bin_max_volume" internalId="228" type="otherCustomField">
+        <name>Max Volume</name>
+    </baseRef>
+</get>

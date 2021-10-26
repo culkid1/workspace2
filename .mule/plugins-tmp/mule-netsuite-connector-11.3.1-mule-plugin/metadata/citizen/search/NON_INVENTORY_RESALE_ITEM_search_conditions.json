@@ -1,0 +1,3129 @@
+{
+  "format": "xml",
+  "type": "Object",
+  "fields": [
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}atpLeadTime",
+        "annotations": {
+          "label": "Atp Lead Time"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}autoLeadTime",
+        "annotations": {
+          "label": "Auto Lead Time"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}autoPreferredStockLevel",
+        "annotations": {
+          "label": "Auto Preferred Stock Level"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}autoReorderPoint",
+        "annotations": {
+          "label": "Auto Reorder Point"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}availableToPartners",
+        "annotations": {
+          "label": "Available To Partners"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}averageCost",
+        "annotations": {
+          "label": "Average Cost"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}backwardConsumptionDays",
+        "annotations": {
+          "label": "Backward Consumption Days"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}binNumber",
+        "annotations": {
+          "label": "Bin Number"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}binOnHandAvail",
+        "annotations": {
+          "label": "Bin On Hand Avail"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}binOnHandCount",
+        "annotations": {
+          "label": "Bin On Hand Count"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}bomQuantity",
+        "annotations": {
+          "label": "Bom Quantity"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}buildEntireAssembly",
+        "annotations": {
+          "label": "Build Entire Assembly"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}buildTime",
+        "annotations": {
+          "label": "Build Time"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}buyItNowPrice",
+        "annotations": {
+          "label": "Buy It Now Price"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}caption",
+        "annotations": {
+          "label": "Caption"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}componentYield",
+        "annotations": {
+          "label": "Component Yield"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}contingentRevenueHandling",
+        "annotations": {
+          "label": "Contingent Revenue Handling"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}conversionRate",
+        "annotations": {
+          "label": "Conversion Rate"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}copyDescription",
+        "annotations": {
+          "label": "Copy Description"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}correlatedItemCorrelation",
+        "annotations": {
+          "label": "Correlated Item Correlation"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}correlatedItemCount",
+        "annotations": {
+          "label": "Correlated Item Count"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}correlatedItemLift",
+        "annotations": {
+          "label": "Correlated Item Lift"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}correlatedItemPurchaseRate",
+        "annotations": {
+          "label": "Correlated Item Purchase Rate"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}cost",
+        "annotations": {
+          "label": "Cost"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}costEstimate",
+        "annotations": {
+          "label": "Cost Estimate"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}created",
+        "annotations": {
+          "label": "Created"
+        }
+      },
+      "model": {
+        "type": "DateTime",
+        "annotations": {
+          "pattern": "YYYY-MM-DDThh:mm:ss"
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDateField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}createJob",
+        "annotations": {
+          "label": "Create Job"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}dateViewed",
+        "annotations": {
+          "label": "Date Viewed"
+        }
+      },
+      "model": {
+        "type": "DateTime",
+        "annotations": {
+          "pattern": "YYYY-MM-DDThh:mm:ss"
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDateField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}daysBeforeExpiration",
+        "annotations": {
+          "label": "Days Before Expiration"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}defaultReturnCost",
+        "annotations": {
+          "label": "Default Return Cost"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}deferRevRec",
+        "annotations": {
+          "label": "Defer Rev Rec"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}demandModifier",
+        "annotations": {
+          "label": "Demand Modifier"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}demandTimeFence",
+        "annotations": {
+          "label": "Demand Time Fence"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}directRevenuePosting",
+        "annotations": {
+          "label": "Direct Revenue Posting"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}displayIneBayStore",
+        "annotations": {
+          "label": "Display Ine Bay Store"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}displayName",
+        "annotations": {
+          "label": "Display Name"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}dontShowPrice",
+        "annotations": {
+          "label": "Dont Show Price"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}eBayItemDescription",
+        "annotations": {
+          "label": "E Bay Item Description"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}eBayItemSubtitle",
+        "annotations": {
+          "label": "E Bay Item Subtitle"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}eBayItemTitle",
+        "annotations": {
+          "label": "E Bay Item Title"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}effectiveDate",
+        "annotations": {
+          "label": "Effective Date"
+        }
+      },
+      "model": {
+        "type": "DateTime",
+        "annotations": {
+          "pattern": "YYYY-MM-DDThh:mm:ss"
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDateField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}enableCatchWeight",
+        "annotations": {
+          "label": "Enable Catch Weight"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}endAuctionsWhenOutOfStock",
+        "annotations": {
+          "label": "End Auctions When Out Of Stock"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}excludeFromSitemap",
+        "annotations": {
+          "label": "Exclude From Sitemap"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}externalIdString",
+        "annotations": {
+          "label": "External Id String"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}featuredDescription",
+        "annotations": {
+          "label": "Featured Description"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}feedDescription",
+        "annotations": {
+          "label": "Feed Description"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}feedName",
+        "annotations": {
+          "label": "Feed Name"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}fixedLotSize",
+        "annotations": {
+          "label": "Fixed Lot Size"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}forwardConsumptionDays",
+        "annotations": {
+          "label": "Forward Consumption Days"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}froogleProductFeed",
+        "annotations": {
+          "label": "Froogle Product Feed"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}futureHorizon",
+        "annotations": {
+          "label": "Future Horizon"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}fxCost",
+        "annotations": {
+          "label": "Fx Cost"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}generateAccruals",
+        "annotations": {
+          "label": "Generate Accruals"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}giftCertAuthCode",
+        "annotations": {
+          "label": "Gift Cert Auth Code"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}giftCertEmail",
+        "annotations": {
+          "label": "Gift Cert Email"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}giftCertExpDate",
+        "annotations": {
+          "label": "Gift Cert Exp Date"
+        }
+      },
+      "model": {
+        "type": "DateTime",
+        "annotations": {
+          "pattern": "YYYY-MM-DDThh:mm:ss"
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDateField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}giftCertFrom",
+        "annotations": {
+          "label": "Gift Cert From"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}giftCertMsg",
+        "annotations": {
+          "label": "Gift Cert Msg"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}giftCertOrigAmt",
+        "annotations": {
+          "label": "Gift Cert Orig Amt"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}giftCertRecipient",
+        "annotations": {
+          "label": "Gift Cert Recipient"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}imageUrl",
+        "annotations": {
+          "label": "Image Url"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}includeChildren",
+        "annotations": {
+          "label": "Include Children"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}internalIdNumber",
+        "annotations": {
+          "label": "Internal Id Number"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}invtCountInterval",
+        "annotations": {
+          "label": "Invt Count Interval"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}isAvailable",
+        "annotations": {
+          "label": "Is Available"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}isDropShipItem",
+        "annotations": {
+          "label": "Is Drop Ship Item"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}isFulfillable",
+        "annotations": {
+          "label": "Is Fulfillable"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}isGcoCompliant",
+        "annotations": {
+          "label": "Is Gco Compliant"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}isInactive",
+        "annotations": {
+          "label": "Is Inactive"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}isLotItem",
+        "annotations": {
+          "label": "Is Lot Item"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}isOnline",
+        "annotations": {
+          "label": "Is Online"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}isPreferredVendor",
+        "annotations": {
+          "label": "Is Preferred Vendor"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}isSerialItem",
+        "annotations": {
+          "label": "Is Serial Item"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}isSpecialOrderItem",
+        "annotations": {
+          "label": "Is Special Order Item"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}isSpecialWorkOrderItem",
+        "annotations": {
+          "label": "Is Special Work Order Item"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}isStorePickupAllowed",
+        "annotations": {
+          "label": "Is Store Pickup Allowed"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}isTaxable",
+        "annotations": {
+          "label": "Is Taxable"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}isVsoeBundle",
+        "annotations": {
+          "label": "Is Vsoe Bundle"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}isWip",
+        "annotations": {
+          "label": "Is Wip"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}itemId",
+        "annotations": {
+          "label": "Item Id"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}itemUrl",
+        "annotations": {
+          "label": "Item Url"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}lastInvtCountDate",
+        "annotations": {
+          "label": "Last Invt Count Date"
+        }
+      },
+      "model": {
+        "type": "DateTime",
+        "annotations": {
+          "pattern": "YYYY-MM-DDThh:mm:ss"
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDateField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}lastModifiedDate",
+        "annotations": {
+          "label": "Last Modified Date"
+        }
+      },
+      "model": {
+        "type": "DateTime",
+        "annotations": {
+          "pattern": "YYYY-MM-DDThh:mm:ss"
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDateField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}lastPurchasePrice",
+        "annotations": {
+          "label": "Last Purchase Price"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}lastQuantityAvailableChange",
+        "annotations": {
+          "label": "Last Quantity Available Change"
+        }
+      },
+      "model": {
+        "type": "DateTime",
+        "annotations": {
+          "pattern": "YYYY-MM-DDThh:mm:ss"
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDateField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}leadTime",
+        "annotations": {
+          "label": "Lead Time"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}locationAllowStorePickup",
+        "annotations": {
+          "label": "Location Allow Store Pickup"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}locationAtpLeadTime",
+        "annotations": {
+          "label": "Location Atp Lead Time"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}locationAverageCost",
+        "annotations": {
+          "label": "Location Average Cost"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}locationBuildTime",
+        "annotations": {
+          "label": "Location Build Time"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}locationCost",
+        "annotations": {
+          "label": "Location Cost"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}locationDefaultReturnCost",
+        "annotations": {
+          "label": "Location Default Return Cost"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}locationDemandTimeFence",
+        "annotations": {
+          "label": "Location Demand Time Fence"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}locationFixedLotSize",
+        "annotations": {
+          "label": "Location Fixed Lot Size"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}locationInvtCountInterval",
+        "annotations": {
+          "label": "Location Invt Count Interval"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}locationLastInvtCountDate",
+        "annotations": {
+          "label": "Location Last Invt Count Date"
+        }
+      },
+      "model": {
+        "type": "DateTime",
+        "annotations": {
+          "pattern": "YYYY-MM-DDThh:mm:ss"
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDateField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}locationLeadTime",
+        "annotations": {
+          "label": "Location Lead Time"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}locationNextInvtCountDate",
+        "annotations": {
+          "label": "Location Next Invt Count Date"
+        }
+      },
+      "model": {
+        "type": "DateTime",
+        "annotations": {
+          "pattern": "YYYY-MM-DDThh:mm:ss"
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDateField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}locationPeriodicLotSizeDays",
+        "annotations": {
+          "label": "Location Periodic Lot Size Days"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}locationPreferredStockLevel",
+        "annotations": {
+          "label": "Location Preferred Stock Level"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}locationQtyAvailForStorePickup",
+        "annotations": {
+          "label": "Location Qty Avail For Store Pickup"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}locationQuantityAvailable",
+        "annotations": {
+          "label": "Location Quantity Available"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}locationQuantityBackOrdered",
+        "annotations": {
+          "label": "Location Quantity Back Ordered"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}locationQuantityCommitted",
+        "annotations": {
+          "label": "Location Quantity Committed"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}locationQuantityInTransit",
+        "annotations": {
+          "label": "Location Quantity In Transit"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}locationQuantityOnHand",
+        "annotations": {
+          "label": "Location Quantity On Hand"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}locationQuantityOnOrder",
+        "annotations": {
+          "label": "Location Quantity On Order"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}locationReorderPoint",
+        "annotations": {
+          "label": "Location Reorder Point"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}locationRescheduleInDays",
+        "annotations": {
+          "label": "Location Reschedule In Days"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}locationRescheduleOutDays",
+        "annotations": {
+          "label": "Location Reschedule Out Days"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}locationSafetyStockLevel",
+        "annotations": {
+          "label": "Location Safety Stock Level"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}locationStorePickupBufferStock",
+        "annotations": {
+          "label": "Location Store Pickup Buffer Stock"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}locationSupplyTimeFence",
+        "annotations": {
+          "label": "Location Supply Time Fence"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}locationTotalValue",
+        "annotations": {
+          "label": "Location Total Value"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}locBackwardConsumptionDays",
+        "annotations": {
+          "label": "Loc Backward Consumption Days"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}locForwardConsumptionDays",
+        "annotations": {
+          "label": "Loc Forward Consumption Days"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}lowerWarningLimit",
+        "annotations": {
+          "label": "Lower Warning Limit"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}manufacturer",
+        "annotations": {
+          "label": "Manufacturer"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}manufactureraddr1",
+        "annotations": {
+          "label": "Manufactureraddr 1"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}manufacturerCity",
+        "annotations": {
+          "label": "Manufacturer City"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}manufacturerState",
+        "annotations": {
+          "label": "Manufacturer State"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}manufacturerTariff",
+        "annotations": {
+          "label": "Manufacturer Tariff"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}manufacturerTaxId",
+        "annotations": {
+          "label": "Manufacturer Tax Id"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}manufacturerZip",
+        "annotations": {
+          "label": "Manufacturer Zip"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}manufacturingChargeItem",
+        "annotations": {
+          "label": "Manufacturing Charge Item"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}matchBillToReceipt",
+        "annotations": {
+          "label": "Match Bill To Receipt"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}matrix",
+        "annotations": {
+          "label": "Matrix"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}matrixChild",
+        "annotations": {
+          "label": "Matrix Child"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}maximumQuantity",
+        "annotations": {
+          "label": "Maximum Quantity"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}metaTagHtml",
+        "annotations": {
+          "label": "Meta Tag Html"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}minimumQuantity",
+        "annotations": {
+          "label": "Minimum Quantity"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}mossApplies",
+        "annotations": {
+          "label": "Moss Applies"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}mpn",
+        "annotations": {
+          "label": "Mpn"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}multManufactureAddr",
+        "annotations": {
+          "label": "Mult Manufacture Addr"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}nexTagCategory",
+        "annotations": {
+          "label": "Nex Tag Category"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}nexTagProductFeed",
+        "annotations": {
+          "label": "Nex Tag Product Feed"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}nextInvtCountDate",
+        "annotations": {
+          "label": "Next Invt Count Date"
+        }
+      },
+      "model": {
+        "type": "DateTime",
+        "annotations": {
+          "pattern": "YYYY-MM-DDThh:mm:ss"
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDateField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}numActiveListings",
+        "annotations": {
+          "label": "Num Active Listings"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}numberAllowedDownloads",
+        "annotations": {
+          "label": "Number Allowed Downloads"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}numCurrentlyListed",
+        "annotations": {
+          "label": "Num Currently Listed"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}obsoleteDate",
+        "annotations": {
+          "label": "Obsolete Date"
+        }
+      },
+      "model": {
+        "type": "DateTime",
+        "annotations": {
+          "pattern": "YYYY-MM-DDThh:mm:ss"
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDateField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}offerSupport",
+        "annotations": {
+          "label": "Offer Support"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}onlineCustomerPrice",
+        "annotations": {
+          "label": "Online Customer Price"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}onSpecial",
+        "annotations": {
+          "label": "On Special"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}pageTitle",
+        "annotations": {
+          "label": "Page Title"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}periodicLotSizeDays",
+        "annotations": {
+          "label": "Periodic Lot Size Days"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}preferenceCriterion",
+        "annotations": {
+          "label": "Preference Criterion"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}preferredBin",
+        "annotations": {
+          "label": "Preferred Bin"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}preferredStockLevel",
+        "annotations": {
+          "label": "Preferred Stock Level"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}preferredStockLevelDays",
+        "annotations": {
+          "label": "Preferred Stock Level Days"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}price",
+        "annotations": {
+          "label": "Price"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}pricesIncludeTax",
+        "annotations": {
+          "label": "Prices Include Tax"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}primaryCategory",
+        "annotations": {
+          "label": "Primary Category"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}purchaseOrderAmount",
+        "annotations": {
+          "label": "Purchase Order Amount"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}purchaseOrderQuantity",
+        "annotations": {
+          "label": "Purchase Order Quantity"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}purchaseOrderQuantityDiff",
+        "annotations": {
+          "label": "Purchase Order Quantity Diff"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}quantityAvailable",
+        "annotations": {
+          "label": "Quantity Available"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}quantityBackOrdered",
+        "annotations": {
+          "label": "Quantity Back Ordered"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}quantityCommitted",
+        "annotations": {
+          "label": "Quantity Committed"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}quantityOnHand",
+        "annotations": {
+          "label": "Quantity On Hand"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}quantityOnOrder",
+        "annotations": {
+          "label": "Quantity On Order"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}receiptAmount",
+        "annotations": {
+          "label": "Receipt Amount"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}receiptQuantity",
+        "annotations": {
+          "label": "Receipt Quantity"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}receiptQuantityDiff",
+        "annotations": {
+          "label": "Receipt Quantity Diff"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}reorderMultiple",
+        "annotations": {
+          "label": "Reorder Multiple"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}reorderPoint",
+        "annotations": {
+          "label": "Reorder Point"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}rescheduleInDays",
+        "annotations": {
+          "label": "Reschedule In Days"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}rescheduleOutDays",
+        "annotations": {
+          "label": "Reschedule Out Days"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}reservePrice",
+        "annotations": {
+          "label": "Reserve Price"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}roundUpAsComponent",
+        "annotations": {
+          "label": "Round Up As Component"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}safetyStockLevel",
+        "annotations": {
+          "label": "Safety Stock Level"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}safetyStockLevelDays",
+        "annotations": {
+          "label": "Safety Stock Level Days"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}salesDescription",
+        "annotations": {
+          "label": "Sales Description"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}sameAsPrimaryBookAmortization",
+        "annotations": {
+          "label": "Same As Primary Book Amortization"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}sameAsPrimaryBookRevRec",
+        "annotations": {
+          "label": "Same As Primary Book Rev Rec"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}scheduleBNumber",
+        "annotations": {
+          "label": "Schedule B Number"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}scheduleBQuantity",
+        "annotations": {
+          "label": "Schedule B Quantity"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}searchKeywords",
+        "annotations": {
+          "label": "Search Keywords"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}seasonalDemand",
+        "annotations": {
+          "label": "Seasonal Demand"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}sellOnEBay",
+        "annotations": {
+          "label": "Sell On E Bay"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}serialNumber",
+        "annotations": {
+          "label": "Serial Number"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}shipIndividually",
+        "annotations": {
+          "label": "Ship Individually"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}shippingRate",
+        "annotations": {
+          "label": "Shipping Rate"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}shoppingDotComCategory",
+        "annotations": {
+          "label": "Shopping Dot Com Category"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}shoppingProductFeed",
+        "annotations": {
+          "label": "Shopping Product Feed"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}shopzillaCategoryId",
+        "annotations": {
+          "label": "Shopzilla Category Id"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}shopzillaProductFeed",
+        "annotations": {
+          "label": "Shopzilla Product Feed"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}startingPrice",
+        "annotations": {
+          "label": "Starting Price"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}stockDescription",
+        "annotations": {
+          "label": "Stock Description"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}storeDescription",
+        "annotations": {
+          "label": "Store Description"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}supplyTimeFence",
+        "annotations": {
+          "label": "Supply Time Fence"
+        }
+      },
+      "model": {
+        "type": "Number",
+        "annotations": {
+          "int": {
+            
+          }
+        }
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchLongField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}thumbnailUrl",
+        "annotations": {
+          "label": "Thumbnail Url"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}totalValue",
+        "annotations": {
+          "label": "Total Value"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}trackLandedCost",
+        "annotations": {
+          "label": "Track Landed Cost"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}transferPrice",
+        "annotations": {
+          "label": "Transfer Price"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}upcCode",
+        "annotations": {
+          "label": "Upc Code"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}upperWarningLimit",
+        "annotations": {
+          "label": "Upper Warning Limit"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}urlComponent",
+        "annotations": {
+          "label": "Url Component"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}useBins",
+        "annotations": {
+          "label": "Use Bins"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}useComponentYield",
+        "annotations": {
+          "label": "Use Component Yield"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}useMarginalRates",
+        "annotations": {
+          "label": "Use Marginal Rates"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}vendorCode",
+        "annotations": {
+          "label": "Vendor Code"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}vendorCost",
+        "annotations": {
+          "label": "Vendor Cost"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}vendorCostEntered",
+        "annotations": {
+          "label": "Vendor Cost Entered"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}vendorName",
+        "annotations": {
+          "label": "Vendor Name"
+        }
+      },
+      "model": {
+        "type": "String"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchStringField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}vsoeDelivered",
+        "annotations": {
+          "label": "Vsoe Delivered"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}vsoePrice",
+        "annotations": {
+          "label": "Vsoe Price"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}weight",
+        "annotations": {
+          "label": "Weight"
+        }
+      },
+      "model": {
+        "type": "Number"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchDoubleField"
+      }
+    },
+    {
+      "key": {
+        "name": "{urn:common_2020_2.platform.webservices.netsuite.com}yahooProductFeed",
+        "annotations": {
+          "label": "Yahoo Product Feed"
+        }
+      },
+      "model": {
+        "type": "Boolean"
+      },
+      "annotations": {
+        "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}SearchBooleanField"
+      }
+    }
+  ]
+}

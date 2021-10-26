@@ -1,0 +1,7 @@
+<getCustomizationIdResponse xmlns="urn:messages_2020_2.platform.webservices.netsuite.com">
+    <platformCore:getCustomizationIdResult xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com">
+        <platformCore:status isSuccess="true"/>
+        <platformCore:totalRecords>0</platformCore:totalRecords>
+        <platformCore:customizationRefList/>
+    </platformCore:getCustomizationIdResult>
+</getCustomizationIdResponse>

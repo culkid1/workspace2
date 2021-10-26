@@ -1,0 +1,2070 @@
+{
+  "MarkupItem": {
+    "displayName": "MarkupItem",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "MarkupItem",
+    "properties": [
+      
+    ]
+  },
+  "Account": {
+    "displayName": "Account",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "Account",
+    "properties": [
+      
+    ]
+  },
+  "Invoice": {
+    "displayName": "Invoice",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "Invoice",
+    "properties": [
+      
+    ]
+  },
+  "Customer": {
+    "displayName": "Customer",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "Customer",
+    "properties": [
+      
+    ]
+  },
+  "CustomerPayment": {
+    "displayName": "CustomerPayment",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CustomerPayment",
+    "properties": [
+      
+    ]
+  },
+  "bin": {
+    "displayName": "Bin",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "bin",
+    "properties": [
+      
+    ]
+  },
+  "usage": {
+    "displayName": "Usage",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "usage",
+    "properties": [
+      
+    ]
+  },
+  "Check": {
+    "displayName": "Check",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "Check",
+    "properties": [
+      
+    ]
+  },
+  "pricingGroup": {
+    "displayName": "PricingGroup",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "pricingGroup",
+    "properties": [
+      
+    ]
+  },
+  "paycheckJournal": {
+    "displayName": "PaycheckJournal",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "paycheckJournal",
+    "properties": [
+      
+    ]
+  },
+  "billingAccount": {
+    "displayName": "BillingAccount",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "billingAccount",
+    "properties": [
+      
+    ]
+  },
+  "paymentCardToken": {
+    "displayName": "PaymentCardToken",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "paymentCardToken",
+    "properties": [
+      
+    ]
+  },
+  "vendorSubsidiaryRelationship": {
+    "displayName": "VendorSubsidiaryRelationship",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "vendorSubsidiaryRelationship",
+    "properties": [
+      
+    ]
+  },
+  "SiteCategory": {
+    "displayName": "SiteCategory",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "SiteCategory",
+    "properties": [
+      
+    ]
+  },
+  "itemAccountMapping": {
+    "displayName": "ItemAccountMapping",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "itemAccountMapping",
+    "properties": [
+      
+    ]
+  },
+  "itemSupplyPlan": {
+    "displayName": "ItemSupplyPlan",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "itemSupplyPlan",
+    "properties": [
+      
+    ]
+  },
+  "inventoryNumber": {
+    "displayName": "InventoryNumber",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "inventoryNumber",
+    "properties": [
+      
+    ]
+  },
+  "paymentCard": {
+    "displayName": "PaymentCard",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "paymentCard",
+    "properties": [
+      
+    ]
+  },
+  "timeSheet": {
+    "displayName": "TimeSheet",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "timeSheet",
+    "properties": [
+      
+    ]
+  },
+  "Department": {
+    "displayName": "Department",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "Department",
+    "properties": [
+      
+    ]
+  },
+  "ServicePurchaseItem": {
+    "displayName": "ServicePurchaseItem",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "ServicePurchaseItem",
+    "properties": [
+      
+    ]
+  },
+  "generalToken": {
+    "displayName": "GeneralToken",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "generalToken",
+    "properties": [
+      
+    ]
+  },
+  "Classification": {
+    "displayName": "Classification",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "Classification",
+    "properties": [
+      
+    ]
+  },
+  "Currency": {
+    "displayName": "Currency",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "Currency",
+    "properties": [
+      
+    ]
+  },
+  "manufacturingOperationTask": {
+    "displayName": "ManufacturingOperationTask",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "manufacturingOperationTask",
+    "properties": [
+      
+    ]
+  },
+  "CustomRecord": {
+    "displayName": "CustomRecord",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CustomRecord",
+    "properties": [
+      
+    ]
+  },
+  "state": {
+    "displayName": "State",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "state",
+    "properties": [
+      
+    ]
+  },
+  "fairValuePrice": {
+    "displayName": "FairValuePrice",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "fairValuePrice",
+    "properties": [
+      
+    ]
+  },
+  "itemGroup": {
+    "displayName": "ItemGroup",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "itemGroup",
+    "properties": [
+      
+    ]
+  },
+  "customerMessage": {
+    "displayName": "CustomerMessage",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "customerMessage",
+    "properties": [
+      
+    ]
+  },
+  "CampaignResponse": {
+    "displayName": "CampaignResponse",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CampaignResponse",
+    "properties": [
+      
+    ]
+  },
+  "itemNumberCustomField": {
+    "displayName": "ItemNumberCustomField",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "itemNumberCustomField",
+    "properties": [
+      
+    ]
+  },
+  "vendorPayment": {
+    "displayName": "VendorPayment",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "vendorPayment",
+    "properties": [
+      
+    ]
+  },
+  "CashRefund": {
+    "displayName": "CashRefund",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CashRefund",
+    "properties": [
+      
+    ]
+  },
+  "CampaignSubscription": {
+    "displayName": "CampaignSubscription",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CampaignSubscription",
+    "properties": [
+      
+    ]
+  },
+  "OtherChargePurchaseItem": {
+    "displayName": "OtherChargePurchaseItem",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "OtherChargePurchaseItem",
+    "properties": [
+      
+    ]
+  },
+  "transferOrder": {
+    "displayName": "TransferOrder",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "transferOrder",
+    "properties": [
+      
+    ]
+  },
+  "CustomerCategory": {
+    "displayName": "CustomerCategory",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CustomerCategory",
+    "properties": [
+      
+    ]
+  },
+  "Employee": {
+    "displayName": "Employee",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "Employee",
+    "properties": [
+      
+    ]
+  },
+  "interCompanyTransferOrder": {
+    "displayName": "InterCompanyTransferOrder",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "interCompanyTransferOrder",
+    "properties": [
+      
+    ]
+  },
+  "Note": {
+    "displayName": "Note",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "Note",
+    "properties": [
+      
+    ]
+  },
+  "deposit": {
+    "displayName": "Deposit",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "deposit",
+    "properties": [
+      
+    ]
+  },
+  "assemblyItem": {
+    "displayName": "AssemblyItem",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "assemblyItem",
+    "properties": [
+      
+    ]
+  },
+  "vendorCredit": {
+    "displayName": "VendorCredit",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "vendorCredit",
+    "properties": [
+      
+    ]
+  },
+  "SupportCaseOrigin": {
+    "displayName": "SupportCaseOrigin",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "SupportCaseOrigin",
+    "properties": [
+      
+    ]
+  },
+  "itemDemandPlan": {
+    "displayName": "ItemDemandPlan",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "itemDemandPlan",
+    "properties": [
+      
+    ]
+  },
+  "customPurchase": {
+    "displayName": "CustomPurchase",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "customPurchase",
+    "properties": [
+      
+    ]
+  },
+  "Estimate": {
+    "displayName": "Estimate",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "Estimate",
+    "properties": [
+      
+    ]
+  },
+  "WinLossReason": {
+    "displayName": "WinLossReason",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "WinLossReason",
+    "properties": [
+      
+    ]
+  },
+  "customTransaction": {
+    "displayName": "CustomTransaction",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "customTransaction",
+    "properties": [
+      
+    ]
+  },
+  "binWorksheet": {
+    "displayName": "BinWorksheet",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "binWorksheet",
+    "properties": [
+      
+    ]
+  },
+  "EntityGroup": {
+    "displayName": "EntityGroup",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "EntityGroup",
+    "properties": [
+      
+    ]
+  },
+  "EntityCustomField": {
+    "displayName": "EntityCustomField",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "EntityCustomField",
+    "properties": [
+      
+    ]
+  },
+  "CustomList": {
+    "displayName": "CustomList",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CustomList",
+    "properties": [
+      
+    ]
+  },
+  "CampaignOffer": {
+    "displayName": "CampaignOffer",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CampaignOffer",
+    "properties": [
+      
+    ]
+  },
+  "JournalEntry": {
+    "displayName": "JournalEntry",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "JournalEntry",
+    "properties": [
+      
+    ]
+  },
+  "CampaignCategory": {
+    "displayName": "CampaignCategory",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CampaignCategory",
+    "properties": [
+      
+    ]
+  },
+  "ContactCategory": {
+    "displayName": "ContactCategory",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "ContactCategory",
+    "properties": [
+      
+    ]
+  },
+  "ContactRole": {
+    "displayName": "ContactRole",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "ContactRole",
+    "properties": [
+      
+    ]
+  },
+  "workOrderCompletion": {
+    "displayName": "WorkOrderCompletion",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "workOrderCompletion",
+    "properties": [
+      
+    ]
+  },
+  "OtherChargeResaleItem": {
+    "displayName": "OtherChargeResaleItem",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "OtherChargeResaleItem",
+    "properties": [
+      
+    ]
+  },
+  "JobStatus": {
+    "displayName": "JobStatus",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "JobStatus",
+    "properties": [
+      
+    ]
+  },
+  "workOrderIssue": {
+    "displayName": "WorkOrderIssue",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "workOrderIssue",
+    "properties": [
+      
+    ]
+  },
+  "PriceLevel": {
+    "displayName": "PriceLevel",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "PriceLevel",
+    "properties": [
+      
+    ]
+  },
+  "costCategory": {
+    "displayName": "CostCategory",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "costCategory",
+    "properties": [
+      
+    ]
+  },
+  "binTransfer": {
+    "displayName": "BinTransfer",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "binTransfer",
+    "properties": [
+      
+    ]
+  },
+  "inventoryTransfer": {
+    "displayName": "InventoryTransfer",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "inventoryTransfer",
+    "properties": [
+      
+    ]
+  },
+  "DepositApplication": {
+    "displayName": "DepositApplication",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "DepositApplication",
+    "properties": [
+      
+    ]
+  },
+  "StatisticalJournalEntry": {
+    "displayName": "StatisticalJournalEntry",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "StatisticalJournalEntry",
+    "properties": [
+      
+    ]
+  },
+  "InventoryAdjustment": {
+    "displayName": "InventoryAdjustment",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "InventoryAdjustment",
+    "properties": [
+      
+    ]
+  },
+  "Partner": {
+    "displayName": "Partner",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "Partner",
+    "properties": [
+      
+    ]
+  },
+  "Solution": {
+    "displayName": "Solution",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "Solution",
+    "properties": [
+      
+    ]
+  },
+  "ItemFulfillment": {
+    "displayName": "ItemFulfillment",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "ItemFulfillment",
+    "properties": [
+      
+    ]
+  },
+  "DescriptionItem": {
+    "displayName": "DescriptionItem",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "DescriptionItem",
+    "properties": [
+      
+    ]
+  },
+  "vendorReturnAuthorization": {
+    "displayName": "VendorReturnAuthorization",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "vendorReturnAuthorization",
+    "properties": [
+      
+    ]
+  },
+  "GiftCertificateItem": {
+    "displayName": "GiftCertificateItem",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "GiftCertificateItem",
+    "properties": [
+      
+    ]
+  },
+  "charge": {
+    "displayName": "Charge",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "charge",
+    "properties": [
+      
+    ]
+  },
+  "billingSchedule": {
+    "displayName": "BillingSchedule",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "billingSchedule",
+    "properties": [
+      
+    ]
+  },
+  "budgetCategory": {
+    "displayName": "BudgetCategory",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "budgetCategory",
+    "properties": [
+      
+    ]
+  },
+  "GiftCertificate": {
+    "displayName": "GiftCertificate",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "GiftCertificate",
+    "properties": [
+      
+    ]
+  },
+  "payrollItem": {
+    "displayName": "PayrollItem",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "payrollItem",
+    "properties": [
+      
+    ]
+  },
+  "bomRevision": {
+    "displayName": "BomRevision",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "bomRevision",
+    "properties": [
+      
+    ]
+  },
+  "inboundShipment": {
+    "displayName": "InboundShipment",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "inboundShipment",
+    "properties": [
+      
+    ]
+  },
+  "CampaignAudience": {
+    "displayName": "CampaignAudience",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CampaignAudience",
+    "properties": [
+      
+    ]
+  },
+  "CrmCustomField": {
+    "displayName": "CrmCustomField",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CrmCustomField",
+    "properties": [
+      
+    ]
+  },
+  "CashSale": {
+    "displayName": "CashSale",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CashSale",
+    "properties": [
+      
+    ]
+  },
+  "NoteType": {
+    "displayName": "NoteType",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "NoteType",
+    "properties": [
+      
+    ]
+  },
+  "customerSubsidiaryRelationship": {
+    "displayName": "CustomerSubsidiaryRelationship",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "customerSubsidiaryRelationship",
+    "properties": [
+      
+    ]
+  },
+  "SupportCase": {
+    "displayName": "SupportCase",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "SupportCase",
+    "properties": [
+      
+    ]
+  },
+  "LotNumberedInventoryItem": {
+    "displayName": "LotNumberedInventoryItem",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "LotNumberedInventoryItem",
+    "properties": [
+      
+    ]
+  },
+  "CustomerRefund": {
+    "displayName": "CustomerRefund",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CustomerRefund",
+    "properties": [
+      
+    ]
+  },
+  "CustomerStatus": {
+    "displayName": "CustomerStatus",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CustomerStatus",
+    "properties": [
+      
+    ]
+  },
+  "CustomerDeposit": {
+    "displayName": "CustomerDeposit",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CustomerDeposit",
+    "properties": [
+      
+    ]
+  },
+  "periodEndJournal": {
+    "displayName": "PeriodEndJournal",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "periodEndJournal",
+    "properties": [
+      
+    ]
+  },
+  "CampaignFamily": {
+    "displayName": "CampaignFamily",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CampaignFamily",
+    "properties": [
+      
+    ]
+  },
+  "PurchaseOrder": {
+    "displayName": "PurchaseOrder",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "PurchaseOrder",
+    "properties": [
+      
+    ]
+  },
+  "currencyRate": {
+    "displayName": "CurrencyRate",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "currencyRate",
+    "properties": [
+      
+    ]
+  },
+  "AdvInterCompanyJournalEntry": {
+    "displayName": "AdvInterCompanyJournalEntry",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "AdvInterCompanyJournalEntry",
+    "properties": [
+      
+    ]
+  },
+  "CampaignVertical": {
+    "displayName": "CampaignVertical",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CampaignVertical",
+    "properties": [
+      
+    ]
+  },
+  "couponCode": {
+    "displayName": "CouponCode",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "couponCode",
+    "properties": [
+      
+    ]
+  },
+  "globalAccountMapping": {
+    "displayName": "GlobalAccountMapping",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "globalAccountMapping",
+    "properties": [
+      
+    ]
+  },
+  "UnitsType": {
+    "displayName": "UnitsType",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "UnitsType",
+    "properties": [
+      
+    ]
+  },
+  "ItemOptionCustomField": {
+    "displayName": "ItemOptionCustomField",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "ItemOptionCustomField",
+    "properties": [
+      
+    ]
+  },
+  "otherNameCategory": {
+    "displayName": "OtherNameCategory",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "otherNameCategory",
+    "properties": [
+      
+    ]
+  },
+  "ServiceResaleItem": {
+    "displayName": "ServiceResaleItem",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "ServiceResaleItem",
+    "properties": [
+      
+    ]
+  },
+  "merchandiseHierarchyNode": {
+    "displayName": "MerchandiseHierarchyNode",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "merchandiseHierarchyNode",
+    "properties": [
+      
+    ]
+  },
+  "Task": {
+    "displayName": "Task",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "Task",
+    "properties": [
+      
+    ]
+  },
+  "Issue": {
+    "displayName": "Issue",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "Issue",
+    "properties": [
+      
+    ]
+  },
+  "CampaignSearchEngine": {
+    "displayName": "CampaignSearchEngine",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CampaignSearchEngine",
+    "properties": [
+      
+    ]
+  },
+  "VendorCategory": {
+    "displayName": "VendorCategory",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "VendorCategory",
+    "properties": [
+      
+    ]
+  },
+  "CustomRecordCustomField": {
+    "displayName": "CustomRecordCustomField",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CustomRecordCustomField",
+    "properties": [
+      
+    ]
+  },
+  "PaymentItem": {
+    "displayName": "PaymentItem",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "PaymentItem",
+    "properties": [
+      
+    ]
+  },
+  "manufacturingRouting": {
+    "displayName": "ManufacturingRouting",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "manufacturingRouting",
+    "properties": [
+      
+    ]
+  },
+  "OtherCustomField": {
+    "displayName": "OtherCustomField",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "OtherCustomField",
+    "properties": [
+      
+    ]
+  },
+  "resourceAllocation": {
+    "displayName": "ResourceAllocation",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "resourceAllocation",
+    "properties": [
+      
+    ]
+  },
+  "TimeBill": {
+    "displayName": "TimeBill",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "TimeBill",
+    "properties": [
+      
+    ]
+  },
+  "NonInventorySaleItem": {
+    "displayName": "NonInventorySaleItem",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "NonInventorySaleItem",
+    "properties": [
+      
+    ]
+  },
+  "hcmJob": {
+    "displayName": "HcmJob",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "hcmJob",
+    "properties": [
+      
+    ]
+  },
+  "Subsidiary": {
+    "displayName": "Subsidiary",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "Subsidiary",
+    "properties": [
+      
+    ]
+  },
+  "SubtotalItem": {
+    "displayName": "SubtotalItem",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "SubtotalItem",
+    "properties": [
+      
+    ]
+  },
+  "revRecTemplate": {
+    "displayName": "RevRecTemplate",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "revRecTemplate",
+    "properties": [
+      
+    ]
+  },
+  "accountingPeriod": {
+    "displayName": "AccountingPeriod",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "accountingPeriod",
+    "properties": [
+      
+    ]
+  },
+  "SupportCasePriority": {
+    "displayName": "SupportCasePriority",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "SupportCasePriority",
+    "properties": [
+      
+    ]
+  },
+  "DiscountItem": {
+    "displayName": "DiscountItem",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "DiscountItem",
+    "properties": [
+      
+    ]
+  },
+  "ItemReceipt": {
+    "displayName": "ItemReceipt",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "ItemReceipt",
+    "properties": [
+      
+    ]
+  },
+  "Job": {
+    "displayName": "Job",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "Job",
+    "properties": [
+      
+    ]
+  },
+  "SalesOrder": {
+    "displayName": "SalesOrder",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "SalesOrder",
+    "properties": [
+      
+    ]
+  },
+  "budget": {
+    "displayName": "Budget",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "budget",
+    "properties": [
+      
+    ]
+  },
+  "workOrder": {
+    "displayName": "WorkOrder",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "workOrder",
+    "properties": [
+      
+    ]
+  },
+  "ItemCustomField": {
+    "displayName": "ItemCustomField",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "ItemCustomField",
+    "properties": [
+      
+    ]
+  },
+  "VendorBill": {
+    "displayName": "VendorBill",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "VendorBill",
+    "properties": [
+      
+    ]
+  },
+  "TransactionColumnCustomField": {
+    "displayName": "TransactionColumnCustomField",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "TransactionColumnCustomField",
+    "properties": [
+      
+    ]
+  },
+  "promotionCode": {
+    "displayName": "PromotionCode",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "promotionCode",
+    "properties": [
+      
+    ]
+  },
+  "Term": {
+    "displayName": "Term",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "Term",
+    "properties": [
+      
+    ]
+  },
+  "downloadItem": {
+    "displayName": "DownloadItem",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "downloadItem",
+    "properties": [
+      
+    ]
+  },
+  "TaxType": {
+    "displayName": "TaxType",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "TaxType",
+    "properties": [
+      
+    ]
+  },
+  "Campaign": {
+    "displayName": "Campaign",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "Campaign",
+    "properties": [
+      
+    ]
+  },
+  "LeadSource": {
+    "displayName": "LeadSource",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "LeadSource",
+    "properties": [
+      
+    ]
+  },
+  "TaxGroup": {
+    "displayName": "TaxGroup",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "TaxGroup",
+    "properties": [
+      
+    ]
+  },
+  "expenseReport": {
+    "displayName": "ExpenseReport",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "expenseReport",
+    "properties": [
+      
+    ]
+  },
+  "lotNumberedAssemblyItem": {
+    "displayName": "LotNumberedAssemblyItem",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "lotNumberedAssemblyItem",
+    "properties": [
+      
+    ]
+  },
+  "PaymentMethod": {
+    "displayName": "PaymentMethod",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "PaymentMethod",
+    "properties": [
+      
+    ]
+  },
+  "purchaseRequisition": {
+    "displayName": "PurchaseRequisition",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "purchaseRequisition",
+    "properties": [
+      
+    ]
+  },
+  "paycheck": {
+    "displayName": "Paycheck",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "paycheck",
+    "properties": [
+      
+    ]
+  },
+  "inventoryCostRevaluation": {
+    "displayName": "InventoryCostRevaluation",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "inventoryCostRevaluation",
+    "properties": [
+      
+    ]
+  },
+  "PartnerCategory": {
+    "displayName": "PartnerCategory",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "PartnerCategory",
+    "properties": [
+      
+    ]
+  },
+  "bom": {
+    "displayName": "Bom",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "bom",
+    "properties": [
+      
+    ]
+  },
+  "InventoryItem": {
+    "displayName": "InventoryItem",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "InventoryItem",
+    "properties": [
+      
+    ]
+  },
+  "nexus": {
+    "displayName": "Nexus",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "nexus",
+    "properties": [
+      
+    ]
+  },
+  "Message": {
+    "displayName": "Message",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "Message",
+    "properties": [
+      
+    ]
+  },
+  "projectTask": {
+    "displayName": "ProjectTask",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "projectTask",
+    "properties": [
+      
+    ]
+  },
+  "ReturnAuthorization": {
+    "displayName": "ReturnAuthorization",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "ReturnAuthorization",
+    "properties": [
+      
+    ]
+  },
+  "InterCompanyJournalEntry": {
+    "displayName": "InterCompanyJournalEntry",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "InterCompanyJournalEntry",
+    "properties": [
+      
+    ]
+  },
+  "SerializedInventoryItem": {
+    "displayName": "SerializedInventoryItem",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "SerializedInventoryItem",
+    "properties": [
+      
+    ]
+  },
+  "customSegment": {
+    "displayName": "CustomSegment",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "customSegment",
+    "properties": [
+      
+    ]
+  },
+  "taxAcct": {
+    "displayName": "TaxAcct",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "taxAcct",
+    "properties": [
+      
+    ]
+  },
+  "TransactionBodyCustomField": {
+    "displayName": "TransactionBodyCustomField",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "TransactionBodyCustomField",
+    "properties": [
+      
+    ]
+  },
+  "workOrderClose": {
+    "displayName": "WorkOrderClose",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "workOrderClose",
+    "properties": [
+      
+    ]
+  },
+  "SupportCaseType": {
+    "displayName": "SupportCaseType",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "SupportCaseType",
+    "properties": [
+      
+    ]
+  },
+  "SupportCaseIssue": {
+    "displayName": "SupportCaseIssue",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "SupportCaseIssue",
+    "properties": [
+      
+    ]
+  },
+  "Opportunity": {
+    "displayName": "Opportunity",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "Opportunity",
+    "properties": [
+      
+    ]
+  },
+  "NonInventoryResaleItem": {
+    "displayName": "NonInventoryResaleItem",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "NonInventoryResaleItem",
+    "properties": [
+      
+    ]
+  },
+  "CreditMemo": {
+    "displayName": "CreditMemo",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CreditMemo",
+    "properties": [
+      
+    ]
+  },
+  "PhoneCall": {
+    "displayName": "PhoneCall",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "PhoneCall",
+    "properties": [
+      
+    ]
+  },
+  "consolidatedExchangeRate": {
+    "displayName": "ConsolidatedExchangeRate",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "consolidatedExchangeRate",
+    "properties": [
+      
+    ]
+  },
+  "assemblyBuild": {
+    "displayName": "AssemblyBuild",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "assemblyBuild",
+    "properties": [
+      
+    ]
+  },
+  "Topic": {
+    "displayName": "Topic",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "Topic",
+    "properties": [
+      
+    ]
+  },
+  "customSale": {
+    "displayName": "CustomSale",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "customSale",
+    "properties": [
+      
+    ]
+  },
+  "SalesTaxItem": {
+    "displayName": "SalesTaxItem",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "SalesTaxItem",
+    "properties": [
+      
+    ]
+  },
+  "ServiceSaleItem": {
+    "displayName": "ServiceSaleItem",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "ServiceSaleItem",
+    "properties": [
+      
+    ]
+  },
+  "kitItem": {
+    "displayName": "KitItem",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "kitItem",
+    "properties": [
+      
+    ]
+  },
+  "itemRevision": {
+    "displayName": "ItemRevision",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "itemRevision",
+    "properties": [
+      
+    ]
+  },
+  "CustomRecordType": {
+    "displayName": "CustomRecordType",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CustomRecordType",
+    "properties": [
+      
+    ]
+  },
+  "CalendarEvent": {
+    "displayName": "CalendarEvent",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CalendarEvent",
+    "properties": [
+      
+    ]
+  },
+  "manufacturingCostTemplate": {
+    "displayName": "ManufacturingCostTemplate",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "manufacturingCostTemplate",
+    "properties": [
+      
+    ]
+  },
+  "Vendor": {
+    "displayName": "Vendor",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "Vendor",
+    "properties": [
+      
+    ]
+  },
+  "assemblyUnbuild": {
+    "displayName": "AssemblyUnbuild",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "assemblyUnbuild",
+    "properties": [
+      
+    ]
+  },
+  "revRecSchedule": {
+    "displayName": "RevRecSchedule",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "revRecSchedule",
+    "properties": [
+      
+    ]
+  },
+  "serializedAssemblyItem": {
+    "displayName": "SerializedAssemblyItem",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "serializedAssemblyItem",
+    "properties": [
+      
+    ]
+  },
+  "Contact": {
+    "displayName": "Contact",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "Contact",
+    "properties": [
+      
+    ]
+  },
+  "JobType": {
+    "displayName": "JobType",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "JobType",
+    "properties": [
+      
+    ]
+  },
+  "ExpenseCategory": {
+    "displayName": "ExpenseCategory",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "ExpenseCategory",
+    "properties": [
+      
+    ]
+  },
+  "SalesRole": {
+    "displayName": "SalesRole",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "SalesRole",
+    "properties": [
+      
+    ]
+  },
+  "NonInventoryPurchaseItem": {
+    "displayName": "NonInventoryPurchaseItem",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "NonInventoryPurchaseItem",
+    "properties": [
+      
+    ]
+  },
+  "OtherChargeSaleItem": {
+    "displayName": "OtherChargeSaleItem",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "OtherChargeSaleItem",
+    "properties": [
+      
+    ]
+  },
+  "SupportCaseStatus": {
+    "displayName": "SupportCaseStatus",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "SupportCaseStatus",
+    "properties": [
+      
+    ]
+  },
+  "CampaignChannel": {
+    "displayName": "CampaignChannel",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "CampaignChannel",
+    "properties": [
+      
+    ]
+  },
+  "Location": {
+    "displayName": "Location",
+    "childs": {
+      
+    },
+    "partName": "recordType",
+    "id": "Location",
+    "properties": [
+      
+    ]
+  }
+}

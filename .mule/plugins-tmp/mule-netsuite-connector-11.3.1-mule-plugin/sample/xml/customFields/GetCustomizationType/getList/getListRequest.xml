@@ -1,0 +1,54 @@
+<getList
+        xmlns="messages_2020_2.platform.webservices.netsuite.com"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com"
+        xmlns:ns7="urn:employees_2020_2.lists.webservices.netsuite.com">
+
+    <baseRef scriptId="custevent_ishdcasetype" internalId="42" type="crmCustomField"
+             xsi:type="platformCore:CustomizationRef">
+        <platformCore:name>Help Desk Case Type</platformCore:name>
+    </baseRef>
+    <baseRef scriptId="custevent_review_status" internalId="3051" type="crmCustomField"
+             xsi:type="platformCore:CustomizationRef">
+        <platformCore:name>Review Status</platformCore:name>
+    </baseRef>
+    <baseRef scriptId="custevent_review_date" internalId="3052" type="crmCustomField"
+             xsi:type="platformCore:CustomizationRef">
+        <platformCore:name>Review Date</platformCore:name>
+    </baseRef>
+    <baseRef scriptId="custevent_relatedcaselinktype" internalId="3053" type="crmCustomField"
+             xsi:type="platformCore:CustomizationRef">
+        <platformCore:name>Related Case Link Type</platformCore:name>
+    </baseRef>
+    <baseRef scriptId="custevent_relatedcase" internalId="3054" type="crmCustomField"
+             xsi:type="platformCore:CustomizationRef">
+        <platformCore:name>Related Case</platformCore:name>
+    </baseRef>
+    <baseRef scriptId="custevent_closereason" internalId="3055" type="crmCustomField"
+             xsi:type="platformCore:CustomizationRef">
+        <platformCore:name>Close Reason</platformCore:name>
+    </baseRef>
+    <baseRef scriptId="custevent_pf_zms_solution" internalId="3056" type="crmCustomField"
+             xsi:type="platformCore:CustomizationRef">
+        <platformCore:name>From KB Solution</platformCore:name>
+    </baseRef>
+    <baseRef scriptId="custevent_address" internalId="3748" type="crmCustomField"
+             xsi:type="platformCore:CustomizationRef">
+        <platformCore:name>Address</platformCore:name>
+    </baseRef>
+    <baseRef scriptId="custevent_latitude" internalId="3749" type="crmCustomField"
+             xsi:type="platformCore:CustomizationRef">
+        <platformCore:name>Latitude</platformCore:name>
+    </baseRef>
+    <baseRef scriptId="custevent_longitude" internalId="3750" type="crmCustomField"
+             xsi:type="platformCore:CustomizationRef">
+        <platformCore:name>Longitude</platformCore:name>
+    </baseRef>
+    <baseRef scriptId="custevent1" internalId="40" type="crmCustomField" xsi:type="platformCore:CustomizationRef">
+        <platformCore:name>Sales Associate</platformCore:name>
+    </baseRef>
+    <baseRef scriptId="custevent2" internalId="41" type="crmCustomField" xsi:type="platformCore:CustomizationRef">
+        <platformCore:name>Sales Associate Phone</platformCore:name>
+    </baseRef>
+
+</getList>

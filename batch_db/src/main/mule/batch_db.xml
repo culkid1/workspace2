@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:db="http://www.mulesoft.org/schema/mule/db"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<db:config name="Database_Config" doc:name="Database Config" doc:id="ed52bbb9-c98c-4c35-898e-0e829bf12bae" >
+		<db:my-sql-connection host="localhost" port="3306" user="root" password="toor@123" database="culkid" />
+	</db:config>
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="162ec415-8015-478a-882d-a570efcd8f5b" >
+		<http:listener-connection host="0.0.0.0" port="8082" />
+	</http:listener-config>
+	<flow name="batch_dbFlow" doc:id="929d80e6-542b-4fef-997e-5934aa0e1111" >
+		<http:listener doc:name="Listener" doc:id="73811559-06c2-43f6-9476-2e7fb3e3925a" config-ref="HTTP_Listener_config" path="batch">
+			<http:error-response >
+				<http:body ><![CDATA[#[output application/json --- payload]]]></http:body>
+			</http:error-response>
+		</http:listener>
+		<set-variable value="#[attributes.queryParams.id]" doc:name="Set Variable" doc:id="f5697425-8847-4fcb-8fb2-1d29fb1be73f" variableName="id"/>
+		<db:select doc:id="ec0ed265-394d-4b33-ba98-d1e02e87bbe9" config-ref="Database_Config">
+			<db:sql><![CDATA[select * from culkid.emp_database where emp_i < 5;]]></db:sql>
+		</db:select>
+		<ee:transform doc:name="Transform Message" doc:id="a0fb5a06-50e9-4f57-9dbe-69be61f3097e" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+payload]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<set-payload value="payload" doc:name="Set Payload" doc:id="e4b47f7e-8816-4958-9b69-114462f8f5cf" />
+		<error-handler ref="batch_dbError_Handler" />
+	</flow>
+</mule>

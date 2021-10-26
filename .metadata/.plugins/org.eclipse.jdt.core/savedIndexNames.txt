@@ -1,0 +1,12 @@
+INDEX VERSION 1.131+/home/culkid/AnypointStudio/studio-workspace1/.metadata/.plugins/org.eclipse.jdt.core
+151653830.index
+3381929070.index
+241682911.index
+2540607589.index
+4004651201.index
+3419791268.index
+2036398409.index
+2578780247.index
+2416139388.index
+2114796880.index
+3875826922.index

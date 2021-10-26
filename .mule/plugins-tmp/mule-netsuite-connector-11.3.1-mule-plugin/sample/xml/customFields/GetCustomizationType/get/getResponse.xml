@@ -1,0 +1,32 @@
+<getResponse xmlns="messages_2020_2.platform.webservices.netsuite.com">
+    <platformMsgs:readResponse xmlns:platformMsgs="urn:messages_2020_2.platform.webservices.netsuite.com">
+        <platformCore:status xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" isSuccess="true"/>
+        <platformMsgs:record xmlns:setupCustom="urn:customization_2020_2.setup.webservices.netsuite.com" internalId="229" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="setupCustom:OtherCustomField">
+
+            <!-- This determines which Record type this field applies to -->
+            <setupCustom:recType xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="-242">
+                <platformCore:name>Bin</platformCore:name>
+            </setupCustom:recType>
+            <setupCustom:label>Max Weight</setupCustom:label>
+            <setupCustom:owner xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com" internalId="-5">
+                <platformCore:name>Alex Wolfe</platformCore:name>
+            </setupCustom:owner>
+            <setupCustom:storeValue>true</setupCustom:storeValue>
+            <setupCustom:showInList>true</setupCustom:showInList>
+            <setupCustom:displayType>_normal</setupCustom:displayType>
+            <!-- Is the custom field mandatory -->
+            <setupCustom:isMandatory>false</setupCustom:isMandatory>
+            <setupCustom:checkSpelling>false</setupCustom:checkSpelling>
+            <setupCustom:defaultChecked>false</setupCustom:defaultChecked>
+            <setupCustom:isFormula>false</setupCustom:isFormula>
+            <setupCustom:accessLevel>_edit</setupCustom:accessLevel>
+            <setupCustom:searchLevel>_edit</setupCustom:searchLevel>
+            <setupCustom:translationsList>
+                <setupCustom:translations/>
+            </setupCustom:translationsList>
+            <!-- This is used to determine the custom field type -->
+            <setupCustom:fieldType>_decimalNumber</setupCustom:fieldType>
+            <setupCustom:scriptId>custrecord_bin_max_weight</setupCustom:scriptId>
+        </platformMsgs:record>
+    </platformMsgs:readResponse>
+</getResponse>

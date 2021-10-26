@@ -1,0 +1,200 @@
+{
+  "CampaignSearchEngine": {
+    "displayName": "CampaignSearchEngine",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "CampaignSearchEngine",
+    "properties": [
+      
+    ]
+  },
+  "CampaignOffer": {
+    "displayName": "CampaignOffer",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "CampaignOffer",
+    "properties": [
+      
+    ]
+  },
+  "CampaignSubscription": {
+    "displayName": "CampaignSubscription",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "CampaignSubscription",
+    "properties": [
+      
+    ]
+  },
+  "CampaignCategory": {
+    "displayName": "CampaignCategory",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "CampaignCategory",
+    "properties": [
+      
+    ]
+  },
+  "CampaignAudience": {
+    "displayName": "CampaignAudience",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "CampaignAudience",
+    "properties": [
+      
+    ]
+  },
+  "BudgetCategory": {
+    "displayName": "BudgetCategory",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "BudgetCategory",
+    "properties": [
+      
+    ]
+  },
+  "SupportCaseType": {
+    "displayName": "SupportCaseType",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "SupportCaseType",
+    "properties": [
+      
+    ]
+  },
+  "SupportCaseIssue": {
+    "displayName": "SupportCaseIssue",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "SupportCaseIssue",
+    "properties": [
+      
+    ]
+  },
+  "LeadSource": {
+    "displayName": "LeadSource",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "LeadSource",
+    "properties": [
+      
+    ]
+  },
+  "TaxAcct": {
+    "displayName": "TaxAcct",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "TaxAcct",
+    "properties": [
+      
+    ]
+  },
+  "State": {
+    "displayName": "State",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "State",
+    "properties": [
+      
+    ]
+  },
+  "Currency": {
+    "displayName": "Currency",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "Currency",
+    "properties": [
+      
+    ]
+  },
+  "SupportCaseStatus": {
+    "displayName": "SupportCaseStatus",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "SupportCaseStatus",
+    "properties": [
+      
+    ]
+  },
+  "CampaignFamily": {
+    "displayName": "CampaignFamily",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "CampaignFamily",
+    "properties": [
+      
+    ]
+  },
+  "SupportCasePriority": {
+    "displayName": "SupportCasePriority",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "SupportCasePriority",
+    "properties": [
+      
+    ]
+  },
+  "CampaignVertical": {
+    "displayName": "CampaignVertical",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "CampaignVertical",
+    "properties": [
+      
+    ]
+  },
+  "CampaignChannel": {
+    "displayName": "CampaignChannel",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "CampaignChannel",
+    "properties": [
+      
+    ]
+  },
+  "SupportCaseOrigin": {
+    "displayName": "SupportCaseOrigin",
+    "childs": {
+      
+    },
+    "partName": "type",
+    "id": "SupportCaseOrigin",
+    "properties": [
+      
+    ]
+  }
+}

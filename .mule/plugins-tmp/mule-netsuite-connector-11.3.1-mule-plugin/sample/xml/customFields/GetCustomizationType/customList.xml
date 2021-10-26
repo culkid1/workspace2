@@ -1,0 +1,254 @@
+<getCustomizationIdResponse xmlns="urn:messages_2020_2.platform.webservices.netsuite.com">
+    <platformCore:getCustomizationIdResult xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com">
+        <platformCore:status isSuccess="true"/>
+        <platformCore:totalRecords>82</platformCore:totalRecords>
+        <platformCore:customizationRefList>
+            <platformCore:customizationRef scriptId="customlist_review_status" internalId="280" type="customList">
+                <platformCore:name>-Solution Review Status</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_2663_acct_type" internalId="388" type="customList">
+                <platformCore:name>Account Type</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist2" internalId="2" type="customList">
+                <platformCore:name>Advertising Preferences</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist244" internalId="244" type="customList">
+                <platformCore:name>Aisle</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist16" internalId="16" type="customList">
+                <platformCore:name>Annual Revenue</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_gus_travel_approval_list" internalId="41" type="customList">
+                <platformCore:name>Approval List</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_bg_processlogmsgtype" internalId="259" type="customList">
+                <platformCore:name>BG Log Message Type</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_bg_processactivity" internalId="255" type="customList">
+                <platformCore:name>BG Process Activity Type</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_bg_processstatus" internalId="253" type="customList">
+                <platformCore:name>BG Process Status</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_2663_bank_acct_type" internalId="394" type="customList">
+                <platformCore:name>Bank Account Type</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist9" internalId="9" type="customList">
+                <platformCore:name>Cable Color Options</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist10" internalId="10" type="customList">
+                <platformCore:name>Cable Lenght Option</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_lead_nurture_cat" internalId="43" type="customList">
+                <platformCore:name>Category</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist4" internalId="4" type="customList">
+                <platformCore:name>Cell Phone Faceplate Colors</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_closereasonlist" internalId="282" type="customList">
+                <platformCore:name>Close Reason List</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlistcustomlist36" internalId="393" type="customList">
+                <platformCore:name>Colors</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist17" internalId="17" type="customList">
+                <platformCore:name>Company Size</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist30" internalId="30" type="customList">
+                <platformCore:name>Customer Priority</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_2663_day_of_week" internalId="384" type="customList">
+                <platformCore:name>Day of Week</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist88" internalId="88" type="customList">
+                <platformCore:name>Demand Planning Methods</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_2663_process_status" internalId="389" type="customList">
+                <platformCore:name>EFT Processing Status</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist395" internalId="395" type="customList">
+                <platformCore:name>Eng Status</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_2663_entity_bank_type" internalId="391" type="customList">
+                <platformCore:name>Entity Bank Detail Type</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_fam_list_accrual_convention" internalId="258" type="customList">
+                <platformCore:name>FAM - Accrual Convention</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_ncfar_annualentry" internalId="397" type="customList">
+                <platformCore:name>FAM - Annual Method Entry</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_ncfar_proposalstatus" internalId="62" type="customList">
+                <platformCore:name>FAM - Asset Proposal Status</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_ncfar_assetstatus" internalId="60" type="customList">
+                <platformCore:name>FAM - Asset Status</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_ncfar_conventions" internalId="64" type="customList">
+                <platformCore:name>FAM - Conventions</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_ncfar_deprhistmethods" internalId="59" type="customList">
+                <platformCore:name>FAM - Depr History Methods</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_ncfar_depractive" internalId="61" type="customList">
+                <platformCore:name>FAM - Depreciation Active</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_ncfar_deprperiod" internalId="54" type="customList">
+                <platformCore:name>FAM - Depreciation Period</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_ncfar_deprrules" internalId="58" type="customList">
+                <platformCore:name>FAM - Depreciation Rules</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_ncfar_disposaltype" internalId="57" type="customList">
+                <platformCore:name>FAM - Disposal Type</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_fam_list_final_convention" internalId="254" type="customList">
+                <platformCore:name>FAM - Final Period Convention</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_far_monthnames" internalId="257" type="customList">
+                <platformCore:name>FAM - Month Names</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_fam_list_period_convention" internalId="252" type="customList">
+                <platformCore:name>FAM - Period Convention</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_ncfar_revisionrules" internalId="56" type="customList">
+                <platformCore:name>FAM - Revision Rules</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_ncfar_taxmethodstatus" internalId="396" type="customList">
+                <platformCore:name>FAM - Tax Method Status</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_ncfar_transactiontype" internalId="63" type="customList">
+                <platformCore:name>FAM - Transaction Type</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_ncfar_unitmeasurment" internalId="55" type="customList">
+                <platformCore:name>FAM - Unit of Measurement</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_fam_list_usedaccounts" internalId="256" type="customList">
+                <platformCore:name>FAM - Used Accounts</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist298" internalId="298" type="customList">
+                <platformCore:name>FW Level</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist28" internalId="28" type="customList">
+                <platformCore:name>Finish</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist33" internalId="33" type="customList">
+                <platformCore:name>Firmware Version</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist26" internalId="26" type="customList">
+                <platformCore:name>Hand</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist29" internalId="29" type="customList">
+                <platformCore:name>Hardware</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist27" internalId="27" type="customList">
+                <platformCore:name>Helmet Size</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist32" internalId="32" type="customList">
+                <platformCore:name>Help Desk Case List</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist6" internalId="6" type="customList">
+                <platformCore:name>How did you hear about us</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist15" internalId="15" type="customList">
+                <platformCore:name>Industry</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist7" internalId="7" type="customList">
+                <platformCore:name>Items of interest</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_skills" internalId="86" type="customList">
+                <platformCore:name>Job Skills</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist22" internalId="22" type="customList">
+                <platformCore:name>Keyword Search</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist23" internalId="23" type="customList">
+                <platformCore:name>Keyword Search2</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_linktypelist" internalId="281" type="customList">
+                <platformCore:name>Link Type List</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist56278" internalId="56278" type="customList">
+                <platformCore:name>MATRIX_LIST</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist19" internalId="19" type="customList">
+                <platformCore:name>Medium</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_ncbgp_processlogmsgtype" internalId="50" type="customList">
+                <platformCore:name>NC Log Message Type</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_ncbgp_processactivity" internalId="49" type="customList">
+                <platformCore:name>NC Process Activity Type</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_ncbgp_processstatus" internalId="51" type="customList">
+                <platformCore:name>NC Process Status</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_2663_batch_status" internalId="382" type="customList">
+                <platformCore:name>Payment Batch Status</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_ep_payment_priority" internalId="387" type="customList">
+                <platformCore:name>Payment Priority</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_2663_payment_type" internalId="390" type="customList">
+                <platformCore:name>Payment Type</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist243" internalId="243" type="customList">
+                <platformCore:name>Picking Zone</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist37" internalId="37" type="customList">
+                <platformCore:name>Product Interest</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist245" internalId="245" type="customList">
+                <platformCore:name>Rack</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist8" internalId="8" type="customList">
+                <platformCore:name>Rating</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_reasonforreturn" internalId="89" type="customList">
+                <platformCore:name>Reason for Return</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_2663_recurrence" internalId="383" type="customList">
+                <platformCore:name>Recurrence</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist25" internalId="25" type="customList">
+                <platformCore:name>Rope Type</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist13" internalId="13" type="customList">
+                <platformCore:name>SatifactionLevel</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_2663_schedule_type" internalId="386" type="customList">
+                <platformCore:name>Schedule Type</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist20" internalId="20" type="customList">
+                <platformCore:name>Search Engine</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist3" internalId="3" type="customList">
+                <platformCore:name>Store Warranty Types</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist5" internalId="5" type="customList">
+                <platformCore:name>Store Wrnty Years</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_vb_memo_list" internalId="365" type="customList">
+                <platformCore:name>Vendor Bill Memo List</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist46" internalId="46" type="customList">
+                <platformCore:name>Vendor Shipment Status</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist_2663_week_of_month" internalId="385" type="customList">
+                <platformCore:name>Week of Month</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist18" internalId="18" type="customList">
+                <platformCore:name>Wine Type</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist14" internalId="14" type="customList">
+                <platformCore:name>YesMaybeNo</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist12" internalId="12" type="customList">
+                <platformCore:name>YesNo</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="customlist44" internalId="283" type="customList">
+                <platformCore:name>YesNo (2) (2)</platformCore:name>
+            </platformCore:customizationRef>
+        </platformCore:customizationRefList>
+    </platformCore:getCustomizationIdResult>
+</getCustomizationIdResponse>

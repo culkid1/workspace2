@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+>
+    <soapenv:Header>
+        <platformMsgs:documentInfo xmlns:platformMsgs="urn:messages_2020_2.platform.webservices.netsuite.com">
+            <platformMsgs:nsId>WEBSERVICES_TSTDRV1372796_022520216291950871551163397_45fb65</platformMsgs:nsId>
+        </platformMsgs:documentInfo>
+    </soapenv:Header>
+    <soapenv:Body>
+        <searchResponse xmlns="urn:messages_2020_2.platform.webservices.netsuite.com">
+            <platformCore:searchResult xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com">
+                <platformCore:status isSuccess="true"/>
+                <platformCore:totalRecords>0</platformCore:totalRecords>
+                <platformCore:totalPages>0</platformCore:totalPages>
+                <platformCore:searchId>WEBSERVICES_TSTDRV1372796_022520216291950871551163397_45fb65
+                </platformCore:searchId>
+                <platformCore:recordList/>
+            </platformCore:searchResult>
+        </searchResponse>
+    </soapenv:Body>
+</soapenv:Envelope>

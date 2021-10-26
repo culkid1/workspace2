@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:email="http://www.mulesoft.org/schema/mule/email" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/email http://www.mulesoft.org/schema/mule/email/current/mule-email.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="4a83eebc-7259-4699-bd2b-e20ddc26e377" >
+		<http:listener-connection host="0.0.0.0" port="8082" />
+	</http:listener-config>
+	<email:smtp-config name="Email_SMTP" doc:name="Email SMTP" doc:id="7744bf88-27e8-41f8-992f-15313165d309" >
+		<email:smtp-connection host="smtp.gmail.com" user="prashanth.petrolpump@gmail.com" password="Sanki@123P" port="587">
+			<email:properties >
+				<email:property key="smtp.starttls.enable" value="true" />
+			</email:properties>
+		</email:smtp-connection>
+	</email:smtp-config>
+	<flow name="email-smtpFlow" doc:id="d30fc3c0-745c-4ee1-a4bb-52c9b0dfe283" >
+		<http:listener doc:name="Listener" doc:id="cb666e12-47af-49fd-98cc-145b42fbe98a" config-ref="HTTP_Listener_config" path="smtp"/>
+		<set-payload value="This is from anypoint studio platform" doc:name="Set Payload" doc:id="5a7cb64e-831d-403f-95cb-a6c414809278" />
+		<email:send doc:id="6b7cfbbe-6007-4cf3-be73-a6d7fc3a9bfc" config-ref="Email_SMTP" fromAddress="prashanth.petrolpump@gmail.com" subject="Mail from MULESOFT">
+			<email:to-addresses >
+				<email:to-address value="prashanth.petrolpump@gmail.com" />
+				<email:to-address value="curr.gk@gmail.com" />
+			</email:to-addresses>
+		</email:send>
+		<logger level="INFO" doc:name="Logger" doc:id="76b2290f-f9e6-44a5-9039-e57f87f77ba3" message="#[payload]"/>
+	</flow>
+</mule>

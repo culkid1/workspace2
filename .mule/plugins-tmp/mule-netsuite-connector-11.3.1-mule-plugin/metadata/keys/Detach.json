@@ -1,0 +1,13 @@
+{
+  "DetachBasicReference": {
+    "displayName": "DetachBasicReference",
+    "childs": {
+      
+    },
+    "partName": "detachRefType",
+    "id": "DetachBasicReference",
+    "properties": [
+      
+    ]
+  }
+}

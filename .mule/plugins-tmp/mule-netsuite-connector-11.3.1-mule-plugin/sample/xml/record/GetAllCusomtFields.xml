@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope
+        xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <soapenv:Header>
+        <platformMsgs:documentInfo xmlns:platformMsgs="urn:messages_2020_2.platform.webservices.netsuite.com">
+            <platformMsgs:nsId>WEBSERVICES_TSTDRV1372796_021520211457470875211170954_a18e0b</platformMsgs:nsId>
+        </platformMsgs:documentInfo>
+    </soapenv:Header>
+    <soapenv:Body>
+        <getResponse xmlns="urn:messages_2020_2.platform.webservices.netsuite.com">
+            <readResponse>
+                <platformCore:status isSuccess="true"
+                                     xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com"/>
+                <record internalId="10226581" externalId="asyncEmployee1217602" xsi:type="listEmp:Employee"
+                        xmlns:listEmp="urn:employees_2020_2.lists.webservices.netsuite.com">
+                    <listEmp:customForm internalId="115"
+                                        xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com">
+                        <platformCore:name>Ramsey Employee Form</platformCore:name>
+                    </listEmp:customForm>
+                    <listEmp:entityId>FNasyncEmployee1217602 LNasyncEmployee1217602</listEmp:entityId>
+                    <listEmp:firstName>FNasyncEmployee1217602</listEmp:firstName>
+                    <listEmp:lastName>LNasyncEmployee1217602</listEmp:lastName>
+                    <listEmp:isInactive>false</listEmp:isInactive>
+                    <listEmp:lastModifiedDate>2021-02-15T20:37:05.000-08:00</listEmp:lastModifiedDate>
+                    <listEmp:dateCreated>2021-02-15T20:37:05.000-08:00</listEmp:dateCreated>
+                    <listEmp:initials>FL</listEmp:initials>
+                    <listEmp:subsidiary internalId="3"
+                                        xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com">
+                        <platformCore:name>Honeycomb Holdings Inc.</platformCore:name>
+                    </listEmp:subsidiary>
+                    <listEmp:globalSubscriptionStatus>_softOptIn</listEmp:globalSubscriptionStatus>
+                    <listEmp:currency internalId="1"
+                                      xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com">
+                        <platformCore:name>USA</platformCore:name>
+                    </listEmp:currency>
+                    <listEmp:purchaseOrderLimit>0.0</listEmp:purchaseOrderLimit>
+                    <listEmp:isSalesRep>false</listEmp:isSalesRep>
+                    <listEmp:isSupportRep>false</listEmp:isSupportRep>
+                    <listEmp:isJobResource>false</listEmp:isJobResource>
+                    <listEmp:hireDate>2021-02-15T00:00:00.000-08:00</listEmp:hireDate>
+                    <listEmp:gender>_omitted</listEmp:gender>
+                    <listEmp:workCalendar internalId="1"
+                                          xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com">
+                        <platformCore:name>Default Work Calendar</platformCore:name>
+                    </listEmp:workCalendar>
+                    <listEmp:giveAccess>false</listEmp:giveAccess>
+                    <listEmp:defaultExpenseReportCurrency internalId="1"
+                                                          xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com">
+                        <platformCore:name>USA</platformCore:name>
+                    </listEmp:defaultExpenseReportCurrency>
+                    <listEmp:sendEmail>false</listEmp:sendEmail>
+                    <listEmp:requirePwdChange>false</listEmp:requirePwdChange>
+                    <listEmp:billPay>false</listEmp:billPay>
+                    <listEmp:eligibleForCommission>false</listEmp:eligibleForCommission>
+                    <listEmp:subscriptionsList>
+                        <listEmp:subscriptions>
+                            <listEmp:subscribed>T</listEmp:subscribed>
+                            <listEmp:subscription>2</listEmp:subscription>
+                            <listEmp:lastModifiedDate>2021-02-15T20:37:05.000-08:00</listEmp:lastModifiedDate>
+                        </listEmp:subscriptions>
+                        <listEmp:subscriptions>
+                            <listEmp:subscribed>T</listEmp:subscribed>
+                            <listEmp:subscription>1</listEmp:subscription>
+                            <listEmp:lastModifiedDate>2021-02-15T20:37:05.000-08:00</listEmp:lastModifiedDate>
+                        </listEmp:subscriptions>
+                        <listEmp:subscriptions>
+                            <listEmp:subscribed>T</listEmp:subscribed>
+                            <listEmp:subscription>4</listEmp:subscription>
+                            <listEmp:lastModifiedDate>2021-02-15T20:37:05.000-08:00</listEmp:lastModifiedDate>
+                        </listEmp:subscriptions>
+                        <listEmp:subscriptions>
+                            <listEmp:subscribed>T</listEmp:subscribed>
+                            <listEmp:subscription>5</listEmp:subscription>
+                            <listEmp:lastModifiedDate>2021-02-15T20:37:05.000-08:00</listEmp:lastModifiedDate>
+                        </listEmp:subscriptions>
+                        <listEmp:subscriptions>
+                            <listEmp:subscribed>T</listEmp:subscribed>
+                            <listEmp:subscription>3</listEmp:subscription>
+                            <listEmp:lastModifiedDate>2021-02-15T20:37:05.000-08:00</listEmp:lastModifiedDate>
+                        </listEmp:subscriptions>
+                    </listEmp:subscriptionsList>
+                    <listEmp:currencyList>
+                        <listEmp:employeeCurrency>
+                            <listEmp:currency internalId="1"
+                                              xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com">
+                                <platformCore:name>USA</platformCore:name>
+                            </listEmp:currency>
+                        </listEmp:employeeCurrency>
+                    </listEmp:currencyList>
+                    <listEmp:customFieldList xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com">
+                        <platformCore:customField internalId="3992" scriptId="custentity_2663_payment_method"
+                                                  xsi:type="platformCore:BooleanCustomFieldRef">
+                            <platformCore:value>false</platformCore:value>
+                        </platformCore:customField>
+                        <platformCore:customField internalId="696" scriptId="custentity2"
+                                                  xsi:type="platformCore:BooleanCustomFieldRef">
+                            <platformCore:value>false</platformCore:value>
+                        </platformCore:customField>
+                    </listEmp:customFieldList>
+                </record>
+            </readResponse>
+        </getResponse>
+    </soapenv:Body>
+</soapenv:Envelope>

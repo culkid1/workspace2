@@ -1,0 +1,389 @@
+{
+  "format": "java",
+  "type": "Array",
+  "annotations": {
+    "classInformation": {
+      "classname": "java.util.Iterator",
+      "hasDefaultConstructor": false,
+      "isInterface": true,
+      "isInstantiable": false,
+      "isAbstract": true,
+      "isFinal": false,
+      "implementedInterfaces": [
+        
+      ],
+      "parent": "",
+      "genericTypes": [
+        
+      ],
+      "isMap": false
+    }
+  },
+  "item": {
+    "type": "Object",
+    "annotations": {
+      "typeId": "org.mule.runtime.api.message.Message"
+    },
+    "fields": [
+      {
+        "key": {
+          "name": "payload",
+          "required": "true"
+        },
+        "model": {
+          "format": "xml",
+          "type": "Object",
+          "annotations": {
+            "typeId": "#root:deletedRecord"
+          },
+          "fields": [
+            {
+              "key": {
+                "name": "{urn:core_2020_2.platform.webservices.netsuite.com}deletedRecord",
+                "required": "true"
+              },
+              "model": {
+                "type": "Object",
+                "fields": [
+                  {
+                    "key": {
+                      "name": "{urn:core_2020_2.platform.webservices.netsuite.com}deletedDate"
+                    },
+                    "model": {
+                      "type": "String"
+                    }
+                  },
+                  {
+                    "key": {
+                      "name": "{urn:core_2020_2.platform.webservices.netsuite.com}record",
+                      "attributes": [
+                        {
+                          "key": {
+                            "name": "internalId"
+                          },
+                          "model": {
+                            "type": "String"
+                          }
+                        },
+                        {
+                          "key": {
+                            "name": "externalId"
+                          },
+                          "model": {
+                            "type": "String"
+                          }
+                        },
+                        {
+                          "key": {
+                            "name": "type"
+                          },
+                          "model": {
+                            "type": "String"
+                          }
+                        }
+                      ]
+                    },
+                    "model": {
+                      "type": "Object",
+                      "fields": [
+                        {
+                          "key": {
+                            "name": "{urn:core_2020_2.platform.webservices.netsuite.com}name"
+                          },
+                          "model": {
+                            "type": "String"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "key": {
+          "name": "attributes",
+          "required": "true"
+        },
+        "model": {
+          "type": "Object",
+          "fields": [
+            {
+              "key": {
+                "name": "attachments"
+              },
+              "model": {
+                "format": "xml",
+                "type": "Null"
+              }
+            },
+            {
+              "key": {
+                "name": "soapHeaders"
+              },
+              "model": {
+                "format": "xml",
+                "type": "Object",
+                "fields": [
+                  {
+                    "key": {
+                      "name": "headers"
+                    },
+                    "model": {
+                      "type": "Object",
+                      "fields": [
+                        {
+                          "key": {
+                            "name": "tokenPassport"
+                          },
+                          "model": {
+                            "type": "Object",
+                            "annotations": {
+                              "typeId": "#root:{urn:messages_2020_2.platform.webservices.netsuite.com}tokenPassport"
+                            },
+                            "fields": [
+                              {
+                                "key": {
+                                  "name": "{urn:messages_2020_2.platform.webservices.netsuite.com}tokenPassport",
+                                  "required": "true"
+                                },
+                                "model": {
+                                  "type": "Object",
+                                  "annotations": {
+                                    "typeId": "{urn:core_2020_2.platform.webservices.netsuite.com}TokenPassport"
+                                  },
+                                  "ordered": true,
+                                  "fields": [
+                                    {
+                                      "key": {
+                                        "name": "{urn:core_2020_2.platform.webservices.netsuite.com}account",
+                                        "required": "true"
+                                      },
+                                      "model": {
+                                        "type": "String"
+                                      }
+                                    },
+                                    {
+                                      "key": {
+                                        "name": "{urn:core_2020_2.platform.webservices.netsuite.com}consumerKey",
+                                        "required": "true"
+                                      },
+                                      "model": {
+                                        "type": "String"
+                                      }
+                                    },
+                                    {
+                                      "key": {
+                                        "name": "{urn:core_2020_2.platform.webservices.netsuite.com}token",
+                                        "required": "true"
+                                      },
+                                      "model": {
+                                        "type": "String"
+                                      }
+                                    },
+                                    {
+                                      "key": {
+                                        "name": "{urn:core_2020_2.platform.webservices.netsuite.com}nonce",
+                                        "required": "true"
+                                      },
+                                      "model": {
+                                        "type": "String"
+                                      }
+                                    },
+                                    {
+                                      "key": {
+                                        "name": "{urn:core_2020_2.platform.webservices.netsuite.com}timestamp",
+                                        "required": "true"
+                                      },
+                                      "model": {
+                                        "type": "Number",
+                                        "annotations": {
+                                          "range": {
+                                            "from": -9.223372036854776E+18,
+                                            "to": 9.223372036854776E+18
+                                          }
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "key": {
+                                        "name": "{urn:core_2020_2.platform.webservices.netsuite.com}signature",
+                                        "attributes": [
+                                          {
+                                            "key": {
+                                              "name": "algorithm",
+                                              "required": "true"
+                                            },
+                                            "model": {
+                                              "type": "String"
+                                            }
+                                          }
+                                        ],
+                                        "required": "true"
+                                      },
+                                      "model": {
+                                        "type": "String"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "key": {
+                            "name": "applicationInfo"
+                          },
+                          "model": {
+                            "type": "Object",
+                            "annotations": {
+                              "typeId": "#root:{urn:messages_2020_2.platform.webservices.netsuite.com}applicationInfo"
+                            },
+                            "fields": [
+                              {
+                                "key": {
+                                  "name": "{urn:messages_2020_2.platform.webservices.netsuite.com}applicationInfo",
+                                  "required": "true"
+                                },
+                                "model": {
+                                  "type": "Object",
+                                  "annotations": {
+                                    "typeId": "{urn:messages_2020_2.platform.webservices.netsuite.com}ApplicationInfo"
+                                  },
+                                  "ordered": true,
+                                  "fields": [
+                                    {
+                                      "key": {
+                                        "name": "{urn:messages_2020_2.platform.webservices.netsuite.com}applicationId",
+                                        "required": "true"
+                                      },
+                                      "model": {
+                                        "type": "String"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "key": {
+                            "name": "partnerInfo"
+                          },
+                          "model": {
+                            "type": "Object",
+                            "annotations": {
+                              "typeId": "#root:{urn:messages_2020_2.platform.webservices.netsuite.com}partnerInfo"
+                            },
+                            "fields": [
+                              {
+                                "key": {
+                                  "name": "{urn:messages_2020_2.platform.webservices.netsuite.com}partnerInfo",
+                                  "required": "true"
+                                },
+                                "model": {
+                                  "type": "Object",
+                                  "annotations": {
+                                    "typeId": "{urn:messages_2020_2.platform.webservices.netsuite.com}PartnerInfo"
+                                  },
+                                  "ordered": true,
+                                  "fields": [
+                                    {
+                                      "key": {
+                                        "name": "{urn:messages_2020_2.platform.webservices.netsuite.com}partnerId"
+                                      },
+                                      "model": {
+                                        "type": "String"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "key": {
+                            "name": "preferences"
+                          },
+                          "model": {
+                            "type": "Object",
+                            "annotations": {
+                              "typeId": "#root:{urn:messages_2020_2.platform.webservices.netsuite.com}preferences"
+                            },
+                            "fields": [
+                              {
+                                "key": {
+                                  "name": "{urn:messages_2020_2.platform.webservices.netsuite.com}preferences",
+                                  "required": "true"
+                                },
+                                "model": {
+                                  "type": "Object",
+                                  "annotations": {
+                                    "typeId": "{urn:messages_2020_2.platform.webservices.netsuite.com}Preferences"
+                                  },
+                                  "ordered": true,
+                                  "fields": [
+                                    {
+                                      "key": {
+                                        "name": "{urn:messages_2020_2.platform.webservices.netsuite.com}warningAsError"
+                                      },
+                                      "model": {
+                                        "type": "Boolean"
+                                      }
+                                    },
+                                    {
+                                      "key": {
+                                        "name": "{urn:messages_2020_2.platform.webservices.netsuite.com}disableMandatoryCustomFieldValidation"
+                                      },
+                                      "model": {
+                                        "type": "Boolean"
+                                      }
+                                    },
+                                    {
+                                      "key": {
+                                        "name": "{urn:messages_2020_2.platform.webservices.netsuite.com}disableSystemNotesForCustomFields"
+                                      },
+                                      "model": {
+                                        "type": "Boolean"
+                                      }
+                                    },
+                                    {
+                                      "key": {
+                                        "name": "{urn:messages_2020_2.platform.webservices.netsuite.com}ignoreReadOnlyFields"
+                                      },
+                                      "model": {
+                                        "type": "Boolean"
+                                      }
+                                    },
+                                    {
+                                      "key": {
+                                        "name": "{urn:messages_2020_2.platform.webservices.netsuite.com}runServerSuiteScriptAndTriggerWorkflows"
+                                      },
+                                      "model": {
+                                        "type": "Boolean"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

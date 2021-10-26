@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:batch="http://www.mulesoft.org/schema/mule/batch" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/batch http://www.mulesoft.org/schema/mule/batch/current/mule-batch.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="031c53e4-ce71-48a9-a923-eca49708e40c" >
+		<http:listener-connection host="0.0.0.0" port="8070" />
+	</http:listener-config>
+	<flow name="batch_processor_demoFlow" doc:id="484b85c8-cb69-435a-88fd-3d2cfa09ed17" >
+		<http:listener doc:name="Listener" doc:id="693bc22f-b08a-4e81-b6f0-42739ee508de" config-ref="HTTP_Listener_config" path="batch"/>
+		<set-payload value='#[[1,2,"a",4,5,"b","c",6]]' doc:name='[1,2,"a",4,5,"b","c",6]' doc:id="8df9daf7-4018-4ed7-a901-aba0158b430d" />
+		<batch:job jobName="batch_processor_demoBatch_Job" doc:id="b733eba7-1888-436b-883d-018bbd52d668" maxFailedRecords="100">
+			<batch:process-records >
+				<batch:step name="Batch_Step" doc:id="ff218cee-3acc-4b12-ae20-e925f952bf7a" acceptPolicy="ALL">
+					<set-payload value="#[payload * 10]" doc:name="payload * 10" doc:id="ed621f35-3cfc-421d-8f77-b64c43de7288" />
+					<batch:aggregator doc:name="Batch Aggregator" doc:id="d8b4a09c-4220-46a2-a671-71af5a61b5c4" size="2">
+						<logger level="INFO" doc:name="Logger" doc:id="546cbab3-4fff-42cf-b549-3c2bff1f8406" message="#[payload]"/>
+					</batch:aggregator>
+				</batch:step>
+				<batch:step name="Batch_Step1" doc:id="e7effe2a-7376-4626-aa2a-322660da07f4" acceptPolicy="ONLY_FAILURES">
+					<logger level="INFO" doc:name="Logger" doc:id="2e19463c-ae29-4f3d-a112-d9e9bf3d8af3" message='the alphabet is: #[payload]'/>
+				</batch:step>
+			</batch:process-records>
+			<batch:on-complete >
+				<logger level="INFO" doc:name="Logger" doc:id="c4503ef5-9d75-4fac-97ba-98401095df87" message="#[payload]"/>
+			</batch:on-complete>
+		</batch:job>
+	</flow>
+</mule>

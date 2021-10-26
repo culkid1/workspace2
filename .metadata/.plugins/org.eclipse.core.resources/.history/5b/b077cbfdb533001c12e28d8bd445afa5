@@ -1,0 +1,6692 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:apikit="http://www.mulesoft.org/schema/mule/mule-apikit" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.mulesoft.org/schema/mule/mule-apikit http://www.mulesoft.org/schema/mule/mule-apikit/current/mule-apikit.xsd ">
+    <http:listener-config name="country-httpListenerConfig">
+        <http:listener-connection host="0.0.0.0" port="8081" />
+    </http:listener-config>
+    <apikit:config name="country-config" api="country.raml" outboundHeadersMapName="outboundHeaders" httpStatusVarName="httpStatus" />
+    <flow name="country-main">
+        <http:listener config-ref="country-httpListenerConfig" path="/api/*">
+            <http:response statusCode="#[vars.httpStatus default 200]">
+                <http:headers>#[vars.outboundHeaders default {}]</http:headers>
+            </http:response>
+            <http:error-response statusCode="#[vars.httpStatus default 500]">
+                <http:body>#[payload]</http:body>
+                <http:headers>#[vars.outboundHeaders default {}]</http:headers>
+            </http:error-response>
+        </http:listener>
+        <apikit:router config-ref="country-config" />
+        <error-handler>
+            <on-error-propagate type="APIKIT:BAD_REQUEST">
+                <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+                    <ee:message>
+                        <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{message: "Bad request"}]]></ee:set-payload>
+                    </ee:message>
+                    <ee:variables>
+                        <ee:set-variable variableName="httpStatus">400</ee:set-variable>
+                    </ee:variables>
+                </ee:transform>
+            </on-error-propagate>
+            <on-error-propagate type="APIKIT:NOT_FOUND">
+                <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+                    <ee:message>
+                        <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{message: "Resource not found"}]]></ee:set-payload>
+                    </ee:message>
+                    <ee:variables>
+                        <ee:set-variable variableName="httpStatus">404</ee:set-variable>
+                    </ee:variables>
+                </ee:transform>
+            </on-error-propagate>
+            <on-error-propagate type="APIKIT:METHOD_NOT_ALLOWED">
+                <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+                    <ee:message>
+                        <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{message: "Method not allowed"}]]></ee:set-payload>
+                    </ee:message>
+                    <ee:variables>
+                        <ee:set-variable variableName="httpStatus">405</ee:set-variable>
+                    </ee:variables>
+                </ee:transform>
+            </on-error-propagate>
+            <on-error-propagate type="APIKIT:NOT_ACCEPTABLE">
+                <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+                    <ee:message>
+                        <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{message: "Not acceptable"}]]></ee:set-payload>
+                    </ee:message>
+                    <ee:variables>
+                        <ee:set-variable variableName="httpStatus">406</ee:set-variable>
+                    </ee:variables>
+                </ee:transform>
+            </on-error-propagate>
+            <on-error-propagate type="APIKIT:UNSUPPORTED_MEDIA_TYPE">
+                <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+                    <ee:message>
+                        <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{message: "Unsupported media type"}]]></ee:set-payload>
+                    </ee:message>
+                    <ee:variables>
+                        <ee:set-variable variableName="httpStatus">415</ee:set-variable>
+                    </ee:variables>
+                </ee:transform>
+            </on-error-propagate>
+            <on-error-propagate type="APIKIT:NOT_IMPLEMENTED">
+                <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+                    <ee:message>
+                        <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{message: "Not Implemented"}]]></ee:set-payload>
+                    </ee:message>
+                    <ee:variables>
+                        <ee:set-variable variableName="httpStatus">501</ee:set-variable>
+                    </ee:variables>
+                </ee:transform>
+            </on-error-propagate>
+        </error-handler>
+    </flow>
+    <flow name="country-console">
+        <http:listener config-ref="country-httpListenerConfig" path="/console/*">
+            <http:response statusCode="#[vars.httpStatus default 200]">
+                <http:headers>#[vars.outboundHeaders default {}]</http:headers>
+            </http:response>
+            <http:error-response statusCode="#[vars.httpStatus default 500]">
+                <http:body>#[payload]</http:body>
+                <http:headers>#[vars.outboundHeaders default {}]</http:headers>
+            </http:error-response>
+        </http:listener>
+        <apikit:console config-ref="country-config" />
+        <error-handler>
+            <on-error-propagate type="APIKIT:NOT_FOUND">
+                <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+                    <ee:message>
+                        <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{message: "Resource not found"}]]></ee:set-payload>
+                    </ee:message>
+                    <ee:variables>
+                        <ee:set-variable variableName="httpStatus">404</ee:set-variable>
+                    </ee:variables>
+                </ee:transform>
+            </on-error-propagate>
+        </error-handler>
+    </flow>
+    <flow name="get:\Deposits\deposits:country-config">
+        <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+            <ee:message>
+                <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+[
+  {
+    ID: "ID",
+    Bin: null,
+    Amount: "0",
+    DepositDate: "2021-08-26T11:52:03.053Z",
+    AdditionalData: null,
+    CardLast4: null,
+    transaction: null,
+    CardType: "",
+    buyer: {}
+  }, 
+  {
+    ID: "ID",
+    Bin: null,
+    Amount: "0",
+    DepositDate: "2021-08-26T11:52:03.000Z",
+    AdditionalData: null,
+    CardLast4: null,
+    transaction: null,
+    CardType: "",
+    buyer: {}
+  }, 
+  {
+    ID: "ID",
+    Bin: "",
+    Amount: "38000",
+    DepositDate: "2021-08-26T11:52:02.587Z",
+    AdditionalData: "{AdditionalData}",
+    CardLast4Digit: "CardLast4Digit",
+    transaction: {
+      Createdby: 15156,
+      buyer: null
+    },
+    CardType: "",
+    buyer: {
+      EmailAddress: "Username@gmail.com"
+    },
+    Name: "Rehan linu"
+  }, 
+  {
+    ID: "ID",
+    Bin: null,
+    Amount: "0",
+    DepositDate: "2021-08-26T11:52:02.410Z",
+    AdditionalData: null,
+    CardLast4: null,
+    transaction: null,
+    CardType: "",
+    buyer: {}
+  }, 
+  {
+    ID: "ID",
+    Bin: null,
+    Amount: "0",
+    DepositDate: "2021-08-26T11:52:02.390Z",
+    AdditionalData: null,
+    CardLast4: null,
+    transaction: null,
+    CardType: "",
+    buyer: {}
+  }
+]]]></ee:set-payload>
+            </ee:message>
+        </ee:transform>
+    </flow>
+    <flow name="get:\Deposits\saleTransactions:country-config">
+        <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+            <ee:message>
+                <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{
+  labels: [
+    "2021-08-23", 
+    "2021-08-24", 
+    "2021-08-25", 
+    "2021-08-26", 
+    "2021-08-27", 
+    "2021-08-28", 
+    "2021-08-29"
+  ],
+  data: [
+    80000, 
+    80000, 
+    980150, 
+    985643, 
+    98390, 
+    0, 
+    0
+  ],
+  totalAmount: 825793,
+  totalTransactions: 69
+}]]></ee:set-payload>
+            </ee:message>
+        </ee:transform>
+    </flow>
+    <flow name="get:\master\1\state:country-config">
+        <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd" doc:id="e3e32457-8908-40da-8f87-1ebf21a47ad8">
+            <ee:message>
+                <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+payload map ( payload01 , indexOfPayload01 ) -> {
+	StateId: payload01.StateId,
+	StateName: payload01.StateName,
+	StateCode: payload01.StateCode,
+	CountryId: payload01.CountryId,
+	Abbreviation: payload01.Abbreviation
+}
+]]></ee:set-payload>
+            </ee:message>
+        </ee:transform>
+    </flow>
+    <flow name="get:\master\country:country-config">
+        <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+            <ee:message>
+                <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+[
+  {
+    CountryId: 1,
+    CountryName: "US",
+    CountryShortName: "US",
+    CountryCode: null
+  }
+]]]></ee:set-payload>
+            </ee:message>
+        </ee:transform>
+    </flow>
+    <flow name="get:\masters:country-config">
+        <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+            <ee:message>
+                <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{
+  AddressType: [
+    {
+      AddressTypeId: 4,
+      AddressTypeDsc: "BillingAddress"
+    }, 
+    {
+      AddressTypeId: 5,
+      AddressTypeDsc: "ShippingAddress"
+    }, 
+    {
+      AddressTypeId: 3,
+      AddressTypeDsc: "TemplateAddress"
+    }, 
+    {
+      AddressTypeId: 2,
+      AddressTypeDsc: "Wo_k"
+    }, 
+    {
+      AddressTypeId: 1,
+      AddressTypeDsc: "Work"
+    }
+  ],
+  BankAccountTypes: [
+    {
+      BankAccountTypeId: 3,
+      BankAccountTypeName: "Corporate Checking"
+    }, 
+    {
+      BankAccountTypeId: 4,
+      BankAccountTypeName: "Corporate Savings"
+    }, 
+    {
+      BankAccountTypeId: 1,
+      BankAccountTypeName: "Personal Checking"
+    }, 
+    {
+      BankAccountTypeId: 2,
+      BankAccountTypeName: "Personal Savings"
+    }
+  ],
+  BusinessType: [
+    {
+      BusinessTypeId: 3,
+      BusinessTypeName: "CORP"
+    }, 
+    {
+      BusinessTypeId: 6,
+      BusinessTypeName: "GOV"
+    }, 
+    {
+      BusinessTypeId: 4,
+      BusinessTypeName: "LLC"
+    }, 
+    {
+      BusinessTypeId: 1,
+      BusinessTypeName: "NONPROFIT"
+    }, 
+    {
+      BusinessTypeId: 5,
+      BusinessTypeName: "PARTNER"
+    }, 
+    {
+      BusinessTypeId: 7,
+      BusinessTypeName: "PUBLIC COMPANY"
+    }, 
+    {
+      BusinessTypeId: 2,
+      BusinessTypeName: "SOLE"
+    }
+  ],
+  MerchantType: [
+    {
+      MerchantTypeId: 9,
+      MerchantTypeName: "Airline",
+      MerchantTypeDesc: null
+    }, 
+    {
+      MerchantTypeId: 8,
+      MerchantTypeName: "Auto Rental",
+      MerchantTypeDesc: null
+    }, 
+    {
+      MerchantTypeId: 7,
+      MerchantTypeName: "eCommerce",
+      MerchantTypeDesc: null
+    }, 
+    {
+      MerchantTypeId: 5,
+      MerchantTypeName: "Lodging/Cruise",
+      MerchantTypeDesc: null
+    }, 
+    {
+      MerchantTypeId: 2,
+      MerchantTypeName: "MOTO",
+      MerchantTypeDesc: null
+    }, 
+    {
+      MerchantTypeId: 4,
+      MerchantTypeName: "Petroleum",
+      MerchantTypeDesc: null
+    }, 
+    {
+      MerchantTypeId: 6,
+      MerchantTypeName: "Restaurant",
+      MerchantTypeDesc: null
+    }, 
+    {
+      MerchantTypeId: 3,
+      MerchantTypeName: "Retail/QSR",
+      MerchantTypeDesc: null
+    }, 
+    {
+      MerchantTypeId: 1,
+      MerchantTypeName: "Supermarket",
+      MerchantTypeDesc: null
+    }
+  ],
+  MerchantCategory: [
+    {
+      MerchantCategoryId: 697,
+      MerchantCategoryCode: 3835,
+      MerchantCategoryDesc: "* MASTERS ECONOMY INNS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 376,
+      MerchantCategoryCode: 3412,
+      MerchantCategoryDesc: "A-1 RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 969,
+      MerchantCategoryCode: 8931,
+      MerchantCategoryDesc: "Accounting, Auditing, and Bookkeeping Services",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 318,
+      MerchantCategoryCode: 3354,
+      MerchantCategoryDesc: "ACTION AUTO RENTAL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 586,
+      MerchantCategoryCode: 3681,
+      MerchantCategoryDesc: "ADAMS MARK HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 885,
+      MerchantCategoryCode: 7311,
+      MerchantCategoryDesc: "Advertising Services",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 26,
+      MerchantCategoryCode: 3011,
+      MerchantCategoryDesc: "AEORFLOT",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 58,
+      MerchantCategoryCode: 3043,
+      MerchantCategoryDesc: "AER LINGUS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 302,
+      MerchantCategoryCode: 3287,
+      MerchantCategoryDesc: "AERO COACH AVAIATION",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 300,
+      MerchantCategoryCode: 3285,
+      MerchantCategoryDesc: "AERO PERU",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 299,
+      MerchantCategoryCode: 3284,
+      MerchantCategoryDesc: "AERO VIRGIN ISLANDS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 45,
+      MerchantCategoryCode: 3030,
+      MerchantCategoryDesc: "AEROLINEAS ARGENTINAS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 301,
+      MerchantCategoryCode: 3286,
+      MerchantCategoryDesc: "AEROLINEAS NICARAGUENSIS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 91,
+      MerchantCategoryCode: 3076,
+      MerchantCategoryDesc: "AEROMEXICO",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 315,
+      MerchantCategoryCode: 3351,
+      MerchantCategoryDesc: "AFFILIATED AUTO RENTAL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 328,
+      MerchantCategoryCode: 3364,
+      MerchantCategoryDesc: "AGENCY RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 2,
+      MerchantCategoryCode: 763,
+      MerchantCategoryDesc: "Agricultural Co-operatives",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 98,
+      MerchantCategoryCode: 3083,
+      MerchantCategoryDesc: "AIR AFRIGUE",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 36,
+      MerchantCategoryCode: 3021,
+      MerchantCategoryDesc: "AIR ALGERIE",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 86,
+      MerchantCategoryCode: 3071,
+      MerchantCategoryDesc: "AIR BRITISH COLUBIA",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 24,
+      MerchantCategoryCode: 3009,
+      MerchantCategoryDesc: "AIR CANADA",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 276,
+      MerchantCategoryCode: 3261,
+      MerchantCategoryDesc: "AIR CHINA",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 914,
+      MerchantCategoryCode: 7623,
+      MerchantCategoryDesc: "Air Conditioning and Refrigeration Repair Shops",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 5,
+      MerchantCategoryCode: 1711,
+      MerchantCategoryDesc: "Air Conditioning Contractors - Sales and Installation, Heating Contractors - Sales, Service, Installation",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 297,
+      MerchantCategoryCode: 3282,
+      MerchantCategoryDesc: "AIR DJIBOUTI",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 22,
+      MerchantCategoryCode: 3007,
+      MerchantCategoryDesc: "AIR FRANCE",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 295,
+      MerchantCategoryCode: 3280,
+      MerchantCategoryDesc: "AIR JAMAICA",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 59,
+      MerchantCategoryCode: 3044,
+      MerchantCategoryDesc: "AIR LANKA",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 43,
+      MerchantCategoryCode: 3028,
+      MerchantCategoryDesc: "AIR MALTA",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 313,
+      MerchantCategoryCode: 3298,
+      MerchantCategoryDesc: "AIR MAURITIUS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 40,
+      MerchantCategoryCode: 3025,
+      MerchantCategoryDesc: "AIR NEW ZEALAND",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 282,
+      MerchantCategoryCode: 3267,
+      MerchantCategoryDesc: "AIR PANAMA",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 281,
+      MerchantCategoryCode: 3266,
+      MerchantCategoryDesc: "AIR SEYCHELLES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 166,
+      MerchantCategoryCode: 3151,
+      MerchantCategoryDesc: "AIR ZAIRE",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 111,
+      MerchantCategoryCode: 3096,
+      MerchantCategoryDesc: "AIR ZIMBABWE",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 35,
+      MerchantCategoryCode: 3020,
+      MerchantCategoryDesc: "AIR-INDIA",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 80,
+      MerchantCategoryCode: 3065,
+      MerchantCategoryDesc: "AIRINTER",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 79,
+      MerchantCategoryCode: 3064,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 87,
+      MerchantCategoryCode: 3072,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 88,
+      MerchantCategoryCode: 3073,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 89,
+      MerchantCategoryCode: 3074,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 74,
+      MerchantCategoryCode: 3059,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 101,
+      MerchantCategoryCode: 3086,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 105,
+      MerchantCategoryCode: 3090,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 106,
+      MerchantCategoryCode: 3091,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 107,
+      MerchantCategoryCode: 3092,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 108,
+      MerchantCategoryCode: 3093,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 82,
+      MerchantCategoryCode: 3067,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 83,
+      MerchantCategoryCode: 3068,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 85,
+      MerchantCategoryCode: 3070,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 94,
+      MerchantCategoryCode: 3079,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 95,
+      MerchantCategoryCode: 3080,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 112,
+      MerchantCategoryCode: 3097,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 113,
+      MerchantCategoryCode: 3098,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 110,
+      MerchantCategoryCode: 3095,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 116,
+      MerchantCategoryCode: 3101,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 119,
+      MerchantCategoryCode: 3104,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 120,
+      MerchantCategoryCode: 3105,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 122,
+      MerchantCategoryCode: 3107,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 123,
+      MerchantCategoryCode: 3108,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 124,
+      MerchantCategoryCode: 3109,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 128,
+      MerchantCategoryCode: 3113,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 129,
+      MerchantCategoryCode: 3114,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 130,
+      MerchantCategoryCode: 3115,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 131,
+      MerchantCategoryCode: 3116,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 134,
+      MerchantCategoryCode: 3119,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 135,
+      MerchantCategoryCode: 3120,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 136,
+      MerchantCategoryCode: 3121,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 137,
+      MerchantCategoryCode: 3122,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 138,
+      MerchantCategoryCode: 3123,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 139,
+      MerchantCategoryCode: 3124,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 143,
+      MerchantCategoryCode: 3128,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 34,
+      MerchantCategoryCode: 3019,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 18,
+      MerchantCategoryCode: 3003,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 41,
+      MerchantCategoryCode: 3026,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 167,
+      MerchantCategoryCode: 3152,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 168,
+      MerchantCategoryCode: 3153,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 170,
+      MerchantCategoryCode: 3155,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 171,
+      MerchantCategoryCode: 3156,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 172,
+      MerchantCategoryCode: 3157,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 173,
+      MerchantCategoryCode: 3158,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 175,
+      MerchantCategoryCode: 3160,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 181,
+      MerchantCategoryCode: 3166,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 182,
+      MerchantCategoryCode: 3167,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 183,
+      MerchantCategoryCode: 3168,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 184,
+      MerchantCategoryCode: 3169,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 146,
+      MerchantCategoryCode: 3131,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 147,
+      MerchantCategoryCode: 3132,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 149,
+      MerchantCategoryCode: 3134,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 151,
+      MerchantCategoryCode: 3136,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 154,
+      MerchantCategoryCode: 3139,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 155,
+      MerchantCategoryCode: 3140,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 156,
+      MerchantCategoryCode: 3141,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 157,
+      MerchantCategoryCode: 3142,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 162,
+      MerchantCategoryCode: 3147,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 163,
+      MerchantCategoryCode: 3148,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 164,
+      MerchantCategoryCode: 3149,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 165,
+      MerchantCategoryCode: 3150,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 177,
+      MerchantCategoryCode: 3162,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 178,
+      MerchantCategoryCode: 3163,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 188,
+      MerchantCategoryCode: 3173,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 189,
+      MerchantCategoryCode: 3174,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 190,
+      MerchantCategoryCode: 3175,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 192,
+      MerchantCategoryCode: 3177,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 194,
+      MerchantCategoryCode: 3179,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 195,
+      MerchantCategoryCode: 3180,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 198,
+      MerchantCategoryCode: 3183,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 203,
+      MerchantCategoryCode: 3188,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 204,
+      MerchantCategoryCode: 3189,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 209,
+      MerchantCategoryCode: 3194,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 210,
+      MerchantCategoryCode: 3195,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 213,
+      MerchantCategoryCode: 3198,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 214,
+      MerchantCategoryCode: 3199,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 216,
+      MerchantCategoryCode: 3201,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 217,
+      MerchantCategoryCode: 3202,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 283,
+      MerchantCategoryCode: 3268,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 284,
+      MerchantCategoryCode: 3269,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 285,
+      MerchantCategoryCode: 3270,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 286,
+      MerchantCategoryCode: 3271,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 287,
+      MerchantCategoryCode: 3272,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 288,
+      MerchantCategoryCode: 3273,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 289,
+      MerchantCategoryCode: 3274,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 290,
+      MerchantCategoryCode: 3275,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 291,
+      MerchantCategoryCode: 3276,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 292,
+      MerchantCategoryCode: 3277,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 293,
+      MerchantCategoryCode: 3278,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 294,
+      MerchantCategoryCode: 3279,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 296,
+      MerchantCategoryCode: 3281,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 278,
+      MerchantCategoryCode: 3263,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 279,
+      MerchantCategoryCode: 3264,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 280,
+      MerchantCategoryCode: 3265,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 275,
+      MerchantCategoryCode: 3260,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 259,
+      MerchantCategoryCode: 3244,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 260,
+      MerchantCategoryCode: 3245,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 261,
+      MerchantCategoryCode: 3246,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 262,
+      MerchantCategoryCode: 3247,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 263,
+      MerchantCategoryCode: 3248,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 264,
+      MerchantCategoryCode: 3249,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 265,
+      MerchantCategoryCode: 3250,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 270,
+      MerchantCategoryCode: 3255,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 272,
+      MerchantCategoryCode: 3257,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 273,
+      MerchantCategoryCode: 3258,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 220,
+      MerchantCategoryCode: 3205,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 221,
+      MerchantCategoryCode: 3206,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 222,
+      MerchantCategoryCode: 3207,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 223,
+      MerchantCategoryCode: 3208,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 224,
+      MerchantCategoryCode: 3209,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 225,
+      MerchantCategoryCode: 3210,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 226,
+      MerchantCategoryCode: 3211,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 228,
+      MerchantCategoryCode: 3213,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 229,
+      MerchantCategoryCode: 3214,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 239,
+      MerchantCategoryCode: 3224,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 240,
+      MerchantCategoryCode: 3225,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 241,
+      MerchantCategoryCode: 3226,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 242,
+      MerchantCategoryCode: 3227,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 245,
+      MerchantCategoryCode: 3230,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 247,
+      MerchantCategoryCode: 3232,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 251,
+      MerchantCategoryCode: 3236,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 252,
+      MerchantCategoryCode: 3237,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 298,
+      MerchantCategoryCode: 3283,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 311,
+      MerchantCategoryCode: 3296,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 312,
+      MerchantCategoryCode: 3297,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 303,
+      MerchantCategoryCode: 3288,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 304,
+      MerchantCategoryCode: 3289,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 305,
+      MerchantCategoryCode: 3290,
+      MerchantCategoryDesc: "Airlines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 710,
+      MerchantCategoryCode: 4511,
+      MerchantCategoryDesc: "Airlines, Air Carriers ( not listed elsewhere)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 711,
+      MerchantCategoryCode: 4582,
+      MerchantCategoryDesc: "Airports, Airport Terminals, Flying Fields",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 325,
+      MerchantCategoryCode: 3361,
+      MerchantCategoryDesc: "AIRWAYS RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 340,
+      MerchantCategoryCode: 3376,
+      MerchantCategoryDesc: "AJAX RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 351,
+      MerchantCategoryCode: 3387,
+      MerchantCategoryDesc: "ALAMO RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 271,
+      MerchantCategoryCode: 3256,
+      MerchantCategoryDesc: "ALASKA AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 28,
+      MerchantCategoryCode: 3013,
+      MerchantCategoryDesc: "ALITALIA",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 176,
+      MerchantCategoryCode: 3161,
+      MerchantCategoryDesc: "ALL NIPPON AIRWAYS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 385,
+      MerchantCategoryCode: 3421,
+      MerchantCategoryDesc: "ALLSTAE RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 587,
+      MerchantCategoryCode: 3682,
+      MerchantCategoryDesc: "ALLSTAR INNS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 267,
+      MerchantCategoryCode: 3252,
+      MerchantCategoryDesc: "ALM",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 266,
+      MerchantCategoryCode: 3251,
+      MerchantCategoryDesc: "ALOHA AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 383,
+      MerchantCategoryCode: 3419,
+      MerchantCategoryDesc: "ALPHA RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 326,
+      MerchantCategoryCode: 3362,
+      MerchantCategoryDesc: "ALTRA AUTO RENTAL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 701,
+      MerchantCategoryCode: 4119,
+      MerchantCategoryDesc: "Ambulance Services",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 659,
+      MerchantCategoryCode: 3754,
+      MerchantCategoryDesc: "AMELIA ISLAND PLANATION",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 268,
+      MerchantCategoryCode: 3253,
+      MerchantCategoryDesc: "AMERICA WEST",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 16,
+      MerchantCategoryCode: 3001,
+      MerchantCategoryDesc: "AMERICAN AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 316,
+      MerchantCategoryCode: 3352,
+      MerchantCategoryDesc: "AMERICAN INTL RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 274,
+      MerchantCategoryCode: 3259,
+      MerchantCategoryDesc: "AMERICAN TRANS AIR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 422,
+      MerchantCategoryCode: 3517,
+      MerchantCategoryDesc: "AMERICANA HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 441,
+      MerchantCategoryCode: 3536,
+      MerchantCategoryDesc: "AMFAC HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 937,
+      MerchantCategoryCode: 7996,
+      MerchantCategoryDesc: "Amusement Parks, Carnivals, Circuses, Fortune Tellers",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 442,
+      MerchantCategoryCode: 3537,
+      MerchantCategoryDesc: "ANA HOTEL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 384,
+      MerchantCategoryCode: 3420,
+      MerchantCategoryDesc: "ANSA INTL RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 48,
+      MerchantCategoryCode: 3033,
+      MerchantCategoryDesc: "ANSETT AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 817,
+      MerchantCategoryCode: 5937,
+      MerchantCategoryDesc: "Antique Reproductions",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 814,
+      MerchantCategoryCode: 5932,
+      MerchantCategoryDesc: "Antique Shops",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 810,
+      MerchantCategoryCode: 5832,
+      MerchantCategoryDesc: "Antique Shops - Sales, Repairs, and Restoration Services",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 939,
+      MerchantCategoryCode: 7998,
+      MerchantCategoryDesc: "Aquariums, Sea-aquariums, Dolphinariums",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 416,
+      MerchantCategoryCode: 3511,
+      MerchantCategoryDesc: "ARABELLA HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 575,
+      MerchantCategoryCode: 3670,
+      MerchantCategoryDesc: "ARCARD HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 968,
+      MerchantCategoryCode: 8911,
+      MerchantCategoryDesc: "Architectural - Engineering and Surveying Services",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 576,
+      MerchantCategoryCode: 3671,
+      MerchantCategoryDesc: "ARCTIA HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 306,
+      MerchantCategoryCode: 3291,
+      MerchantCategoryDesc: "ARIANA AFGHAN",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 840,
+      MerchantCategoryCode: 5971,
+      MerchantCategoryDesc: "Art Dealers and Galleries",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 839,
+      MerchantCategoryCode: 5970,
+      MerchantCategoryDesc: "Artist's Supply and Craft Shops",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 436,
+      MerchantCategoryCode: 3531,
+      MerchantCategoryDesc: "ASTIR HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 454,
+      MerchantCategoryCode: 3549,
+      MerchantCategoryDesc: "AUBERGE DES GOVERNEURS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 49,
+      MerchantCategoryCode: 3034,
+      MerchantCategoryDesc: "AUSTRAINLIAN AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 258,
+      MerchantCategoryCode: 3243,
+      MerchantCategoryDesc: "AUSTRIAN AIR SERVICE",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 66,
+      MerchantCategoryCode: 3051,
+      MerchantCategoryDesc: "AUSTRIAN AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 364,
+      MerchantCategoryCode: 3400,
+      MerchantCategoryDesc: "AUTO HOST COST CAR RENTALS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 400,
+      MerchantCategoryCode: 3436,
+      MerchantCategoryDesc: "AUTOHANSA RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 389,
+      MerchantCategoryCode: 3425,
+      MerchantCategoryDesc: "AUTOMATE RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 773,
+      MerchantCategoryCode: 5542,
+      MerchantCategoryDesc: "Automated Fuel Dispensers",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 978,
+      MerchantCategoryCode: 9700,
+      MerchantCategoryDesc: "Automated Referral Service ( For Visa Only)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 768,
+      MerchantCategoryCode: 5521,
+      MerchantCategoryDesc: "Automobile and Truck Dealers (Used Only)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 965,
+      MerchantCategoryCode: 8675,
+      MerchantCategoryDesc: "Automobile Associations",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 906,
+      MerchantCategoryCode: 7523,
+      MerchantCategoryDesc: "Automobile Parking Lots and Garages",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 769,
+      MerchantCategoryCode: 5531,
+      MerchantCategoryDesc: "Automobile Supply Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 907,
+      MerchantCategoryCode: 7531,
+      MerchantCategoryDesc: "Automotive Body Repair Shops",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 771,
+      MerchantCategoryCode: 5533,
+      MerchantCategoryDesc: "Automotive Parts, Accessories Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 910,
+      MerchantCategoryCode: 7538,
+      MerchantCategoryDesc: "Automotive Service Shops",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 770,
+      MerchantCategoryCode: 5532,
+      MerchantCategoryDesc: "Automotive Tire Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 387,
+      MerchantCategoryCode: 3423,
+      MerchantCategoryDesc: "AVCAR RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 257,
+      MerchantCategoryCode: 3242,
+      MerchantCategoryDesc: "AVENSA",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 68,
+      MerchantCategoryCode: 3053,
+      MerchantCategoryDesc: "AVIACO (SPAIN)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 54,
+      MerchantCategoryCode: 3039,
+      MerchantCategoryDesc: "AVIANCA",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 256,
+      MerchantCategoryCode: 3241,
+      MerchantCategoryDesc: "AVIATECA (GUATEMALA)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 353,
+      MerchantCategoryCode: 3389,
+      MerchantCategoryDesc: "AVIS RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 391,
+      MerchantCategoryCode: 3427,
+      MerchantCategoryDesc: "AVON RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 255,
+      MerchantCategoryCode: 3240,
+      MerchantCategoryDesc: "BAHAMASAIR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 973,
+      MerchantCategoryCode: 9223,
+      MerchantCategoryDesc: "Bail and Bond Payments",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 765,
+      MerchantCategoryCode: 5462,
+      MerchantCategoryDesc: "Bakeries",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 56,
+      MerchantCategoryCode: 3041,
+      MerchantCategoryDesc: "BALKAN-BULGARIAN AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 633,
+      MerchantCategoryCode: 3728,
+      MerchantCategoryDesc: "BALLY'S HOTEL AND CASINO",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 928,
+      MerchantCategoryCode: 7929,
+      MerchantCategoryDesc: "Bands, Orchestras, and Miscellaneous Entertainers (Not Elsewhere Classified)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 254,
+      MerchantCategoryCode: 3239,
+      MerchantCategoryDesc: "BAR HARBOR AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 874,
+      MerchantCategoryCode: 7230,
+      MerchantCategoryDesc: "Barber and Beauty Shops",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 253,
+      MerchantCategoryCode: 3238,
+      MerchantCategoryDesc: "BEMIDJI AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 407,
+      MerchantCategoryCode: 3502,
+      MerchantCategoryDesc: "BEST WESTERN HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 818,
+      MerchantCategoryCode: 5940,
+      MerchantCategoryDesc: "Bicycle Shops - Sales and Service",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 929,
+      MerchantCategoryCode: 7932,
+      MerchantCategoryDesc: "Billiard and Pool Establishments",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 648,
+      MerchantCategoryCode: 3743,
+      MerchantCategoryDesc: "BILTMORE HOTEL AND SUITES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 887,
+      MerchantCategoryCode: 7332,
+      MerchantCategoryDesc: "Blueprinting and Photocopying Services",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 774,
+      MerchantCategoryCode: 5551,
+      MerchantCategoryDesc: "Boat Dealers",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 708,
+      MerchantCategoryCode: 4457,
+      MerchantCategoryDesc: "Boat Rentals and Leases",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 638,
+      MerchantCategoryCode: 3733,
+      MerchantCategoryDesc: "BOCA RATON RESORT",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 820,
+      MerchantCategoryCode: 5942,
+      MerchantCategoryDesc: "Book Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 745,
+      MerchantCategoryCode: 5192,
+      MerchantCategoryDesc: "Books, Periodicals, and Newspapers",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 930,
+      MerchantCategoryCode: 7933,
+      MerchantCategoryDesc: "Bowling Alleys",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 121,
+      MerchantCategoryCode: 3106,
+      MerchantCategoryDesc: "BRAATHENS S.A.F.E. (NORWAY)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 20,
+      MerchantCategoryCode: 3005,
+      MerchantCategoryDesc: "BRITISH AIRWAYS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 126,
+      MerchantCategoryCode: 3111,
+      MerchantCategoryDesc: "BRITISH MIDLAND",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 632,
+      MerchantCategoryCode: 3727,
+      MerchantCategoryDesc: "BROADMOOR HOTEL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 250,
+      MerchantCategoryCode: 3235,
+      MerchantCategoryDesc: "BROKWAY AIR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 317,
+      MerchantCategoryCode: 3353,
+      MerchantCategoryDesc: "BROOKS RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 589,
+      MerchantCategoryCode: 3684,
+      MerchantCategoryDesc: "BUDGET HOST INNS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 330,
+      MerchantCategoryCode: 3366,
+      MerchantCategoryDesc: "BUDGET RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 590,
+      MerchantCategoryCode: 3685,
+      MerchantCategoryDesc: "BUDGETEL HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 703,
+      MerchantCategoryCode: 4131,
+      MerchantCategoryDesc: "Bus Lines, Including Charters, Tour Buses",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 957,
+      MerchantCategoryCode: 8244,
+      MerchantCategoryDesc: "Business and Secretarial Schools",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 901,
+      MerchantCategoryCode: 7399,
+      MerchantCategoryDesc: "Business Services, Not Elsewhere Classified",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 880,
+      MerchantCategoryCode: 7278,
+      MerchantCategoryDesc: "Buying/Shopping Services, Clubs",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 249,
+      MerchantCategoryCode: 3234,
+      MerchantCategoryDesc: "BWIA",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 722,
+      MerchantCategoryCode: 4899,
+      MerchantCategoryDesc: "Cable and other pay television (previously Cable Services)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 824,
+      MerchantCategoryCode: 5946,
+      MerchantCategoryDesc: "Camera and Photographic Supply Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 577,
+      MerchantCategoryCode: 3672,
+      MerchantCategoryDesc: "CAMPANIEL HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 186,
+      MerchantCategoryCode: 3171,
+      MerchantCategoryDesc: "CANADIAN AIRLINES INTERNATIONAL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 763,
+      MerchantCategoryCode: 5441,
+      MerchantCategoryDesc: "Candy, Nut, and Confectionery Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 248,
+      MerchantCategoryCode: 3233,
+      MerchantCategoryDesc: "CAPITOL AIR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 767,
+      MerchantCategoryCode: 5511,
+      MerchantCategoryDesc: "Car and Truck Dealers (New and Used) Sales, Service, Repairs, Parts, and Leasing",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 331,
+      MerchantCategoryCode: 3367,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 329,
+      MerchantCategoryCode: 3365,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 327,
+      MerchantCategoryCode: 3363,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 322,
+      MerchantCategoryCode: 3358,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 319,
+      MerchantCategoryCode: 3355,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 320,
+      MerchantCategoryCode: 3356,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 356,
+      MerchantCategoryCode: 3392,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 361,
+      MerchantCategoryCode: 3397,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 365,
+      MerchantCategoryCode: 3401,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 366,
+      MerchantCategoryCode: 3402,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 367,
+      MerchantCategoryCode: 3403,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 368,
+      MerchantCategoryCode: 3404,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 370,
+      MerchantCategoryCode: 3406,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 371,
+      MerchantCategoryCode: 3407,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 372,
+      MerchantCategoryCode: 3408,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 352,
+      MerchantCategoryCode: 3388,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 333,
+      MerchantCategoryCode: 3369,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 346,
+      MerchantCategoryCode: 3382,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 347,
+      MerchantCategoryCode: 3383,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 348,
+      MerchantCategoryCode: 3384,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 341,
+      MerchantCategoryCode: 3377,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 342,
+      MerchantCategoryCode: 3378,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 343,
+      MerchantCategoryCode: 3379,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 344,
+      MerchantCategoryCode: 3380,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 335,
+      MerchantCategoryCode: 3371,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 336,
+      MerchantCategoryCode: 3372,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 337,
+      MerchantCategoryCode: 3373,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 338,
+      MerchantCategoryCode: 3374,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 339,
+      MerchantCategoryCode: 3375,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 390,
+      MerchantCategoryCode: 3426,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 405,
+      MerchantCategoryCode: 3441,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 388,
+      MerchantCategoryCode: 3424,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 386,
+      MerchantCategoryCode: 3422,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 377,
+      MerchantCategoryCode: 3413,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 363,
+      MerchantCategoryCode: 3399,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 374,
+      MerchantCategoryCode: 3410,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 375,
+      MerchantCategoryCode: 3411,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 379,
+      MerchantCategoryCode: 3415,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 380,
+      MerchantCategoryCode: 3416,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 381,
+      MerchantCategoryCode: 3417,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 382,
+      MerchantCategoryCode: 3418,
+      MerchantCategoryDesc: "Car Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 903,
+      MerchantCategoryCode: 7512,
+      MerchantCategoryDesc: "Car Rental Companies ( Not Listed Below)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 911,
+      MerchantCategoryCode: 7542,
+      MerchantCategoryDesc: "Car Washes",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 825,
+      MerchantCategoryCode: 5947,
+      MerchantCategoryDesc: "Card Shops, Gift, Novelty, and Souvenir Shops",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 649,
+      MerchantCategoryCode: 3744,
+      MerchantCategoryDesc: "CAREFREE RESORTS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 392,
+      MerchantCategoryCode: 3428,
+      MerchantCategoryDesc: "CAREY RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 621,
+      MerchantCategoryCode: 3716,
+      MerchantCategoryDesc: "CARLTON HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 8,
+      MerchantCategoryCode: 1750,
+      MerchantCategoryDesc: "Carpentry Contractors",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 872,
+      MerchantCategoryCode: 7217,
+      MerchantCategoryDesc: "Carpet and Upholstery Cleaning",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 802,
+      MerchantCategoryCode: 5811,
+      MerchantCategoryDesc: "Caterers",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 114,
+      MerchantCategoryCode: 3099,
+      MerchantCategoryDesc: "CATHAY PACIFIC",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 243,
+      MerchantCategoryCode: 3228,
+      MerchantCategoryDesc: "CAYMAN AIRWAYS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 961,
+      MerchantCategoryCode: 8398,
+      MerchantCategoryDesc: "Charitable and Social Service Organizations",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 743,
+      MerchantCategoryCode: 5169,
+      MerchantCategoryDesc: "Chemicals and Allied Products, Not Elsewhere Classified",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 960,
+      MerchantCategoryCode: 8351,
+      MerchantCategoryDesc: "Child Care Services",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 783,
+      MerchantCategoryCode: 5641,
+      MerchantCategoryDesc: "Children's and Infant's Wear Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 93,
+      MerchantCategoryCode: 3078,
+      MerchantCategoryDesc: "CHINA AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 944,
+      MerchantCategoryCode: 8041,
+      MerchantCategoryDesc: "Chiropractors",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 449,
+      MerchantCategoryCode: 3544,
+      MerchantCategoryDesc: "CIGA HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 849,
+      MerchantCategoryCode: 5993,
+      MerchantCategoryDesc: "Cigar Stores and Stands",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 401,
+      MerchantCategoryCode: 3437,
+      MerchantCategoryDesc: "CITE RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 622,
+      MerchantCategoryCode: 3717,
+      MerchantCategoryDesc: "CITY LODGE HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 962,
+      MerchantCategoryCode: 8641,
+      MerchantCategoryDesc: "Civic, Fraternal, and Social Associations",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 592,
+      MerchantCategoryCode: 3687,
+      MerchantCategoryDesc: "CLARION HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 892,
+      MerchantCategoryCode: 7349,
+      MerchantCategoryDesc: "Cleaning and Maintenance, Janitorial Services",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 582,
+      MerchantCategoryCode: 3677,
+      MerchantCategoryDesc: "CLIMAT DE FRANCE HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 881,
+      MerchantCategoryCode: 7296,
+      MerchantCategoryDesc: "Clothing Rental - Costumes, Formal Wear, Uniforms",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 647,
+      MerchantCategoryCode: 3742,
+      MerchantCategoryDesc: "CLUB MED",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 652,
+      MerchantCategoryCode: 3747,
+      MerchantCategoryDesc: "CLUBCORP/CLUB RESORTS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 457,
+      MerchantCategoryCode: 3552,
+      MerchantCategoryDesc: "COAST HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 955,
+      MerchantCategoryCode: 8220,
+      MerchantCategoryDesc: "Colleges, Junior Colleges, Universities, and ProfessionalSchools",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 641,
+      MerchantCategoryCode: 3736,
+      MerchantCategoryDesc: "COLORADO BELLE/EDGEWATER RESORT",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 238,
+      MerchantCategoryCode: 3223,
+      MerchantCategoryDesc: "COMAIR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 467,
+      MerchantCategoryCode: 3562,
+      MerchantCategoryDesc: "COMFORT INNS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 237,
+      MerchantCategoryCode: 3222,
+      MerchantCategoryDesc: "COMMAND AIRWAYS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 729,
+      MerchantCategoryCode: 5046,
+      MerchantCategoryDesc: "Commercial Equipment, Not Elsewhere Classified",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 742,
+      MerchantCategoryCode: 5139,
+      MerchantCategoryDesc: "Commercial Footwear",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 888,
+      MerchantCategoryCode: 7333,
+      MerchantCategoryDesc: "Commercial Photography, Art and Graphics",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 931,
+      MerchantCategoryCode: 7941,
+      MerchantCategoryDesc: "Commercial Sports, Athletic Fields, Professional Sport Clubs, and Sport Promoters",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 235,
+      MerchantCategoryCode: 3220,
+      MerchantCategoryDesc: "COMPANIA FAUCETT",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 593,
+      MerchantCategoryCode: 3688,
+      MerchantCategoryDesc: "COMPRI HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 896,
+      MerchantCategoryCode: 7379,
+      MerchantCategoryDesc: "Computer Maintenance and Repair Services, Not Elsewhere Classified",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 894,
+      MerchantCategoryCode: 7372,
+      MerchantCategoryDesc: "Computer Programming, Integrated Systems Design and Data Processing Services",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 800,
+      MerchantCategoryCode: 5734,
+      MerchantCategoryDesc: "Computer Software Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 728,
+      MerchantCategoryCode: 5045,
+      MerchantCategoryDesc: "Computers, Computer Peripheral Equipment, Software",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 443,
+      MerchantCategoryCode: 3538,
+      MerchantCategoryDesc: "CONCORDE HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 594,
+      MerchantCategoryCode: 3689,
+      MerchantCategoryDesc: "CONSORT HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 726,
+      MerchantCategoryCode: 5039,
+      MerchantCategoryDesc: "Construction Materials, Not Elsewhere Classified",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 886,
+      MerchantCategoryCode: 7321,
+      MerchantCategoryDesc: "Consumer Credit Reporting Agencies",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 76,
+      MerchantCategoryCode: 3061,
+      MerchantCategoryDesc: "CONTINENTAL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 10,
+      MerchantCategoryCode: 1771,
+      MerchantCategoryDesc: "Contractors - Concrete Work",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 11,
+      MerchantCategoryCode: 1799,
+      MerchantCategoryDesc: "Contractors - Special Trade, Not Elsewhere Classified",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 234,
+      MerchantCategoryCode: 3219,
+      MerchantCategoryDesc: "COPA",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 956,
+      MerchantCategoryCode: 8241,
+      MerchantCategoryDesc: "Correspondence Schools",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 845,
+      MerchantCategoryCode: 5977,
+      MerchantCategoryDesc: "Cosmetic Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 879,
+      MerchantCategoryCode: 7277,
+      MerchantCategoryDesc: "Counseling Service - Debt, Marriage, Personal",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 705,
+      MerchantCategoryCode: 4215,
+      MerchantCategoryDesc: "Courier Services - Air or Ground, Freight forwarders",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 971,
+      MerchantCategoryCode: 9211,
+      MerchantCategoryDesc: "Court Costs, including Alimony and Child Support",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 595,
+      MerchantCategoryCode: 3690,
+      MerchantCategoryDesc: "COURTYARD BY MARRIOTT",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 434,
+      MerchantCategoryCode: 3529,
+      MerchantCategoryDesc: "CP HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 426,
+      MerchantCategoryCode: 3521,
+      MerchantCategoryDesc: "CREST HOTELS (see FORTE HOTELS)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 103,
+      MerchantCategoryCode: 3088,
+      MerchantCategoryDesc: "CROATIA AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 233,
+      MerchantCategoryCode: 3218,
+      MerchantCategoryDesc: "CROWN AIR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 655,
+      MerchantCategoryCode: 3750,
+      MerchantCategoryDesc: "CROWNE PLAZA HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 707,
+      MerchantCategoryCode: 4411,
+      MerchantCategoryDesc: "Cruise and Steamship Lines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 61,
+      MerchantCategoryCode: 3046,
+      MerchantCategoryDesc: "CRUZEIRO DO SUL (BRAZIJ)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 232,
+      MerchantCategoryCode: 3217,
+      MerchantCategoryDesc: "CSA",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 231,
+      MerchantCategoryCode: 3216,
+      MerchantCategoryDesc: "CUMBERLAND AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 583,
+      MerchantCategoryCode: 3678,
+      MerchantCategoryDesc: "CUMULUS HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 498,
+      MerchantCategoryCode: 3593,
+      MerchantCategoryDesc: "CUNARD HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 307,
+      MerchantCategoryCode: 3292,
+      MerchantCategoryDesc: "CYPRUS AIRWAYS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 764,
+      MerchantCategoryCode: 5451,
+      MerchantCategoryDesc: "Dairy Products Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 230,
+      MerchantCategoryCode: 3215,
+      MerchantCategoryDesc: "DAN AIR SERVICES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 534,
+      MerchantCategoryCode: 3629,
+      MerchantCategoryDesc: "DAN HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 926,
+      MerchantCategoryCode: 7911,
+      MerchantCategoryDesc: "Dance Halls, Studios and Schools",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 584,
+      MerchantCategoryCode: 3679,
+      MerchantCategoryDesc: "DANUBIUS HOTEL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 415,
+      MerchantCategoryCode: 3510,
+      MerchantCategoryDesc: "DAYS INN, DAYSTOP",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 553,
+      MerchantCategoryCode: 3648,
+      MerchantCategoryDesc: "DE VERE HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 73,
+      MerchantCategoryCode: 3058,
+      MerchantCategoryDesc: "DELTA",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 486,
+      MerchantCategoryCode: 3581,
+      MerchantCategoryDesc: "DELTA HOTEL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 942,
+      MerchantCategoryCode: 8021,
+      MerchantCategoryDesc: "Dentists and Orthodontists",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 758,
+      MerchantCategoryCode: 5311,
+      MerchantCategoryDesc: "Department Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 808,
+      MerchantCategoryCode: 5817,
+      MerchantCategoryDesc: "Digital Goods: Applications (Excludes Games)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 807,
+      MerchantCategoryCode: 5816,
+      MerchantCategoryDesc: "Digital Goods: Games",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 809,
+      MerchantCategoryCode: 5818,
+      MerchantCategoryDesc: "Digital Goods: Large Digital Goods Merchant",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 806,
+      MerchantCategoryCode: 5815,
+      MerchantCategoryDesc: "Digital Goods: Media, Books, Movies, Music",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 596,
+      MerchantCategoryCode: 3691,
+      MerchantCategoryDesc: "DILLION INNS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 834,
+      MerchantCategoryCode: 5965,
+      MerchantCategoryDesc: "Direct Marketing - Catalog and Catalog and Retail Merchant",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 833,
+      MerchantCategoryCode: 5964,
+      MerchantCategoryDesc: "Direct Marketing - Catalog Merchant",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 829,
+      MerchantCategoryCode: 5960,
+      MerchantCategoryDesc: "Direct Marketing- Insurance Service",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 757,
+      MerchantCategoryCode: 5310,
+      MerchantCategoryDesc: "Discount Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 941,
+      MerchantCategoryCode: 8011,
+      MerchantCategoryDesc: "Doctors and Physicians (Not Elsewhere Classified)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 354,
+      MerchantCategoryCode: 3390,
+      MerchantCategoryDesc: "DOLLAR RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 227,
+      MerchantCategoryCode: 3212,
+      MerchantCategoryDesc: "DOMINICANA",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 832,
+      MerchantCategoryCode: 5963,
+      MerchantCategoryDesc: "Door-to-Door Sales",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 492,
+      MerchantCategoryCode: 3587,
+      MerchantCategoryDesc: "DORAL HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 528,
+      MerchantCategoryCode: 3623,
+      MerchantCategoryDesc: "DORINT HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 597,
+      MerchantCategoryCode: 3692,
+      MerchantCategoryDesc: "DOUBLETREE HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 432,
+      MerchantCategoryCode: 3527,
+      MerchantCategoryDesc: "DOWNTOWNER-PASSPORT HOTEL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 794,
+      MerchantCategoryCode: 5714,
+      MerchantCategoryDesc: "Drapery, Window Covering and Upholstery Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 804,
+      MerchantCategoryCode: 5813,
+      MerchantCategoryDesc: "Drinking Places (Alcoholic Beverages), Bars, Taverns, Cocktail lounges, Nightclubs and Discotheques",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 811,
+      MerchantCategoryCode: 5912,
+      MerchantCategoryDesc: "Drug Stores and Pharmacies",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 739,
+      MerchantCategoryCode: 5122,
+      MerchantCategoryDesc: "Drugs, Drug Proprietors, and Druggist's Sundries",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 598,
+      MerchantCategoryCode: 3693,
+      MerchantCategoryDesc: "DRURY INNS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 871,
+      MerchantCategoryCode: 7216,
+      MerchantCategoryDesc: "Dry Cleaners",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 430,
+      MerchantCategoryCode: 3525,
+      MerchantCategoryDesc: "DUNFEY HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 737,
+      MerchantCategoryCode: 5099,
+      MerchantCategoryDesc: "Durable Goods, Not Elsewhere Classified",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 756,
+      MerchantCategoryCode: 5309,
+      MerchantCategoryDesc: "Duty Free Store",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 72,
+      MerchantCategoryCode: 3057,
+      MerchantCategoryDesc: "EASTWEST AIRLINES (AUSTRALIA)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 803,
+      MerchantCategoryCode: 5812,
+      MerchantCategoryDesc: "Eating places and Restaurants",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 549,
+      MerchantCategoryCode: 3644,
+      MerchantCategoryDesc: "ECONO LODGES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 362,
+      MerchantCategoryCode: 3398,
+      MerchantCategoryDesc: "ECONO-CAR RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 599,
+      MerchantCategoryCode: 3694,
+      MerchantCategoryDesc: "ECONOMY INNS OF AMERICA",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 308,
+      MerchantCategoryCode: 3293,
+      MerchantCategoryDesc: "ECUATORIANA",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 52,
+      MerchantCategoryCode: 3037,
+      MerchantCategoryDesc: "EGYPTAIR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 47,
+      MerchantCategoryCode: 3032,
+      MerchantCategoryDesc: "EL AL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 853,
+      MerchantCategoryCode: 5997,
+      MerchantCategoryDesc: "Electric Razor Stores - Sales and Service",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 723,
+      MerchantCategoryCode: 4900,
+      MerchantCategoryDesc: "Electric, Gas, Sanitary and Water Utilities",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 915,
+      MerchantCategoryCode: 7629,
+      MerchantCategoryDesc: "Electrical And Small Appliance Repair Shops",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 6,
+      MerchantCategoryCode: 1731,
+      MerchantCategoryDesc: "Electrical Contractors",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 732,
+      MerchantCategoryCode: 5065,
+      MerchantCategoryDesc: "Electrical Parts and Equipment",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 798,
+      MerchantCategoryCode: 5732,
+      MerchantCategoryDesc: "Electronic Sales",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 954,
+      MerchantCategoryCode: 8211,
+      MerchantCategoryDesc: "Elementary and Secondary Schools",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 557,
+      MerchantCategoryCode: 3652,
+      MerchantCategoryDesc: "EMBASSY HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 600,
+      MerchantCategoryCode: 3695,
+      MerchantCategoryDesc: "EMBASSY SUITES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 893,
+      MerchantCategoryCode: 7361,
+      MerchantCategoryDesc: "Employment Agencies, Temporary Help Services",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 369,
+      MerchantCategoryCode: 3405,
+      MerchantCategoryDesc: "ENTERPRISE RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 899,
+      MerchantCategoryCode: 7394,
+      MerchantCategoryDesc: "Equipment Rental and Leasing Services, Tool Rental, Furniture Rental, and Appliance Rental",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 309,
+      MerchantCategoryCode: 3294,
+      MerchantCategoryDesc: "ETHIOPIAN AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 345,
+      MerchantCategoryCode: 3381,
+      MerchantCategoryDesc: "EUROP CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 355,
+      MerchantCategoryCode: 3391,
+      MerchantCategoryDesc: "EUROPE BY CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 99,
+      MerchantCategoryCode: 3084,
+      MerchantCategoryDesc: "EVA AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 601,
+      MerchantCategoryCode: 3696,
+      MerchantCategoryDesc: "EXEL INNS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 891,
+      MerchantCategoryCode: 7342,
+      MerchantCategoryDesc: "Exterminating and Disinfecting Services",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 495,
+      MerchantCategoryCode: 3590,
+      MerchantCategoryDesc: "FAIRMONT HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 784,
+      MerchantCategoryCode: 5651,
+      MerchantCategoryDesc: "Family Clothing Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 602,
+      MerchantCategoryCode: 3697,
+      MerchantCategoryDesc: "FARFIELD HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 620,
+      MerchantCategoryCode: 3715,
+      MerchantCategoryDesc: "FARIFIELD INN",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 805,
+      MerchantCategoryCode: 5814,
+      MerchantCategoryDesc: "Fast Food Restaurants",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 856,
+      MerchantCategoryCode: 6010,
+      MerchantCategoryDesc: "Financial Institutions - Manual Cash Disbursements",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 857,
+      MerchantCategoryCode: 6011,
+      MerchantCategoryDesc: "Financial Institutions - Manual Cash Disbursements",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 858,
+      MerchantCategoryCode: 6012,
+      MerchantCategoryDesc: "Financial Institutions - Merchandise and Services",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 972,
+      MerchantCategoryCode: 9222,
+      MerchantCategoryDesc: "Fines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 57,
+      MerchantCategoryCode: 3042,
+      MerchantCategoryDesc: "FINNAIR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 795,
+      MerchantCategoryCode: 5718,
+      MerchantCategoryDesc: "Fireplace, Fireplace Screens, and Accessories Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 569,
+      MerchantCategoryCode: 3664,
+      MerchantCategoryDesc: "FLAG INN",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 616,
+      MerchantCategoryCode: 3711,
+      MerchantCategoryDesc: "FLAG INNS (AUSRALIA)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 793,
+      MerchantCategoryCode: 5713,
+      MerchantCategoryDesc: "Floor Covering Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 848,
+      MerchantCategoryCode: 5992,
+      MerchantCategoryDesc: "Florists",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 746,
+      MerchantCategoryCode: 5193,
+      MerchantCategoryDesc: "Florists, Supplies, Nursery Stock and Flowers",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 410,
+      MerchantCategoryCode: 3505,
+      MerchantCategoryDesc: "FORTE HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 475,
+      MerchantCategoryCode: 3570,
+      MerchantCategoryDesc: "FORUM HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 619,
+      MerchantCategoryCode: 3714,
+      MerchantCategoryDesc: "FOUR SEASONS HOTEL (AUSTRALIA)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 448,
+      MerchantCategoryCode: 3543,
+      MerchantCategoryDesc: "FOUR SEASONS HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 219,
+      MerchantCategoryCode: 3204,
+      MerchantCategoryDesc: "FREEDOM AIR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 412,
+      MerchantCategoryCode: 3507,
+      MerchantCategoryDesc: "FRIENDSHIP INNS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 847,
+      MerchantCategoryCode: 5983,
+      MerchantCategoryDesc: "Fuel - Fuel Oil, Wood, Coal, Liquefied Petroleum",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 876,
+      MerchantCategoryCode: 7261,
+      MerchantCategoryDesc: "Funeral Service and Crematories",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 917,
+      MerchantCategoryCode: 7641,
+      MerchantCategoryDesc: "Furniture, Furniture Repair, and Furniture Refinishing",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 792,
+      MerchantCategoryCode: 5712,
+      MerchantCategoryDesc: "Furniture, Home Furnishings, and Equipment Stores, ExceptAppliances",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 787,
+      MerchantCategoryCode: 5681,
+      MerchantCategoryDesc: "Furriers and Fur Shops",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 215,
+      MerchantCategoryCode: 3200,
+      MerchantCategoryDesc: "FUYANA AIRWAYS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 118,
+      MerchantCategoryCode: 3103,
+      MerchantCategoryDesc: "GARUDA (INDONESIA)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 980,
+      MerchantCategoryCode: 9702,
+      MerchantCategoryDesc: "GCAS Emergency Services ( For Visa Only)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 4,
+      MerchantCategoryCode: 1520,
+      MerchantCategoryDesc: "General Contractors-Residential and Commercial",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 373,
+      MerchantCategoryCode: 3409,
+      MerchantCategoryDesc: "GENERAL RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 751,
+      MerchantCategoryCode: 5231,
+      MerchantCategoryDesc: "Glass, Paint, and Wallpaper Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 828,
+      MerchantCategoryCode: 5950,
+      MerchantCategoryDesc: "Glassware/Crystal Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 378,
+      MerchantCategoryCode: 3414,
+      MerchantCategoryDesc: "GODFREY NATL RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 617,
+      MerchantCategoryCode: 3712,
+      MerchantCategoryDesc: "GOLDEN CHAIN HOTEL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 218,
+      MerchantCategoryCode: 3203,
+      MerchantCategoryDesc: "GOLDEN PACIFIC AIR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 411,
+      MerchantCategoryCode: 3506,
+      MerchantCategoryDesc: "GOLDEN TULIP HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 933,
+      MerchantCategoryCode: 7992,
+      MerchantCategoryDesc: "Golf Courses - Public",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 975,
+      MerchantCategoryCode: 9399,
+      MerchantCategoryDesc: "Government Services ( Not Elsewhere Classified)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 922,
+      MerchantCategoryCode: 7802,
+      MerchantCategoryDesc: "Government-Licensed Horse/Dog Racing",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 921,
+      MerchantCategoryCode: 7801,
+      MerchantCategoryDesc: "Government-Licensed On-Line Casinos (On-Line Gambling)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 920,
+      MerchantCategoryCode: 7800,
+      MerchantCategoryDesc: "Government-Owned Lotteries",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 658,
+      MerchantCategoryCode: 3753,
+      MerchantCategoryDesc: "GREENBRIAH RESORTS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 761,
+      MerchantCategoryCode: 5411,
+      MerchantCategoryDesc: "Grocery Stores, Supermarkets",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 606,
+      MerchantCategoryCode: 3701,
+      MerchantCategoryDesc: "GUEST QUARTERS (Formally PICKETT SUITE HOTELS)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 55,
+      MerchantCategoryCode: 3040,
+      MerchantCategoryDesc: "GULF AIR (BAHRAIN)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 570,
+      MerchantCategoryCode: 3665,
+      MerchantCategoryDesc: "HAMPTON INNS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 733,
+      MerchantCategoryCode: 5072,
+      MerchantCategoryDesc: "Hardware Equipment and Supplies",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 752,
+      MerchantCategoryCode: 5251,
+      MerchantCategoryDesc: "Hardware Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 603,
+      MerchantCategoryCode: 3698,
+      MerchantCategoryDesc: "HARLEY HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 636,
+      MerchantCategoryCode: 3731,
+      MerchantCategoryDesc: "HARRAH'S HOTELS AND CASINOS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 639,
+      MerchantCategoryCode: 3734,
+      MerchantCategoryDesc: "HARVEY/BRISTOL HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 212,
+      MerchantCategoryCode: 3197,
+      MerchantCategoryDesc: "HAVASU AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 211,
+      MerchantCategoryCode: 3196,
+      MerchantCategoryDesc: "HAWAIIAN AIR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 883,
+      MerchantCategoryCode: 7298,
+      MerchantCategoryDesc: "Health and Beauty Shops",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 843,
+      MerchantCategoryCode: 5975,
+      MerchantCategoryDesc: "Hearing Aids - Sales, Service, and Supply Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 493,
+      MerchantCategoryCode: 3588,
+      MerchantCategoryDesc: "HELMSLEY HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 321,
+      MerchantCategoryCode: 3357,
+      MerchantCategoryDesc: "HERTZ RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 626,
+      MerchantCategoryCode: 3721,
+      MerchantCategoryDesc: "HILTON CONRAD",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 409,
+      MerchantCategoryCode: 3504,
+      MerchantCategoryDesc: "HILTON HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 440,
+      MerchantCategoryCode: 3535,
+      MerchantCategoryDesc: "HILTON INTERNATIONAL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 543,
+      MerchantCategoryCode: 3638,
+      MerchantCategoryDesc: "HO JO INN, HOWARD JOHNSON",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 823,
+      MerchantCategoryCode: 5945,
+      MerchantCategoryDesc: "Hobby, Toy, and Game Shops",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 406,
+      MerchantCategoryCode: 3501,
+      MerchantCategoryDesc: "HOLIDAY INNS, HOLIDAY INN EXPRESS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 332,
+      MerchantCategoryCode: 3368,
+      MerchantCategoryDesc: "HOLIDAY RENT-A-WRECK",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 749,
+      MerchantCategoryCode: 5200,
+      MerchantCategoryDesc: "Home Supply Warehouse Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 696,
+      MerchantCategoryCode: 3816,
+      MerchantCategoryDesc: "Home2Suites",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 656,
+      MerchantCategoryCode: 3751,
+      MerchantCategoryDesc: "HOMEWOOD SUITES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 3,
+      MerchantCategoryCode: 780,
+      MerchantCategoryDesc: "Horticultural Services, Landscaping Services",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 500,
+      MerchantCategoryCode: 3595,
+      MerchantCategoryDesc: "HOSPITALITY INTERNATIONAL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 950,
+      MerchantCategoryCode: 8062,
+      MerchantCategoryDesc: "Hospitals",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 438,
+      MerchantCategoryCode: 3533,
+      MerchantCategoryDesc: "HOTEL IBIS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 484,
+      MerchantCategoryCode: 3579,
+      MerchantCategoryDesc: "HOTEL MERCURE",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 446,
+      MerchantCategoryCode: 3541,
+      MerchantCategoryDesc: "HOTEL OKURA",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 568,
+      MerchantCategoryCode: 3663,
+      MerchantCategoryDesc: "HOTELES EL PRESIDENTS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 453,
+      MerchantCategoryCode: 3548,
+      MerchantCategoryDesc: "HOTELES MELIA",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 456,
+      MerchantCategoryCode: 3551,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 451,
+      MerchantCategoryCode: 3546,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 452,
+      MerchantCategoryCode: 3547,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 444,
+      MerchantCategoryCode: 3539,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 476,
+      MerchantCategoryCode: 3571,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 469,
+      MerchantCategoryCode: 3564,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 464,
+      MerchantCategoryCode: 3559,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 465,
+      MerchantCategoryCode: 3560,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 466,
+      MerchantCategoryCode: 3561,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 459,
+      MerchantCategoryCode: 3554,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 460,
+      MerchantCategoryCode: 3555,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 461,
+      MerchantCategoryCode: 3556,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 462,
+      MerchantCategoryCode: 3557,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 485,
+      MerchantCategoryCode: 3580,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 481,
+      MerchantCategoryCode: 3576,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 471,
+      MerchantCategoryCode: 3566,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 472,
+      MerchantCategoryCode: 3567,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 474,
+      MerchantCategoryCode: 3569,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 494,
+      MerchantCategoryCode: 3589,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 487,
+      MerchantCategoryCode: 3582,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 483,
+      MerchantCategoryCode: 3578,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 501,
+      MerchantCategoryCode: 3596,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 502,
+      MerchantCategoryCode: 3597,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 499,
+      MerchantCategoryCode: 3594,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 509,
+      MerchantCategoryCode: 3604,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 510,
+      MerchantCategoryCode: 3605,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 511,
+      MerchantCategoryCode: 3606,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 512,
+      MerchantCategoryCode: 3607,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 513,
+      MerchantCategoryCode: 3608,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 514,
+      MerchantCategoryCode: 3609,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 515,
+      MerchantCategoryCode: 3610,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 516,
+      MerchantCategoryCode: 3611,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 567,
+      MerchantCategoryCode: 3662,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 585,
+      MerchantCategoryCode: 3680,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 572,
+      MerchantCategoryCode: 3667,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 574,
+      MerchantCategoryCode: 3669,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 535,
+      MerchantCategoryCode: 3630,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 536,
+      MerchantCategoryCode: 3631,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 537,
+      MerchantCategoryCode: 3632,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 526,
+      MerchantCategoryCode: 3621,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 532,
+      MerchantCategoryCode: 3627,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 533,
+      MerchantCategoryCode: 3628,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 529,
+      MerchantCategoryCode: 3624,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 521,
+      MerchantCategoryCode: 3616,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 522,
+      MerchantCategoryCode: 3617,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 523,
+      MerchantCategoryCode: 3618,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 524,
+      MerchantCategoryCode: 3619,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 505,
+      MerchantCategoryCode: 3600,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 506,
+      MerchantCategoryCode: 3601,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 507,
+      MerchantCategoryCode: 3602,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 518,
+      MerchantCategoryCode: 3613,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 519,
+      MerchantCategoryCode: 3614,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 431,
+      MerchantCategoryCode: 3526,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 419,
+      MerchantCategoryCode: 3514,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 640,
+      MerchantCategoryCode: 3735,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 613,
+      MerchantCategoryCode: 3708,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 581,
+      MerchantCategoryCode: 3676,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 588,
+      MerchantCategoryCode: 3683,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 662,
+      MerchantCategoryCode: 3757,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 663,
+      MerchantCategoryCode: 3758,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 664,
+      MerchantCategoryCode: 3759,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 665,
+      MerchantCategoryCode: 3760,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 666,
+      MerchantCategoryCode: 3761,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 667,
+      MerchantCategoryCode: 3762,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 668,
+      MerchantCategoryCode: 3763,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 669,
+      MerchantCategoryCode: 3764,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 670,
+      MerchantCategoryCode: 3765,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 671,
+      MerchantCategoryCode: 3766,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 672,
+      MerchantCategoryCode: 3767,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 673,
+      MerchantCategoryCode: 3768,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 674,
+      MerchantCategoryCode: 3769,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 675,
+      MerchantCategoryCode: 3770,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 676,
+      MerchantCategoryCode: 3771,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 677,
+      MerchantCategoryCode: 3772,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 678,
+      MerchantCategoryCode: 3773,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 679,
+      MerchantCategoryCode: 3774,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 680,
+      MerchantCategoryCode: 3775,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 681,
+      MerchantCategoryCode: 3776,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 682,
+      MerchantCategoryCode: 3777,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 683,
+      MerchantCategoryCode: 3778,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 684,
+      MerchantCategoryCode: 3779,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 685,
+      MerchantCategoryCode: 3780,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 686,
+      MerchantCategoryCode: 3781,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 687,
+      MerchantCategoryCode: 3782,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 688,
+      MerchantCategoryCode: 3783,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 689,
+      MerchantCategoryCode: 3784,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 690,
+      MerchantCategoryCode: 3785,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 691,
+      MerchantCategoryCode: 3786,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 692,
+      MerchantCategoryCode: 3787,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 693,
+      MerchantCategoryCode: 3788,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 694,
+      MerchantCategoryCode: 3789,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 695,
+      MerchantCategoryCode: 3790,
+      MerchantCategoryDesc: "Hotels/Motels/Inns/Resorts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 530,
+      MerchantCategoryCode: 3625,
+      MerchantCategoryDesc: "HOTLE UNIVERSALE",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 797,
+      MerchantCategoryCode: 5722,
+      MerchantCategoryDesc: "Household Appliance Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 490,
+      MerchantCategoryCode: 3585,
+      MerchantCategoryDesc: "HUNGAR HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 552,
+      MerchantCategoryCode: 3647,
+      MerchantCategoryDesc: "HUSA HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 545,
+      MerchantCategoryCode: 3640,
+      MerchantCategoryDesc: "HYATT HOTEL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 117,
+      MerchantCategoryCode: 3102,
+      MerchantCategoryDesc: "IBERIA",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 445,
+      MerchantCategoryCode: 3540,
+      MerchantCategoryDesc: "IBEROTEL HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 578,
+      MerchantCategoryCode: 3673,
+      MerchantCategoryDesc: "IBUSZ HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 65,
+      MerchantCategoryCode: 3050,
+      MerchantCategoryDesc: "ICELANDAIR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 556,
+      MerchantCategoryCode: 3651,
+      MerchantCategoryDesc: "IMPERIAL LONDON HOTEL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 208,
+      MerchantCategoryCode: 3193,
+      MerchantCategoryDesc: "INDIAN AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 735,
+      MerchantCategoryCode: 5085,
+      MerchantCategoryDesc: "Industrial Supplies, Not Elsewhere Classified",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 629,
+      MerchantCategoryCode: 3724,
+      MerchantCategoryDesc: "INER NOR HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 895,
+      MerchantCategoryCode: 7375,
+      MerchantCategoryDesc: "Information Retrieval Services",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 7,
+      MerchantCategoryCode: 1740,
+      MerchantCategoryDesc: "Insulation - Contractors, Masonry, Stonework Contractors, Plastering Contractors, Stonework and Masonry Contractors, Tile Settings Contractors",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 862,
+      MerchantCategoryCode: 6381,
+      MerchantCategoryDesc: "Insurance Premiums, (no longer valid for first presentment work)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 393,
+      MerchantCategoryCode: 3429,
+      MerchantCategoryDesc: "INSURANCE RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 861,
+      MerchantCategoryCode: 6300,
+      MerchantCategoryDesc: "Insurance Sales, Underwriting, and Premiums",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 863,
+      MerchantCategoryCode: 6399,
+      MerchantCategoryDesc: "Insurance, Not Elsewhere Classified ( no longer valid forfirst presentment work)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 417,
+      MerchantCategoryCode: 3512,
+      MerchantCategoryDesc: "INTER-CONTINENTAL HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 402,
+      MerchantCategoryCode: 3438,
+      MerchantCategoryDesc: "INTERENT RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 580,
+      MerchantCategoryCode: 3675,
+      MerchantCategoryDesc: "INTERHOTEL CEDOK",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 977,
+      MerchantCategoryCode: 9405,
+      MerchantCategoryDesc: "Intra - Government Transactions",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 207,
+      MerchantCategoryCode: 3192,
+      MerchantCategoryDesc: "IRAN AIR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 206,
+      MerchantCategoryCode: 3191,
+      MerchantCategoryDesc: "ISLAND AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 21,
+      MerchantCategoryCode: 3006,
+      MerchantCategoryDesc: "JAPAN AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 634,
+      MerchantCategoryCode: 3729,
+      MerchantCategoryDesc: "JOHN ASCUAGA'S NUGGET",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 463,
+      MerchantCategoryCode: 3558,
+      MerchantCategoryDesc: "JOLLY HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 468,
+      MerchantCategoryCode: 3563,
+      MerchantCategoryDesc: "JOURNEY'S END MOTLS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 205,
+      MerchantCategoryCode: 3190,
+      MerchantCategoryDesc: "JUGOSLAV AIR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 623,
+      MerchantCategoryCode: 3718,
+      MerchantCategoryDesc: "KAROS HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 358,
+      MerchantCategoryCode: 3394,
+      MerchantCategoryDesc: "KEMWELL GROUP RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 310,
+      MerchantCategoryCode: 3295,
+      MerchantCategoryDesc: "KENYA AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 25,
+      MerchantCategoryCode: 3010,
+      MerchantCategoryDesc: "KLM (ROYAL DUTCH AIRLINES)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 565,
+      MerchantCategoryCode: 3660,
+      MerchantCategoryDesc: "KNIGHTS INNS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 97,
+      MerchantCategoryCode: 3082,
+      MerchantCategoryDesc: "KOREAN AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 53,
+      MerchantCategoryCode: 3038,
+      MerchantCategoryDesc: "KUWAIT AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 421,
+      MerchantCategoryCode: 3516,
+      MerchantCategoryDesc: "LA QUINTA MOTOR INNS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 70,
+      MerchantCategoryCode: 3055,
+      MerchantCategoryDesc: "LAB (BOLIVIA)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 202,
+      MerchantCategoryCode: 3187,
+      MerchantCategoryDesc: "LACSA (COSTA RICA)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 473,
+      MerchantCategoryCode: 3568,
+      MerchantCategoryDesc: "LADBROKE HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 69,
+      MerchantCategoryCode: 3054,
+      MerchantCategoryDesc: "LADECO (CHILE)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 67,
+      MerchantCategoryCode: 3052,
+      MerchantCategoryDesc: "LANCHILE",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 201,
+      MerchantCategoryCode: 3186,
+      MerchantCategoryDesc: "LAP (PARAGUAY)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 870,
+      MerchantCategoryCode: 7211,
+      MerchantCategoryDesc: "Laundry - Family and Commercial",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 869,
+      MerchantCategoryCode: 7210,
+      MerchantCategoryDesc: "Laundry, Cleaning, and Garment Services",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 200,
+      MerchantCategoryCode: 3185,
+      MerchantCategoryDesc: "LAV (VENEZUELA)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 826,
+      MerchantCategoryCode: 5948,
+      MerchantCategoryDesc: "Leather Foods Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 953,
+      MerchantCategoryCode: 8111,
+      MerchantCategoryDesc: "Legal Services and Attorneys",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 199,
+      MerchantCategoryCode: 3184,
+      MerchantCategoryDesc: "LIAT",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 699,
+      MerchantCategoryCode: 4111,
+      MerchantCategoryDesc: "Local/Suburban Commuter Passenger Transportation - Railroads, Feries, Local Water Transportation.",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 865,
+      MerchantCategoryCode: 7011,
+      MerchantCategoryDesc: "Lodging - Hotels, Motels, Resorts, Central Reservation Services (not elsewhere classified)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 559,
+      MerchantCategoryCode: 3654,
+      MerchantCategoryDesc: "LOEWS HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 197,
+      MerchantCategoryCode: 3182,
+      MerchantCategoryDesc: "LOT (POLAND)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 23,
+      MerchantCategoryCode: 3008,
+      MerchantCategoryDesc: "LUFTHANSA",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 750,
+      MerchantCategoryCode: 5211,
+      MerchantCategoryDesc: "Lumber and Building Materials Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 161,
+      MerchantCategoryCode: 3146,
+      MerchantCategoryDesc: "LUXAIR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 830,
+      MerchantCategoryCode: 5961,
+      MerchantCategoryDesc: "Mail Order Houses Including Catalog Order Stores, Book/Record Clubs (No longer permitted for U.S. original presentments)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 394,
+      MerchantCategoryCode: 3430,
+      MerchantCategoryDesc: "MAJOR RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 115,
+      MerchantCategoryCode: 3100,
+      MerchantCategoryDesc: "MALAYSIAN AIRLINE SYSTEM",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 196,
+      MerchantCategoryCode: 3181,
+      MerchantCategoryDesc: "MALEV",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 897,
+      MerchantCategoryCode: 7392,
+      MerchantCategoryDesc: "Management, Consulting, and Public Relations Services",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 482,
+      MerchantCategoryCode: 3577,
+      MerchantCategoryDesc: "MANDARIN ORIENTAL HOTEL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 709,
+      MerchantCategoryCode: 4468,
+      MerchantCategoryDesc: "Marinas, Marine Service, and Supplies",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 573,
+      MerchantCategoryCode: 3668,
+      MerchantCategoryDesc: "MARITIM HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 414,
+      MerchantCategoryCode: 3509,
+      MerchantCategoryDesc: "MARRIOTT HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 882,
+      MerchantCategoryCode: 7297,
+      MerchantCategoryDesc: "Massage Parlors",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 762,
+      MerchantCategoryCode: 5422,
+      MerchantCategoryDesc: "Meat Provisioners - Freezer and Locker",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 951,
+      MerchantCategoryCode: 8071,
+      MerchantCategoryDesc: "Medical and Dental Laboratories",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 952,
+      MerchantCategoryCode: 8099,
+      MerchantCategoryDesc: "Medical Services and Health Practitioners (Not Elsewhere Classified)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 730,
+      MerchantCategoryCode: 5047,
+      MerchantCategoryDesc: "Medical, Dental Ophthalmic, Hospital Equipment and Supplies",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 938,
+      MerchantCategoryCode: 7997,
+      MerchantCategoryDesc: "Membership Clubs (Sports, Recreation, Athletic), Country Clubs, and Private Golf Courses",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 966,
+      MerchantCategoryCode: 8699,
+      MerchantCategoryDesc: "Membership Organizations ( Not Elsewhere Classified)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 780,
+      MerchantCategoryCode: 5611,
+      MerchantCategoryDesc: "Men's and Boy's Clothing and Accessories Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 788,
+      MerchantCategoryCode: 5691,
+      MerchantCategoryDesc: "Men's and Women's Clothing Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 741,
+      MerchantCategoryCode: 5137,
+      MerchantCategoryDesc: "Men's Women's and Children's Uniforms and Commercial Clothing",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 425,
+      MerchantCategoryCode: 3520,
+      MerchantCategoryDesc: "MERIDIEN HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 527,
+      MerchantCategoryCode: 3622,
+      MerchantCategoryDesc: "MERLIN HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 193,
+      MerchantCategoryCode: 3178,
+      MerchantCategoryDesc: "MESA AIR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 731,
+      MerchantCategoryCode: 5051,
+      MerchantCategoryDesc: "Metal Service Centers and Offices",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 102,
+      MerchantCategoryCode: 3087,
+      MerchantCategoryDesc: "METRO AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 191,
+      MerchantCategoryCode: 3176,
+      MerchantCategoryDesc: "METROFLIGHT AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 566,
+      MerchantCategoryCode: 3661,
+      MerchantCategoryDesc: "METROPOLE HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 38,
+      MerchantCategoryCode: 3023,
+      MerchantCategoryDesc: "MEXICANA",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 635,
+      MerchantCategoryCode: 3730,
+      MerchantCategoryDesc: "MGM GRAND HOTEL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 604,
+      MerchantCategoryCode: 3699,
+      MerchantCategoryDesc: "MIDWAY MOTOR LODGE",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 100,
+      MerchantCategoryCode: 3085,
+      MerchantCategoryDesc: "MIDWEST EXPRESS AIRLINES, INC.",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 646,
+      MerchantCategoryCode: 3741,
+      MerchantCategoryDesc: "MILLENIUM BROADWAY HOTEL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 403,
+      MerchantCategoryCode: 3439,
+      MerchantCategoryDesc: "MILLEVILLE RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 766,
+      MerchantCategoryCode: 5499,
+      MerchantCategoryDesc: "Misc. Food Stores - Convenience Stores and Specialty Markets",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 760,
+      MerchantCategoryCode: 5399,
+      MerchantCategoryDesc: "Misc. General Merchandise",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 855,
+      MerchantCategoryCode: 5999,
+      MerchantCategoryDesc: "Miscellaneous and Specialty Retail Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 791,
+      MerchantCategoryCode: 5699,
+      MerchantCategoryDesc: "Miscellaneous Apparel and Accessory Shops",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 779,
+      MerchantCategoryCode: 5599,
+      MerchantCategoryDesc: "Miscellaneous Auto Dealers",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 796,
+      MerchantCategoryCode: 5719,
+      MerchantCategoryDesc: "Miscellaneous Home Furnishing Specialty Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 884,
+      MerchantCategoryCode: 7299,
+      MerchantCategoryDesc: "Miscellaneous Personal Services ( not elsewhere classifies)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 12,
+      MerchantCategoryCode: 2741,
+      MerchantCategoryDesc: "Miscellaneous Publishing and Printing",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 477,
+      MerchantCategoryCode: 3572,
+      MerchantCategoryDesc: "MIYAKO HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 754,
+      MerchantCategoryCode: 5271,
+      MerchantCategoryDesc: "Mobile Home Dealers",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 721,
+      MerchantCategoryCode: 4829,
+      MerchantCategoryDesc: "Money Orders - Wire Transfer",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 605,
+      MerchantCategoryCode: 3700,
+      MerchantCategoryDesc: "MOTEL 6",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 924,
+      MerchantCategoryCode: 7832,
+      MerchantCategoryDesc: "Motion Picture Theaters",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 923,
+      MerchantCategoryCode: 7829,
+      MerchantCategoryDesc: "Motion Pictures and Video Tape Production and Distribution",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 704,
+      MerchantCategoryCode: 4214,
+      MerchantCategoryDesc: "Motor Freight Carriers, Moving and Storage Companies, Trucking - Local/Long Distance, Delivery Services - Local",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 905,
+      MerchantCategoryCode: 7519,
+      MerchantCategoryDesc: "Motor Home and Recreational Vehicle Rentals",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 777,
+      MerchantCategoryCode: 5592,
+      MerchantCategoryDesc: "Motor Home Dealers",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 724,
+      MerchantCategoryCode: 5013,
+      MerchantCategoryDesc: "Motor vehicle supplies and new parts",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 776,
+      MerchantCategoryCode: 5571,
+      MerchantCategoryDesc: "Motorcycle Dealers",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 544,
+      MerchantCategoryCode: 3639,
+      MerchantCategoryDesc: "MOUNT CHARLOTTE THISTLE",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 517,
+      MerchantCategoryCode: 3612,
+      MerchantCategoryDesc: "MOVENPICK HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 799,
+      MerchantCategoryCode: 5733,
+      MerchantCategoryDesc: "Music Stores, Musical Instruments, Piano Sheet Music",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 187,
+      MerchantCategoryCode: 3172,
+      MerchantCategoryDesc: "NATIONAIR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 357,
+      MerchantCategoryCode: 3393,
+      MerchantCategoryDesc: "NATIONAL CAR RENTAL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 180,
+      MerchantCategoryCode: 3165,
+      MerchantCategoryDesc: "NEW YORK HELICOPTER",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 850,
+      MerchantCategoryCode: 5994,
+      MerchantCategoryDesc: "News Dealers and Newsstands",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 60,
+      MerchantCategoryCode: 3045,
+      MerchantCategoryDesc: "NIGERIA AIRWAYS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 508,
+      MerchantCategoryCode: 3603,
+      MerchantCategoryDesc: "NOAH'S HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 748,
+      MerchantCategoryCode: 5199,
+      MerchantCategoryDesc: "Non-durable Goods, Not Elsewhere Classified",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 859,
+      MerchantCategoryCode: 6051,
+      MerchantCategoryDesc: "Non-Financial Institutions - Foreign Currency, Money Orders (not wire transfer) and Travelers Cheques",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 96,
+      MerchantCategoryCode: 3081,
+      MerchantCategoryDesc: "NORDAIR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 179,
+      MerchantCategoryCode: 3164,
+      MerchantCategoryDesc: "NORONTAIR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 75,
+      MerchantCategoryCode: 3060,
+      MerchantCategoryDesc: "NORTHWEST",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 185,
+      MerchantCategoryCode: 3170,
+      MerchantCategoryDesc: "NOUNT COOK",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 547,
+      MerchantCategoryCode: 3642,
+      MerchantCategoryDesc: "NOVOTEL HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 753,
+      MerchantCategoryCode: 5261,
+      MerchantCategoryDesc: "Nurseries - Lawn and Garden Supply Store",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 949,
+      MerchantCategoryCode: 8050,
+      MerchantCategoryDesc: "Nursing and Personal Care Facilities",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 562,
+      MerchantCategoryCode: 3657,
+      MerchantCategoryDesc: "OBEROI HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 725,
+      MerchantCategoryCode: 5021,
+      MerchantCategoryDesc: "Office and Commercial Furniture",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 727,
+      MerchantCategoryCode: 5044,
+      MerchantCategoryDesc: "Office, Photographic, Photocopy, and Microfilm Equipment",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 46,
+      MerchantCategoryCode: 3031,
+      MerchantCategoryDesc: "OLYMPIC AIRWAYS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 497,
+      MerchantCategoryCode: 3592,
+      MerchantCategoryDesc: "OMNI HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 637,
+      MerchantCategoryCode: 3732,
+      MerchantCategoryDesc: "OPRYLAND HOTEL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 947,
+      MerchantCategoryCode: 8044,
+      MerchantCategoryDesc: "Opticians, Optical Goods, and Eyeglasses (no longer validfor first presentments)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 946,
+      MerchantCategoryCode: 8043,
+      MerchantCategoryDesc: "Opticians, Opticians Goods and Eyeglasses",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 945,
+      MerchantCategoryCode: 8042,
+      MerchantCategoryDesc: "Optometrists and Ophthalmologists",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 844,
+      MerchantCategoryCode: 5976,
+      MerchantCategoryDesc: "Orthopedic Goods Prosthetic Devices",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 943,
+      MerchantCategoryCode: 8031,
+      MerchantCategoryDesc: "Osteopaths",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 563,
+      MerchantCategoryCode: 3658,
+      MerchantCategoryDesc: "OTANI HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 812,
+      MerchantCategoryCode: 5921,
+      MerchantCategoryDesc: "Package Stores - Beer, Wine, and Liquor",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 713,
+      MerchantCategoryCode: 4723,
+      MerchantCategoryDesc: "Package Tour Operators (For use in Germany only)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 909,
+      MerchantCategoryCode: 7535,
+      MerchantCategoryDesc: "Paint Shops - Automotive",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 747,
+      MerchantCategoryCode: 5198,
+      MerchantCategoryDesc: "Paints, Varnishes, and Supplies",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 39,
+      MerchantCategoryCode: 3024,
+      MerchantCategoryDesc: "PAKISTAN INTERNATIONAL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 17,
+      MerchantCategoryCode: 3002,
+      MerchantCategoryDesc: "PAN AMERICAN",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 504,
+      MerchantCategoryCode: 3599,
+      MerchantCategoryDesc: "PANNONIA HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 458,
+      MerchantCategoryCode: 3553,
+      MerchantCategoryDesc: "PARK INNS INTERNATIONAL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 700,
+      MerchantCategoryCode: 4112,
+      MerchantCategoryDesc: "Passenger Railways",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 815,
+      MerchantCategoryCode: 5933,
+      MerchantCategoryDesc: "Pawn Shops and Salvage Yards",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 323,
+      MerchantCategoryCode: 3359,
+      MerchantCategoryDesc: "PAYLESS CAR RENTAL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 174,
+      MerchantCategoryCode: 3159,
+      MerchantCategoryDesc: "PBA",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 657,
+      MerchantCategoryCode: 3752,
+      MerchantCategoryDesc: "PEABODY HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 428,
+      MerchantCategoryCode: 3523,
+      MerchantCategoryDesc: "PENNSULA HOTEL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 558,
+      MerchantCategoryCode: 3653,
+      MerchantCategoryDesc: "PENTA HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 851,
+      MerchantCategoryCode: 5995,
+      MerchantCategoryDesc: "Pet Shops, Pet Foods, and Supplies Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 744,
+      MerchantCategoryCode: 5172,
+      MerchantCategoryDesc: "Petroleum and Petroleum Products",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 37,
+      MerchantCategoryCode: 3022,
+      MerchantCategoryDesc: "PHILIPPINE AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 900,
+      MerchantCategoryCode: 7395,
+      MerchantCategoryDesc: "Photofinishing Laboratories, Photo Developing",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 873,
+      MerchantCategoryCode: 7221,
+      MerchantCategoryDesc: "Photographic Studios",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 740,
+      MerchantCategoryCode: 5131,
+      MerchantCategoryDesc: "Piece Goods, Notions, and Other Dry Goods",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 734,
+      MerchantCategoryCode: 5074,
+      MerchantCategoryDesc: "Plumbing and Heating Equipment and Supplies",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 948,
+      MerchantCategoryCode: 8049,
+      MerchantCategoryDesc: "Podiatrists and Chiropodists",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 963,
+      MerchantCategoryCode: 8651,
+      MerchantCategoryDesc: "Political Organizations",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 976,
+      MerchantCategoryCode: 9402,
+      MerchantCategoryDesc: "Postal Services - Government Only",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 736,
+      MerchantCategoryCode: 5094,
+      MerchantCategoryDesc: "Precious Stones and Metals, Watches and Jewelry",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 531,
+      MerchantCategoryCode: 3626,
+      MerchantCategoryDesc: "PRINCE HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 489,
+      MerchantCategoryCode: 3584,
+      MerchantCategoryDesc: "PRINCESS HOTELS INTERNATIONAL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 169,
+      MerchantCategoryCode: 3154,
+      MerchantCategoryDesc: "PRINCEVILLE",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 970,
+      MerchantCategoryCode: 8999,
+      MerchantCategoryDesc: "Professional Services ( Not Elsewhere Defined)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 624,
+      MerchantCategoryCode: 3719,
+      MerchantCategoryDesc: "PROTEA HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 898,
+      MerchantCategoryCode: 7393,
+      MerchantCategoryDesc: "Protective and Security Services - Including Armored Carsand Guard Dogs",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 706,
+      MerchantCategoryCode: 4225,
+      MerchantCategoryDesc: "Public warehousing, Storage",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 424,
+      MerchantCategoryCode: 3519,
+      MerchantCategoryDesc: "PULLMAN INTERNATIONAL HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 413,
+      MerchantCategoryCode: 3508,
+      MerchantCategoryDesc: "QUALITY INNS, QUALITY SUITES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 618,
+      MerchantCategoryCode: 3713,
+      MerchantCategoryDesc: "QUALITY PACIFIC HOTEL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 27,
+      MerchantCategoryCode: 3012,
+      MerchantCategoryDesc: "QUANTAS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 71,
+      MerchantCategoryCode: 3056,
+      MerchantCategoryDesc: "QUEBECAIRE",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 550,
+      MerchantCategoryCode: 3645,
+      MerchantCategoryDesc: "QUEENS MOAT HOUSES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 889,
+      MerchantCategoryCode: 7338,
+      MerchantCategoryDesc: "Quick Copy, Reproduction and Blueprinting Services",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 913,
+      MerchantCategoryCode: 7622,
+      MerchantCategoryDesc: "Radio Repair Shops",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 554,
+      MerchantCategoryCode: 3649,
+      MerchantCategoryDesc: "RADISSON HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 698,
+      MerchantCategoryCode: 4011,
+      MerchantCategoryDesc: "Railroads",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 542,
+      MerchantCategoryCode: 3637,
+      MerchantCategoryDesc: "RAMADA INNS, RAMADA LIMITED",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 538,
+      MerchantCategoryCode: 3633,
+      MerchantCategoryDesc: "RANK HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 579,
+      MerchantCategoryCode: 3674,
+      MerchantCategoryDesc: "RANTASIPI HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 864,
+      MerchantCategoryCode: 6513,
+      MerchantCategoryDesc: "Real Estate Agents and Managers - Rentals",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 801,
+      MerchantCategoryCode: 5735,
+      MerchantCategoryDesc: "Record Shops",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 940,
+      MerchantCategoryCode: 7999,
+      MerchantCategoryDesc: "Recreation Services (Not Elsewhere Classified)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 775,
+      MerchantCategoryCode: 5561,
+      MerchantCategoryDesc: "Recreational and Utility Trailers, Camp Dealers",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 433,
+      MerchantCategoryCode: 3528,
+      MerchantCategoryDesc: "RED LION HOTELS, RED LION INNS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 555,
+      MerchantCategoryCode: 3650,
+      MerchantCategoryDesc: "RED ROOK INNS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 455,
+      MerchantCategoryCode: 3550,
+      MerchantCategoryDesc: "REGAL 8 INNS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 503,
+      MerchantCategoryCode: 3598,
+      MerchantCategoryDesc: "REGENT INTERNATIONAL HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 470,
+      MerchantCategoryCode: 3565,
+      MerchantCategoryDesc: "RELAX INNS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 842,
+      MerchantCategoryCode: 5973,
+      MerchantCategoryDesc: "Religious Goods Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 964,
+      MerchantCategoryCode: 8661,
+      MerchantCategoryDesc: "Religious Organizations",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 435,
+      MerchantCategoryCode: 3530,
+      MerchantCategoryDesc: "RENAISSANCE HOTELS, STOUFFER HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 277,
+      MerchantCategoryCode: 3262,
+      MerchantCategoryDesc: "RENO AIR, INC.",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 334,
+      MerchantCategoryCode: 3370,
+      MerchantCategoryDesc: "RENT-A-WRECK",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 919,
+      MerchantCategoryCode: 7699,
+      MerchantCategoryDesc: "Repair Shops and Related Services -Miscellaneous",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 395,
+      MerchantCategoryCode: 3431,
+      MerchantCategoryDesc: "REPLACEMENT RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 396,
+      MerchantCategoryCode: 3432,
+      MerchantCategoryDesc: "RESERVE RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 608,
+      MerchantCategoryCode: 3703,
+      MerchantCategoryDesc: "RESIDENCE INNS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 540,
+      MerchantCategoryCode: 3635,
+      MerchantCategoryDesc: "RESO HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 628,
+      MerchantCategoryCode: 3723,
+      MerchantCategoryDesc: "RICA HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 631,
+      MerchantCategoryCode: 3726,
+      MerchantCategoryDesc: "RIO SUITES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 642,
+      MerchantCategoryCode: 3737,
+      MerchantCategoryDesc: "RIVIERA HOTEL AND CASINO",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 420,
+      MerchantCategoryCode: 3515,
+      MerchantCategoryDesc: "RODEWAY INNS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 9,
+      MerchantCategoryCode: 1761,
+      MerchantCategoryDesc: "Roofing - Contractors, Sheet Metal Work - Contractors, Siding - Contractors",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 63,
+      MerchantCategoryCode: 3048,
+      MerchantCategoryDesc: "ROYAL AIR MAROC",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 447,
+      MerchantCategoryCode: 3542,
+      MerchantCategoryDesc: "ROYAL HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 609,
+      MerchantCategoryCode: 3704,
+      MerchantCategoryDesc: "ROYCE HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 44,
+      MerchantCategoryCode: 3029,
+      MerchantCategoryDesc: "SABENA",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 244,
+      MerchantCategoryCode: 3229,
+      MerchantCategoryDesc: "SAETA SOCIAEDAD ECUATORIANOS DE TRANSPORTES AEREOS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 160,
+      MerchantCategoryCode: 3145,
+      MerchantCategoryDesc: "SAN JUAN AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 478,
+      MerchantCategoryCode: 3573,
+      MerchantCategoryDesc: "SANDMAN HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 610,
+      MerchantCategoryCode: 3705,
+      MerchantCategoryDesc: "SANDMAN INNS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 561,
+      MerchantCategoryCode: 3656,
+      MerchantCategoryDesc: "SARA HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 541,
+      MerchantCategoryCode: 3636,
+      MerchantCategoryDesc: "SAROVA HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 31,
+      MerchantCategoryCode: 3016,
+      MerchantCategoryDesc: "SAS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 488,
+      MerchantCategoryCode: 3583,
+      MerchantCategoryDesc: "SAS HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 246,
+      MerchantCategoryCode: 3231,
+      MerchantCategoryDesc: "SASHA SERVICIO AERO DE HONDURAS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 29,
+      MerchantCategoryCode: 3014,
+      MerchantCategoryDesc: "SAUDIA ARABIAN AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 560,
+      MerchantCategoryCode: 3655,
+      MerchantCategoryDesc: "SCANDIC HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 158,
+      MerchantCategoryCode: 3143,
+      MerchantCategoryDesc: "SCENIC AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 959,
+      MerchantCategoryCode: 8299,
+      MerchantCategoryDesc: "Schools and Educational Services ( Not Elsewhere Classified)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 630,
+      MerchantCategoryCode: 3725,
+      MerchantCategoryDesc: "SEAINES PLANATION",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 860,
+      MerchantCategoryCode: 6211,
+      MerchantCategoryDesc: "Security Brokers/Dealers",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 772,
+      MerchantCategoryCode: 5541,
+      MerchantCategoryDesc: "Service Stations ( with or without ancillary services)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 827,
+      MerchantCategoryCode: 5949,
+      MerchantCategoryDesc: "Sewing, Needle, Fabric, and Price Goods Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 450,
+      MerchantCategoryCode: 3545,
+      MerchantCategoryDesc: "SHANGRI-LA INTERNATIONAL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 408,
+      MerchantCategoryCode: 3503,
+      MerchantCategoryDesc: "SHERATON HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 611,
+      MerchantCategoryCode: 3706,
+      MerchantCategoryDesc: "SHILO INNS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 786,
+      MerchantCategoryCode: 5661,
+      MerchantCategoryDesc: "Shoe Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 612,
+      MerchantCategoryCode: 3707,
+      MerchantCategoryDesc: "SHONEY'S INNS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 875,
+      MerchantCategoryCode: 7251,
+      MerchantCategoryDesc: "Shop Repair Shops and Shoe Shine Parlors, and Hat Cleaning Shops",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 350,
+      MerchantCategoryCode: 3386,
+      MerchantCategoryDesc: "SHOWCASE RENTAL CARS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 153,
+      MerchantCategoryCode: 3138,
+      MerchantCategoryDesc: "SIMMONS AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 90,
+      MerchantCategoryCode: 3075,
+      MerchantCategoryDesc: "SINGAPORE AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 152,
+      MerchantCategoryCode: 3137,
+      MerchantCategoryDesc: "SINGLETON",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 324,
+      MerchantCategoryCode: 3360,
+      MerchantCategoryDesc: "SNAPPY CAR RENTAL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 778,
+      MerchantCategoryCode: 5598,
+      MerchantCategoryDesc: "Snowmobile Dealers",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 546,
+      MerchantCategoryCode: 3641,
+      MerchantCategoryDesc: "SOFITEL HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 491,
+      MerchantCategoryCode: 3586,
+      MerchantCategoryDesc: "SOKOS HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 423,
+      MerchantCategoryCode: 3518,
+      MerchantCategoryDesc: "SOL HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 496,
+      MerchantCategoryCode: 3591,
+      MerchantCategoryDesc: "SONESTA HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 32,
+      MerchantCategoryCode: 3017,
+      MerchantCategoryDesc: "SOUTH AFRICAN AIRWAYS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 661,
+      MerchantCategoryCode: 3756,
+      MerchantCategoryDesc: "SOUTH SEAS RESORTS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 439,
+      MerchantCategoryCode: 3534,
+      MerchantCategoryDesc: "SOUTHERN PACIFIC HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 625,
+      MerchantCategoryCode: 3720,
+      MerchantCategoryDesc: "SOUTHERN SUN HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 81,
+      MerchantCategoryCode: 3066,
+      MerchantCategoryDesc: "SOUTHWEST",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 14,
+      MerchantCategoryCode: 2842,
+      MerchantCategoryDesc: "Specialty Cleaning, Polishing, and Sanitation Preparations",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 867,
+      MerchantCategoryCode: 7032,
+      MerchantCategoryDesc: "Sporting and Recreational Camps",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 819,
+      MerchantCategoryCode: 5941,
+      MerchantCategoryDesc: "Sporting Goods Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 785,
+      MerchantCategoryCode: 5655,
+      MerchantCategoryDesc: "Sports Apparel, Riding Apparel Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 650,
+      MerchantCategoryCode: 3745,
+      MerchantCategoryDesc: "ST. REGIS HOTEL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 571,
+      MerchantCategoryCode: 3666,
+      MerchantCategoryDesc: "STAKIS HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 841,
+      MerchantCategoryCode: 5972,
+      MerchantCategoryDesc: "Stamp and Coin Stores - Philatelic and Numismatic Supplies",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 821,
+      MerchantCategoryCode: 5943,
+      MerchantCategoryDesc: "Stationery Stores, Office and School Supply Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 738,
+      MerchantCategoryCode: 5111,
+      MerchantCategoryDesc: "Stationery, Office Supplies, Printing, and Writing Paper",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 548,
+      MerchantCategoryCode: 3643,
+      MerchantCategoryDesc: "STEIGENBERGER HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 890,
+      MerchantCategoryCode: 7339,
+      MerchantCategoryDesc: "Stenographic and Secretarial Support Services",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 150,
+      MerchantCategoryCode: 3135,
+      MerchantCategoryDesc: "SUDAN AIRWAYS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 591,
+      MerchantCategoryCode: 3686,
+      MerchantCategoryDesc: "SUISSE CHALETS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 84,
+      MerchantCategoryCode: 3069,
+      MerchantCategoryDesc: "SUN COUNTRY AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 437,
+      MerchantCategoryCode: 3532,
+      MerchantCategoryDesc: "SUN ROUTE HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 145,
+      MerchantCategoryCode: 3130,
+      MerchantCategoryDesc: "SUN WORLD INTERNATIONAL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 148,
+      MerchantCategoryCode: 3133,
+      MerchantCategoryDesc: "SUNBELT AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 614,
+      MerchantCategoryCode: 3709,
+      MerchantCategoryDesc: "SUPER8 MOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 144,
+      MerchantCategoryCode: 3129,
+      MerchantCategoryDesc: "SURINAM AIRWAYS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 551,
+      MerchantCategoryCode: 3646,
+      MerchantCategoryDesc: "SWALLOW HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 852,
+      MerchantCategoryCode: 5996,
+      MerchantCategoryDesc: "Swimming Pools - Sales, Service, and Supplies",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 30,
+      MerchantCategoryCode: 3015,
+      MerchantCategoryDesc: "SWISSAIR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 539,
+      MerchantCategoryCode: 3634,
+      MerchantCategoryDesc: "SWISSOTEL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 142,
+      MerchantCategoryCode: 3127,
+      MerchantCategoryDesc: "TACA INTERNATIONAL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 789,
+      MerchantCategoryCode: 5697,
+      MerchantCategoryDesc: "Tailors, Seamstress, Mending, and Alterations",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 564,
+      MerchantCategoryCode: 3659,
+      MerchantCategoryDesc: "TAJ HOTELS INTERNATIONAL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 141,
+      MerchantCategoryCode: 3126,
+      MerchantCategoryDesc: "TALAIR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 140,
+      MerchantCategoryCode: 3125,
+      MerchantCategoryDesc: "TAN",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 50,
+      MerchantCategoryCode: 3035,
+      MerchantCategoryDesc: "TAP (PORTUGAL)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 974,
+      MerchantCategoryCode: 9311,
+      MerchantCategoryDesc: "Tax Payments",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 878,
+      MerchantCategoryCode: 7276,
+      MerchantCategoryDesc: "Tax Preparation Service",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 702,
+      MerchantCategoryCode: 4121,
+      MerchantCategoryDesc: "Taxicabs and Limousines",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 716,
+      MerchantCategoryCode: 4812,
+      MerchantCategoryDesc: "Telecommunications Equipment including telephone sales",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 720,
+      MerchantCategoryCode: 4821,
+      MerchantCategoryDesc: "Telegraph services",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 525,
+      MerchantCategoryCode: 3620,
+      MerchantCategoryDesc: "TELFORD INTERNATIONAL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 854,
+      MerchantCategoryCode: 5998,
+      MerchantCategoryDesc: "Tent and Awning Shops",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 967,
+      MerchantCategoryCode: 8734,
+      MerchantCategoryDesc: "Testing Laboratories ( non-medical)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 92,
+      MerchantCategoryCode: 3077,
+      MerchantCategoryDesc: "THAI AIRWAYS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 654,
+      MerchantCategoryCode: 3749,
+      MerchantCategoryDesc: "THE BEVERLY HILLS HOTEL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 651,
+      MerchantCategoryCode: 3746,
+      MerchantCategoryDesc: "THE ELIOT HOTEL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 660,
+      MerchantCategoryCode: 3755,
+      MerchantCategoryDesc: "THE HOMESTEAD",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 607,
+      MerchantCategoryCode: 3702,
+      MerchantCategoryDesc: "THE REGISTRY HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 615,
+      MerchantCategoryCode: 3710,
+      MerchantCategoryDesc: "THE RITZ CARLTON HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 927,
+      MerchantCategoryCode: 7922,
+      MerchantCategoryDesc: "Theatrical Producers (Except Motion Pictures), Ticket Agencies",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 359,
+      MerchantCategoryCode: 3395,
+      MerchantCategoryDesc: "THRIFTY RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 62,
+      MerchantCategoryCode: 3047,
+      MerchantCategoryDesc: "THY (TURKEY)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 360,
+      MerchantCategoryCode: 3396,
+      MerchantCategoryDesc: "TILDEN TENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 866,
+      MerchantCategoryCode: 7012,
+      MerchantCategoryDesc: "Timeshares",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 908,
+      MerchantCategoryCode: 7534,
+      MerchantCategoryDesc: "Tire Re-treading and Repair Shops",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 427,
+      MerchantCategoryCode: 3522,
+      MerchantCategoryDesc: "TOKYO HOTEL",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 714,
+      MerchantCategoryCode: 4784,
+      MerchantCategoryDesc: "Toll and Bridge Fees",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 932,
+      MerchantCategoryCode: 7991,
+      MerchantCategoryDesc: "Tourist Attractions and Exhibits",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 912,
+      MerchantCategoryCode: 7549,
+      MerchantCategoryDesc: "Towing Services",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 645,
+      MerchantCategoryCode: 3740,
+      MerchantCategoryDesc: "TOWNPLACE SUITES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 868,
+      MerchantCategoryCode: 7033,
+      MerchantCategoryDesc: "Trailer Parks and Camp Grounds",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 19,
+      MerchantCategoryCode: 3004,
+      MerchantCategoryDesc: "TRANS WORLD AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 104,
+      MerchantCategoryCode: 3089,
+      MerchantCategoryDesc: "TRANSAERO",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 715,
+      MerchantCategoryCode: 4789,
+      MerchantCategoryDesc: "Transportation Services, Not elsewhere classified)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 236,
+      MerchantCategoryCode: 3221,
+      MerchantCategoryDesc: "TRANSPORTES AEROS MILITARES ECCUATORANOS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 712,
+      MerchantCategoryCode: 4722,
+      MerchantCategoryDesc: "Travel Agencies and Tour Operations",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 520,
+      MerchantCategoryCode: 3615,
+      MerchantCategoryDesc: "TRAVELODGE",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 349,
+      MerchantCategoryCode: 3385,
+      MerchantCategoryDesc: "TROPICAL RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 643,
+      MerchantCategoryCode: 3738,
+      MerchantCategoryDesc: "TROPICANA RESORT AND CASINO",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 904,
+      MerchantCategoryCode: 7513,
+      MerchantCategoryDesc: "Truck and Utility Trailer Rentals",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 902,
+      MerchantCategoryCode: 7511,
+      MerchantCategoryDesc: "Truck Stop",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 269,
+      MerchantCategoryCode: 3254,
+      MerchantCategoryDesc: "TRUMP AIRLINE",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 64,
+      MerchantCategoryCode: 3049,
+      MerchantCategoryDesc: "TUNIS AIR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 13,
+      MerchantCategoryCode: 2791,
+      MerchantCategoryDesc: "Typesetting, Plate Making, &amp; Related Services",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 846,
+      MerchantCategoryCode: 5978,
+      MerchantCategoryDesc: "Typewriter Stores - Sales, Rental, Service",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 397,
+      MerchantCategoryCode: 3433,
+      MerchantCategoryDesc: "UGLY DUCKLING RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 15,
+      MerchantCategoryCode: 3000,
+      MerchantCategoryDesc: "UNITED AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 78,
+      MerchantCategoryCode: 3063,
+      MerchantCategoryDesc: "US AIR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 398,
+      MerchantCategoryCode: 3434,
+      MerchantCategoryDesc: "USA RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 813,
+      MerchantCategoryCode: 5931,
+      MerchantCategoryDesc: "Used Merchandise and Secondhand Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 42,
+      MerchantCategoryCode: 3027,
+      MerchantCategoryDesc: "UTA/INTERAIR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 480,
+      MerchantCategoryCode: 3575,
+      MerchantCategoryDesc: "VAGABOND HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 133,
+      MerchantCategoryCode: 3118,
+      MerchantCategoryDesc: "VALLEY AIRLINES",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 399,
+      MerchantCategoryCode: 3435,
+      MerchantCategoryDesc: "VALUE RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 759,
+      MerchantCategoryCode: 5331,
+      MerchantCategoryDesc: "Variety Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 33,
+      MerchantCategoryCode: 3018,
+      MerchantCategoryDesc: "VARIG (BRAZIL)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 51,
+      MerchantCategoryCode: 3036,
+      MerchantCategoryDesc: "VASP (BRAZIL)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 479,
+      MerchantCategoryCode: 3574,
+      MerchantCategoryDesc: "VENTURE INNS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 1,
+      MerchantCategoryCode: 742,
+      MerchantCategoryDesc: "Veterinary Services",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 404,
+      MerchantCategoryCode: 3440,
+      MerchantCategoryDesc: "VIA ROUTE RENT-A-CAR",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 132,
+      MerchantCategoryCode: 3117,
+      MerchantCategoryDesc: "VIASA",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 934,
+      MerchantCategoryCode: 7993,
+      MerchantCategoryDesc: "Video Amusement Game Supplies",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 935,
+      MerchantCategoryCode: 7994,
+      MerchantCategoryDesc: "Video Game Arcades/Establishments",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 159,
+      MerchantCategoryCode: 3144,
+      MerchantCategoryDesc: "VIRGIN ATLANTIC",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 979,
+      MerchantCategoryCode: 9701,
+      MerchantCategoryDesc: "Visa Credential Service ( For Visa Only)",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 718,
+      MerchantCategoryCode: 4815,
+      MerchantCategoryDesc: "VisaPhone",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 958,
+      MerchantCategoryCode: 8249,
+      MerchantCategoryDesc: "Vocational Schools and Trade Schools",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 916,
+      MerchantCategoryCode: 7631,
+      MerchantCategoryDesc: "Watch, Clock, and Jewelry Repair",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 822,
+      MerchantCategoryCode: 5944,
+      MerchantCategoryDesc: "Watch, Clock, Jewelry, and Silverware Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 429,
+      MerchantCategoryCode: 3524,
+      MerchantCategoryDesc: "WELCOMGROUP HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 918,
+      MerchantCategoryCode: 7692,
+      MerchantCategoryDesc: "Welding Repair",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 653,
+      MerchantCategoryCode: 3748,
+      MerchantCategoryDesc: "WELESLEY INNS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 77,
+      MerchantCategoryCode: 3062,
+      MerchantCategoryDesc: "WESTERN",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 418,
+      MerchantCategoryCode: 3513,
+      MerchantCategoryDesc: "WESTIN HOTELS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 755,
+      MerchantCategoryCode: 5300,
+      MerchantCategoryDesc: "Wholesale Clubs",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 314,
+      MerchantCategoryCode: 3299,
+      MerchantCategoryDesc: "WIDERO'S FLYVESELSKAP",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 790,
+      MerchantCategoryCode: 5698,
+      MerchantCategoryDesc: "Wig and Toupee Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 127,
+      MerchantCategoryCode: 3112,
+      MerchantCategoryDesc: "WINDWARD ISLAND",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 125,
+      MerchantCategoryCode: 3110,
+      MerchantCategoryDesc: "WINGS AIRWAYS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 782,
+      MerchantCategoryCode: 5631,
+      MerchantCategoryDesc: "Women's Accessory and Specialty Shops",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 781,
+      MerchantCategoryCode: 5621,
+      MerchantCategoryDesc: "Women's Ready-to-Wear Stores",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 644,
+      MerchantCategoryCode: 3739,
+      MerchantCategoryDesc: "WOODSIDE HOTELS AND RESORTS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 816,
+      MerchantCategoryCode: 5935,
+      MerchantCategoryDesc: "Wrecking and Salvage Yards",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 627,
+      MerchantCategoryCode: 3722,
+      MerchantCategoryDesc: "WYNDHAM HOTEL AND RESORTS",
+      IsProhibited: false
+    }, 
+    {
+      MerchantCategoryId: 109,
+      MerchantCategoryCode: 3094,
+      MerchantCategoryDesc: "ZAMBIA AIRWAYS",
+      IsProhibited: false
+    }
+  ],
+  MerchantWorkflow: [
+    {
+      MerchantWorkflowId: 5,
+      MerchantWorkDesc: "Activate"
+    }, 
+    {
+      MerchantWorkflowId: 1,
+      MerchantWorkDesc: "Created"
+    }, 
+    {
+      MerchantWorkflowId: 3,
+      MerchantWorkDesc: "KYC Completed"
+    }, 
+    {
+      MerchantWorkflowId: 2,
+      MerchantWorkDesc: "KYC Initiated"
+    }, 
+    {
+      MerchantWorkflowId: 4,
+      MerchantWorkDesc: "Register with payment processor"
+    }
+  ],
+  TransactionType: [
+    {
+      TransactionTypeCode: 1,
+      TransactionTypeName: "Sales"
+    }, 
+    {
+      TransactionTypeCode: 3,
+      TransactionTypeName: "Refund"
+    }, 
+    {
+      TransactionTypeCode: 6,
+      TransactionTypeName: "Authorization"
+    }, 
+    {
+      TransactionTypeCode: 7,
+      TransactionTypeName: "Capture"
+    }, 
+    {
+      TransactionTypeCode: 8,
+      TransactionTypeName: "Void"
+    }, 
+    {
+      TransactionTypeCode: 10,
+      TransactionTypeName: "eCheck"
+    }, 
+    {
+      TransactionTypeCode: 13,
+      TransactionTypeName: "Finance"
+    }, 
+    {
+      TransactionTypeCode: 14,
+      TransactionTypeName: "ACHPayout"
+    }, 
+    {
+      TransactionTypeCode: 15,
+      TransactionTypeName: "ACHRefundPayout"
+    }
+  ],
+  TransactionStatus: [
+    {
+      TransactionStatusId: 1,
+      TransactionStatusName: "Initiated"
+    }, 
+    {
+      TransactionStatusId: 2,
+      TransactionStatusName: "Captured"
+    }, 
+    {
+      TransactionStatusId: 3,
+      TransactionStatusName: "Declined"
+    }, 
+    {
+      TransactionStatusId: 4,
+      TransactionStatusName: "Settled"
+    }, 
+    {
+      TransactionStatusId: 5,
+      TransactionStatusName: "InProgress"
+    }, 
+    {
+      TransactionStatusId: 6,
+      TransactionStatusName: "Refunded"
+    }, 
+    {
+      TransactionStatusId: 7,
+      TransactionStatusName: "Cancelled"
+    }, 
+    {
+      TransactionStatusId: 8,
+      TransactionStatusName: "Processed"
+    }, 
+    {
+      TransactionStatusId: 9,
+      TransactionStatusName: "FailedForLimit"
+    }, 
+    {
+      TransactionStatusId: 10,
+      TransactionStatusName: "Flagged"
+    }, 
+    {
+      TransactionStatusId: 11,
+      TransactionStatusName: "InProgress"
+    }, 
+    {
+      TransactionStatusId: 12,
+      TransactionStatusName: "Reversed"
+    }
+  ],
+  BbbRating: [
+    {
+      BbbRatingId: 2,
+      BbbRatingName: "A",
+      RangeFrom: 94,
+      RangeTo: 96.99
+    }, 
+    {
+      BbbRatingId: 1,
+      BbbRatingName: "A+",
+      RangeFrom: 97,
+      RangeTo: 100
+    }, 
+    {
+      BbbRatingId: 3,
+      BbbRatingName: "A-",
+      RangeFrom: 90,
+      RangeTo: 93.99
+    }, 
+    {
+      BbbRatingId: 5,
+      BbbRatingName: "B",
+      RangeFrom: 84,
+      RangeTo: 86.99
+    }, 
+    {
+      BbbRatingId: 4,
+      BbbRatingName: "B+",
+      RangeFrom: 87,
+      RangeTo: 89.99
+    }, 
+    {
+      BbbRatingId: 6,
+      BbbRatingName: "B-",
+      RangeFrom: 80,
+      RangeTo: 83.99
+    }, 
+    {
+      BbbRatingId: 8,
+      BbbRatingName: "C",
+      RangeFrom: 74,
+      RangeTo: 76.99
+    }, 
+    {
+      BbbRatingId: 7,
+      BbbRatingName: "C+",
+      RangeFrom: 77,
+      RangeTo: 79.99
+    }, 
+    {
+      BbbRatingId: 9,
+      BbbRatingName: "C-",
+      RangeFrom: 70,
+      RangeTo: 73.99
+    }, 
+    {
+      BbbRatingId: 11,
+      BbbRatingName: "D",
+      RangeFrom: 64,
+      RangeTo: 66.99
+    }, 
+    {
+      BbbRatingId: 10,
+      BbbRatingName: "D+",
+      RangeFrom: 67,
+      RangeTo: 69.99
+    }, 
+    {
+      BbbRatingId: 12,
+      BbbRatingName: "D-",
+      RangeFrom: 60,
+      RangeTo: 63.99
+    }, 
+    {
+      BbbRatingId: 13,
+      BbbRatingName: "F",
+      RangeFrom: 0,
+      RangeTo: 59.99
+    }
+  ],
+  OwnerType: [
+    {
+      OwnerTypeId: 3,
+      OwnerTypeName: "Director"
+    }, 
+    {
+      OwnerTypeId: 2,
+      OwnerTypeName: "Owner"
+    }, 
+    {
+      OwnerTypeId: 1,
+      OwnerTypeName: "Partner"
+    }
+  ],
+  BusinessContactType: [
+    {
+      BusinessContactTypeId: 2,
+      BusinessContactTypeName: "BILLING"
+    }, 
+    {
+      BusinessContactTypeId: 3,
+      BusinessContactTypeName: "LOCATION"
+    }, 
+    {
+      BusinessContactTypeId: 4,
+      BusinessContactTypeName: "PRINCIPAL"
+    }, 
+    {
+      BusinessContactTypeId: 1,
+      BusinessContactTypeName: "TRADING"
+    }
+  ],
+  CardFeeTemplate: [
+    {
+      CardFeeTemplateId: 2,
+      CardFeeTemplateName: "Visa Qualified Credit",
+      Occurrence: "Transaction",
+      FeeEntryMax: 0.3,
+      FeeEntryMin: 0.1,
+      FeeDefault: 0.3,
+      FeeMin: 0.1,
+      FeeMax: 0.3,
+      RateEntryMax: 3.49,
+      RateEntryMin: 0.1,
+      RateDefault: 2.49,
+      RateMin: 0.1,
+      RateMax: 3.49
+    }, 
+    {
+      CardFeeTemplateId: 3,
+      CardFeeTemplateName: "Mastercard Qualified Credit",
+      Occurrence: "Transaction",
+      FeeEntryMax: 0.3,
+      FeeEntryMin: 0.1,
+      FeeDefault: 0.3,
+      FeeMin: 0.1,
+      FeeMax: 0.3,
+      RateEntryMax: 3.49,
+      RateEntryMin: 0.1,
+      RateDefault: 2.49,
+      RateMin: 0.1,
+      RateMax: 3.49
+    }, 
+    {
+      CardFeeTemplateId: 13928,
+      CardFeeTemplateName: "262-Retrieval Fee",
+      Occurrence: "Transaction",
+      FeeEntryMax: 35,
+      FeeEntryMin: 5,
+      FeeDefault: 35,
+      FeeMin: 5,
+      FeeMax: 35,
+      RateEntryMax: null,
+      RateEntryMin: null,
+      RateDefault: null,
+      RateMin: null,
+      RateMax: null
+    }, 
+    {
+      CardFeeTemplateId: 15501,
+      CardFeeTemplateName: "Visa Mastercard Chargeback Fees",
+      Occurrence: "CHGBK_FEE",
+      FeeEntryMax: 35,
+      FeeEntryMin: 5,
+      FeeDefault: 35,
+      FeeMin: 5,
+      FeeMax: 35,
+      RateEntryMax: null,
+      RateEntryMin: null,
+      RateDefault: null,
+      RateMin: null,
+      RateMax: null
+    }, 
+    {
+      CardFeeTemplateId: 45610,
+      CardFeeTemplateName: "037-Mc Vru/Voice Auth Fee",
+      Occurrence: "Transaction",
+      FeeEntryMax: 1,
+      FeeEntryMin: 0,
+      FeeDefault: 0.1,
+      FeeMin: 0,
+      FeeMax: 1,
+      RateEntryMax: null,
+      RateEntryMin: null,
+      RateDefault: null,
+      RateMin: null,
+      RateMax: null
+    }, 
+    {
+      CardFeeTemplateId: 45611,
+      CardFeeTemplateName: "047-Visa Vru/Voice Auth Fee",
+      Occurrence: "Transaction",
+      FeeEntryMax: 1,
+      FeeEntryMin: 0,
+      FeeDefault: 0.1,
+      FeeMin: 0,
+      FeeMax: 1,
+      RateEntryMax: null,
+      RateEntryMin: null,
+      RateDefault: null,
+      RateMin: null,
+      RateMax: null
+    }, 
+    {
+      CardFeeTemplateId: 46165,
+      CardFeeTemplateName: "Monthly Service Charge",
+      Occurrence: "Recurring",
+      FeeEntryMax: 499,
+      FeeEntryMin: 0,
+      FeeDefault: 25,
+      FeeMin: 0,
+      FeeMax: 499,
+      RateEntryMax: null,
+      RateEntryMin: null,
+      RateDefault: null,
+      RateMin: null,
+      RateMax: null
+    }, 
+    {
+      CardFeeTemplateId: 46544,
+      CardFeeTemplateName: "067-Amex Vru/Voice Auth Fee",
+      Occurrence: "Transaction",
+      FeeEntryMax: 1,
+      FeeEntryMin: 0,
+      FeeDefault: 0.1,
+      FeeMin: 0,
+      FeeMax: 1,
+      RateEntryMax: null,
+      RateEntryMin: null,
+      RateDefault: null,
+      RateMin: null,
+      RateMax: null
+    }, 
+    {
+      CardFeeTemplateId: 46547,
+      CardFeeTemplateName: "06d-Amex Authorizations",
+      Occurrence: "",
+      FeeEntryMax: 1,
+      FeeEntryMin: 0,
+      FeeDefault: 0.1,
+      FeeMin: 0,
+      FeeMax: 1,
+      RateEntryMax: null,
+      RateEntryMin: null,
+      RateDefault: null,
+      RateMin: null,
+      RateMax: null
+    }, 
+    {
+      CardFeeTemplateId: 46725,
+      CardFeeTemplateName: "077-Discover Vru/Voice Auth Fee",
+      Occurrence: "Transaction",
+      FeeEntryMax: 1,
+      FeeEntryMin: 0,
+      FeeDefault: 0.1,
+      FeeMin: 0,
+      FeeMax: 1,
+      RateEntryMax: null,
+      RateEntryMin: null,
+      RateDefault: null,
+      RateMin: null,
+      RateMax: null
+    }, 
+    {
+      CardFeeTemplateId: 46800,
+      CardFeeTemplateName: "014-Amex Credits Trans Fee",
+      Occurrence: "Transaction",
+      FeeEntryMax: 1,
+      FeeEntryMin: 0,
+      FeeDefault: 0.1,
+      FeeMin: 0,
+      FeeMax: 1,
+      RateEntryMax: null,
+      RateEntryMin: null,
+      RateDefault: null,
+      RateMin: null,
+      RateMax: null
+    }, 
+    {
+      CardFeeTemplateId: 47118,
+      CardFeeTemplateName: "Visa Voice Authorization Fee",
+      Occurrence: "Transaction",
+      FeeEntryMax: 1,
+      FeeEntryMin: 0,
+      FeeDefault: 0.1,
+      FeeMin: 0,
+      FeeMax: 1,
+      RateEntryMax: null,
+      RateEntryMin: null,
+      RateDefault: null,
+      RateMin: null,
+      RateMax: null
+    }, 
+    {
+      CardFeeTemplateId: 47134,
+      CardFeeTemplateName: "10d-Visa Auth Fee",
+      Occurrence: "Onetime_Fee",
+      FeeEntryMax: 1,
+      FeeEntryMin: 0,
+      FeeDefault: 0.1,
+      FeeMin: 0,
+      FeeMax: 1,
+      RateEntryMax: null,
+      RateEntryMin: null,
+      RateDefault: null,
+      RateMin: null,
+      RateMax: null
+    }, 
+    {
+      CardFeeTemplateId: 47373,
+      CardFeeTemplateName: "Discover Qualified Credit (Full Pr)",
+      Occurrence: "Transaction",
+      FeeEntryMax: 0.3,
+      FeeEntryMin: 0.1,
+      FeeDefault: 0.3,
+      FeeMin: 0.1,
+      FeeMax: 0.3,
+      RateEntryMax: 3.49,
+      RateEntryMin: 0.1,
+      RateDefault: 2.49,
+      RateMin: 0.1,
+      RateMax: 3.49
+    }, 
+    {
+      CardFeeTemplateId: 49872,
+      CardFeeTemplateName: "American Express Chargeback Fee",
+      Occurrence: "Onetime_Fee",
+      FeeEntryMax: 35,
+      FeeEntryMin: 5,
+      FeeDefault: 35,
+      FeeMin: 5,
+      FeeMax: 35,
+      RateEntryMax: null,
+      RateEntryMin: null,
+      RateDefault: null,
+      RateMin: null,
+      RateMax: null
+    }, 
+    {
+      CardFeeTemplateId: 60262,
+      CardFeeTemplateName: "Account Setup Fee",
+      Occurrence: "Onetime_Fee",
+      FeeEntryMax: 10,
+      FeeEntryMin: 5,
+      FeeDefault: 10,
+      FeeMin: 5,
+      FeeMax: 10,
+      RateEntryMax: null,
+      RateEntryMin: null,
+      RateDefault: null,
+      RateMin: null,
+      RateMax: null
+    }, 
+    {
+      CardFeeTemplateId: 69002,
+      CardFeeTemplateName: "American Express Qualified Credit",
+      Occurrence: "Transaction",
+      FeeEntryMax: 0.3,
+      FeeEntryMin: 0.1,
+      FeeDefault: 0.3,
+      FeeMin: 0.1,
+      FeeMax: 0.3,
+      RateEntryMax: 3.49,
+      RateEntryMin: 0.1,
+      RateDefault: 2.49,
+      RateMin: 0.1,
+      RateMax: 3.49
+    }
+  ]
+}]]></ee:set-payload>
+            </ee:message>
+        </ee:transform>
+    </flow>
+</mule>

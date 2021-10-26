@@ -1,0 +1,44 @@
+<getCustomizationIdResponse xmlns="urn:messages_2020_2.platform.webservices.netsuite.com">
+    <platformCore:getCustomizationIdResult xmlns:platformCore="urn:core_2020_2.platform.webservices.netsuite.com">
+        <platformCore:status isSuccess="true"/>
+        <platformCore:totalRecords>12</platformCore:totalRecords>
+        <platformCore:customizationRefList>
+            <platformCore:customizationRef scriptId="custevent_ishdcasetype" internalId="42" type="crmCustomField">
+                <platformCore:name>Help Desk Case Type</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custevent_review_status" internalId="3051" type="crmCustomField">
+                <platformCore:name>Review Status</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custevent_review_date" internalId="3052" type="crmCustomField">
+                <platformCore:name>Review Date</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custevent_relatedcaselinktype" internalId="3053" type="crmCustomField">
+                <platformCore:name>Related Case Link Type</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custevent_relatedcase" internalId="3054" type="crmCustomField">
+                <platformCore:name>Related Case</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custevent_closereason" internalId="3055" type="crmCustomField">
+                <platformCore:name>Close Reason</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custevent_pf_zms_solution" internalId="3056" type="crmCustomField">
+                <platformCore:name>From KB Solution</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custevent_address" internalId="3748" type="crmCustomField">
+                <platformCore:name>Address</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custevent_latitude" internalId="3749" type="crmCustomField">
+                <platformCore:name>Latitude</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custevent_longitude" internalId="3750" type="crmCustomField">
+                <platformCore:name>Longitude</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custevent1" internalId="40" type="crmCustomField">
+                <platformCore:name>Sales Associate</platformCore:name>
+            </platformCore:customizationRef>
+            <platformCore:customizationRef scriptId="custevent2" internalId="41" type="crmCustomField">
+                <platformCore:name>Sales Associate Phone</platformCore:name>
+            </platformCore:customizationRef>
+        </platformCore:customizationRefList>
+    </platformCore:getCustomizationIdResult>
+</getCustomizationIdResponse>
